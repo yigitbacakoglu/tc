@@ -5,8 +5,6 @@ gem 'rails',  '~> 3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'mysql2'
 gem 'devise'
 gem 'cancan'
 gem 'omniauth'
@@ -19,6 +17,10 @@ gem 'mongrel', '1.2.0.pre2'
 
 group :development do
   gem "rails-erd"
+  gem 'mysql2'
+end
+group :production do
+  gem 'sqlite3'
 end
 
 # Gems used only for assets and not required

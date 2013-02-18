@@ -37,13 +37,13 @@
 <body>
 
 <div class="top-bar">
-  <a id="topbar-brand-out" class="brand" href="../dashboard.html">
+  <a id="topbar-brand-out" class="brand" href="<%= root_path %>">
     TalkyCloud
   </a>
 
   <div class="pull-right">
     <div class="hpadded20">
-      <%= link_to "Sign Up", "/user_registrations/sign_up", :class => "btn btn-small dark-blue" %>
+      <%= link_to "Sign Up", new_user_registration_registration_url, :class => "btn btn-small dark-blue" %>
     </div>
   </div>
 </div>

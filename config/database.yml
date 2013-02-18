@@ -16,12 +16,10 @@ test:
   password: 6O7MbIRT5HxJ
   socket: /tmp/mysql.sock
 
-production:
- adapter: mysql2
- encoding: utf8
- database: talky_test
- pool: 5
- username: simon
- password: 6O7MbIRT5HxJ
- socket: /tmp/mysql.sock
 
+production:
+  adapter: sqlite3
+  encoding: utf8
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000
