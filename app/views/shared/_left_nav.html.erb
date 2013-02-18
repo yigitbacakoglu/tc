@@ -1,0 +1,180 @@
+<nav id="primary" class="main-nav collapsible-nav">
+  <!-- Brand -->
+  <a id="sidebar-brand" href="dashboard.html">
+    TalkyCloud
+  </a>
+  <button type="button" class="btn btn-navbar btn-inverse" data-toggle="collapse" data-target=".nav-collapse">
+    <i class="icon-reorder"></i>
+  </button>
+
+  <ul class="nav-collapse collapse">
+
+    <!-- Profile -->
+    <li class="profile">
+      <a href="#profile-opts" class="accordion-toggle" data-toggle="collapse">
+        <img class="avatar user3">
+          <span class="text" id="profile-text">
+            <%= @current_user.try(:firstname) %> <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="profile-opts" class="collapse secondary">
+        <li class="">
+          <a href="#">
+            Settings
+          </a>
+        </li>
+        <li class="">
+          <a href="#">
+            Change password
+          </a>
+        </li>
+        <li class="">
+          <%= link_to "Logout", destroy_user_registration_session_path, :method => :delete %>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Dashboard -->
+    <li class="active">
+      <a href="dashboard.html">
+          <span class="icon">
+            <i class="icon-dashboard"></i>
+          </span>
+          <span class="text">
+            Dashboard
+          </span>
+      </a>
+    </li>
+
+    <!-- Components -->
+    <li class="">
+      <a href="#components-list" class="accordion-toggle" data-toggle="collapse">
+          <span class="icon">
+            <i class="icon-microformats"></i>
+          </span>
+          <span class="text">
+            Components <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="components-list" class="collapse secondary">
+        <li class="">
+          <a href="components/buttons.html">
+            Buttons
+          </a>
+        </li>
+        <li class="">
+          <a href="components/forms.html">
+            Forms
+          </a>
+        </li>
+        <li class="">
+          <a href="components/elements.html">
+            Elements
+          </a>
+        </li>
+        <li class="">
+          <a href="components/widgets.html">
+            Widgets
+          </a>
+        </li>
+        <li class="">
+          <a href="components/charts.html">
+            Charts
+          </a>
+        </li>
+        <li class="">
+          <a href="components/tables.html">
+            Tables
+          </a>
+        </li>
+        <li class="">
+          <a href="components/grid.html">
+            Grid
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Sample pages -->
+    <li class="">
+      <a href="#sample-pages" class="accordion-toggle" data-toggle="collapse">
+          <span class="icon">
+            <i class="icon-pushpin"></i>
+          </span>
+          <span class="text">
+            Pages <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="sample-pages" class="collapse secondary">
+        <li class="">
+          <a href="samples/gallery.html">
+            Gallery
+          </a>
+        </li>
+        <li class="">
+          <a href="samples/faq.html">
+            FAQ
+          </a>
+        </li>
+        <li class="">
+          <a href="samples/pricing_plans.html">
+            Pricing Plans
+          </a>
+        </li>
+        <li class="">
+          <a href="samples/login.html">
+            Login
+          </a>
+        </li>
+        <li class="">
+          <a href="samples/register.html">
+            Register
+          </a>
+        </li>
+        <li class="">
+          <a href="samples/reports.html">
+            Reports
+          </a>
+        </li>
+        <li class="">
+          <a href="samples/error.html">
+            Error 404
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Extras dropdown -->
+    <li class="">
+      <a href="#extras" class="accordion-toggle" data-toggle="collapse">
+          <span class="icon">
+            <i class="icon-gift"></i>
+          </span>
+          <span class="text">
+            Extras <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="extras" class="collapse secondary">
+        <li class="">
+          <a href="extras/fullcalendar.html">
+            Fullcalendar
+          </a>
+        </li>
+        <li class="">
+          <a href="extras/icons.html">
+            Icons
+          </a>
+        </li>
+        <li class="">
+          <a href="extras/world-map.html">
+            World map
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

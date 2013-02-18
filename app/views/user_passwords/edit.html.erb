@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "Warehouse", root_path, class: "brand" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span6 offset3">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {class: 'form-horizontal',method: :put }) do |f| %>
+          <fieldset>
+            <legend>Edit:</legend>
+
+            <div class="control-group password">
+              <label class="password control-label" for="user_email">
+                Password</label>
+
+              <div class="controls">
+                <%= f.password_field :password %>
+              </div>
+            </div>
+            <div class="control-group password" style="width: 175px !important;">
+              <label class="password  control-label" for="user_email">
+                Password Confirmation</label>
+
+              <div class="controls">
+                <%= f.password_field :password_confirmation %>
+              </div>
+            </div>
+
+            <div class="form-actions" style="margin-bottom:0">
+              <%= f.submit "Submit", :class => 'btn btn-primary' %>
+              <%= link_to 'Cancel', root_path, :class => 'btn' %>
+            </div>
+          </fieldset>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+
+  <footer>
+    <p>Changhong & Hu Zhengping 2012 &copy; All Rights Reserved.</p>
+  </footer>
+</div>

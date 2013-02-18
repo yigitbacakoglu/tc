@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  message: MyText
+  widget: 
+  ip_address: 
+  kind: MyString
+  parent_id: 1
+
+two:
+  message: MyText
+  widget: 
+  ip_address: 
+  kind: MyString
+  parent_id: 1
