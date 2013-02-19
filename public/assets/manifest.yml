@@ -415,8 +415,10 @@ admin/html5shiv.js: admin/html5shiv-c1e866803d5f704366e8c085b8095cb7.js
 admin/html5shiv/index.js: admin/html5shiv-c1e866803d5f704366e8c085b8095cb7.js
 admin/ie_fix.js: admin/ie_fix-ab56bb6d12d2c281e7a87b1c4efacbd0.js
 admin/ie_fix/index.js: admin/ie_fix-ab56bb6d12d2c281e7a87b1c4efacbd0.js
-application.js: application-a511ea1545824440d723123402e011a5.js
-application/index.js: application-a511ea1545824440d723123402e011a5.js
+application.js: application-a25560352bfde68339c74b3efb2c1592.js
+application/index.js: application-a25560352bfde68339c74b3efb2c1592.js
+click.js: click-5b7fa1ac65eb2eb4f4a7ef030863d5b9.js
+click/index.js: click-5b7fa1ac65eb2eb4f4a7ef030863d5b9.js
 html5.js: html5-5a0c2e1f99b73358244b84719fa73517.js
 html5/index.js: html5-5a0c2e1f99b73358244b84719fa73517.js
 user_passwords.js: user_passwords-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
