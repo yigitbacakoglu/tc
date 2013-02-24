@@ -10,9 +10,10 @@ class Comment < ActiveRecord::Base
 
   belongs_to :post
   belongs_to :ip_address
+  belongs_to :user
   has_many :ratings, :as => :ratable, :class_name => 'Rating'
 
-  attr_accessible :kind, :message, :parent_id, :ip_address_id, :user_agent, :referer
+  attr_accessible :kind, :message, :parent_id, :ip_address_id, :user_agent, :referer, :user_id
 
   validates :message, :presence => true
   scope :main, lambda { where("parent_id IS NULL") }

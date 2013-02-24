@@ -32,6 +32,7 @@ class Post < ActiveRecord::Base
     is_sub_comment = options[:is_sub_comment]
     c = comments.new(:ip_address_id => IpAddress.find_by_value(options[:ip_address]).id)
     c.message = message
+    c.user_id = options[:user_id]
     c.user_agent = options[:user_agent]
     c.referer = options[:referer]
     c.spam? ? false : c.save

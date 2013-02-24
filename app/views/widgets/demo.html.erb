@@ -210,7 +210,7 @@
                           <div class="avatar pull-left"></div>
 
                           <div class="article">
-                            <div class="post-info"> <%= "#{comment.ip_address.user.firstname}, #{time_ago_in_words(comment.created_at)} ago" %>
+                            <div class="post-info"> <%= "#{comment.user.firstname}, #{time_ago_in_words(comment.created_at)} ago" %>
                               <%= rating_for(comment, :url => rate_posts_path) %>
                               <div class="post-error">
                                 <%= @object.errors.first[1] if @object == comment && @object.errors.any? %>
