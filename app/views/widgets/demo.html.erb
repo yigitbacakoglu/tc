@@ -1,9 +1,247 @@
 <%= content_for :head do %>
     <%= javascript_include_tag "jquery.raty" %>
     <%= javascript_include_tag "widget" %>
+    <%= stylesheet_link_tag "admin/font-awesome" %>
+    <style>
+        .box.bordered {
+            background-color: #fff;
+            margin: 10px auto 5px auto;
+            padding: 0;
+            border: 1px solid #cccccc;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .box {
+            height: 100%;
+            background: transparent;
+            margin: 10px auto 5px auto;
+            padding: 0;
+            line-height: 20px;
+
+        }
+
+        .padded10 {
+            padding: 10px;
+        }
+
+        .box .box-header {
+            height: auto;
+            margin-top: 0px;
+            padding: 10px;
+            padding-left: 20px;
+            font-size: 1.2em;
+            font-weight: 700;
+            line-height: 28px;
+            text-align: left;
+            text-transform: uppercase;
+            color: rgba(51, 86, 106, 0.5);
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6), 0 0 1px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            outline: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .recent-comments {
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ol, ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .input-success {
+            position: relative;
+            font-size: 12px;
+            line-height: 30px;
+            color: #63a822;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+            padding-right: .3em;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: inherit;
+            display: inline;
+            width: auto;
+            height: auto;
+            line-height: normal;
+            vertical-align: baseline;
+            background-image: none !important;
+            background-position: 0 0;
+            background-repeat: repeat;
+        }
+
+            /*.postbox .post-actions {*/
+            /*-webkit-transition: opacity linear .2s;*/
+            /*-moz-transition: opacity linear .2s;*/
+            /*-ms-transition: opacity linear .2s;*/
+            /*-o-transition: opacity linear .2s;*/
+            /*transition: opacity linear .2s;*/
+            /*visibility: visible;*/
+            /*filter: alpha(opacity=100);*/
+            /*-khtml-opacity: 1;*/
+            /*-moz-opacity: 1;*/
+            /*opacity: 1;*/
+            /*border-top: 1px dotted #c6cdd6;*/
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            /*height: 32px;*/
+            /*}*/
+
+        .recent-comments .comment-box {
+            min-height: 110px;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #eeeeee;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            margin-top: 6px;
+        }
+
+        .recent-comments .comment-box .avatar {
+            background-image: url('/assets/avatar.png');
+        }
+
+        .recent-comments .comment-box .avatar {
+            width: 80px;
+            height: 80px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            margin: 5px 10px;
+            background-size: 100%;
+        }
+
+        .recent-comments .comment-box .article {
+            margin-left: 100px;
+        }
+
+        .recent-comments .comment-box .article .post-info {
+            color: #67a0be;
+            font-weight: 600;
+            font-size: 10px;
+            margin-left: 10px;
+        }
+
+        .post-error {
+            color: rgb(245, 62, 46);
+            font-weight: 600;
+            font-size: 8px;
+            margin-left: 10px;
+        }
+
+        .post-success {
+            color: rgb(103, 190, 113);
+            font-weight: 600;
+            font-size: 8px;
+            margin-left: 10px;
+        }
+
+        .recent-comments .comment-box .article .post-content-preview {
+            color: #333;
+            margin: 3px 10px;
+        }
+    </style>
+    <%= javascript_tag "new_comment_form = '#{escape_javascript(comment_form(@comment, comment_posts_url))}'" %>
+    <!--<%#= javascript_tag "edit_comment_form = '#{escape_javascript(comment_form(@comment, update_comment_posts_url))}'" %>-->
 <% end %>
 
-<%= rating_for(@post, :url => rate_posts_path) %>
-<p><%= @post.errors.first[1] if @post.errors.any? %></p>
-<p><%= flash.first[1] if flash.any? %></p>
-<% flash.clear %>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="box bordered">
+            <div class="box-header">
+              <i class="icon-comments"></i> Widget Name
+              <div class="pull-right">
+                <%= rating_for(@post, :url => rate_posts_path) %>
+                <div class="post-error">
+                  <%= @object.errors.first[1] if @object == @post && @object.errors.any? %>
+                </div>
+                <div class="post-success">
+                  <%= @success[1] if @success && @success[0] == @post %>
+                </div>
+              </div>
+              <%= comment_form(@comment, comment_posts_url) %>
+            </div>
+            <div class="padded10">
+              <ul class="recent-comments">
+
+                <% @comments.each do |comment| %>
+
+                    <% unless comment.new_record? %>
+
+                        <li class="comment-box">
+                          <div class="avatar pull-left"></div>
+
+                          <div class="article">
+                            <div class="post-info"> <%= "#{comment.ip_address.user.firstname}, #{time_ago_in_words(comment.created_at)} ago" %>
+                              <%= rating_for(comment, :url => rate_posts_path) %>
+                              <div class="post-error">
+                                <%= @object.errors.first[1] if @object == comment && @object.errors.any? %>
+                              </div>
+                              <div class="post-success">
+                                <%= @success[1] if @success && @success[0] == comment %>
+                              </div>
+                            </div>
+                            <div class="post-content-preview" id="comment_<%= comment.id %>">
+
+                              <%= label_tag "content", comment.message, :id => "comment_label_#{comment.id}" %>
+                            </div>
+
+                            <div class="article-actions">
+                              <%= link_to "Edit", edit_comment_path(comment.id), :remote => true %>  -
+                              <%= link_to "Remove", edit_comment_path(comment.id), :remote => true %>
+                            </div>
+                          </div>
+                        </li>
+
+                    <% end %>
+
+                <% end %>
+              </ul>
+                <%= link_to "#{image_tag 'hero-image.png', :style => 'width:100px;height:50px;'}".html_safe, "//talkycloud.com" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

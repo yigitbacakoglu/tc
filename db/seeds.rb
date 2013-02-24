@@ -14,3 +14,7 @@ post.rating_category = Category.create(:max_value => 6,
                                        :name => "star",
                                        :category_type => "rating")
 post.save
+
+
+# SecureRandom.hex(10)
+# Devise.friendly_token

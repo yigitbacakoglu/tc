@@ -28,6 +28,12 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def comment(message, ip_address, is_sub_comment = nil)
+    c = comments.new(:ip_address_id => IpAddress.find_by_value(ip_address).id)
+    c.message = message
+    c.save
+  end
+
   def can_rate?(ip_address)
     user_ips = IpAddress.find_by_value(ip_address).user.ip_address_ids
     ratings = self.ratings.where("ip_address_id IN(?)", user_ips)
@@ -47,7 +53,7 @@ class Post < ActiveRecord::Base
 
   def set_defaults
     unless self.rating_category #|| self.commenting_category
-       self.rating_category = Category.where(:category_type => "rating").first
+      self.rating_category = Category.where(:category_type => "rating").first
     end
   end
 

@@ -1,0 +1,5 @@
+$('#edit_comment_' + <%= @current_comment.id %>).remove();
+$(".wrapper").html('<%= escape_javascript(render :template => "widgets/demo", :formats => [:html], :handlers => [:erb]) %>');
+$(function () {
+    apply_raty();
+});

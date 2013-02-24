@@ -3,6 +3,7 @@ Omrats::Application.routes.draw do
 
   root :to => "home#index"
   get '/demo', :to => "widgets#demo"
+  get '/demo-1', :to => "widgets#demo"
   get '/demo-2', :to => "widgets#demo"
   match '/admin', :to => 'admin/overview#index'
   match '/auth/:provider/callback' => 'authentications#create'
@@ -17,6 +18,7 @@ Omrats::Application.routes.draw do
       post :comment
     end
   end
+  resources :comments
 
   devise_for :user_registrations,
              :path => '/authenticate',

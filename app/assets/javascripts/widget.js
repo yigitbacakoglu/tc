@@ -22,8 +22,9 @@ function apply_raty() {
                 },
                 url:$(this).attr('data-url'),
                 data:{
-                    value:score
-//					id: $(this).attr('data-id'),
+                    value:score,
+					id: $(this).attr('data-id'),
+                    class_name:$(this).attr("data-classname")
                 },
                 dataType: "script"
             });

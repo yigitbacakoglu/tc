@@ -1,0 +1,3 @@
+$('#edit_comment_' + <%= @current_comment.id %>).remove();
+$('#comment_label_' + <%= @current_comment.id %>).hide();
+$('#comment_' + <%= @current_comment.id %>).append('<div class="edit_comment_<%= @current_comment.id %>"><%= escape_javascript(render :template => 'comments/edit', :formats => [:html], :handlers => [:erb]) %></div>')
