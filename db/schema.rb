@@ -11,32 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121223192554) do
+ActiveRecord::Schema.define(:version => 20130223213935) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "max_value"
+    t.string   "category_type"
   end
 
   create_table "comments", :force => true do |t|
     t.text     "message"
-    t.integer  "widget_id"
     t.integer  "ip_address_id"
     t.string   "kind"
     t.integer  "parent_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "post_id"
   end
 
   add_index "comments", ["ip_address_id"], :name => "index_comments_on_ip_address_id"
-  add_index "comments", ["widget_id"], :name => "index_comments_on_widget_id"
 
   create_table "ip_addresses", :force => true do |t|
-    t.float    "value"
+    t.string   "value"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "url"
+    t.integer  "widget_id"
+    t.integer  "category_id"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.integer  "rating_category_id"
+    t.integer  "commenting_category_id"
   end
 
   create_table "ratings", :force => true do |t|
@@ -67,6 +78,14 @@ ActiveRecord::Schema.define(:version => 20121223192554) do
   end
 
   add_index "restrictions", ["restirctable_id", "restrictable_type"], :name => "index_restrictions_on_restirctable_id_and_restrictable_type"
+
+  create_table "sales", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "stores", :force => true do |t|
     t.string   "name"

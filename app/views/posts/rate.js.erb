@@ -1,0 +1,10 @@
+$(".wrapper").html('<%= escape_javascript(render :template => "widgets/demo", :formats => [:html], :handlers => [:erb]) %>');
+$(function () {
+    apply_raty();
+});
+
+<%#= render :partial =>'spree/admin/shared/next/flashes' %>
+//$('.modal').modal('hide');
+//$(function () {
+//    run_controller_initializers();
+//});

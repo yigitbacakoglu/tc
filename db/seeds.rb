@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+widget = Widget.create(:key => 1, :webpage => "localhost")
+post = widget.posts.create(:url => "/demo")
+post.rating_category = Category.create(:max_value => 5,
+                                       :name => "star",
+                                       :category_type => "rating")
+post.save
+
+post = widget.posts.create(:url => "/demo-2")
+post.rating_category = Category.create(:max_value => 6,
+                                       :name => "star",
+                                       :category_type => "rating")
+post.save

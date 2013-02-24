@@ -13,9 +13,10 @@ gem 'omniauth-twitter'
 gem 'twitter'
 gem 'fb_graph'
 gem 'mongrel', '1.2.0.pre2'
-
+gem "recaptcha", :require => "recaptcha/rails"
 
 group :development do
+  gem "letsrate", "~> 1.0.8"
   gem "rails-erd"
   gem 'mysql2'
 end

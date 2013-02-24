@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  ROLES = %w[admin moderator author banned]
+  ROLES = %w[admin moderator author banned anonymous]
 
   attr_accessible :firstname, :lastname, :nickname, :role
 
@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :user_stores, :class_name => 'UserStore', :dependent => :destroy
   has_many :stores, :through => :user_stores
   has_many :restrictions, :as => :restrictable, :class_name => 'Restriction', :dependent => :destroy
-
+  has_many :ip_addresses, :class_name => "IpAddress"
 
   def self.current
     Thread.current[:user]

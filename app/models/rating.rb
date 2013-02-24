@@ -1,5 +1,11 @@
 class Rating < ActiveRecord::Base
-  has_one :ip_address
+  belongs_to :ip_address
   belongs_to :ratable, :polymorphic => true
+  #belongs_to :category
   attr_accessible :value, :ratable, :ratable_id, :ratable_type
+
+  def max_value
+    self.ratable.rating_category.max_value
+  end
+
 end

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="description" content="TinaGold.com domain for sale. You find this domain and other people can find as well."/>
+  <meta name="keywords" content="tina, tina gold, tinagold.com, who is tinagold.com "/>
+  <!--<script src="http://widgets.twimg.com/j/2/widget.js"></script>-->
+  <!--<link href="http://widgets.twimg.com/j/2/widget.css" rel="stylesheet" type="text/css">-->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title><%= request.host %> > Domain For Sale</title>
+  <link rel="shortcut icon" href="/assets/blogs/favicon.ico">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <%= javascript_include_tag "blogs/jquery.form" %>
+  <%= javascript_include_tag "blogs/jquery.blockUI" %>
+  <%= javascript_include_tag "blogs/jquery.infieldlabel.min" %>
+  <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js" type="text/javascript"></script>
+  <!-- Loads Twitter message -->
+  <%= javascript_include_tag "blogs/jquery.validate.min" %>
+  <%= javascript_include_tag "blogs/customize" %>
+
+  <%= stylesheet_link_tag "blogs/reset" %>
+  <%= stylesheet_link_tag "blogs/industry" %>
+  <!-- To switch the theme style, un-comment the swiss.css line, and comment the industry.css line -->
+  <!--<link rel="stylesheet" type="text/css" href="css/swiss.css" />-->
+
+  <!-- IE 6 Fixes -->
+  <!--[if lte IE 6]>
+  <%= javascript_include_tag "blogs/DD_belatedPNG" %>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38636227-1']);
+      _gaq.push(['_setDomainName', 'talkycloud.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>
+  <meta name='yandex-verification' content='79ee0685e1c46577'/>
+
+</head>
+<body>
+
+<a href="linktoportfolio.html" title="More of my Domains" id="portfolioButton"><img src="/assets/blogs/icons/world_link.png" alt="Domains"/>More
+  of my Domains</a>
+
+<div id="domainPortfolio">
+  <ul>
+    <li><a href="#">PireGibi.com</a></li>
+    <li><a href="#">TalkyCloud.com</a></li>
+  </ul>
+</div>
+<!-- end #domainPortfolio -->
+
+<div id="outerWrapper">
+  <h1>TinaGold.com <span class="saleTag">is for sale!</span></h1>
+
+  <div id="wrapper">
+    <h2 class="topHeading">Minimum Offer</h2>
+
+    <p class="minPrice">$150</p>
+
+    <h2>Request Information</h2>
+
+    <div id="formSection">
+      <%= form_for @sale, :url => save_contact_info_url, :method => "POST", :html => {:id => "offerForm"} do |f| %>
+          <p><label for="name"><img src="/assets/blogs/icons/user.png" alt="Name"/> Name</label>
+            <%= f.text_field :name, :class => "required", :id => "name" %>   </p>
+
+          <p><label for="email"><img src="/assets/blogs/icons/email.png" alt="Email"/> Email</label>
+            <%= f.text_field :email, :class => "required email", :id => "email" %> </p>
+
+          <p><label for="comments"><img src="/assets/blogs/icons/comment.png" alt="Comments"/> Offer/Message</label>
+            <%= f.text_area :message, :class => "required", :id => "comments", :cols => "40", :rows => "8" %>
+
+            </textarea></p>
+
+          <%= recaptcha_tags %>
+
+          <p>
+            <a class="button" id="submit" title="Submit" href="#"><img src="/assets/blogs/icons/email_go.png" alt="send"/>Send
+              Request</a></p>
+      <% end %>
+    </div>
+    <!-- end #formSection -->
+    <div class="success section">
+      <p><img src="/assets/blogs/icons/accept.png" alt="Success" class="imgLeft"/><strong>Your message has been
+        sent!</strong>
+        I'll get back to you as as soon as I can.</p>
+    </div>
+    <!-- end .success message -->
+    <div class="formerror section">
+      <p><img src="/assets/blogs/icons/exclamation.png" alt="Error" class="imgLeft"/><strong>Sorry, but the captcha text
+        was
+        different, please refresh and try again.</strong></p>
+    </div>
+    <!-- end .error message -->
+
+    <h2>My Domain Updates</h2>
+
+    <div class="section" id="twistter">
+      <a href="http://twitter.com/ycbacakoglu" title="Domain Tweets" class="button"><img src="/assets/blogs/icons/twitter.gif" alt="send"/>Follow me on Twitter</a>
+
+      <noscript>
+        <p>
+
+          <a href="http://twitter.com/ycbacakoglu" title="Domain Tweets" class="button">Follow me on Twitter</a>
+        </p>
+      </noscript>
+    </div>
+    <!-- end .section -->
+    <script>
+
+//        new TWTR.Widget({
+//            version: 2,
+//            type: 'search',
+//            search: 'tinagold',
+//            interval: 6000,
+//            title: 'Twitter &quot;tina gold&quot; Search Results',
+//            subject: 'tina gold',
+//            width: 487,
+//            height: 118,
+//            theme: {
+//                shell: {
+//                    background: '#8ec1da',
+//                    color: '#ffffff'
+//                },
+//                tweets: {
+//                    background: '#ffffff',
+//                    color: '#444444',
+//                    links: '#1985b5'
+//                }
+//            },
+//            features: {
+//                scrollbar: false,
+//                loop: true,
+//                live: true,
+//                hashtags: true,
+//                timestamp: true,
+//                avatars: true,
+//                behavior: 'default'
+//            }
+//        }).render().start();
+//
+    </script>
+    <div id="footer" class="section">
+      <p>&copy; 2013 YCB
+    </div>
+    <!-- end footer section -->
+  </div>
+  <!-- end #wrapper -->
+</div>
+<!-- end #outerWrapper -->
+</body>
+</html>
+
+
+
+<!-- Localized -->

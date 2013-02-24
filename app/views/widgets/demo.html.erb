@@ -1,0 +1,9 @@
+<%= content_for :head do %>
+    <%= javascript_include_tag "jquery.raty" %>
+    <%= javascript_include_tag "widget" %>
+<% end %>
+
+<%= rating_for(@post, :url => rate_posts_path) %>
+<p><%= @post.errors.first[1] if @post.errors.any? %></p>
+<p><%= flash.first[1] if flash.any? %></p>
+<% flash.clear %>
