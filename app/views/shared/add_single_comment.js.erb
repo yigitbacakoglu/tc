@@ -1,0 +1,5 @@
+$('#comment_container').html('<li class="comment-box" id="comment_container<%= @current_comment.id %>">' +
+        '<%= escape_javascript(render :template => 'shared/single_comment', :formats => [:html], :handlers => [:erb]) %></li>')
+$(function () {
+    apply_raty();
+});

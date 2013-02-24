@@ -70,6 +70,9 @@ GEM
     json (1.7.7)
     jwt (0.1.5)
       multi_json (>= 1.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     letsrate (1.0.8)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -182,6 +185,7 @@ DEPENDENCIES
   devise
   fb_graph
   jquery-rails
+  kaminari
   letsrate (~> 1.0.8)
   mongrel (= 1.2.0.pre2)
   mysql2

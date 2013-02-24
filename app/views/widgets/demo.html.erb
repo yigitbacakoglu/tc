@@ -126,6 +126,16 @@
             margin-top: 6px;
         }
 
+        .recent-comments .view-more {
+            min-height: 24px;
+            background-color: #fff;
+        }
+
+        .recent-comments .view-more:hover {
+            background-color: #eeeeee;
+            cursor: hand !important;
+        }
+
         .recent-comments .comment-box .avatar {
             background-image: url('/assets/avatar.png');
         }
@@ -200,13 +210,13 @@
               <%= comment_form(@comment, comment_posts_url) %>
             </div>
             <div class="padded10">
-              <ul class="recent-comments">
+              <ul class="recent-comments" id="comment_container">
 
                 <% @comments.each do |comment| %>
 
                     <% unless comment.new_record? %>
 
-                        <li class="comment-box">
+                        <li class="comment-box" id="comment_container<%= comment.id %>">
                           <div class="avatar pull-left"></div>
 
                           <div class="article">
@@ -234,8 +244,11 @@
                     <% end %>
 
                 <% end %>
+                <li class="comment-box view-more" style="text-align: center">
+                  <%#= link_to_next_page @comments, 'View More', :remote => true %>
+                </li>
               </ul>
-                <%= link_to "#{image_tag 'hero-image.png', :style => 'width:100px;height:50px;'}".html_safe, "//talkycloud.com" %>
+              <%= link_to "#{image_tag 'hero-image.png', :style => 'width:100px;height:50px;'}".html_safe, "//talkycloud.com" %>
             </div>
           </div>
         </div>

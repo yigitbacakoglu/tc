@@ -1,0 +1,22 @@
+<div class="avatar pull-left"></div>
+
+<div class="article">
+  <div class="post-info"> <%= "#{@current_comment.user.firstname}, #{time_ago_in_words(@current_comment.created_at)} ago" %>
+    <%= rating_for(@current_comment, :url => rate_posts_path) %>
+    <div class="post-error">
+      <%= @object.errors.first[1] if @object == @current_comment && @object.errors.any? %>
+    </div>
+    <div class="post-success">
+      <%= @success[1] if @success && @success[0] == @current_comment %>
+    </div>
+  </div>
+  <div class="post-content-preview" id="@current_comment_<%= @current_comment.id %>">
+
+    <%= label_tag "content", @current_comment.message, :id => "@current_comment_label_#{@current_comment.id}" %>
+  </div>
+
+  <div class="article-actions">
+    <%= link_to "Edit", edit_comment_path(@current_comment.id), :remote => true %>  -
+    <%= link_to "Remove", comment_path(@current_comment.id), :remote => true, :method => :delete, :confirm => "Are you sure?" %>
+  </div>
+</div>

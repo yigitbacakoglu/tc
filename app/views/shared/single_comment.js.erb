@@ -1,0 +1,4 @@
+$('#comment_container_' + <%= @current_comment.id %>).html('<%= escape_javascript(render :template => 'shared/single_comment', :formats => [:html], :handlers => [:erb]) %>')
+$(function () {
+    apply_raty();
+});

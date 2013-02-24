@@ -1,12 +1,13 @@
 class Comment < ActiveRecord::Base
+  paginates_per 25
 
   include Rakismet::Model
-  rakismet_attrs  :author => proc { ip_address.user.fullname },
-                  :author_email => proc { ip_address.user.email },
-                  :user_ip => proc { ip_address.value },
-                  :content => proc { message },
-                  :referrer => proc { referer },
-                  :user_agent => proc { user_agent }
+  rakismet_attrs :author => proc { ip_address.user.fullname },
+                 :author_email => proc { ip_address.user.email },
+                 :user_ip => proc { ip_address.value },
+                 :content => proc { message },
+                 :referrer => proc { referer },
+                 :user_agent => proc { user_agent }
 
   belongs_to :post
   belongs_to :ip_address

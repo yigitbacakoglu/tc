@@ -16,7 +16,7 @@ class PostsController < ApplicationController
                        params[:comment][:message],
                        :ip_address => request.remote_ip,
                        :referrer => request.referer,
-                       :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id)),
+                       :user_id => request.referer,
                        :user_agent => env["HTTP_USER_AGENT"]
                       )
         flash[:success] = "Thank you for rating!"
