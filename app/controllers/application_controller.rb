@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   def check_sale
     for_sale = ["tinagold.com", "www.tinagold.com"]
     if for_sale.include?(request.host)
-      redirect_to sale_path
+      redirect_to sale_path if request.path != sale_path
     end
   end
 end
