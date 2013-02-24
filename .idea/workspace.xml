@@ -40,7 +40,16 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.627907">
+            <state line="31" column="101" selection-start="899" selection-end="937" vertical-scroll-proportion="0.6617336">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="83" selection-start="367" selection-end="384" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -524,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="83" selection-start="367" selection-end="384" vertical-scroll-proportion="0.33826637">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7480" column="13" selection-start="211395" selection-end="211395" vertical-scroll-proportion="0.75">
@@ -626,9 +628,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="83" selection-start="367" selection-end="384" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.627907">
+        <state line="31" column="101" selection-start="899" selection-end="937" vertical-scroll-proportion="0.6617336">
           <folding />
         </state>
       </provider>
