@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include BaseHelper
   layout "application"
   prepend_before_filter :set_current_user
+  before_filter :check_sale
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url, :alert => exception.message
@@ -22,6 +23,13 @@ class ApplicationController < ActionController::Base
     else
       a = IpAddress.find_or_create_by_value(request.remote_ip)
       @current_anonymous_user = a.user
+    end
+  end
+
+  def check_sale
+    for_sale = ["tinagold.com", "www.tinagold.com"]
+    if for_sale.include?(request.host)
+      redirect_to sale_path
     end
   end
 end
