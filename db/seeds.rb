@@ -1,4 +1,8 @@
-widget = Widget.create(:key => 1, :webpage => "localhost")
+if Rails.env == "development"
+  widget = Widget.create(:key => 1, :webpage => "localhost")
+else
+  widget = Widget.create(:key => 1, :webpage => "talkycloud.com")
+end
 post = widget.posts.create(:url => "/demo")
 post.rating_category = Category.create(:max_value => 5,
                                        :name => "star",
