@@ -1,9 +1,18 @@
 class Comment < ActiveRecord::Base
+
+  include Rakismet::Model
+  rakismet_attrs  :author => proc { ip_address.user.fullname },
+                  :author_email => proc { ip_address.user.email },
+                  :user_ip => proc { ip_address.value },
+                  :content => proc { message },
+                  :referrer => proc { referer },
+                  :user_agent => proc { user_agent }
+
   belongs_to :post
   belongs_to :ip_address
   has_many :ratings, :as => :ratable, :class_name => 'Rating'
 
-  attr_accessible :kind, :message, :parent_id, :ip_address_id
+  attr_accessible :kind, :message, :parent_id, :ip_address_id, :user_agent, :referer
 
   validates :message, :presence => true
   scope :main, lambda { where("parent_id IS NULL") }

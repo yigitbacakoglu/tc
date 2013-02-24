@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223213935) do
+ActiveRecord::Schema.define(:version => 20130224182607) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(:version => 20130223213935) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.integer  "post_id"
+    t.string   "user_agent"
+    t.string   "referer"
   end
 
   add_index "comments", ["ip_address_id"], :name => "index_comments_on_ip_address_id"

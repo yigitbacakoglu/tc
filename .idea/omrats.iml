@@ -72,6 +72,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-erd (v1.1.0, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.12, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.3, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rakismet (v1.3.0, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.1, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="recaptcha (v0.3.5, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-graphviz (v1.0.8, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />

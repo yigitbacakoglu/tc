@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
     self.user_registration.try(:email)
   end
 
+  def fullname
+    "#{firstname} #{lastname}"
+  end
+
 end

@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-
   def set_current_user
     User.current = user_registration_signed_in? ? current_user_registration.user : nil
     @current_user = User.current

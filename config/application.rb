@@ -62,5 +62,11 @@ module Omrats
     config.gem "cancan"
 
     config.assets.initialize_on_precompile = false
+
+    #Akismet
+    config.rakismet.key = '0c1ae24c878a'
+    config.rakismet.url = 'http://talkycloud.com/'
+    #config.rakismet.host = 'http://talkycloud.com/'
+
   end
 end

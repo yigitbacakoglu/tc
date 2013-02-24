@@ -12,7 +12,12 @@ class PostsController < ApplicationController
 
   def comment
     if @current_user || @current_anonymous_user
-      if @post.comment(params[:comment][:message], request.remote_ip, nil)
+      if @post.comment(
+                       params[:comment][:message],
+                       :ip_address => request.remote_ip,
+                       :referrer => request.referer,
+                       :user_agent => env["HTTP_USER_AGENT"]
+                      )
         flash[:success] = "Thank you for rating!"
       end
     end

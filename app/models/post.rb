@@ -28,10 +28,13 @@ class Post < ActiveRecord::Base
     end
   end
 
-  def comment(message, ip_address, is_sub_comment = nil)
-    c = comments.new(:ip_address_id => IpAddress.find_by_value(ip_address).id)
+  def comment(message, options = {})
+    is_sub_comment = options[:is_sub_comment]
+    c = comments.new(:ip_address_id => IpAddress.find_by_value(options[:ip_address]).id)
     c.message = message
-    c.save
+    c.user_agent = options[:user_agent]
+    c.referer = options[:referer]
+    c.spam? ? false : c.save
   end
 
   def can_rate?(ip_address)
