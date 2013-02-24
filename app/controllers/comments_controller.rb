@@ -9,13 +9,18 @@ class CommentsController < ApplicationController
   def update
     if @current_user || @current_anonymous_user
       if @current_comment.update_attributes(params[:comment])
-        flash[:success] = "Thank you for rating!"
+        flash[:success] = "Thank you for comment!"
       end
     end
   end
 
   def destroy
-
+    if @current_user || @current_anonymous_user
+      if @current_comment.destroy
+        flash[:success] = "Deleted"
+      end
+    end
+    render "posts/rate"
   end
 
   private
