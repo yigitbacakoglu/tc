@@ -52,6 +52,6 @@ class Comment < ActiveRecord::Base
   end
 
   def save_rating
-    self.ratings.build(:value => 0, :ip_address_id => ip_address_id)
+    #self.ratings.build(:value => 0, :ip_address_id => ip_address_id)
   end
 end
