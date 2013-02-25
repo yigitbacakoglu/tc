@@ -1,4 +1,4 @@
-class WidgetsController < ApplicationController
+class WidgetsController < WelcomeController
   before_filter :load_widget
 
   def demo

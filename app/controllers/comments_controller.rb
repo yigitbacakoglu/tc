@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class CommentsController < WelcomeController
 
   before_filter :load_widget
 

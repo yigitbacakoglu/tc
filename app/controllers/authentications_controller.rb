@@ -48,7 +48,7 @@ class AuthenticationsController < ApplicationController
 
   private
   def set_session
-    session[:user_registration_return_to] = '/admin'
+    session[:user_registration_return_to] ||= '/admin'
   end
 
   def get_name_from_twitter(auth_hash)
