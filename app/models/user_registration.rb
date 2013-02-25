@@ -7,7 +7,7 @@ class UserRegistration < ActiveRecord::Base
   belongs_to :user
   has_many :user_authentications, :class_name => 'UserAuthentication', :dependent => :destroy
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  #before_save :check_user
+  before_save :check_user
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
@@ -32,14 +32,21 @@ class UserRegistration < ActiveRecord::Base
                                     :oauth_token_secret => omniauth['credentials']['secret'])
   end
 
-  #def check_user
-  #  if self.user.blank?
-  #    ip = IpAddress.where(:value => self.current_sign_in_ip).first
-  #   if !ip.blank?
-  #     self.user = ip.user
-  #   end
-  #  end
-  #end
+  def check_user
+    if self.user.blank?
+      #users = IpAddress.where(:value => self.current_sign_in_ip).map(&:user)
+      self.user = User.new(:firstname => self.email.split('@').first,
+                           :lastname => self.email.split('@').last)
+      #users.each do |usr|
+      #  if usr.firstname == "Anonymous"
+      #    self.user = usr
+      #    self.user.firstname = self.email
+      #    self.save!
+      #    return true
+      #  end
+      #end
+    end
+  end
 
   def password_required?
     (user_authentications.empty? || !password.blank?) && super
