@@ -20,6 +20,7 @@ class CommentsController < WelcomeController
         flash[:success] = "Deleted"
       end
     end
+    render 'posts/rate'
   end
 
   private
