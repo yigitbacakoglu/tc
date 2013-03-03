@@ -22,7 +22,7 @@
       </a>
 
       <ul id="profile-opts" class="collapse secondary">
-        <%= tab :accounts, :label => "My Account", :url => admin_account_path(@current_user), :match_path => "/admin/account.*" %>
+        <%= tab :accounts, :label => "My Account", :url => admin_account_path, :match_path => "/admin/account.*" %>
         <li class="">
           <%= link_to "Logout", destroy_user_registration_session_path, :method => :delete %>
         </li>

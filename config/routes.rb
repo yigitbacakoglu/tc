@@ -31,7 +31,8 @@ Omrats::Application.routes.draw do
 
   namespace :admin do
     resources :overview
-    resources :account
+    resources :account, :except => [:show, :index]
+    get '/account', :as => :account, :to => 'account#show'
     resources :widgets
   end
 
