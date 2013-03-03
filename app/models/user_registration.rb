@@ -52,4 +52,8 @@ class UserRegistration < ActiveRecord::Base
     (user_authentications.empty? || !password.blank?) && super
   end
 
+  def has_password?
+    !self.encrypted_password.blank?
+  end
+
 end

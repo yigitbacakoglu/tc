@@ -1,23 +1,14 @@
-<%# start -----------------------------------Spree social ---------------------------------- %>
-<% if @current_controller == "user_registrations" %>
-
-    <div class="socialBox"><span class="socialTitle"> <%= t("or_signupwith") %></span></div>
-    <div class="clear30"></div>
-<% elsif @current_controller == "user_sessions" %>
-    <div class="socialBox"><span class="socialTitle"> <%= t(:or_loginwith) %></span></div>
-    <div class="clear20"></div>
-
-<% elsif @current_controller == "account" %>
-
-<% else %>
-    <div class="socialBox"><span class="socialTitle"> <%= t("or_signupwith") %></span></div>
-    <div class="clear20"></div>
-<% end %>
 <div id="loginSocial">
-  <% @url = "/user/auth/" %>
-  <%# Spree::AuthenticationMethod.available_for(@user).each do |method| %>
-    <%= link_to(t(method.provider), "#{@url}#{method.provider}", :title => t(:sign_in_with, :provider => method.provider), :id => "loginSocial#{method.provider.camelize}") if method.active %>
-    <%# end %>
+  <% @url = "/auth/" %>
+  <% ['facebook', 'twitter'].each do |method| %>
+
+      <%= link_to("<i class='icon-#{method} custom'></i> #{method.camelize}".html_safe, "/auth/#{method}",
+                  :id => "loginSocial#{method.camelize}",
+                  :rel => "tooltip",
+                  "data-original-title" => "#{method.camelize} Login",
+                  "data-placement" => "top",
+                  :class => "btn btn-small") unless @user_registration.user_authentications.map(&:provider).include?(method) %>
+    <% end %>
       <div class="clear20"></div>
       <div class="socialBox"></div>
 </div>

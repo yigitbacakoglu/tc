@@ -25,8 +25,8 @@ class WidgetsController < WelcomeController
 
   def load_widget
     #URI.parse(env["REQUEST_URI"])
-    @widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
-    @post = @widget.posts.find_or_create_by_url(request.path)
+    @current_widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
+    @post = @current_widget.posts.find_or_create_by_url(request.path)
     @comment = @post.comments.build
     @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc")
   end

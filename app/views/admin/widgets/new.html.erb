@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="box bordered">
+        <div class="box-header">
+          <i class="icon-user"></i> New Widget
+        </div>
+        <%= form_for [:admin, @widget] do |f| %>
+            <div class="row-fluid">
+              <div class="span6">
+                <div class="padded">
+                  <div class="section-title">
+                    Web Page Details
+                  </div>
+                  <div class="vpadded">
+                    <div class="input full-width">
+                      <%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>
+                    </div>
+                    <div class="input full-width">
+                      <%= f.text_field :category_id, :placeholder => 'Category' %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row-fluid">
+              <div class="span6">
+                <div class="padded">
+                  <div class="vpadded">
+                    <%= f.submit "Create", :class => "btn medium-blue" %> or
+                    <%= link_to "Cancel", admin_widgets_path %>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

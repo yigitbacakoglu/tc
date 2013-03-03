@@ -48,8 +48,8 @@ class PostsController < WelcomeController
 
   def load_widget
     #URI.parse(env["REQUEST_URI"])
-    @widget = Widget.where(:key => 1, :webpage => request.host).first
-    @post = @widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
+    @current_widget = Widget.where(:key => 1, :webpage => request.host).first
+    @post = @current_widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
     @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc")
     @comment = @post.comments.build
 

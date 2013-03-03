@@ -32,6 +32,7 @@ Omrats::Application.routes.draw do
   namespace :admin do
     resources :overview
     resources :account
+    resources :widgets
   end
 
 end

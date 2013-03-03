@@ -1,14 +1,21 @@
-<% if @user.user_authentications %>
-    <% unless @user.user_authentications.empty? %>
-        <legend><%= t(:social_accounts) %></legend>
+<div class="section-title">
+  Social Accounts
+</div>
+<% if @user_registration.user_authentications %>
+    <% unless @user_registration.user_authentications.empty? %>
+
         <p><strong><%= t(:you_have_signed_in_with_these_services) %>:</strong></p>
 
         <div class="authentications">
-          <% for user_authentication in @user.user_authentications %>
+          <% for user_authentication in @user_registration.user_authentications %>
               <div class="authentication">
-                <%= image_tag "store/#{user_authentication.provider}_32.png", :size => "32x32", :class => "columns" %>
-                <div class="provider columns two"><%#= user_authentication.provider %></div>
-                <%= link_to icon('delete') + ' ' +"Delete", user_authentication, :class => "removeAuth" %>
+
+              <p class="text-transparent"><i class="social-link icon-<%= user_authentication.provider %> custom "></i>
+                <%= "#{user_authentication.provider.camelize} " %>
+                <%#= link_to '<i class="icon-remove "></i>'.html_safe, '#', :remote => true %>
+              </p>
+
+                <%#= link_to "Delete", user_authentication, :class => "removeAuth" %>
               </div>
           <% end %>
           <div class="clear"></div>
@@ -16,13 +23,23 @@
     <% end %>
 
 <% end %>
-<%= content_tag(:p, content_tag(:strong, t(:add_another_service_to_sign_in_with))) if AuthenticationMethod.available_for(@user).exists? %>
-<%= render :partial => "spree/shared/social" %>
+<%= content_tag(:p, content_tag(:strong, t(:add_another_service_to_sign_in_with))) %>
+<%= render :partial => "shared/social_buttons" %>
+<style>
+    .icon-facebook.custom {
+        color: #3b5998;
+        font-size: 25px;
+    }
 
+    .icon-twitter.custom {
+        font-size: 25px !important;
+        color: rgb(0, 173, 255);
+    }
+</style>
 <!--Used in account page.-->
 <script>
     $(document).ready(function () {
-        has_password = <%= @user.has_password? %>;
+        has_password = <%= @user_registration.has_password? %>;
         $('.removeAuth').click(function (e) {
             e.preventDefault();
             if (confirm('<%=  t(:remove_authentication_option_confirmation) %>')) {

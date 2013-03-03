@@ -26,10 +26,10 @@ class CommentsController < WelcomeController
   private
   def load_widget
     #URI.parse(env["REQUEST_URI"])
-    @widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
+    @current_widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
     @current_comment = Comment.find(params[:id])
     @post = @current_comment.post
-    unless @widget.posts.include?(@post)
+    unless @current_widget.posts.include?(@post)
       redirect_to root_path
     end
     @comment = @post.comments.build

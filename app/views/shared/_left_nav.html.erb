@@ -1,3 +1,6 @@
+<!--:match_path => new_admin_order_path-->
+
+
 <nav id="primary" class="main-nav collapsible-nav">
   <!-- Brand -->
   <a id="sidebar-brand" href="dashboard.html">
@@ -19,9 +22,7 @@
       </a>
 
       <ul id="profile-opts" class="collapse secondary">
-        <li class="">
-          <%= link_to "Change Password", admin_account_path(@current_user) %>
-        </li>
+        <%= tab :accounts, :label => "My Account", :url => admin_account_path(@current_user), :match_path => "/admin/account.*" %>
         <li class="">
           <%= link_to "Logout", destroy_user_registration_session_path, :method => :delete %>
         </li>
@@ -29,35 +30,23 @@
     </li>
 
     <!-- Dashboard -->
-    <li class="active">
-      <a href="/admin">
-          <span class="icon">
-            <i class="icon-dashboard"></i>
-          </span>
-          <span class="text">
-            Dashboard
-          </span>
-      </a>
-    </li>
+    <%= tab :dashboard, :label => "Dashboard", :url => admin_path, :icon => 'dashboard',:match_path => "/admin" %>
 
     <!-- Components -->
-    <li class="">
+    <li class="<%= "active" if request.fullpath.gsub('//', '/').match("/admin/.*widget.*").to_s == request.fullpath %>">
 
       <a href="#components-list" class="accordion-toggle" data-toggle="collapse">
           <span class="icon">
             <i class="icon-microformats"></i>
           </span>
           <span class="text">
-            Components <b class="caret"></b>
+            Widgets <b class="caret"></b>
           </span>
       </a>
 
       <ul id="components-list" class="collapse secondary">
-        <li class="">
-          <a href="components/buttons.html">
-            Buttons
-          </a>
-        </li>
+        <%= tab :widgets, :label => "All", :url => admin_widgets_path, :match_path => '/admin/widgets' %>
+        <%= tab :widgets, :label => "New Widget", :url => new_admin_widget_path, :match_path => new_admin_widget_path %>
       </ul>
 
     </li>

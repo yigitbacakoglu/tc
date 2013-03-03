@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include BaseHelper
   layout "application"
-  prepend_before_filter :load_widget
   prepend_before_filter :set_current_user
   before_filter :check_sale
 
@@ -35,14 +34,14 @@ class ApplicationController < ActionController::Base
 
   def load_widget
     #URI.parse(env["REQUEST_URI"])
-    @widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
+    @current_widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
 
   #  if params[:action] == 'demo'
-  #    @post = @widget.posts.find_or_create_by_url(request.path)
+  #    @post = @current_widget.posts.find_or_create_by_url(request.path)
   #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
   #
   #  else
-  #    @post = @widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
+  #    @post = @current_widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
   #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
   #
   #  end
@@ -57,7 +56,7 @@ class ApplicationController < ActionController::Base
   ##  ---
   #    @current_comment = Comment.find(params[:id])
   #    @post = @current_comment.post
-  #    unless @widget.posts.include?(@post)
+  #    unless @current_widget.posts.include?(@post)
   #      redirect_to root_path
   #    end
   #    @comment = @post.comments.build
