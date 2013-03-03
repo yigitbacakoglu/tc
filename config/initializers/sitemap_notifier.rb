@@ -28,3 +28,4 @@ SitemapNotifier::Notifier.configure do |config|
   # If you don't want the notifications to run in the background
   #   config.background = false
 end
+

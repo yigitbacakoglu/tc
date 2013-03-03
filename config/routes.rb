@@ -1,6 +1,8 @@
 Omrats::Application.routes.draw do
 
 
+  match 'sitemap.xml' => 'sitemaps#sitemap'
+
   root :to => "home#index"
   get '/demo', :to => "widgets#demo"
   get '/demo-1', :to => "widgets#demo"
