@@ -4,9 +4,9 @@ Omrats::Application.routes.draw do
   match 'sitemap.xml' => 'sitemaps#sitemap'
 
   root :to => "home#index"
-  get '/demo', :to => "widgets#demo"
-  get '/demo-1', :to => "widgets#demo"
-  get '/demo-2', :to => "widgets#demo"
+  get '/demo', :to => "widgets#demo", :as => :demo
+  get '/demo-1', :to => "widgets#demo", :as => :demo2
+  get '/demo-2', :to => "widgets#demo", :as => :demo3
   match '/admin', :to => 'admin/overview#index', :as => :admin
   match '/auth/:provider/callback' => 'authentications#create'
 

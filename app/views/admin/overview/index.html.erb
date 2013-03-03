@@ -1,36 +1,38 @@
 <% @offers = Sale.all %>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="box bordered">
-        <div class="padded">
-          <div class="section-title">TinaGold.com Offers</div>
-          <table class="table">
-            <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Message</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% @offers.each do |offer| %>
+<% if params[:yigitcan] %>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="box bordered">
+            <div class="padded">
+              <div class="section-title">TinaGold.com Offers</div>
+              <table class="table">
+                <thead>
                 <tr>
-                  <td>
-                    <%= offer.name %>
-                  </td>
-                  <td style="line-height: 24px;">
-                    <%= offer.email %>
-                  </td>
-                  <td>   <%= offer.message %>
-                  </td>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Message</th>
                 </tr>
-            <% end %>
+                </thead>
+                <tbody>
+                <% @offers.each do |offer| %>
+                    <tr>
+                      <td>
+                        <%= offer.name %>
+                      </td>
+                      <td style="line-height: 24px;">
+                        <%= offer.email %>
+                      </td>
+                      <td>   <%= offer.message %>
+                      </td>
+                    </tr>
+                <% end %>
 
-            </tbody>
-          </table>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+<% end %>
