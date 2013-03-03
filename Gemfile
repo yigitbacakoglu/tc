@@ -17,6 +17,7 @@ gem "recaptcha", :require => "recaptcha/rails"
 gem 'rakismet'
 gem 'kaminari'
 gem 'mechanize'
+gem 'sitemap_notifier'
 
 group :development do
   gem "letsrate", "~> 1.0.8"
