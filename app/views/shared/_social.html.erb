@@ -1,0 +1,57 @@
+<% if @user.user_authentications %>
+    <% unless @user.user_authentications.empty? %>
+        <legend><%= t(:social_accounts) %></legend>
+        <p><strong><%= t(:you_have_signed_in_with_these_services) %>:</strong></p>
+
+        <div class="authentications">
+          <% for user_authentication in @user.user_authentications %>
+              <div class="authentication">
+                <%= image_tag "store/#{user_authentication.provider}_32.png", :size => "32x32", :class => "columns" %>
+                <div class="provider columns two"><%#= user_authentication.provider %></div>
+                <%= link_to icon('delete') + ' ' +"Delete", user_authentication, :class => "removeAuth" %>
+              </div>
+          <% end %>
+          <div class="clear"></div>
+        </div>
+    <% end %>
+
+<% end %>
+<%= content_tag(:p, content_tag(:strong, t(:add_another_service_to_sign_in_with))) if AuthenticationMethod.available_for(@user).exists? %>
+<%= render :partial => "spree/shared/social" %>
+
+<!--Used in account page.-->
+<script>
+    $(document).ready(function () {
+        has_password = <%= @user.has_password? %>;
+        $('.removeAuth').click(function (e) {
+            e.preventDefault();
+            if (confirm('<%=  t(:remove_authentication_option_confirmation) %>')) {
+                if (!has_password) {
+                    e.preventDefault();
+                    $('.default_fancybox').trigger('click');
+                    $("<div class='flash hideit warning'><div class='center_warning'><p><%= t(:need_to_define_password) %><span><%= t(:close) %></span></p></div></div>").insertBefore('#widget_form');
+                }
+                else if (has_password) {
+                    $.ajax({
+                        type:'POST',
+                        url:$(this).attr("href"),
+                        data:{
+                            _method:'delete',
+                            authenticity_token:AUTH_TOKEN
+                        },
+                        dataType:'script',
+                        success:function (response) {
+                            el.parents("tr").fadeOut('hide');
+                        },
+                        error:function (response, textStatus, errorThrown) {
+                            show_flash_error(response.responseText);
+                        }
+                    });
+                }
+            }
+        });
+    });
+
+
+</script>
+<%# end -----------------------------------Spree social ---------------------------------- %>

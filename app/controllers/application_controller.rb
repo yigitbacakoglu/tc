@@ -2,9 +2,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include BaseHelper
   layout "application"
+  prepend_before_filter :load_widget
   prepend_before_filter :set_current_user
   before_filter :check_sale
-  #before_filter :load_widget
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url, :alert => exception.message
@@ -37,32 +37,32 @@ class ApplicationController < ActionController::Base
     #URI.parse(env["REQUEST_URI"])
     @widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
 
-    if params[:action] == 'demo'
-      @post = @widget.posts.find_or_create_by_url(request.path)
-      @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
-
-    else
-      @post = @widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
-      @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
-
-    end
-
-
-    if params[:class_name] == "comment"
-      @object = @comments.where(:id => params[:id]).first
-    elsif params[:class_name] == "post"
-      @object = @post
-    end
-
-  #  ---
-      @current_comment = Comment.find(params[:id])
-      @post = @current_comment.post
-      unless @widget.posts.include?(@post)
-        redirect_to root_path
-      end
-      @comment = @post.comments.build
-      #@comments = @post.comments.joins(:ratings).order("#{::Rating.quoted_table_name}.value desc")
-      @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
+  #  if params[:action] == 'demo'
+  #    @post = @widget.posts.find_or_create_by_url(request.path)
+  #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
+  #
+  #  else
+  #    @post = @widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
+  #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
+  #
+  #  end
+  #
+  #
+  #  if params[:class_name] == "comment"
+  #    @object = @comments.where(:id => params[:id]).first
+  #  elsif params[:class_name] == "post"
+  #    @object = @post
+  #  end
+  #
+  ##  ---
+  #    @current_comment = Comment.find(params[:id])
+  #    @post = @current_comment.post
+  #    unless @widget.posts.include?(@post)
+  #      redirect_to root_path
+  #    end
+  #    @comment = @post.comments.build
+  #    #@comments = @post.comments.joins(:ratings).order("#{::Rating.quoted_table_name}.value desc")
+  #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
   end
 
 

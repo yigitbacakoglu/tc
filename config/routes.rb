@@ -5,7 +5,7 @@ Omrats::Application.routes.draw do
   get '/demo', :to => "widgets#demo"
   get '/demo-1', :to => "widgets#demo"
   get '/demo-2', :to => "widgets#demo"
-  match '/admin', :to => 'admin/overview#index'
+  match '/admin', :to => 'admin/overview#index', :as => :admin
   match '/auth/:provider/callback' => 'authentications#create'
 
   get '/sale', :to => "blogs#sale", :as => :sale
@@ -31,6 +31,7 @@ Omrats::Application.routes.draw do
 
   namespace :admin do
     resources :overview
+    resources :account
   end
 
 end

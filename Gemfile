@@ -16,6 +16,7 @@ gem 'mongrel', '1.2.0.pre2'
 gem "recaptcha", :require => "recaptcha/rails"
 gem 'rakismet'
 gem 'kaminari'
+gem 'mechanize'
 
 group :development do
   gem "letsrate", "~> 1.0.8"

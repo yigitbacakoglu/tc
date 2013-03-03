@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="box bordered">
+        <div class="box-header">
+          <i class="icon-th-list"></i> My Account
+          <div class="pull-right">
+            <div class="btn-group">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-cog"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-left">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                Change Password
+              </div>
+              <div class="vpadded">
+                <%= form_for @user_registration, :url => admin_account_path, :method => :put, :html => {:class => "mainForm"} do |f| %>
+                    <div class="input full-width">
+
+                      <%= f.password_field :password, :placeholder => "Password" %>
+                    </div>
+                    <div class="input full-width">
+
+                      <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %>
+                    </div>
+                    <div class="vpadded">
+                      <%= f.submit "Update", :class => "btn medium-blue" %> or
+                      <%= link_to "Cancel", admin_path %>
+                    </div>
+
+                    <%#= render :partial => 'shared/social' %>
+
+                <% end %>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="widget_form" style="display:none">
+  <%= form_for @user_registration, :url => admin_account_path, :remote => true, :method => :put, :html => {:class => "mainForm"} do |f| %>
+      <fieldset>
+        <legend><%= t(:new_password) %> </legend>
+        <div class="rowElem">
+          <%= f.label :password, t(:password) %>
+          <div class="formRight">
+            <%= f.password_field :password %>
+          </div>
+        </div>
+        <div class="rowElem">
+          <%= f.label :password_confirmation, t(:confirm_password) %>
+          <div class="formRight">
+            <%= f.password_field :password_confirmation, :class => 'title' %>
+          </div>
+        </div>
+        <div class="fix"></div>
+        <div class="submitForm">
+          <%= f.submit t(:update), :disable_with => t('payment_states.processing'), :class => "button button-blue button-big" %> <%= t(:or) %>
+          <%= link_to t(:cancel), admin_account_path %>
+          <%= hidden_field_tag 'new_password', 'new_password' %>
+        </div>
+
+      </fieldset>
+  <% end %>
+</div>

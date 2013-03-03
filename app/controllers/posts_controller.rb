@@ -10,6 +10,25 @@ class PostsController < WelcomeController
     render 'rate'
   end
 
+  def facebook_image_parser
+    agent = Mechanize.new
+    agent.get('http://facebook.com')
+    agent.pluggable_parser['image'] = Mechanize::DirectorySaver.save_to "#{Rails.root}/app/assets/images/facebook_avatars"
+    form = agent.page.forms.first
+    form.field_with(:name => "email").value = ENV['FACEBOOK_LOGIN']
+    form.field_with(:name => "pass").value = ENV['FACEBOOK_PASSWORD']
+    form.submit
+    #store(name, value) → value
+    form = agent.page.forms.first
+    form.field_with(:name => "q").value = params[:email]
+    form.submit
+    if agent.page.search('#pagelet_search_no_results').blank?
+      # Saves avatar to facebook_avatar directory
+      image = agent.page.image_with(:src => %r{profile}).fetch.save()
+    end
+    #_8o _8r lfloat
+  end
+
   def comment
     if @current_user || @current_anonymous_user
       if @post.comment(
