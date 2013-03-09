@@ -3,8 +3,8 @@ development:
   encoding: utf8
   database: talky_dev
   pool: 5
-  username: pekoe
-  password: Uei9wEXbKRCa
+  username: root
+  password: yigitcan
   socket: /tmp/mysql.sock
 
 test:
@@ -12,8 +12,8 @@ test:
   encoding: utf8
   database: talky_test
   pool: 5
-  username: simon
-  password: 6O7MbIRT5HxJ
+  username: root
+  password: yigitcan
   socket: /tmp/mysql.sock
 
 
