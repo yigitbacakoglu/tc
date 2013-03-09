@@ -14,7 +14,19 @@ class Admin::WidgetsController < Admin::BaseController
     @widget.key = SecureRandom.hex(15)
     if @widget.save
       flash[:success] = "Widget succesfully created"
-      redirect_to admin_widgets_path
+      respond_to do |format|
+        format.html { redirect_to admin_widgets_path }
+      end
+    end
+  end
+
+  def destroy
+    widget = Widget.find(params[:id])
+    if widget.destroy
+      respond_to do |format|
+        flash[:success] = "Widget successfully removed"
+        format.js { render "shared/destroy" }
+      end
     end
   end
 end

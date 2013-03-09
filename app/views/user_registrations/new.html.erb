@@ -1,83 +1,64 @@
-<div class="container">
-  <% unless session[:omniauth] %>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="login-container center">
+        <% unless session[:omniauth] %>
 
-      <div class="navbar">
-        <div class="navbar-inner">
-          <div class="container">
-            <%= link_to "STS", root_path, class: "brand" %>
-          </div>
-        </div>
+            <div class="title text-transparent">Sign Up</div>
+            <hr class="main">
+
+            <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'login-form'}) do |f| %>
+                <ul class="fields-list">
+                  <li>
+                    <i class="icon-user" style="float: left;"></i>
+                    <%= f.email_field :email, :autocomplete => "off", :id => "username", :placeholder => "Email" %>
+                  </li>
+
+                  <li>
+                    <i class="icon-key" style="float: left;"></i>
+                    <%= f.password_field :password, :autocomplete => "off", :id => "password", :placeholder => "Password" %>
+                  </li>
+
+                  <li>
+                    <i class="icon-key" style="float: left;"></i>
+                    <%= f.password_field :password_confirmation, :autocomplete => "off", :id => "password_conf", :placeholder => "Password Confirmation" %>
+                  </li>
+                </ul>
+                <div class="actions">
+                  <%= f.submit 'Save & Continue', :class => 'btn btn-large medium-blue login-btn' %>
+                </div>
+
+                <hr class="main">
+                <div class="social-actions">
+                  <%= link_to "<i class='icon-twitter'></i>".html_safe, "/auth/twitter", :rel => "tooltip", "data-original-title" => "Twitter Login", "data-placement" => "top", :class => "social-link text-transparent" %>
+                  <%= link_to "<i class='icon-facebook'></i>".html_safe, "/auth/facebook", :rel => "tooltip", "data-original-title" => "Facebook Login", "data-placement" => "top", :class => "social-link text-transparent" %>
+                  <%= link_to "Have an Account?", new_session_path(resource_name), :class => "social-link text-transparent", :style => "font-size: 1em; padding-top:15px; float:left;" %>
+                </div>
+
+            <% end %>
+
+        <% else %>
+            <div class="title text-transparent">One more step</div>
+            <hr class="main">
+
+            <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'login-form', :method => :post}) do |f| %>
+                <ul class="fields-list">
+                  <li>
+                    <i class="icon-user" style="float: left;"></i>
+                    <%= f.email_field :email, :autocomplete => "off", :id => "username", :placeholder => "Email" %>
+                  </li>
+                </ul>
+
+                <div class="actions">
+                  <%= f.submit 'Save & Continue', :class => 'btn btn-large medium-blue login-btn' %>
+                </div>
+
+            <% end %>
+
+        <% end %>
       </div>
-      <div class="row">
-        <div class="span6 offset3">
-          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
-              <fieldset>
-                <legend>Sign up !</legend>
-
-                <div class="control-group email">
-                  <label class="email control-label" for="user_email">
-                    E-mail</label>
-
-                  <div class="controls">
-                    <%= f.email_field :email %>
-                  </div>
-                </div>
-                <div class="control-group password">
-                  <label class="password control-label" for="user_email">
-                    Password</label>
-
-                  <div class="controls">
-                    <%= f.password_field :password %>
-                  </div>
-                </div>
-                <div class="control-group password" style="width: 175px !important;">
-                  <label class="password  control-label" for="user_email">
-                    Password Confirmation</label>
-
-                  <div class="controls">
-                    <%= f.password_field :password_confirmation %>
-                  </div>
-                </div>
-
-
-                <div class="form-actions">
-                  <%= f.submit "Submit", class: "btn-primary btn" %>
-                  <%= link_to 'Cancel', root_path, class: 'btn' %>
-                  <%= link_to "Have an account？", new_session_path(resource_name), class: "btn btn-success", style: "float:right; color:white;" %>
-                </div>
-              </fieldset>
-          <% end %>
-        </div>
-      </div>
-      <hr>
-  <% else %>
-      <div class="container-fluid">
-        <div class="row-fluid">
-          <div class="span12">
-            <div class="login-container center">
-              <div class="title text-transparent">One more step</div>
-              <hr class="main">
-
-              <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'login-form', :method => :post}) do |f| %>
-                  <ul class="fields-list">
-                    <li>
-                      <i class="icon-user" style="float: left;"></i>
-                      <%= f.email_field :email, :autocomplete => "off", :id => "username", :placeholder => "Email" %>
-                    </li>
-                  </ul>
-
-                  <div class="actions">
-                    <%= f.submit 'Save & Continue', :class => 'btn btn-large medium-blue login-btn' %>
-                  </div>
-
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-<% end %>
-  <footer>
-    <p>YCB &copy; All Rights Reserved.</p>
-  </footer>
+    </div>
+  </div>
 
 </div>
+

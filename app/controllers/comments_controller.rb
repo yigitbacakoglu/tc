@@ -25,8 +25,7 @@ class CommentsController < WelcomeController
 
   private
   def load_widget
-    #URI.parse(env["REQUEST_URI"])
-    @current_widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
+
     @current_comment = Comment.find(params[:id])
     @post = @current_comment.post
     unless @current_widget.posts.include?(@post)
@@ -35,5 +34,6 @@ class CommentsController < WelcomeController
     @comment = @post.comments.build
     #@comments = @post.comments.joins(:ratings).order("#{::Rating.quoted_table_name}.value desc")
     @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc")
+
   end
 end

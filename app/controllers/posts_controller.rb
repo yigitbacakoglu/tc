@@ -10,6 +10,22 @@ class PostsController < WelcomeController
     render 'rate'
   end
 
+
+  def comment
+    if @current_user || @current_anonymous_user
+      if @post.comment(
+          params[:comment][:message],
+          :ip_address => request.remote_ip,
+          :referrer => request.referer,
+          :user_id => @current_user.id,
+          :user_agent => env["HTTP_USER_AGENT"]
+      )
+        flash[:success] = "Thank you for rating!"
+      end
+    end
+    render 'rate'
+  end
+
   def facebook_image_parser
     agent = Mechanize.new
     agent.get('http://facebook.com')
@@ -29,30 +45,12 @@ class PostsController < WelcomeController
     #_8o _8r lfloat
   end
 
-  def comment
-    if @current_user || @current_anonymous_user
-      if @post.comment(
-          params[:comment][:message],
-          :ip_address => request.remote_ip,
-          :referrer => request.referer,
-          :user_id => @current_user.id,
-          :user_agent => env["HTTP_USER_AGENT"]
-      )
-        flash[:success] = "Thank you for rating!"
-      end
-    end
-    render 'rate'
-  end
-
   private
 
   def load_widget
-    #URI.parse(env["REQUEST_URI"])
-    @current_widget = Widget.where(:key => 1, :webpage => request.host).first
     @post = @current_widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
     @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc")
     @comment = @post.comments.build
-
     if params[:class_name] == "comment"
       @object = @comments.where(:id => params[:id]).first
     elsif params[:class_name] == "post"

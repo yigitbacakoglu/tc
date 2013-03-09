@@ -10,11 +10,13 @@
               <th>Webpage</th>
               <th>Category</th>
               <th>Key</th>
+              <th>Actions</th>
             </tr>
             </thead>
             <tbody>
             <% @widgets.each do |widget| %>
-                <tr>
+                <% identifier = rand(19031903) %>
+                <tr id="<%= identifier %>">
                   <td>
                     <%= widget.webpage %>
                   </td>
@@ -22,6 +24,10 @@
                     <%= widget.category_id %>
                   </td>
                   <td>   <%= widget.key %>
+                  </td>
+                  <td>
+                    <%= link_to_with_icon "icon-pencil", "Edit", edit_admin_widget_path(widget), :class => "btn dark-blue" %>
+                    <%= link_to_delete widget, {:url => admin_widget_path(widget, :dom_id => identifier), :class => "btn red"} %>
                   </td>
                 </tr>
             <% end %>
