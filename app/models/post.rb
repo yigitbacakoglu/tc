@@ -37,7 +37,13 @@ class Post < ActiveRecord::Base
     c.user_id = options[:user_id]
     c.user_agent = options[:user_agent]
     c.referer = options[:referer]
-    c.spam? ? false : c.save
+    if c.spam?
+      false
+    else
+      c.save
+      c
+    end
+
   end
 
   def can_rate?(ip_address)

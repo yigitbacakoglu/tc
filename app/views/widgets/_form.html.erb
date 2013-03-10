@@ -2,25 +2,7 @@
 
     <% unless comment.new_record? %>
 
-        <li class="comment-box" id="comment_container<%= comment.id %>">
-          <div class="avatar pull-left" style='background-image: url(<%= avatar_url(comment.user) %>);'>
-          </div>
-
-          <div class="article">
-            <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago" %>
-              <%= rating_for(comment, :url => rate_posts_path) %>
-            </div>
-            <div class="post-content-preview" id="comment_text_<%= comment.id %>">
-
-              <%= label_tag "content", comment.message, :id => "comment_label_#{comment.id}", "data-page" => params[:page] %>
-            </div>
-
-            <div class="article-actions">
-              <%= link_to "Edit", edit_comment_path(comment.id), :remote => true, :class => 'edit-comment' %>  -
-              <%= link_to "Remove", comment_path(comment.id), :remote => true, :method => :delete, :confirm => "Are you sure?" %>
-            </div>
-          </div>
-        </li>
+        <%= render :partial => "shared/comment_item", :locals => {:comment => comment} %>
 
     <% end %>
 

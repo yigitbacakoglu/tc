@@ -12,16 +12,16 @@ class PostsController < WelcomeController
 
 
   def comment
-      if @post.comment(
-          params[:comment][:message],
-          :ip_address => request.remote_ip,
-          :referrer => request.referer,
-          :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id) ),
-          :user_agent => env["HTTP_USER_AGENT"]
-      )
-        flash[:success] = "Thank you for rating!"
-      end
-    render 'rate'
+    @current_comment = @post.comment(
+        params[:comment][:message],
+        :ip_address => request.remote_ip,
+        :referrer => request.referer,
+        :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id)),
+        :user_agent => env["HTTP_USER_AGENT"]
+    )
+    if @current_comment
+      flash[:success] = "Thank you for rating!"
+    end
   end
 
   def facebook_image_parser
