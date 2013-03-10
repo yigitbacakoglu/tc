@@ -1,5 +1,6 @@
 class UserRegistrationsController < Devise::RegistrationsController
-  layout  "login"
+  layout "login"
+
   def create
     super
     session[:omniauth] = nil unless @user_registration.new_record?
@@ -12,6 +13,7 @@ class UserRegistrationsController < Devise::RegistrationsController
     if session[:omniauth]
       auth_hash = session[:omniauth]
       @user_registration.apply_omniauth(session[:omniauth])
+      @user_registration.check_username(auth_hash['info']['nickname'])
       @user_registration.build_user(:firstname => auth_hash['info']['first_name'].try(:strip), :lastname => auth_hash['info']['last_name'])
       @user_registration.valid?
     end

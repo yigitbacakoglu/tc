@@ -29,6 +29,9 @@ module Admin
           end
           redirect_to admin_account_url, :notice => t(:account_updated)
         else
+          @user_registration.errors.to_a.each do |error|
+            flash[:error] = "#{error}"
+          end
           render "show"
         end
       end

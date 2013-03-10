@@ -35,33 +35,6 @@ class ApplicationController < ActionController::Base
   def load_widget
     #URI.parse(env["REQUEST_URI"])
     @current_widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
-
-  #  if params[:action] == 'demo'
-  #    @post = @current_widget.posts.find_or_create_by_url(request.path)
-  #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
-  #
-  #  else
-  #    @post = @current_widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
-  #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
-  #
-  #  end
-  #
-  #
-  #  if params[:class_name] == "comment"
-  #    @object = @comments.where(:id => params[:id]).first
-  #  elsif params[:class_name] == "post"
-  #    @object = @post
-  #  end
-  #
-  ##  ---
-  #    @current_comment = Comment.find(params[:id])
-  #    @post = @current_comment.post
-  #    unless @current_widget.posts.include?(@post)
-  #      redirect_to root_path
-  #    end
-  #    @comment = @post.comments.build
-  #    #@comments = @post.comments.joins(:ratings).order("#{::Rating.quoted_table_name}.value desc")
-  #    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page])
   end
 
 

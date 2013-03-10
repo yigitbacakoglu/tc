@@ -27,6 +27,8 @@ class AuthenticationsController < ApplicationController
         auth_hash = get_name_from_twitter(auth_hash)
       end
 
+      user_registration.check_username(auth_hash['info']['nickname'])
+
       user_registration.build_user(:firstname => auth_hash['info']['first_name'].try(:strip), :lastname => auth_hash['info']['last_name'])
 
       if user_registration.save

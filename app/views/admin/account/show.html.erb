@@ -5,16 +5,37 @@
         <div class="box-header">
           <i class="icon-user"></i> My Account
         </div>
+        <%= form_for @user_registration, :url => admin_account_path, :method => :put, :html => {:class => "mainForm"} do |f| %>
 
-        <div class="row-fluid">
+            <div class="row-fluid">
 
-          <div class="span6">
-            <div class="padded">
-              <div class="section-title">
-                Change Password
+              <div class="span6">
+                <div class="padded">
+                  <div class="section-title">
+                    Profile
+                  </div>
+                  <div class="vpadded">
+                    <%= f.fields_for :user do |usr| %>
+                        <div class="input full-width">
+                          <%= usr.text_field :firstname, :placeholder => 'Firstname' %>
+                        </div>
+                        <div class="input full-width">
+                          <%= usr.text_field :lastname, :placeholder => 'Lastname' %>
+                        </div>
+                        <div class="input full-width">
+                          <%= f.email_field :email, :placeholder => 'Email' %>
+                        </div>
+                    <% end %>
+
+                  </div>
+                </div>
               </div>
-              <div class="vpadded">
-                <%= form_for @user_registration, :url => admin_account_path, :method => :put, :html => {:class => "mainForm"} do |f| %>
+              <div class="span6">
+                <div class="padded">
+                  <div class="section-title">
+                    Change Password
+                  </div>
+                  <div class="vpadded">
                     <div class="input full-width">
 
                       <%= f.password_field :password, :placeholder => "Password" %>
@@ -23,21 +44,22 @@
 
                       <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %>
                     </div>
-                    <div class="vpadded">
-                      <%= f.submit "Update", :class => "btn medium-blue" %> or
-                      <%= link_to "Cancel", admin_path %>
-                    </div>
 
-                    <%= render :partial => 'shared/social' %>
+                  </div>
 
-                <% end %>
-
+                </div>
               </div>
+              <div class="padded">
+                <div class="vpadded">
+                  <div class="clearfix"></div>
+                  <%= f.submit "Update", :class => "btn medium-blue" %> or
+                  <%= link_to "Cancel", admin_path %>
+                </div>
 
+                <%= render :partial => 'shared/social' %>
+              </div>
             </div>
-          </div>
-        </div>
-
+        <% end %>
       </div>
     </div>
   </div>

@@ -35,6 +35,7 @@ Omrats::Application.routes.draw do
     resources :overview
     resources :account, :except => [:show, :index]
     get '/account', :as => :account, :to => 'account#show'
+    put '/account', :as => :update_account, :to => 'account#update'
     resources :widgets
   end
 

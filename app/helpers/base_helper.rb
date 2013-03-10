@@ -15,7 +15,7 @@ module BaseHelper
   end
 
   def comment_form(object, url, method = "POST")
-    render :partial => "shared/comment_form", :locals => {:object => object, :url => url, :method => method}
+    render :partial => "shared/comment_form", :formats => :html, :locals => {:object => object, :url => url, :method => method}
   end
 
   # Make an admin tab that coveres one or more resources supplied by symbols

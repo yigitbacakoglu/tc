@@ -9,6 +9,17 @@ class Admin::WidgetsController < Admin::BaseController
     @widget = Widget.new
   end
 
+  def edit
+    @widget = Widget.find(params[:id])
+  end
+
+  def update
+    @widget = Widget.find(params[:id])
+    if @widget.update_attributes(params[:widget])
+      redirect_to admin_widgets_path
+    end
+  end
+
   def create
     @widget = Widget.new(params[:widget])
     @widget.key = SecureRandom.hex(15)

@@ -16,5 +16,16 @@ post.rating_category = Category.create(:max_value => 6,
 post.save
 
 
+%w[
+Blog
+E-Commerce
+News
+Advertisement
+Questionary
+Personal Webpage
+].each do |category|
+  Category.create(:category_type => "widget", :name => category)
+end
+
 # SecureRandom.hex(10)
 # Devise.friendly_token

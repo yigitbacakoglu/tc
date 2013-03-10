@@ -1,7 +1,58 @@
-<%= form_for object, :url => url, :method => method, :remote => true do |f| %>
-    <%= f.text_area :message, :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
-    <br/>
-    <div class="post-actions">
-      <%= f.submit "Post", :class => "btn btn-medium btn-primary pull-right", :style => "width: 30%;" %>
-    </div>
+<% if @current_widget.login_required && @current_user.blank? %>
+    <%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration"), :remote => true, :html => {:class => 'login-form'}) do |f| %>
+        <%= text_area_tag "comment_message", "", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+        <br/>
+
+        <div id="action_form" class="post-actions" style="display: none;">
+
+          <ul class="fields-list">
+            <li>
+              <i class="icon-user" style="float: left;"></i>
+              <%= f.email_field :email, :autocomplete => "off", :id => "username", :placeholder => "Email" %>
+            </li>
+
+            <li>
+              <i class="icon-key" style="float: left;"></i>
+              <%= f.password_field :password, :autocomplete => "off", :id => "password", :placeholder => "Password" %>
+            </li>
+
+            <li>
+              <i class="icon-key" style="float: left;"></i>
+              <%= f.password_field :password_confirmation, :autocomplete => "off", :id => "password_conf", :placeholder => "Password Confirmation" %>
+            </li>
+          </ul>
+          <div class="actions">
+            <%= f.submit 'Save & Continue', :class => 'btn btn-large medium-blue login-btn' %>
+          </div>
+
+          <hr class="main">
+          <div class="social-actions">
+            <%= link_to "<i class='icon-twitter'></i>".html_safe, "/auth/twitter", :rel => "tooltip", "data-original-title" => "Twitter Login", "data-placement" => "top", :class => "social-link text-transparent" %>
+            <%= link_to "<i class='icon-facebook'></i>".html_safe, "/auth/facebook", :rel => "tooltip", "data-original-title" => "Facebook Login", "data-placement" => "top", :class => "social-link text-transparent" %>
+          </div>
+
+        </div>
+    <% end %>
+
+
+<% else %>
+    <%= form_for object, :url => url, :method => method, :remote => true do |f| %>
+        <%= f.text_area :message, :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+        <br/>
+        <div id="action_form" class="post-actions" style="display: none;">
+          <%= f.submit "Post", :class => "btn btn-medium btn-primary pull-right", :style => "width: 30%;" %>
+        </div>
+    <% end %>
+
 <% end %>
+<script>
+    $(function () {
+
+
+        $('#comment_message').on('focusin', function () {
+            $('#action_form').slideDown();
+        })
+
+
+    })
+</script>
