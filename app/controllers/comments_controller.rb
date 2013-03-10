@@ -1,9 +1,8 @@
 class CommentsController < WelcomeController
+  before_filter :load_resource
 
-  before_filter :load_widget
 
   def edit
-
   end
 
   def update
@@ -24,8 +23,8 @@ class CommentsController < WelcomeController
   end
 
   private
-  def load_widget
 
+  def load_resource
     @current_comment = Comment.find(params[:id])
     @post = @current_comment.post
     unless @current_widget.posts.include?(@post)
@@ -33,7 +32,6 @@ class CommentsController < WelcomeController
     end
     @comment = @post.comments.build
     #@comments = @post.comments.joins(:ratings).order("#{::Rating.quoted_table_name}.value desc")
-    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc")
-
+    load_comments
   end
 end

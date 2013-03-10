@@ -4,24 +4,28 @@ class ApplicationController < ActionController::Base
   layout "application"
   prepend_before_filter :set_current_user
   before_filter :check_sale
+  before_filter :set_anonymous_user
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url, :alert => exception.message
   end
 
   private
+
   def set_current_user
     User.current = user_registration_signed_in? ? current_user_registration.user : nil
     @current_user = User.current
     save_ip_address
   end
 
+  def set_anonymous_user
+    @current_anonymous_user = User.find(session[:user_id]) if session[:user_id]
+  end
+
   def save_ip_address
     if @current_user
+      session.delete :user_id
       @current_user.ip_addresses.find_or_create_by_value(request.remote_ip)
-    else
-      a = IpAddress.find_or_create_by_value(request.remote_ip)
-      @current_anonymous_user = a.user
     end
   end
 
@@ -31,12 +35,5 @@ class ApplicationController < ActionController::Base
       redirect_to sale_path if (request.path != sale_path) && (save_contact_info_path != request.path)
     end
   end
-
-  def load_widget
-    #URI.parse(env["REQUEST_URI"])
-    @current_widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
-  end
-
-
 
 end

@@ -2,8 +2,6 @@ class IpAddress < ActiveRecord::Base
   attr_accessible :user_id, :value
 
   belongs_to :user
-  has_many :comments, :class_name => 'Comment'
-  has_many :ratings, :class_name => 'Rating'
 
   before_save :validate_user
 
@@ -20,6 +18,7 @@ class IpAddress < ActiveRecord::Base
     self.user = User.create(:firstname => "Anonymous",
                      :lastname => "User",
                      :nickname => "Guest",
-                     :role => "anonymous")
+                     :role => "anonymous"
+    )
   end
 end

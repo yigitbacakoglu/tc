@@ -1,6 +1,9 @@
 class UserRegistration < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  validate :check_user
+  validate :check_password
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
 
@@ -8,9 +11,8 @@ class UserRegistration < ActiveRecord::Base
   attr_accessible :login
   belongs_to :user
   has_many :user_authentications, :class_name => 'UserAuthentication', :dependent => :destroy
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :user_attributes, :username
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :user_attributes, :username, :user_id
   accepts_nested_attributes_for :user
-  validate :check_user
   validates_presence_of :username
 
   def self.from_omniauth(auth)
@@ -37,31 +39,18 @@ class UserRegistration < ActiveRecord::Base
   end
 
   def check_user
+    email = self.email.split(/@/)
+    check_username(email[0])
     if self.user.blank?
-      email = self.email.split(/@/)
-      #users = IpAddress.where(:value => self.current_sign_in_ip).map(&:user)
-      self.user = User.new(:firstname => email[0],
+      self.user = User.new(:firstname => self.username,
                            :lastname => email[1])
-
-      check_username(email[0])
-
-      IpAddress.where(:value => self.user.ip_address_ids).each do |ip|
-        unless ip.user == self.user
-          ip.user.comments.each {|i| self.user.comments << i}
-          ip.user.ratings.each {|i| self.user.ratings << i}
-        end
-      end
-      #users.each do |usr|
-      #  if usr.firstname == "Anonymous"
-      #    self.user = usr
-      #    self.user.firstname = self.email
-      #    self.save!
-      #    return true
-      #  end
-      #end
     end
+
   end
 
+  def check_password
+    self.password = Devise.friendly_token if self.password.blank?
+  end
   def password_required?
     (user_authentications.empty? || !password.blank?) && super
   end

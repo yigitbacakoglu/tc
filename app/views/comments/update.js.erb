@@ -1,5 +1,4 @@
-$('#edit_comment_' + <%= @current_comment.id %>).remove();
-$(".wrapper").html('<%= escape_javascript(render :template => "widgets/demo", :formats => [:html], :handlers => [:erb]) %>');
-$(function () {
-    apply_raty();
-});
+$('form[id^=edit_comment]').remove();
+$('#comment_label_<%= @current_comment.id %>').html("<%= escape_javascript(@current_comment.message) %>");
+$('label[id^=comment_label_]').show();
+

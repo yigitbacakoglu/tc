@@ -8,21 +8,15 @@
           <ul class="fields-list">
             <li>
               <i class="icon-user" style="float: left;"></i>
-              <%= f.email_field :email, :autocomplete => "off", :id => "username", :placeholder => "Email" %>
+              <%= f.text_field :username, :autocomplete => "off", :id => "nickname", :placeholder => "Username" %>
             </li>
-
             <li>
-              <i class="icon-key" style="float: left;"></i>
-              <%= f.password_field :password, :autocomplete => "off", :id => "password", :placeholder => "Password" %>
-            </li>
-
-            <li>
-              <i class="icon-key" style="float: left;"></i>
-              <%= f.password_field :password_confirmation, :autocomplete => "off", :id => "password_conf", :placeholder => "Password Confirmation" %>
+              <i class="icon-user" style="float: left;"></i>
+              <%= f.email_field :email, :autocomplete => "off", :id => "email", :placeholder => "Email" %>
             </li>
           </ul>
           <div class="actions">
-            <%= f.submit 'Save & Continue', :class => 'btn btn-large medium-blue login-btn' %>
+            <%= f.submit 'Next', :class => 'btn btn-large medium-blue login-btn' %>
           </div>
 
           <hr class="main">
@@ -39,9 +33,16 @@
     <%= form_for object, :url => url, :method => method, :remote => true do |f| %>
         <%= f.text_area :message, :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
         <br/>
-        <div id="action_form" class="post-actions" style="display: none;">
-          <%= f.submit "Post", :class => "btn btn-medium btn-primary pull-right", :style => "width: 30%;" %>
-        </div>
+        <% if params[:action] == 'edit' %>
+            <div id="action_form_edit" class="post-actions">
+              <%= f.submit "Post", :class => "btn btn-medium btn-primary pull-right", :style => "width: 30%;" %>
+            </div>
+        <% else %>
+            <div id="action_form" class="post-actions" style="display: none;">
+              <%= f.submit "Post", :class => "btn btn-medium btn-primary pull-right", :style => "width: 30%;" %>
+            </div>
+        <% end %>
+
     <% end %>
 
 <% end %>

@@ -2,19 +2,18 @@ class Comment < ActiveRecord::Base
   paginates_per 25
 
   include Rakismet::Model
-  rakismet_attrs :author => proc { ip_address.user.fullname },
-                 :author_email => proc { ip_address.user.email },
-                 :user_ip => proc { ip_address.value },
+  rakismet_attrs :author => proc { user.fullname },
+                 :author_email => proc { user.email },
+                 :user_ip => proc { ip_address },
                  :content => proc { message },
                  :referrer => proc { referer },
                  :user_agent => proc { user_agent }
 
   belongs_to :post
-  belongs_to :ip_address
   belongs_to :user
   has_many :ratings, :as => :ratable, :class_name => 'Rating'
 
-  attr_accessible :kind, :message, :parent_id, :ip_address_id, :user_agent, :referer, :user_id
+  attr_accessible :kind, :message, :parent_id, :ip_address, :user_agent, :referer, :user_id
 
   validates :message, :presence => true
   scope :main, lambda { where("parent_id IS NULL") }
@@ -24,10 +23,9 @@ class Comment < ActiveRecord::Base
 
   def rate(value, ip_address, user_id)
     if can_rate? ip_address
-      #r = ratings.find_or_initialize_by_ip_address_id(IpAddress.find_by_value(ip_address).id)
       r = ratings.find_or_initialize_by_user_id(user_id)
       r.value = value
-      r.ip_address_id = IpAddress.find_by_value(ip_address).id
+      r.ip_address = ip_address
       r.save!
     else
       errors.add :base, "You already rated this."
@@ -47,8 +45,7 @@ class Comment < ActiveRecord::Base
     if User.current
       all_ratings = self.ratings.where(:user_id => User.current.id)
     else
-      user_ips = IpAddress.find_by_value(ip_address).user.ip_address_ids
-      all_ratings = self.ratings.where("ip_address_id IN(?)", user_ips)
+      all_ratings = self.ratings.where(:ip_address => ip_address)
     end
     if all_ratings.blank?
       true

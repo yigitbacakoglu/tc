@@ -1,5 +1,5 @@
 class WidgetsController < WelcomeController
-  before_filter :load_widget
+  before_filter :load_resource
 
   def demo
     if @current_widget.login_required? && @current_user.blank?
@@ -26,10 +26,10 @@ class WidgetsController < WelcomeController
 
   private
 
-  def load_widget
+  def load_resource
     @post = @current_widget.posts.find_or_create_by_url(request.path)
     @comment = @post.comments.build
-    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc")
+    load_comments
   end
 
 end

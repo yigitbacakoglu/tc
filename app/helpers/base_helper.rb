@@ -9,7 +9,7 @@ module BaseHelper
     rating_max_value = category.max_value
     avg_rate = number_with_precision rateable_obj.avg_rate, :precision => 2
 
-    content_tag :div, "", :class => "star", "data-rating" => avg_rate,
+    content_tag :div, "", :class => "star", :id => "#{rateable_obj.class.name.to_s.downcase}_#{rateable_obj.id}", "data-rating" => avg_rate,
                 "data-id" => rateable_obj.id, "data-classname" => rateable_obj.class.name.to_s.downcase,
                 "data-star-count" => rating_max_value, "data-url" => options[:url]
   end

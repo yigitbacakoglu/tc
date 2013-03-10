@@ -1,10 +1,10 @@
-$(".wrapper").html('<%= escape_javascript(render :template => "widgets/demo", :formats => [:html], :handlers => [:erb]) %>');
-$(function () {
-    apply_raty();
-});
+$('.post-error, .post-success').remove();
+var error_message = '<div class="post-error">' +
+        '<%= @object.errors.first[1] if @object.errors.any? %>' +
+        '</div> '
+var success_message = '<div class="post-success">' +
+        '<%= @success[1] if @success  %>' +
+        '</div>'
+$('#<%= "#{@object.class.name.downcase}_#{params[:id]}" %>').append(error_message);
+$('#<%= "#{@object.class.name.downcase}_#{params[:id]}" %>').append(success_message);
 
-<%#= render :partial =>'spree/admin/shared/next/flashes' %>
-//$('.modal').modal('hide');
-//$(function () {
-//    run_controller_initializers();
-//});

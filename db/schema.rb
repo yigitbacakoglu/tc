@@ -23,18 +23,16 @@ ActiveRecord::Schema.define(:version => 20130310131749) do
 
   create_table "comments", :force => true do |t|
     t.text     "message"
-    t.integer  "ip_address_id"
     t.string   "kind"
     t.integer  "parent_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "post_id"
     t.string   "user_agent"
     t.string   "referer"
     t.integer  "user_id"
+    t.string   "ip_address"
   end
-
-  add_index "comments", ["ip_address_id"], :name => "index_comments_on_ip_address_id"
 
   create_table "ip_addresses", :force => true do |t|
     t.string   "value"
@@ -55,15 +53,14 @@ ActiveRecord::Schema.define(:version => 20130310131749) do
 
   create_table "ratings", :force => true do |t|
     t.integer  "value"
-    t.integer  "ip_address_id"
     t.integer  "ratable_id"
     t.string   "ratable_type"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "user_id"
+    t.string   "ip_address"
   end
 
-  add_index "ratings", ["ip_address_id"], :name => "index_ratings_on_ip_address_id"
   add_index "ratings", ["ratable_id", "ratable_type"], :name => "index_ratings_on_ratable_id_and_ratable_type"
 
   create_table "restricted_words", :force => true do |t|

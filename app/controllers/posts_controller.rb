@@ -1,9 +1,9 @@
 class PostsController < WelcomeController
-  before_filter :load_widget
+  before_filter :load_resource
 
   def rate
     if @current_user || @current_anonymous_user
-      if @object.rate(params[:value], request.remote_ip, @current_user.try(:id))
+      if @object.rate(params[:value], request.remote_ip, @current_user.try(:id) || @current_anonymous_user.try(:id))
         @success = [@object, "Thank you for rating!"]
       end
     end
@@ -12,17 +12,15 @@ class PostsController < WelcomeController
 
 
   def comment
-    if @current_user || @current_anonymous_user
       if @post.comment(
           params[:comment][:message],
           :ip_address => request.remote_ip,
           :referrer => request.referer,
-          :user_id => @current_user.id,
+          :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id) ),
           :user_agent => env["HTTP_USER_AGENT"]
       )
         flash[:success] = "Thank you for rating!"
       end
-    end
     render 'rate'
   end
 
@@ -47,9 +45,9 @@ class PostsController < WelcomeController
 
   private
 
-  def load_widget
+  def load_resource
     @post = @current_widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
-    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc")
+    load_comments
     @comment = @post.comments.build
     if params[:class_name] == "comment"
       @object = @comments.where(:id => params[:id]).first

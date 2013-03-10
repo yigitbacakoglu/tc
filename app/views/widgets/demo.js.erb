@@ -1,1 +1,8 @@
+<% if params[:page] %>
+$('.comment-box.view-more').first().remove();
+$('#comment_container').append('<%= escape_javascript(render :partial => "widgets/form", :formats => :html) %>');
+apply_raty();
+<% else %>
 $('#comment-form-container').html('<%= escape_javascript(comment_form(@comment, comment_posts_url)) %>');
+<% end %>
+

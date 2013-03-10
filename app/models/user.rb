@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   attr_accessible :firstname, :lastname, :nickname, :role
 
   has_one :user_registration, :dependent => :destroy
-
+  after_commit :check_registration
   has_many :user_stores, :class_name => 'UserStore', :dependent => :destroy
   has_many :stores, :through => :user_stores
   has_many :restrictions, :as => :restrictable, :class_name => 'Restriction', :dependent => :destroy
@@ -23,8 +23,27 @@ class User < ActiveRecord::Base
     self.user_registration.try(:email)
   end
 
+  def username
+    self.user_registration.username
+  end
+
   def fullname
     "#{firstname} #{lastname}"
   end
 
+  def anonymous?
+    self.has_role? "anonymous"
+  end
+
+  def has_role?(param)
+    self.role == param
+  end
+
+  def check_registration
+    if self.user_registration.blank?
+      user_registration = UserRegistration.new(:email => "#{SecureRandom.hex(20)}@example.com", :user_id => self.id)
+      user_registration.user = self
+      user_registration.save
+    end
+  end
 end
