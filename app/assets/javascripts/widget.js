@@ -23,7 +23,7 @@ function apply_raty() {
                 url:$(this).attr('data-url'),
                 data:{
                     value:score,
-					id: $(this).attr('data-id'),
+					comment_id: $(this).attr('data-id'),
                     class_name:$(this).attr("data-classname")
                 },
                 dataType: "script"

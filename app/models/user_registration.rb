@@ -14,6 +14,7 @@ class UserRegistration < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :user_attributes, :username, :user_id
   accepts_nested_attributes_for :user
   validates_presence_of :username
+  validates_uniqueness_of :username
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

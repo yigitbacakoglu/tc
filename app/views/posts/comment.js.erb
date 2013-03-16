@@ -1,3 +1,9 @@
+<% if @current_comment.valid? %>
 $('textarea').val('');
 $('#comment_container').prepend('<%= escape_javascript(render :partial => "shared/comment_item", :locals => {:comment => @current_comment }, :formats => :html) %>');
 apply_raty();
+<%= render :partial => "shared/flashes" %>
+<% else %>
+<%= render :partial => "shared/errors", :locals => {:target => @current_comment} %>
+<% end %>
+<%#= render :partial => "shared/errors" %>

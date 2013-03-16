@@ -16,6 +16,7 @@ class Comment < ActiveRecord::Base
   attr_accessible :kind, :message, :parent_id, :ip_address, :user_agent, :referer, :user_id
 
   validates :message, :presence => true
+  validates_length_of :message, :minimum => 2, :maximum => 650, :allow_blank => true
   scope :main, lambda { where("parent_id IS NULL") }
   scope :sub, lambda { where("parent_id IS NOT NULL") }
 
