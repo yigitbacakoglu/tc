@@ -2,6 +2,8 @@ class WidgetsController < WelcomeController
   before_filter :load_resource
 
   def demo
+    #URI.parse(env["REQUEST_URI"])
+    session[:current_widget] = request.referer
     if @current_widget.login_required? && @current_user.blank?
       @user = UserRegistration.new_with_session({}, session)
       session["user_registration_return_to"] = "/close"
@@ -11,6 +13,7 @@ class WidgetsController < WelcomeController
 
   def close
     flash[:success] = "Signed in successfully"
+    @show_avatar = true
   end
 
   def create
@@ -32,7 +35,7 @@ class WidgetsController < WelcomeController
   private
 
   def load_resource
-    @post = @current_widget.posts.find_or_create_by_url(request.path)
+    @post = @current_widget.posts.find_or_create_by_url(session[:current_page])
     @comment = @post.comments.build
     load_comments
   end
