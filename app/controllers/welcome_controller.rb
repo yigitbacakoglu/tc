@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
   private
   def set_widget
     #URI.parse(env["REQUEST_URI"])
-    @current_widget = Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
+    @current_widget = Widget.where(:key => 123, :webpage => request.host.gsub("www.", "")).first
     #@current_widget = Widget.where(:key => params[:key], :webpage => request.host.gsub("www.", "")).first
   end
 
