@@ -4,8 +4,13 @@ class WidgetsController < WelcomeController
   def demo
     if @current_widget.login_required? && @current_user.blank?
       @user = UserRegistration.new_with_session({}, session)
-      session["user_registration_return_to"] = request.path
+      session["user_registration_return_to"] = "/close"
     end
+    @show_avatar = true
+  end
+
+  def close
+    flash[:success] = "Signed in successfully"
   end
 
   def create

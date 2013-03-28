@@ -78,7 +78,7 @@ module BaseHelper
   def link_to_delete(resource, options={})
     url = options[:url] || object_url(resource)
     confirm = options[:confirm] || 'Are you sure?'
-    name = options[:name] || font_icon('icon-remove icon-white') + ' ' + 'Delete'
+    name = options[:name] || font_icon('icon-trash icon-white') + ' ' + 'Delete'
     link_to name, url,
             :class => options[:class],
             :remote => true,
@@ -88,6 +88,10 @@ module BaseHelper
 
   def font_icon(icon_class)
     icon_class ? "<i class='#{icon_class}'></i>".html_safe : ""
+  end
+
+  def current_user
+    @current_user || @current_anonymous_user
   end
 
 

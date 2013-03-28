@@ -7,7 +7,7 @@ module ApplicationHelper
     else
       #default_url = "#{root_url}assets/avatar.png"
       default_url = "mm"
-      gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
+      gravatar_id = user.blank? ? "11" : Digest::MD5.hexdigest(user.email.downcase)
       "http://gravatar.com/avatar/#{gravatar_id}?s=80&d=#{CGI.escape(default_url)}"
     end
 

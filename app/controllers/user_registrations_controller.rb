@@ -1,9 +1,28 @@
 class UserRegistrationsController < Devise::RegistrationsController
   layout "login"
 
+  # POST /resource
   def create
-    super
-    session[:omniauth] = nil unless @user_registration.new_record?
+    build_resource
+
+    if resource.save
+      if resource.active_for_authentication?
+        set_flash_message :notice, :signed_up if is_navigational_format?
+        sign_up(resource_name, resource)
+        respond_with resource, :location => after_sign_up_path_for(resource)
+      else
+        set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
+        expire_session_data_after_sign_in!
+        respond_with resource, :location => after_inactive_sign_up_path_for(resource)
+      end
+    else
+      clean_up_passwords resource
+      if request.referer.include?('demo')
+        render :partial => "shared/errors", :locals => {:target => resource}
+      else
+        respond_with resource
+      end
+    end
   end
 
   private
@@ -18,4 +37,5 @@ class UserRegistrationsController < Devise::RegistrationsController
       @user_registration.valid?
     end
   end
+
 end

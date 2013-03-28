@@ -1,8 +1,9 @@
 class CommentsController < WelcomeController
+  load_and_authorize_resource
   before_filter :load_resource
 
-
   def edit
+    @show_avatar = false;
   end
 
   def update
@@ -16,16 +17,16 @@ class CommentsController < WelcomeController
   def destroy
     if @current_user || @current_anonymous_user
       if @current_comment.destroy
-        flash[:success] = "Deleted"
+        flash[:notice] = "Comment successfully deleted"
       end
     end
-    render 'posts/rate'
+    render 'shared/destroy'
   end
 
   private
 
   def load_resource
-    @current_comment = Comment.find(params[:id])
+    @current_comment = @comment
     @post = @current_comment.post
     unless @current_widget.posts.include?(@post)
       redirect_to root_path

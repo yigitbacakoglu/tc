@@ -19,8 +19,8 @@ class PostsController < WelcomeController
         :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id)),
         :user_agent => env["HTTP_USER_AGENT"]
     )
-    if @current_comment
-      flash[:success] = "Thank you for rating!"
+    if @current_comment.valid?
+      flash[:success] = "Thank your comment!"
     end
   end
 
@@ -50,7 +50,7 @@ class PostsController < WelcomeController
     load_comments
     @comment = @post.comments.build
     if params[:class_name] == "comment"
-      @object = @comments.where(:id => params[:id]).first
+      @object = @comments.where(:id => params[:comment_id]).first
     elsif params[:class_name] == "post"
       @object = @post
     end

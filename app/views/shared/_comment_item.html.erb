@@ -11,9 +11,12 @@
       <%= label_tag "content", comment.message, :id => "comment_label_#{comment.id}", "data-page" => params[:page] %>
     </div>
 
-    <div class="article-actions">
-      <%= link_to "Edit", edit_comment_path(comment.id), :remote => true, :class => 'edit-comment' %>  -
-      <%= link_to "Remove", comment_path(comment.id), :remote => true, :method => :delete, :confirm => "Are you sure?" %>
+    <div class="article-actions" style="margin-top:25px;">
+      <% if can? :edit, comment %>
+          <%= link_to_with_icon "icon-edit", "Edit", edit_comment_path(comment.id), :remote => true, :class => 'edit-comment' %>
+          -
+          <%= link_to_delete comment, {:url => comment_path(comment, :dom_id => "comment_container#{comment.id}")} %>
+      <% end %>
     </div>
   </div>
 </li>

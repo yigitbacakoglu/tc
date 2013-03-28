@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     save_ip_address
   end
 
+  def current_user
+    @current_user || @current_anonymous_user
+  end
+
   def set_anonymous_user
     @current_anonymous_user = User.find(session[:user_id]) if session[:user_id]
   end
