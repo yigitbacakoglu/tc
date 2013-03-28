@@ -20,7 +20,7 @@ class PostsController < WelcomeController
         :user_agent => env["HTTP_USER_AGENT"]
     )
     if @current_comment.valid?
-      flash[:success] = "Thank your comment!"
+      flash[:success] = "Thanks for comment!"
     end
   end
 

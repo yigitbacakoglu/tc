@@ -26,9 +26,7 @@ class WelcomeController < ApplicationController
       ref = URI.parse(request.referer)
       session[:current_page] ||= ref.path
     end
-    @current_widget = Widget.where(:key => session[:current_widget_key], :webpage => uri.host.gsub("www.", "")).first
-
-    #@current_widget ||= Widget.where(:key => 1, :webpage => request.host.gsub("www.", "")).first
+    @current_widget = Widget.where(:key => 123, :webpage => request.host.gsub("www.", "")).first
     #@current_widget = Widget.where(:key => params[:key], :webpage => request.host.gsub("www.", "")).first
   end
 

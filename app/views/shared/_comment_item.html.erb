@@ -10,7 +10,7 @@
       <%= rating_for(comment, :url => rate_posts_path) %>
     </div>
     <div class="past-actions" style="margin-top:-40px; float: right;">
-      edit
+
     </div>
     <div class="post-content-preview" id="comment_text_<%= comment.id %>">
 
@@ -18,7 +18,6 @@
     </div>
 
     <div class="article-actions">
-      asd asd
       <% if can? :edit, comment %>
           <%= link_to_with_icon "icon-edit", "Edit", edit_comment_path(comment.id), :remote => true, :class => 'edit-comment' %>
           -
