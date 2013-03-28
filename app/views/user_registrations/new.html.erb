@@ -50,9 +50,10 @@
             <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'login-form', :method => :post}) do |f| %>
                 <ul class="fields-list">
                   <li>
-                    <i class="icon-user" style="float: left;"></i>
+                    <i class="icon-user" style="float: left; left: 15px;"></i>
                     <%= f.email_field :email, :autocomplete => "off", :id => "username", :placeholder => "Email" %>
                   </li>
+
                 </ul>
 
                 <div class="actions">
