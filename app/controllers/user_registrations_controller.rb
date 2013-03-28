@@ -7,8 +7,11 @@ class UserRegistrationsController < Devise::RegistrationsController
 
     if resource.save
       if resource.active_for_authentication?
-        set_flash_message :notice, :signed_up if is_navigational_format?
+        set_flash_message :notice, :signed_up
         sign_up(resource_name, resource)
+        if request.referer.include?('demo') && params[:close]
+          session["user_registration_return_to"] ||= request.referer
+        end
         respond_with resource, :location => after_sign_up_path_for(resource)
       else
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
@@ -17,7 +20,7 @@ class UserRegistrationsController < Devise::RegistrationsController
       end
     else
       clean_up_passwords resource
-      if request.referer.include?('demo')
+      if request.referer.include?('demo') && params[:close].blank?
         render :partial => "shared/errors", :locals => {:target => resource}
       else
         respond_with resource

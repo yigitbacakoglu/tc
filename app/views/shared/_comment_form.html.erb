@@ -4,7 +4,7 @@
 <% end %>
 <% if @current_widget.login_required && @current_user.blank? %>
 
-    <%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration"), :remote => true, :html => {:class => 'post-form'}) do |f| %>
+    <%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration", :close => false), :remote => true, :html => {:class => 'login-form'}) do |f| %>
         <%= text_area_tag "comment_message", "", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
         <br/>
 
@@ -74,8 +74,8 @@
         $('.auth-twitter').on('click', function () {
             openWin("/auth/twitter")
         });
-        $('.auth-twitter').on('click', function () {
-            openWin("/auth/twitter")
+        $('.auth-facebook').on('click', function () {
+            openWin("/auth/facebook")
         });
         $('.auth-talky').on('click', function () {
             openWin("/authenticate/login")
@@ -169,11 +169,14 @@
         background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png") -32px 0;
     }
 
-    .post-form {
+    .login-form {
         margin-left: 50px;
-        min-width: 410px;
+        min-width: 412px;
     }
-    post-formtrue {
+    .post-formtrue {
+        margin-left: 50px;
+    }
+    .post-formfalse {
         margin-left: 0px !important;
         min-width: 0px !important;
     }
@@ -187,6 +190,10 @@
     .alert {
         padding: 0px 31px 0px 14px !important;
     }
+
+   .guest-details {
+       width: 207px;
+   }
 
 </style>
 
