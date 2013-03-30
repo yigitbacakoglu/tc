@@ -19,8 +19,8 @@ class PostsController < WelcomeController
         :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id)),
         :user_agent => env["HTTP_USER_AGENT"]
     )
-    if @current_comment.valid?
-      flash[:success] = "Thank your comment!"
+    if @current_comment && @current_comment.valid?
+      flash[:success] = "Thanks for comment!"
     end
   end
 
@@ -46,7 +46,7 @@ class PostsController < WelcomeController
   private
 
   def load_resource
-    @post = @current_widget.posts.where(:url => "#{URI.parse(request.referer).path}").first
+    @post = @current_widget.posts.where(:url => session[:current_page]).first
     load_comments
     @comment = @post.comments.build
     if params[:class_name] == "comment"

@@ -13,13 +13,13 @@
     <div class="span12">
       <div class="row-fluid">
         <div class="span12">
-          <div class="box bordered">
+          <div class="box bordered box-container">
             <div class="box-header">
               <section id="main">
                 <%= render :partial => "shared/flashes" %>
 
               </section>
-              <i class="icon-comments"></i> Widget Name
+              <i class="icon-comments"></i> <%= @current_widget.try(:store).try(:name) %>
               <div class="pull-right">
                 <%= rating_for(@post, :url => rate_posts_path) %>
                 <div class="post-error">
@@ -55,4 +55,10 @@
         $('form[id^=edit_comment]').remove();
         $('label[id^=comment_label_]').show();
     })
+    $(function () {
+        var h = $('.wrapper').css('height');
+        h = parseInt(h) + 20
+        parent.resize(h);
+    })
+
 </script>

@@ -3,15 +3,21 @@
   </div>
 
   <div class="article">
-    <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago" %>
+    <div class="post-info">
+      <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago" %>
+    </div>
+    <div class="past-rating">
       <%= rating_for(comment, :url => rate_posts_path) %>
+    </div>
+    <div class="past-actions" style="margin-top:-40px; float: right;">
+
     </div>
     <div class="post-content-preview" id="comment_text_<%= comment.id %>">
 
       <%= label_tag "content", comment.message, :id => "comment_label_#{comment.id}", "data-page" => params[:page] %>
     </div>
 
-    <div class="article-actions" style="margin-top:25px;">
+    <div class="article-actions">
       <% if can? :edit, comment %>
           <%= link_to_with_icon "icon-edit", "Edit", edit_comment_path(comment.id), :remote => true, :class => 'edit-comment' %>
           -

@@ -12,8 +12,27 @@ class WelcomeController < ApplicationController
   private
   def set_widget
     #URI.parse(env["REQUEST_URI"])
-    @current_widget = Widget.where(:key => 123, :webpage => request.host.gsub("www.", "")).first
-    #@current_widget = Widget.where(:key => params[:key], :webpage => request.host.gsub("www.", "")).first
+
+    reset_widget_session
+
+    @current_widget = Widget.where(:key => session[:current_widget_key], :webpage => session[:current_widget_host]).first
+  end
+
+  def reset_widget_session
+    if params[:k] && params[:p] && params[:u]
+      session[:current_widget_host] = params[:u]
+      session[:current_widget_key] = params[:k]
+      session[:current_page] = params[:p]
+    end
+  end
+
+  def init_session
+    session[:current_widget_host] ||= request.referer
+    session[:current_widget_key] ||= params[:k]
+    if request.referer
+      ref = URI.parse(request.referer)
+      session[:current_page] ||= ref.path
+    end
   end
 
   def check_user
