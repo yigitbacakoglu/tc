@@ -134,9 +134,15 @@
 
       <script id="talky-script">
           $(function () {
-              setTimeout(function() {
+              setTimeout(function () {
                   var like = document.createElement('iframe');
+                  <% if Rails.env.development? %>
                   like.src = "//localhost:3000/demo?k=123&u=" + window.location.hostname + "&p=" + window.location.pathname + "";
+
+                  <% else %>
+                  like.src = "//talkycloud.com/demo?k=123&u=" + window.location.hostname + "&p=" + window.location.pathname + "";
+
+                  <% end %>
 //    like.scrolling = 'no';
                   like.frameBorder = 0;
                   like.id = "talky-frame";
