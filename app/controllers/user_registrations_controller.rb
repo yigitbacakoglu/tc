@@ -9,8 +9,10 @@ class UserRegistrationsController < Devise::RegistrationsController
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up
         sign_up(resource_name, resource)
-        if request.referer.include?('demo') && params[:close]
+        if request.referer.include?('demo') && params[:close].eql?('true')
           session["user_registration_return_to"] ||= request.referer
+        elsif params[:close].eql?('false')
+          session["user_registration_return_to"] = request.referer
         end
         respond_with resource, :location => after_sign_up_path_for(resource)
       else

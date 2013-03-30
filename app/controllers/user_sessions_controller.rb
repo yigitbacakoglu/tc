@@ -9,7 +9,12 @@ class UserSessionsController < Devise::SessionsController
   private
 
   def after_sign_out_path_for(resource_or_scope)
-    request.referer
+    if session[:current_page]
+      request.referer + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
+    else
+      request.referer
+    end
+
   end
 
 end

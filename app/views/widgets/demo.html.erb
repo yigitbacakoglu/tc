@@ -55,4 +55,10 @@
         $('form[id^=edit_comment]').remove();
         $('label[id^=comment_label_]').show();
     })
+    $(function () {
+        var h = $('.wrapper').css('height');
+        h = parseInt(h) + 20
+        parent.resize(h);
+    })
+
 </script>

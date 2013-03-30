@@ -3,15 +3,16 @@ class WidgetsController < WelcomeController
 
   def demo
     #URI.parse(env["REQUEST_URI"])
-    session[:current_widget] = request.referer
+    #session[:current_widget] = request.referer
     if @current_widget.login_required? && @current_user.blank?
       @user = UserRegistration.new_with_session({}, session)
-      session["user_registration_return_to"] = "/close"
+      session["user_registration_return_to"] = "/close?" + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
     end
     @show_avatar = true
   end
 
   def close
+    reset_widget_session
     flash[:success] = "Signed in successfully"
     @show_avatar = true
   end
