@@ -19,10 +19,10 @@ class WelcomeController < ApplicationController
   end
 
   def reset_widget_session
-    if params[:k] && params[:p] && params[:u]
-      session[:current_widget_host] = params[:u]
-      session[:current_widget_key] = params[:k]
-      session[:current_page] = params[:p]
+    if params["k"] && params["p"] && params["u"]
+      session[:current_widget_host] = params["u"]
+      session[:current_widget_key] = params["k"]
+      session[:current_page] = params["p"]
     end
   end
 
