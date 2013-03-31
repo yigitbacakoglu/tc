@@ -1,0 +1,15 @@
+<script>
+    $(function () {
+        var h = $('.wrapper').css('height');
+        h = parseInt(h) + 20
+        var socket = new easyXDM.Socket({
+            onMessage: function (message, origin) {
+                //do something with message
+                setTimeout(function(){
+                    var h = $('.wrapper').css('height');
+                    h = parseInt(h) + 20;
+                    socket.postMessage(h);},300);
+            }
+        });
+    });
+</script>
