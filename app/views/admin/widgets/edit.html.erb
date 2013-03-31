@@ -37,13 +37,13 @@
         external.src = "//talkycloud.com/assets/embed.js";
         <% end %>
         external.id = "talky-script";
-        var external = document.createElement('script');
+        var external2 = document.createElement('script');
         <% if Rails.env.development? %>
-        external.src = "//localhost:3000/assets/easyXDM.min.js";
+        external2.src = "//localhost:3000/assets/easyXDM.min.js";
         <% else %>
-        external.src = "//talkycloud.com/assets/easyXDM.min.js";
+        external2.src = "//talkycloud.com/assets/easyXDM.min.js";
         <% end %>
-        $(".well").text(cms.outerHTML + external.outerHTML);
+        $(".well").text(cms.outerHTML + external.outerHTML + external2.outerHTML);
         $(".well").slideDown();
     });
 </script>
