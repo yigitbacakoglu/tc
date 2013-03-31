@@ -43,13 +43,7 @@
         <% else %>
         external.src = "//talkycloud.com/assets/easyXDM.min.js";
         <% end %>
-
-
-        $(".well").text("
-        <!--Talky Cloud Commenting Widget-->
-        " + cms.outerHTML + external.outerHTML + "
-        <!--/Talky Cloud Commenting Widget-->
-        " );
+        $(".well").text(cms.outerHTML + external.outerHTML);
         $(".well").slideDown();
     });
 </script>
