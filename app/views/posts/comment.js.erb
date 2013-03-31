@@ -8,17 +8,4 @@ apply_raty();
 <% end %>
 <%#= render :partial => "shared/errors" %>
 
-var h = $('.wrapper').css('height');
-h = parseInt(h) + 20
-var socket = new easyXDM.Socket({
-    remote: "http://localhost:3000", // the path to the provider
-
-//    remote: "http://talkycloud.com/demo", // the path to the provider
-    onMessage: function (message, origin) {
-        socket.postMessage(h);
-    },
-    onReady: function () {
-        socket.postMessage(h);
-    }
-});
 

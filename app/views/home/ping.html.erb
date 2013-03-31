@@ -1,15 +1,54 @@
 <script>
-    $(function () {
-        var h = $('.wrapper').css('height');
-        h = parseInt(h) + 20
-        var socket = new easyXDM.Socket({
-            onMessage: function (message, origin) {
-                //do something with message
-                setTimeout(function(){
-                    var h = $('.wrapper').css('height');
-                    h = parseInt(h) + 20;
-                    socket.postMessage(h);},300);
-            }
-        });
+    var iframe;
+    var socket = new easyXDM.Socket({
+        onReady: function () {
+            iframe = document.createElement("iframe");
+            iframe.frameBorder = 0;
+            iframe.width = "100%";
+            iframe.id = "talky-frame";
+            document.body.appendChild(iframe);
+            <% if Rails.env.development? %>
+            iframe.src = "//localhost:3000/demo?k=" + easyXDM.query.k + "&u=" + easyXDM.query.u + "&p=" + easyXDM.query.p + "";
+            <% else %>
+            iframe.src = "//talkycloud.com/demo?k=" + easyXDM.query.k + "&u=" + easyXDM.query.u + "&p=" + easyXDM.query.p + "";
+            <% end %>
+            var timer;
+            iframe.onload = function () {
+                var h = $('.wrapper').css('height');
+                h = parseInt(h) + 20
+
+                var d = iframe.contentWindow.document;
+                var originalHeight = d.body.scrollHeight;
+                console.log(originalHeight);
+
+                // We want to monitor the document for resize events in case of the use of accordions and such,
+                // but unfortunately only the window node emits the resize event, and we need the body's.
+                // The only solution then is to use polling..
+
+                // Lets start the polling if not all ready started
+                if (!timer) {
+                    timer = setInterval(function () {
+                        try {
+                            var d = iframe.contentWindow.document;
+                            var newHeight = d.body.scrollHeight;
+                            if (newHeight != originalHeight) {
+                                // The height has changed since last we checked
+                                originalHeight = newHeight;
+                                iframe.height = originalHeight + "px";
+                                socket.postMessage(originalHeight);
+                            }
+                        } catch (e) {
+                            // We tried to read the property at some point when it wasn't available
+                        }
+                    }, 300);
+                }
+                // Send the first message
+                iframe.height = originalHeight + "px";
+                socket.postMessage(originalHeight);
+            };
+        },
+        onMessage: function (url, origin) {
+            console.log(url);
+        }
     });
 </script>

@@ -26,7 +26,7 @@ class Admin::WidgetsController < Admin::BaseController
     if @widget.save
       flash[:success] = "Widget succesfully created"
       respond_to do |format|
-        format.html { redirect_to admin_widgets_path }
+        format.html { redirect_to edit_admin_widget_path(@widget) }
         format.js { render 'admin/widgets/create' }
       end
     end

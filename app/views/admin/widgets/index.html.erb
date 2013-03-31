@@ -1,9 +1,11 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span12">
+
       <div class="box bordered">
         <div class="padded">
           <div class="section-title">Widgets</div>
+          <div class="section-title"><%= link_to_with_icon "icon-plus", 'New' ,new_admin_widget_url, :class => "btn btn-success pull-right" %></div>
           <table class="table table-striped">
             <thead>
             <tr>

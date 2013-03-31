@@ -1,6 +1,7 @@
 var cms = document.createElement('script');
 cms.innerHTML = "talky-costumer-key='<%= @widget.try(:key) %>'";
 cms.type = "text/javascript"
+
 var external = document.createElement('script');
 <% if Rails.env.development? %>
 external.src = "//localhost:3000/assets/embed.js";
@@ -9,6 +10,12 @@ external.src = "//talkycloud.com/assets/embed.js";
 <% end %>
 external.id = "talky-script";
 
-$(".well").text(cms.outerHTML + external.outerHTML);
+$(".well").text("<!--Talky Cloud Commenting Widget-->" + cms.outerHTML + external.outerHTML + "<!--/Talky Cloud Commenting Widget-->");
 $(".well").slideDown();
+
+<%= render :partial => "shared/flashes" %>
+$('.form-horizontal').attr('action')
+
+
+
 

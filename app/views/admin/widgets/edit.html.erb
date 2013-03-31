@@ -18,11 +18,41 @@
               </div>
             </div>
 
-      <% end %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+    $(function () {
+        var cms = document.createElement('script');
+        cms.innerHTML = "talkyCostumerKey='<%= @widget.try(:key) %>'";
+        cms.type = "text/javascript"
+
+        var external = document.createElement('script');
+        <% if Rails.env.development? %>
+        external.src = "//localhost:3000/assets/dev_embed.js";
+        <% else %>
+        external.src = "//talkycloud.com/assets/embed.js";
+        <% end %>
+        external.id = "talky-script";
+        var external = document.createElement('script');
+        <% if Rails.env.development? %>
+        external.src = "//localhost:3000/assets/easyXDM.min.js";
+        <% else %>
+        external.src = "//talkycloud.com/assets/easyXDM.min.js";
+        <% end %>
+
+
+        $(".well").text("
+        <!--Talky Cloud Commenting Widget-->
+        " + cms.outerHTML + external.outerHTML + "
+        <!--/Talky Cloud Commenting Widget-->
+        " );
+        $(".well").slideDown();
+    });
+</script>
 
 
 

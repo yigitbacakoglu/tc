@@ -54,17 +54,5 @@
         }
         $('form[id^=edit_comment]').remove();
         $('label[id^=comment_label_]').show();
-    })
-    $(function () {
-        var h = $('.wrapper').css('height');
-        h = parseInt(h) + 20
-
-        var socket = new easyXDM.Socket({
-            onMessage: function (message, origin) {
-                socket.postMessage(h);
-            }
-        });
     });
-
-
 </script>

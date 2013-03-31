@@ -11,6 +11,9 @@
         <div class="input full-width">
           <%= f.text_field :category_id, :placeholder => 'Category' %>
         </div>
+        <% unless @widget.new_record? %>
+      <p> <i class="icon-info-sign"></i> <b>Please Copy and Paste code into place where you would like to load TalkyCloud. </b> </p>
+        <% end %>
         <div class="well" style="display: none;">
 
         </div>
