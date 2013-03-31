@@ -13,7 +13,7 @@
     <file path="/new.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364656520182" ignored="false" />
     <file path="/new.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364676521862" ignored="false" />
     <file path="/user_registrations_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364656975787" ignored="false" />
-    <file path="/index.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364754500757" ignored="false" />
+    <file path="/index.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364756951416" ignored="false" />
     <file path="/demo.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364753114923" ignored="false" />
     <file path="/application.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364751337477" ignored="false" />
     <file path="/application_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364671972443" ignored="false" />
@@ -45,105 +45,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="comment.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/posts/comment.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="-5.76">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/create.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="48" selection-start="0" selection-end="619" vertical-scroll-proportion="-10.24">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="38" selection-start="250" selection-end="250" vertical-scroll-proportion="-4.48">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="41" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.5319149">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="50" selection-start="340" selection-end="340" vertical-scroll-proportion="-6.4">
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="59" selection-start="4246" selection-end="4246" vertical-scroll-proportion="-2.52">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widgets_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admin/widgets_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="65" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="138" selection-start="333" selection-end="333" vertical-scroll-proportion="7.04">
+            <state line="146" column="26" selection-start="4895" selection-end="4895" vertical-scroll-proportion="0.6217617">
               <folding>
-                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="embed.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/embed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="39" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dev_embed.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dev_embed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="3" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demo.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.12">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -172,8 +80,8 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/widgets_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/widgets/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/widgets/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/widgets/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
       </list>
     </option>
   </component>
@@ -799,7 +707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.12">
+        <state line="8" column="0" selection-start="325" selection-end="325" vertical-scroll-proportion="0.320802">
           <folding />
         </state>
       </provider>
@@ -807,13 +715,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/create.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="48" selection-start="0" selection-end="619" vertical-scroll-proportion="-10.24">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="250" selection-end="250" vertical-scroll-proportion="-4.48">
           <folding />
         </state>
       </provider>
@@ -827,28 +728,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/embed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="39" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+        <state line="9" column="39" selection-start="379" selection-end="379" vertical-scroll-proportion="0.35036495">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dev_embed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="3" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
+        <state line="18" column="3" selection-start="783" selection-end="783" vertical-scroll-proportion="0.7007299">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/widgets_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="65" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
+        <state line="28" column="65" selection-start="616" selection-end="616" vertical-scroll-proportion="0.49292454">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="138" selection-start="333" selection-end="333" vertical-scroll-proportion="7.04">
+        <state line="7" column="138" selection-start="333" selection-end="333" vertical-scroll-proportion="-0.45595855">
           <folding>
             <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -857,24 +758,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="340" selection-end="340" vertical-scroll-proportion="-6.4">
+        <state line="10" column="50" selection-start="340" selection-end="340" vertical-scroll-proportion="0.42553192">
           <folding>
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="59" selection-start="4246" selection-end="4246" vertical-scroll-proportion="-2.52">
+        <state line="48" column="41" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.82978725">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/widgets/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="41" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.5319149">
+        <state line="7" column="38" selection-start="250" selection-end="250" vertical-scroll-proportion="0.29787233">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="26" selection-start="4895" selection-end="4895" vertical-scroll-proportion="0.6217617">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
