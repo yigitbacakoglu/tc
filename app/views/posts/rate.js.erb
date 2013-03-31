@@ -8,3 +8,13 @@ var success_message = '<div class="post-success">' +
 $('#<%= "#{@object.class.name.downcase}_#{params[:comment_id]}" %>').append(error_message);
 $('#<%= "#{@object.class.name.downcase}_#{params[:comment_id]}" %>').append(success_message);
 
+$(function () {
+    var h = $('.wrapper').css('height');
+    h = parseInt(h) + 20
+    var socket = new easyXDM.Socket({
+        onMessage: function (message, origin) {
+            //do something with message
+            socket.postMessage(h);
+        }
+    });
+});

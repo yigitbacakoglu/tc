@@ -5,7 +5,7 @@
         <div class="box-header">
           <i class="icon-sitemap"></i> New Widget
         </div>
-        <%= form_for [:admin, @widget] do |f| %>
+        <%= form_for [:admin, @widget], :remote => true do |f| %>
             <%= render :partial => "form", :locals => {:f => f} %>
             <div class="row-fluid">
               <div class="span6">

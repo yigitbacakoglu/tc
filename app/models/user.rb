@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end
 
   def username
-    self.user_registration.username
+    anonymous? ? 'Anonymous' : self.user_registration.username
   end
 
   def fullname

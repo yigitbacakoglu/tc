@@ -5,6 +5,7 @@ Omrats::Application.routes.draw do
 
   root :to => "home#index"
   get '/close', :to => "widgets#close", :as => :close
+  get '/ping', :to => "home#ping", :as => :ping
   get '/demo', :to => "widgets#demo", :as => :demo
   get '/demo-1', :to => "widgets#demo", :as => :demo2
   get '/demo-2', :to => "widgets#demo", :as => :demo3

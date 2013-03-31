@@ -3,5 +3,9 @@ class HomeController < ApplicationController
 
   end
 
+  def ping
+
+  end
+
   private
 end

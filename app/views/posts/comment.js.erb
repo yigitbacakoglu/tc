@@ -1,4 +1,4 @@
-<% if @current_comment.valid? %>
+<% if @current_comment && @current_comment.valid? %>
 $('textarea').val('');
 $('#comment_container').prepend('<%= escape_javascript(render :partial => "shared/comment_item", :locals => {:comment => @current_comment }, :formats => :html) %>');
 apply_raty();
@@ -7,3 +7,18 @@ apply_raty();
 <%= render :partial => "shared/errors", :locals => {:target => @current_comment} %>
 <% end %>
 <%#= render :partial => "shared/errors" %>
+
+var h = $('.wrapper').css('height');
+h = parseInt(h) + 20
+var socket = new easyXDM.Socket({
+    remote: "http://localhost:3000", // the path to the provider
+
+//    remote: "http://talkycloud.com/demo", // the path to the provider
+    onMessage: function (message, origin) {
+        socket.postMessage(h);
+    },
+    onReady: function () {
+        socket.postMessage(h);
+    }
+});
+

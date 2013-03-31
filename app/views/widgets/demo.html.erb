@@ -58,7 +58,13 @@
     $(function () {
         var h = $('.wrapper').css('height');
         h = parseInt(h) + 20
-        parent.resize(h);
-    })
+
+        var socket = new easyXDM.Socket({
+            onMessage: function (message, origin) {
+                socket.postMessage(h);
+            }
+        });
+    });
+
 
 </script>

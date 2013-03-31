@@ -27,6 +27,7 @@ class Admin::WidgetsController < Admin::BaseController
       flash[:success] = "Widget succesfully created"
       respond_to do |format|
         format.html { redirect_to admin_widgets_path }
+        format.js { render 'admin/widgets/create' }
       end
     end
   end
