@@ -47,6 +47,11 @@ class WelcomeController < ApplicationController
               break
             end
           end
+          if @current_anonymous_user.blank?
+            ip = IpAddress.create(:value => request.remote_ip)
+            @current_anonymous_user = ip.user
+            session[:user_id] = ip.user.id
+          end
         else
           ip = IpAddress.create(:value => request.remote_ip)
           @current_anonymous_user = ip.user

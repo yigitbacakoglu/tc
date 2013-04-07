@@ -4,7 +4,9 @@ class Post < ActiveRecord::Base
   belongs_to :widget
   belongs_to :category
   has_many :ratings, :as => :ratable, :class_name => 'Rating'
-  has_many :comments, :class_name => "Comment"
+
+  has_many :comments, :class_name => "Comment",
+           :conditions => ["#{::Comment.quoted_table_name}.state = ? ", "approved"]
 
   belongs_to :rating_category,
              :class_name => "Category",
@@ -16,6 +18,10 @@ class Post < ActiveRecord::Base
 
 
   before_create :set_defaults
+
+  def approval_required?
+    self.widget.approval_required?
+  end
 
   def rate(value, ip_address, user_id)
     if can_rate? ip_address
@@ -37,6 +43,7 @@ class Post < ActiveRecord::Base
     c.user_id = options[:user_id]
     c.user_agent = options[:user_agent]
     c.referer = options[:referer]
+    c.store_id = self.widget.store_id
     if c.spam?
       false
     else

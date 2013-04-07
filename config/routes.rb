@@ -35,10 +35,16 @@ Omrats::Application.routes.draw do
 
   namespace :admin do
     resources :overview
+    resources :comments do
+      collection do
+        get "set_all/:state", :as => :set_all, :to => "comments#set_all"
+      end
+    end
     resources :account, :except => [:show, :index]
     get '/account', :as => :account, :to => 'account#show'
     put '/account', :as => :update_account, :to => 'account#update'
     resources :widgets
+    get '/fire/:e/comment/:comment_id', :as => :fire, :to => 'overview#fire'
   end
 
 end

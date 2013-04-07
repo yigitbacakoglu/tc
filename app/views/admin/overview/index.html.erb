@@ -1,6 +1,6 @@
 <% @offers = Sale.all %>
 <% if params[:yigitcan] %>
-    <div class="container-fluid">
+    <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
       <div class="row-fluid">
         <div class="span12">
           <div class="box bordered">
@@ -36,3 +36,38 @@
       </div>
     </div>
 <% end %>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="box bordered">
+        <div class="box-header">
+          <i class="icon-comments"></i> Recent comments
+          <div class="pull-right">
+            <div class="btn-group">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-wrench"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-left">
+                <li><%= link_to "Approve All", set_all_admin_comments_path('approve'), :confirm => "Are you sure?" %></li>
+                <li><%= link_to "Reject All", set_all_admin_comments_path('reject'), :confirm => "Are you sure?" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="padded10">
+          <ul id="comment_container" class="recent-comments">
+            <%= render :partial => "index" %>
+            <% if @comments.blank? %>
+                <div class="padded">
+                  <i class="icon-info-sign"></i> <span>You dont have waiting comment... </span>
+                </div>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

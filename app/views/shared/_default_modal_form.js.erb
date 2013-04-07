@@ -1,0 +1,10 @@
+$('#defaultModal .modal-footer').remove();
+$('#defaultModal .modal-body').remove();
+$('#defaultModal form').remove();
+$('#defaultModal').append('<%= escape_javascript(render :template => "#{target}", :formats => [:html], :handlers => [:erb]) %>'); //this contains both footer and body
+$('#defaultModal .modal-header h3').text('<%= @title %>'); // don't need a footer here
+$('#defaultModal').modal('show');
+//$(document).ready(function () {
+//    setTimeout("$('form').enableClientSideValidations()", 500);
+//    run_controller_initializers()
+//});

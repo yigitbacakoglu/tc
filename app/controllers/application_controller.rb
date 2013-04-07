@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     save_ip_address
   end
 
+  def set_current_store
+    @current_store = current_user.stores.first
+  end
+
   def current_user
     @current_user || @current_anonymous_user
   end

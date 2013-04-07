@@ -1,0 +1,58 @@
+<div class="span12">
+  <div class="box bordered">
+    <div class="padded">
+      <div class="section-title">Comments</div>
+      <table class="table table-strip table-bordered">
+        <thead>
+        <tr>
+          <th>Created At</th>
+          <th>Message</th>
+          <th>Page</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>State</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @comments.each do |comment| %>
+            <tr>
+              <td>
+                <%= simple_date(comment.created_at) %>
+              </td>
+
+              <td>
+                <%= comment.message.truncate(25) %>
+              </td>
+              <td>
+                <%= comment.post.url %>
+              </td>
+              <td style="line-height: 24px;">
+                <%= comment.user.fullname %>
+              </td>
+              <td>   <%= comment.user.email %>
+              </td>
+              <td>
+                <span class="badge <%= comment.state_color %>"><%= comment.state %></span>
+              </td>
+              <td>
+                <%= link_to_with_icon "icon-edit", "Edit", edit_admin_comment_path(comment), :class => "btn btn-mini btn-info", :remote => true %>
+                <%= link_to_with_icon "icon-ok", "Approve", admin_fire_path('approve', comment.id), :class => "btn btn-mini green", :confirm => "Are you sure?" %>
+                <%= link_to_with_icon "icon-remove", "Reject", admin_fire_path('reject', comment.id), :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td colspan="7">
+              <%= paginate @comments, :theme => "bootstrap_theme" %>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+
+    </div>
+  </div>
+
+</div>

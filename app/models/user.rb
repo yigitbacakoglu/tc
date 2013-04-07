@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
   end
 
   def has_role?(param)
-    self.role == param
+    self.role == param.try(:to_s)
   end
 
   def check_registration

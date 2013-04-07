@@ -94,5 +94,9 @@ module BaseHelper
     @current_user || @current_anonymous_user
   end
 
+  def simple_date(date)
+    date.strftime('%b %d, %Y')
+  end
+
 
 end

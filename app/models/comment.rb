@@ -11,16 +11,36 @@ class Comment < ActiveRecord::Base
 
   belongs_to :post
   belongs_to :user
+  belongs_to :store
   has_many :ratings, :as => :ratable, :class_name => 'Rating'
 
-  attr_accessible :kind, :message, :parent_id, :ip_address, :user_agent, :referer, :user_id
+  attr_accessible :kind, :message,
+                  :parent_id, :ip_address, :user_agent, :referer, :user_id, :state
 
   validates :message, :presence => true
   validates_length_of :message, :minimum => 2, :maximum => 650, :allow_blank => true
+  validate :restrictions
   scope :main, lambda { where("parent_id IS NULL") }
   scope :sub, lambda { where("parent_id IS NOT NULL") }
+  scope :approved, lambda { where(:state => 'approved') }
+  scope :rejected, lambda { where(:state => 'rejected') }
+  scope :waiting, lambda { where(:state => 'new') }
 
   before_create :save_rating
+  after_create :auto_approve
+  state_machine :state, :initial => :new do
+    event :approve do
+      transition :from => :new, :to => :approved
+      transition :from => :rejected, :to => :approved
+    end
+    event :reject do
+      transition :from => :new, :to => :rejected
+      transition :from => :approved, :to => :rejected
+    end
+  end
+
+
+  #after_transition :on => :register, :do => :sent_registered_mail
 
   def rate(value, ip_address, user_id)
     if can_rate? ip_address
@@ -55,8 +75,52 @@ class Comment < ActiveRecord::Base
       (all_ratings.order("updated_at desc").first.created_at.to_time + 300) >= Time.now
     end
   end
+  # Returns CSS color class for span views
+  def state_color
+    case state
+      when 'rejected'
+        "red"
+      when 'approved'
+        "green"
+      when 'new'
+       "orange"
+    end
+  end
 
+  private
   def save_rating
     #self.ratings.build(:value => 0, :ip_address_id => ip_address_id)
   end
+
+  def auto_approve
+    self.approve unless self.post.approval_required?
+  end
+
+  def restrictions
+    validate_user
+    validate_restricted_words
+  end
+
+
+  def validate_user
+    errors.add(:base, "You are not allowed to comment") if self.post.widget.store && self.post.widget.store.restrictions.map(&:restrictable).include?(self.user)
+  end
+
+
+  def validate_restricted_words
+    bads = []
+    # Gets list of badwords
+    IO.foreach('lib/badwords.txt') do |line|
+      bads << line.strip
+    end
+    #Gets list of store restricted words
+
+    bads += self.post.widget.store.restricted_words.map(&:value)
+    badex = /\b(#{bads.join('|')})\b/i
+
+    #Replacing bad words with star
+    self.message = self.message.gsub(badex, '[**]').gsub('[**][**]', '[**]')
+
+  end
+
 end

@@ -49,6 +49,10 @@
         <%= tab :widgets, :label => "New Widget", :url => new_admin_widget_path, :match_path => new_admin_widget_path %>
       </ul>
 
+      <!-- Dashboard -->
+      <%= tab :dashboard, :label => "Comments", :url => admin_comments_path, :icon => 'comments',:match_path => "/admin/comment.*" %>
+
+
     </li>
   </ul>
 </nav>

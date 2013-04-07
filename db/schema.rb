@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130310131749) do
+ActiveRecord::Schema.define(:version => 20130406154731) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20130310131749) do
     t.string   "referer"
     t.integer  "user_id"
     t.string   "ip_address"
+    t.string   "state"
+    t.integer  "store_id"
   end
 
   create_table "ip_addresses", :force => true do |t|
@@ -49,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20130310131749) do
     t.datetime "updated_at",             :null => false
     t.integer  "rating_category_id"
     t.integer  "commenting_category_id"
+    t.string   "state"
   end
 
   create_table "ratings", :force => true do |t|
@@ -72,13 +75,13 @@ ActiveRecord::Schema.define(:version => 20130310131749) do
 
   create_table "restrictions", :force => true do |t|
     t.integer  "store_id"
-    t.integer  "restirctable_id"
+    t.integer  "restrictable_id"
     t.string   "restrictable_type"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
 
-  add_index "restrictions", ["restirctable_id", "restrictable_type"], :name => "index_restrictions_on_restirctable_id_and_restrictable_type"
+  add_index "restrictions", ["restrictable_id", "restrictable_type"], :name => "index_restrictions_on_restirctable_id_and_restrictable_type"
 
   create_table "sales", :force => true do |t|
     t.string   "name"
@@ -150,9 +153,10 @@ ActiveRecord::Schema.define(:version => 20130310131749) do
     t.string   "webpage"
     t.integer  "category_id"
     t.string   "key"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
-    t.boolean  "login_required", :default => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.boolean  "login_required",    :default => false
+    t.boolean  "approval_required", :default => false
   end
 
 end

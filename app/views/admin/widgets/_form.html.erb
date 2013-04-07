@@ -9,10 +9,23 @@
           <%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>
         </div>
         <div class="input full-width">
-          <%= f.text_field :category_id, :placeholder => 'Category' %>
+          <%= f.select :category_id, Category.where(:category_type => :widget).collect { |c| [c.name, c.id] }, {}, :class => "chzn-select" %>
         </div>
+        <div class="clearfix" style="margin-top:15px;">
+          <label class="checkbox">
+            <%= f.check_box :approval_required %> Approval required
+          </label>
+          <label class="checkbox">
+            <%= f.check_box :login_required %>
+            Login required
+          </label></div>
+
+
+
+
         <% unless @widget.new_record? %>
-      <p> <i class="icon-info-sign"></i> <b>Please Copy and Paste code into place where you would like to load TalkyCloud. </b> </p>
+            <p><i class="icon-info-sign"></i>
+              <b>Please Copy and Paste code into place where you would like to load TalkyCloud. </b></p>
         <% end %>
         <div class="well" style="display: none;">
 
@@ -23,19 +36,19 @@
   </div>
 
   <!--<div class="span6">-->
-    <!--<div class="padded">-->
-      <!--<div class="section-title">-->
-        <!--Web Page Details-->
-      <!--</div>-->
-      <!--<div class="vpadded">-->
-        <!--<div class="input full-width">-->
-          <!--<%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>-->
-        <!--</div>-->
-        <!--<div class="input full-width">-->
-          <!--<%= f.text_field :category_id, :placeholder => 'Category' %>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
+  <!--<div class="padded">-->
+  <!--<div class="section-title">-->
+  <!--Web Page Details-->
+  <!--</div>-->
+  <!--<div class="vpadded">-->
+  <!--<div class="input full-width">-->
+  <!--<%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>-->
+  <!--</div>-->
+  <!--<div class="input full-width">-->
+  <!--<%= f.text_field :category_id, :placeholder => 'Category' %>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
   <!--</div>-->
 
 </div>

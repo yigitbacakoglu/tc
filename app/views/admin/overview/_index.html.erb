@@ -1,0 +1,25 @@
+<% @comments.each do |comment| %>
+    <li class="comment-box">
+      <div class="avatar user2 pull-left" style='background-image: url(<%= avatar_url(comment.user) %>);'></div>
+
+      <div class="article">
+        <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago, Page: #{comment.post.url}" %>
+          <span class="pull-right badge <%= comment.state_color %>"><%= comment.state %></span>
+        </div>
+        <div class="post-content-preview">
+          <%= comment.message %>
+        </div>
+
+        <div class="article-actions">
+          <%= link_to_with_icon "icon-edit", "Edit", edit_admin_comment_path(comment), :class => "btn btn-mini dark-blue", :remote => true %>
+          <%= link_to_with_icon "icon-ok", "Approve", admin_fire_path('approve', comment.id), :class => "btn btn-mini green", :confirm => "Are you sure?" %>
+          <%= link_to_with_icon "icon-remove", "Reject", admin_fire_path('reject', comment.id), :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+        </div>
+      </div>
+    </li>
+
+<% end %>
+
+<li class="comment-box view-more" style="text-align: center">
+  <%= link_to_next_page @comments, 'View More', :remote => true %>
+</li>

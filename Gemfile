@@ -19,6 +19,7 @@ gem 'kaminari'
 gem 'mechanize'
 gem 'sitemap_notifier'
 gem 'dynamic_sitemaps'
+gem 'state_machine'
 
 group :development do
   gem "letsrate", "~> 1.0.8"

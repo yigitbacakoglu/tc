@@ -4,5 +4,6 @@ class Store < ActiveRecord::Base
   has_many :widgets, :class_name => 'Widget'
   has_many :user_stores, :class_name => 'UserStore'
   has_many :users, :through => :user_stores
+  has_many :comments
   attr_accessible :email, :kind, :name, :recover_email, :website
 end

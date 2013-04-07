@@ -4,19 +4,40 @@
   </a>
 
   <ul class="top-notifications">
-    <li>
-      <a href="#messages" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-         Comments Waiting <span class="badge dark-blue">3</span>
-      </a>
+    <!--<li>-->
+      <!--<a href="#messages" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">-->
+         <!--Comments Waiting <span class="badge dark-blue">3</span>-->
+      <!--</a>-->
 
-      <div class="collapsed" style="height: 0; overflow: visible;">
-        <ul id="messages" class="collapse top-bar-list">
-          <li><a href="#">New message</a></li>
-          <li><a href="#">Inbox <span class="count">(8)</span></a></li>
-          <li><a href="#">Sent</a></li>
-          <li><a href="#">Drafts</a></li>
-        </ul>
-      </div>
+      <!--<div class="collapsed" style="height: 0; overflow: visible;">-->
+        <!--<ul id="messages" class="collapse top-bar-list">-->
+          <!--<li><a href="#">New message</a></li>-->
+          <!--<li><a href="#">Inbox <span class="count">(8)</span></a></li>-->
+          <!--<li><a href="#">Sent</a></li>-->
+          <!--<li><a href="#">Drafts</a></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</li>-->
+
+    <li>
+      <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
+        Comments Waiting <span class="badge orange"><%= @current_store.comments.waiting.all.count %></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
+        Rejected <span class="badge red"><%= @current_store.comments.rejected.all.count %></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
+        Approved <span class="badge green"><%= @current_store.comments.approved.all.count %></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
+        Total <span class="badge dark-blue"><%= @current_store.comments.all.count %></span>
+      </a>
     </li>
 
     <!--<li>-->

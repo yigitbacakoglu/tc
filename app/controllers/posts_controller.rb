@@ -20,7 +20,11 @@ class PostsController < WelcomeController
         :user_agent => env["HTTP_USER_AGENT"]
     )
     if @current_comment && @current_comment.valid?
-      flash[:success] = "Thanks for comment!"
+      if @current_comment.approved?
+        flash[:success] = "Thanks for comment!"
+      else
+        flash[:success] = "Your comment will be published after approval!"
+      end
     end
   end
 
