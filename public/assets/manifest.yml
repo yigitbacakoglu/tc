@@ -469,8 +469,8 @@ admin/html5shiv.js: admin/html5shiv-c1e866803d5f704366e8c085b8095cb7.js
 admin/html5shiv/index.js: admin/html5shiv-c1e866803d5f704366e8c085b8095cb7.js
 admin/ie_fix.js: admin/ie_fix-ab56bb6d12d2c281e7a87b1c4efacbd0.js
 admin/ie_fix/index.js: admin/ie_fix-ab56bb6d12d2c281e7a87b1c4efacbd0.js
-application.js: application-024e2384055557e04e8f5a8bcf938c96.js
-application/index.js: application-024e2384055557e04e8f5a8bcf938c96.js
+application.js: application-50006372f638268d7a9bd95ba82731b6.js
+application/index.js: application-50006372f638268d7a9bd95ba82731b6.js
 blogs/DD_belatedPNG.js: blogs/DD_belatedPNG-f8390a16e323ade857a18e039e559d4d.js
 blogs/DD_belatedPNG/index.js: blogs/DD_belatedPNG-f8390a16e323ade857a18e039e559d4d.js
 blogs/customize.js: blogs/customize-2445d65351d1ed34224753d52c57501c.js
@@ -497,6 +497,8 @@ html5.js: html5-5a0c2e1f99b73358244b84719fa73517.js
 html5/index.js: html5-5a0c2e1f99b73358244b84719fa73517.js
 jquery.raty.js: jquery.raty-6059bf5c0441e71d9bbf10891e121f7d.js
 jquery/index.raty.js: jquery.raty-6059bf5c0441e71d9bbf10891e121f7d.js
+tagit.js: tagit-1918b337944c4dd8ecdb214a5e71afb9.js
+tagit/index.js: tagit-1918b337944c4dd8ecdb214a5e71afb9.js
 user_passwords.js: user_passwords-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 user_passwords/index.js: user_passwords-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 user_registrations.js: user_registrations-a7fa98ba2ef09a5dcc079d3f014a4e3c.js

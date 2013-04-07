@@ -19,8 +19,24 @@ class Store < ActiveRecord::Base
 
 
   has_many :comments
-  attr_accessible :email, :kind, :name, :recover_email, :website
+  attr_accessible :email, :kind, :name, :recover_email, :website, :restricted_words_attributes
+  accepts_nested_attributes_for :restricted_words
 
+  # Adding restricted_words
+  def add_words(word_array = [])
+    word_array = [word_array] if word_array.is_a? String
+    word_array.each do |word|
+      self.restricted_words.create(:value => word)
+    end
+  end
+
+  # Deleting restricted words
+  def delete_words(word_array = [])
+    word_array = [word_array] if word_array.is_a? String
+    word_array.each do |word|
+      self.restricted_words.where(:value => word).delete_all
+    end
+  end
 
   def self.current=(store)
     Thread.current[:store] = store

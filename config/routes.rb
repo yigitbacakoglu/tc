@@ -44,6 +44,12 @@ Omrats::Application.routes.draw do
       end
     end
 
+    resources :settings do
+      collection do
+        put :update_restricted_words
+      end
+    end
+
     resources :comments do
       collection do
         get "set_all/:state", :as => :set_all, :to => "comments#set_all"
