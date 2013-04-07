@@ -30,9 +30,9 @@
     </li>
 
     <!-- Dashboard -->
-    <%= tab :dashboard, :label => "Dashboard", :url => admin_path, :icon => 'dashboard',:match_path => "/admin" %>
+    <%= tab :dashboard, :label => "Dashboard", :url => admin_path, :icon => 'dashboard', :match_path => "/admin" %>
 
-    <!-- Components -->
+    <!-- Widgets -->
     <li class="<%= "active" if request.fullpath.gsub('//', '/').match("/admin/.*widget.*").to_s == request.fullpath %>">
 
       <a href="#components-list" class="accordion-toggle " data-toggle="collapse">
@@ -44,14 +44,30 @@
           </span>
       </a>
 
-      <ul id="components-list" class="collapse secondary">
+      <ul id="components-list" class=" <%= "in" if request.fullpath.gsub('//', '/').match("/admin/.*widget.*").to_s == request.fullpath %> collapse secondary">
         <%= tab :widgets, :label => "All", :url => admin_widgets_path, :match_path => '/admin/widgets' %>
         <%= tab :widgets, :label => "New Widget", :url => new_admin_widget_path, :match_path => new_admin_widget_path %>
       </ul>
 
-      <!-- Dashboard -->
-      <%= tab :dashboard, :label => "Comments", :url => admin_comments_path, :icon => 'comments',:match_path => "/admin/comment.*" %>
+    </li>
+    <%= tab :comments, :label => "Comments", :url => admin_comments_path, :icon => 'comments', :match_path => "/admin/comment.*" %>
+    <!-- Components -->
+    <li class="<%= "active" if request.fullpath.gsub('//', '/').match("/admin/.*user.*").to_s == request.fullpath %>">
 
+      <a href="#users-list" class="accordion-toggle " data-toggle="collapse">
+          <span class="icon">
+            <i class="icon-user"></i>
+          </span>
+          <span class="text">
+            Users <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="users-list" class="<%= "in" if request.fullpath.gsub('//', '/').match("/admin/.*user.*").to_s == request.fullpath %> collapse secondary">
+        <%= tab :widgets, :label => "All", :url => admin_users_path, :match_path => '/admin/users' %>
+        <%= tab :widgets, :label => "Active", :url => admin_users_path(:e => :active), :match_path => "/admin/users.?e=active.*" %>
+        <%= tab :widgets, :label => "Banned", :url => admin_users_path(:e => :banned), :match_path => "/admin/users.?e=banned.*" %>
+      </ul>
 
     </li>
   </ul>

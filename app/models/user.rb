@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :restrictions, :as => :restrictable, :class_name => 'Restriction', :dependent => :destroy
   has_many :ip_addresses, :class_name => "IpAddress"
   has_many :comments, :class_name => 'Comment'
+  has_many :ratings, :class_name => 'Rating'
 
   def self.current
     Thread.current[:user]
@@ -17,6 +18,10 @@ class User < ActiveRecord::Base
 
   def self.current=(user)
     Thread.current[:user] = user
+  end
+
+  def banned_from?(store)
+    self.user_stores.where(:store_id => store.id).first.role.eql?('banned') rescue false
   end
 
   def email
@@ -39,6 +44,25 @@ class User < ActiveRecord::Base
     self.role == param.try(:to_s)
   end
 
+  def rating_avg_on(store)
+    (comment_rating_avg_on(store) + post_rating_avg_on(store)) / 2
+  end
+
+  def comment_rating_avg_on(store)
+    sum = 0
+    rates = self.ratings.where("#{::Rating.quoted_table_name}.ratable_type = ? AND #{::Rating.quoted_table_name}.ratable_id IN(?)", "Comment", store.comment_ids)
+    rates.collect { |r| sum += (100*(r.value / r.max_value)) }
+    rates.blank? ? 0 : (sum / rates.count)
+  end
+
+  def post_rating_avg_on(store)
+    sum = 0
+    rates = self.ratings.where("#{::Rating.quoted_table_name}.ratable_type = ? AND #{::Rating.quoted_table_name}.ratable_id IN(?)", "Post", store.widgets.map(&:post_ids).first)
+    rates.collect { |r| sum += (100*(r.value / r.max_value)) }
+    rates.blank? ? 0 : (sum / rates.count)
+  end
+
+  private
   def check_registration
     if self.user_registration.blank?
       user_registration = UserRegistration.new(:email => "#{SecureRandom.hex(20)}@example.com", :user_id => self.id)

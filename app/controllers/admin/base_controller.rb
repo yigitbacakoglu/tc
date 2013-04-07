@@ -33,6 +33,9 @@ class Admin::BaseController < ApplicationController
 
   def authorize_admin
     raise CanCan::AccessDenied unless current_user && current_user.has_role?('admin')
+    session.delete(:current_widget_host)
+    session.delete(:current_widget_key)
+    session.delete(:current_page)
   end
 
 end

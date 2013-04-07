@@ -16,6 +16,7 @@ class WelcomeController < ApplicationController
     reset_widget_session
 
     @current_widget = Widget.where(:key => session[:current_widget_key], :webpage => session[:current_widget_host]).first
+    set_current_store(@current_widget.store)
   end
 
   def reset_widget_session

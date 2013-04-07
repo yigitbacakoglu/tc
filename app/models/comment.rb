@@ -27,7 +27,7 @@ class Comment < ActiveRecord::Base
   scope :waiting, lambda { where(:state => 'new') }
 
   before_create :save_rating
-  after_create :auto_approve
+  after_create :after_create
   state_machine :state, :initial => :new do
     event :approve do
       transition :from => :new, :to => :approved
@@ -75,6 +75,7 @@ class Comment < ActiveRecord::Base
       (all_ratings.order("updated_at desc").first.created_at.to_time + 300) >= Time.now
     end
   end
+
   # Returns CSS color class for span views
   def state_color
     case state
@@ -83,7 +84,7 @@ class Comment < ActiveRecord::Base
       when 'approved'
         "green"
       when 'new'
-       "orange"
+        "orange"
     end
   end
 
@@ -92,15 +93,24 @@ class Comment < ActiveRecord::Base
     #self.ratings.build(:value => 0, :ip_address_id => ip_address_id)
   end
 
+  def after_create
+    auto_approve
+    save_user_store
+  end
+
   def auto_approve
     self.approve unless self.post.approval_required?
   end
 
+  def save_user_store
+    self.user.stores << Store.current if Store.current && !self.user.stores.include?(Store.current)
+  end
+
+  #Validate restrictions
   def restrictions
     validate_user
     validate_restricted_words
   end
-
 
   def validate_user
     errors.add(:base, "You are not allowed to comment") if self.post.widget.store && self.post.widget.store.restrictions.map(&:restrictable).include?(self.user)

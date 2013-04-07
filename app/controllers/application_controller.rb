@@ -18,8 +18,9 @@ class ApplicationController < ActionController::Base
     save_ip_address
   end
 
-  def set_current_store
-    @current_store = current_user.stores.first
+  def set_current_store(store = nil)
+    Store.current = (store || current_user.stores.first)
+    @current_store = Store.current
   end
 
   def current_user

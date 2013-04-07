@@ -34,13 +34,24 @@ Omrats::Application.routes.draw do
   resources :authentications
 
   namespace :admin do
+
     resources :overview
+
+    resources :users do
+      member do
+        put :ban
+        put :allow
+      end
+    end
+
     resources :comments do
       collection do
         get "set_all/:state", :as => :set_all, :to => "comments#set_all"
       end
     end
+
     resources :account, :except => [:show, :index]
+
     get '/account', :as => :account, :to => 'account#show'
     put '/account', :as => :update_account, :to => 'account#update'
     resources :widgets
