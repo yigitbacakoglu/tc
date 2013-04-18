@@ -37,9 +37,16 @@ class Post < ActiveRecord::Base
   end
 
   def comment(message, options = {})
+    parent_id = nil
+    unless message.is_a? String
+      parent_id = message[:parent_id]
+      message = message[:message]
+    end
+
     is_sub_comment = options[:is_sub_comment]
     c = comments.new(:ip_address => options[:ip_address])
     c.message = message
+    c.parent_id = parent_id
     c.user_id = options[:user_id]
     c.user_agent = options[:user_agent]
     c.referer = options[:referer]

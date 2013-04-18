@@ -64,6 +64,6 @@ class WelcomeController < ApplicationController
   end
 
   def load_comments
-    @comments = @post.comments.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page]).per(5)
+    @comments = @post.comments.main.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page]).per(5)
   end
 end

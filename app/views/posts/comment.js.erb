@@ -1,7 +1,13 @@
 <% if @current_comment && @current_comment.valid? %>
 $('textarea').val('');
+$('#<%= params[:prepend_container] %>').find('.comment-form-container').slideUp();
 <% if @current_comment.approved? %>
+<% if params[:prepend_container] %>
+$(('<%= escape_javascript(render :partial => "shared/comment_item", :locals => {:comment => @current_comment }, :formats => :html) %>')).insertBefore('#<%= params[:prepend_container] %>');
+$('#<%= params[:prepend_container] %>').find('.comment-form-container').slideUp();
+<% else %>
 $('#comment_container').prepend('<%= escape_javascript(render :partial => "shared/comment_item", :locals => {:comment => @current_comment }, :formats => :html) %>');
+<% end %>
 <% end %>
 apply_raty();
 <%= render :partial => "shared/flashes" %>

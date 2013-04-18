@@ -14,8 +14,12 @@ module BaseHelper
                 "data-star-count" => rating_max_value, "data-url" => options[:url]
   end
 
-  def comment_form(object, url, method = "POST")
-    render :partial => "shared/comment_form", :formats => :html, :locals => {:object => object, :url => url, :method => method}
+  def comment_form(object, url, method = "POST", display_none = false, parent_id = false)
+    render :partial => "shared/comment_form", :formats => :html, :locals => {:object => object,
+                                                                             :url => url,
+                                                                             :method => method,
+                                                                             :parent_id => parent_id,
+                                                                             :display_none => display_none}
   end
 
   # Make an admin tab that coveres one or more resources supplied by symbols

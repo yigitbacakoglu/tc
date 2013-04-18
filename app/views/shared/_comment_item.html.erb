@@ -1,10 +1,17 @@
-<li class="comment-box" id="comment_container<%= comment.id %>">
+<% sub_level ||= 0 %>
+<% sub_level += 1 %>
+<% identifier = rand(19031903) %>
+<li class="comment-box sub-<%= sub_level %>" id="comment_container<%= comment.id %>">
   <div class="avatar pull-left" style='background-image: url(<%= avatar_url(comment.user) %>);'>
   </div>
 
   <div class="article">
     <div class="post-info">
       <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago" %>
+
+      <% if comment.parent.present? %>
+          , <i class="icon-retweet"></i>Reply to <%= comment.parent.user.username rescue '[Deleted Comment]' %>
+      <% end %>
     </div>
     <div class="past-rating">
       <%= rating_for(comment, :url => rate_posts_path) %>
@@ -23,6 +30,21 @@
           -
           <%= link_to_delete comment, {:url => comment_path(comment, :dom_id => "comment_container#{comment.id}")} %>
       <% end %>
+      <% unless (@current_widget.login_required && @current_user.blank?) %>
+          <%= link_to_with_icon "icon-retweet", "Reply", "#", :class => 'reply', "data-form" => "reply-form-container_#{comment.id}" %>
+      <% end %>
     </div>
   </div>
+  <ul class="child-comments">
+    <% for child in comment.children %>
+        <%= render :partial => "shared/comment_item", :locals => {:comment => child, :sub_level => sub_level} %>
+    <% end %>
+  </ul>
+  <% unless (@current_widget.login_required && @current_user.blank?) %>
+      <ul class="reply-form" id="reply-form-container_<%= comment.id %>">
+        <li>
+          <%= comment_form(Comment.new, comment_posts_url, 'POST', true, comment.id) %>
+        </li>
+      </ul>
+  <% end %>
 </li>

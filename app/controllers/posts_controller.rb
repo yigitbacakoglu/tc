@@ -13,7 +13,7 @@ class PostsController < WelcomeController
 
   def comment
     @current_comment = @post.comment(
-        params[:comment][:message],
+        params[:comment],
         :ip_address => request.remote_ip,
         :referrer => request.referer,
         :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id)),
@@ -54,7 +54,7 @@ class PostsController < WelcomeController
     load_comments
     @comment = @post.comments.build
     if params[:class_name] == "comment"
-      @object = @comments.where(:id => params[:comment_id]).first
+      @object = @post.comments.where(:id => params[:comment_id]).first
     elsif params[:class_name] == "post"
       @object = @post
     end

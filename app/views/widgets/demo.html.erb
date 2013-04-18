@@ -55,4 +55,154 @@
         $('form[id^=edit_comment]').remove();
         $('label[id^=comment_label_]').show();
     });
+
+    $('.reply').on('click', function (e) {
+        e.preventDefault();
+        var form = $('#' + $(this).attr('data-form')).find('.comment-form-container');
+        form.slideToggle();
+        $("html, body").animate({ scrollTop: form.offset().top }, 1000);
+
+    })
 </script>
+
+<script>
+    $(function () {
+        $('textarea[id^=comment_message]').on('focusin', function () {
+            $('div[id^=login_form_]').slideDown();
+        });
+//        $('textarea[id^=comment_message]').on('focusin', function () {
+//            $('div[id^='+ $(this).attr('data-form') +']').slideDown();
+//        });
+        $('input[id^=nickname_]').on('focusin', function () {
+            $('div[id=' + $(this).attr('data-next') + ']').slideDown();
+        });
+
+        $('.auth-twitter').on('click', function () {
+            openWin("/auth/twitter")
+        });
+        $('.auth-facebook').on('click', function () {
+            openWin("/auth/facebook?display=popup")
+        });
+        $('.auth-talky').on('click', function () {
+            openWin("/authenticate/login")
+        })
+
+    })
+    function openWin(url) {
+        var myWindow = window.open(url, 'auth', 'width=500,height=500');
+        myWindow.document.html("<p>Loading</p>");
+        myWindow.focus();
+    }
+</script>
+<style>
+    .postbox section {
+        padding: 14px 0 0;
+        -webkit-border-radius: 0 0 3px 3px;
+        -moz-border-radius: 0 0 3px 3px;
+        border-radius: 0 0 3px 3px;
+    }
+
+    .auth-section .connect {
+        position: absolute;
+    }
+
+    h6 {
+        font-weight: 600;
+        font-size: 11px;
+        color: #8e949c;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+        line-height: 1;
+    }
+
+    .auth-section {
+        display: block;
+        position: relative;
+        z-index: 200;
+    }
+
+    .auth-section .connect .services {
+        margin: 0 0 18px;
+    }
+
+    .auth-section .connect .services li {
+        float: left;
+        margin: 0 5px 0 0;
+    }
+
+    .auth-section .connect .services li.auth-twitter a {
+        background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png");
+    }
+
+    .auth-section .connect .services a {
+        font-size: 11px;
+        display: block;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999em;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
+        -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
+    }
+
+    .auth-section .guest {
+        border-left: 1px dotted #cfd5dc;
+        margin: 0 98px 0 119px;
+        padding: 0 10px 0 10px;
+        min-height: 32px;
+        position: relative;
+    }
+
+    .auth-section .guest p {
+        margin: 0 0 12px;
+    }
+
+    .auth-section .guest .guest-details.expanded {
+        display: block;
+    }
+
+    .auth-section .proceed {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        font-size: 12px;
+    }
+
+    .auth-section .connect .services li.auth-facebook a {
+        background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png") -32px 0;
+    }
+
+    .login-form {
+        margin-left: 50px;
+        min-width: 412px;
+    }
+
+    .post-formtrue {
+        margin-left: 50px;
+    }
+
+    .post-formfalse {
+        margin-left: 0px !important;
+        min-width: 0px !important;
+    }
+
+    section#main {
+        overflow: hidden;
+        margin-left: 0px !important;
+        padding-top: 0px !important;
+    }
+
+    .alert {
+        padding: 0px 31px 0px 14px !important;
+    }
+
+    .guest-details {
+        width: 207px;
+    }
+
+</style>
+
+

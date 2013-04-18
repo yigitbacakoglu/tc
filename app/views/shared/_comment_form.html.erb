@@ -1,199 +1,72 @@
-<div style="padding:3px"></div>
-<% if @show_avatar %>
-    <%= image_tag avatar_url(current_user), :style => "position:absolute; width:40px;" %>
-<% end %>
-<% if @current_widget.login_required && @current_user.blank? %>
+<% display_none ||= false %>
+<div class="comment-form-container" style="<%= "display:none;" if display_none %>">
 
-    <%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration", :close => false), :remote => true, :html => {:class => 'login-form'}) do |f| %>
-        <%= text_area_tag "comment_message", "", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
-        <br/>
+  <div style="padding:3px"></div>
+  <% if @show_avatar %>
+      <%= image_tag avatar_url(current_user), :style => "position:absolute; width:40px;" %>
+  <% end %>
+  <% if @current_widget.login_required && @current_user.blank? %>
+      <% identifier = rand(19031903) %>
+      <%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration", :close => false), :remote => true, :html => {:class => 'login-form'}) do |f| %>
+          <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+          <br/>
 
-        <div id="login_form" class="post-actions" style="display: none;">
+          <div id="login_form_<%= identifier %>" class="post-actions" style="display: none;">
 
-          <div class="logged-out auth-section">
-            <section data-tab="auth-external">
-              <div class="connect"><h6>Sign in with</h6>
-                <ul class="services">
-                  <li class="auth-twitter">
-                    <a data-action="auth:twitter" href="#" title="Twitter">Twitter</a></li>
-                  <li class="auth-facebook">
-                    <a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
-                  <li class="auth-talky"><a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
-                </ul>
-              </div>
-              <div class="guest"><h6> or register with TalkyCloud </h6>
-
-                <p class="input-wrapper">
-                  <%= f.text_field :username, :autocomplete => "off", :id => "nickname", :placeholder => "Username" %>
-                </p>
-
-                <div class="guest-details " style="display: none;">
-                  <p class="input-wrapper">
-                    <%= f.email_field :email, :autocomplete => "off", :id => "email", :placeholder => "Email" %>
-                  </p>
+            <div class="logged-out auth-section">
+              <section data-tab="auth-external">
+                <div class="connect"><h6>Sign in with</h6>
+                  <ul class="services">
+                    <li class="auth-twitter">
+                      <a data-action="auth:twitter" href="#" title="Twitter">Twitter</a></li>
+                    <li class="auth-facebook">
+                      <a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
+                    <li class="auth-talky"><a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
+                  </ul>
                 </div>
-              </div>
-              <div class="proceed">
-                <%= f.submit 'Next', :class => 'btn btn-medium dark-blue login-btn' %>
-              </div>
+                <div class="guest"><h6> or register with TalkyCloud </h6>
 
-            </section>
+                  <p class="input-wrapper">
+                    <%= f.text_field :username, :autocomplete => "off", :id => "nickname_#{identifier}", "data-next" => "details_#{identifier}", :placeholder => "Username" %>
+                  </p>
+
+                  <div class="guest-details " id="details_<%= identifier %>" style="display: none;">
+                    <p class="input-wrapper">
+                      <%= f.email_field :email, :autocomplete => "off", :id => "email_#{identifier}", :placeholder => "Email" %>
+                    </p>
+                  </div>
+                </div>
+                <div class="proceed">
+                  <%= f.submit 'Next', :class => 'btn btn-medium dark-blue login-btn' %>
+                </div>
+
+              </section>
+
+            </div>
 
           </div>
-
-        </div>
-    <% end %>
+      <% end %>
 
 
-<% else %>
-    <%= form_for object, :url => url, :method => method, :remote => true, :html => {:class => "post-form#{@show_avatar}"} do |f| %>
-        <%= f.text_area :message, :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
-        <br/>
-        <div id="action_form" class="post-actions">
-          <div class="btn-group pull-right">
-            <%= f.submit "Post as #{current_user.try(:firstname)}", :class => "btn dark-blue pull-right" %>
-            <a class="btn dark-blue dropdown-toggle pull-right" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to_with_icon "icon-off", "Logout", destroy_user_registration_session_path, :method => :delete %></li>
-            </ul>
+  <% else %>
+      <%= form_for object, :url => url, :method => method, :remote => true, :html => {:class => "post-form#{@show_avatar}"} do |f| %>
+          <%= f.text_area :message, :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+          <br/>
+
+          <% if parent_id %>
+              <%= f.hidden_field :parent_id, :value => parent_id %>
+              <%= hidden_field_tag :prepend_container,  "reply-form-container_#{parent_id}" %>
+          <% end %>
+          <div id="action_form_<%= rand(19031903) %>" class="post-actions">
+            <div class="btn-group pull-right">
+              <%= f.submit "Post as #{current_user.try(:firstname)}", :class => "btn dark-blue pull-right" %>
+              <a class="btn dark-blue dropdown-toggle pull-right" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to_with_icon "icon-off", "Logout", destroy_user_registration_session_path, :method => :delete %></li>
+              </ul>
+            </div>
           </div>
-        </div>
-    <% end %>
+      <% end %>
 
-<% end %>
-
-<script>
-    $(function () {
-        $('#comment_message').on('focusin', function () {
-            $('#login_form').slideDown();
-        });
-        $('#nickname').on('focusin', function () {
-            $('.guest-details').slideDown();
-        });
-
-        $('.auth-twitter').on('click', function () {
-            openWin("/auth/twitter")
-        });
-        $('.auth-facebook').on('click', function () {
-            openWin("/auth/facebook")
-        });
-        $('.auth-talky').on('click', function () {
-            openWin("/authenticate/login")
-        })
-
-    })
-    function openWin(url) {
-        var myWindow = window.open(url, 'auth', 'width=500,height=300');
-        myWindow.document.html("<p>Loading</p>");
-        myWindow.focus();
-    }
-</script>
-<style>
-    .postbox section {
-        padding: 14px 0 0;
-        -webkit-border-radius: 0 0 3px 3px;
-        -moz-border-radius: 0 0 3px 3px;
-        border-radius: 0 0 3px 3px;
-    }
-
-    .auth-section .connect {
-        position: absolute;
-    }
-
-    h6 {
-        font-weight: 600;
-        font-size: 11px;
-        color: #8e949c;
-        text-transform: uppercase;
-        margin: 0 0 10px;
-        line-height: 1;
-    }
-
-    .auth-section {
-        display: block;
-        position: relative;
-        z-index: 200;
-    }
-
-    .auth-section .connect .services {
-        margin: 0 0 18px;
-    }
-
-    .auth-section .connect .services li {
-        float: left;
-        margin: 0 5px 0 0;
-    }
-
-    .auth-section .connect .services li.auth-twitter a {
-        background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png");
-    }
-
-    .auth-section .connect .services a {
-        font-size: 11px;
-        display: block;
-        width: 32px;
-        height: 32px;
-        text-indent: -9999em;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
-        -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
-    }
-
-    .auth-section .guest {
-        border-left: 1px dotted #cfd5dc;
-        margin: 0 98px 0 119px;
-        padding: 0 10px 0 10px;
-        min-height: 32px;
-        position: relative;
-    }
-
-    .auth-section .guest p {
-        margin: 0 0 12px;
-    }
-
-    .auth-section .guest .guest-details.expanded {
-        display: block;
-    }
-
-    .auth-section .proceed {
-        position: absolute;
-        right: 0;
-        top: 15px;
-        font-size: 12px;
-    }
-
-    .auth-section .connect .services li.auth-facebook a {
-        background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png") -32px 0;
-    }
-
-    .login-form {
-        margin-left: 50px;
-        min-width: 412px;
-    }
-    .post-formtrue {
-        margin-left: 50px;
-    }
-    .post-formfalse {
-        margin-left: 0px !important;
-        min-width: 0px !important;
-    }
-
-    section#main {
-        overflow: hidden;
-        margin-left: 0px !important;
-        padding-top: 0px !important;
-    }
-
-    .alert {
-        padding: 0px 31px 0px 14px !important;
-    }
-
-   .guest-details {
-       width: 207px;
-   }
-
-</style>
-
+  <% end %>
+</div>
