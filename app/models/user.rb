@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :ip_addresses, :class_name => "IpAddress"
   has_many :comments, :class_name => 'Comment'
   has_many :ratings, :class_name => 'Rating'
+  before_create :create_bogus_store
 
   def self.current
     Thread.current[:user]
@@ -69,5 +70,15 @@ class User < ActiveRecord::Base
       user_registration.user = self
       user_registration.save
     end
+  end
+
+  def create_bogus_store
+    self.role = 'admin'
+    store = self.stores.new
+    store = Store.new
+    store.kind = "blog"
+    store.email = "admin@talkycloud.com"
+    store.recover_email = "admin@talkycloud.com"
+    store.website = "talkycloud.com"
   end
 end

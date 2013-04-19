@@ -55,3 +55,6 @@ en:
         subject: 'Reset password instructions'
       unlock_instructions:
         subject: 'Unlock Instructions'
+    user_sessions:
+      user_registration:
+        signed_out: 'Signed out!'

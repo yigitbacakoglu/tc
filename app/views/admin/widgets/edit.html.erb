@@ -38,12 +38,11 @@
         <% end %>
         external.id = "talky-script";
         var external2 = document.createElement('script');
-        <% if Rails.env.development? %>
         external2.src = "//talkycloud.com/assets/easyXDM.min.js";
-        <% else %>
-        external2.src = "//talkycloud.com/assets/easyXDM.min.js";
-        <% end %>
-        $(".well").text(cms.outerHTML + external.outerHTML + external2.outerHTML);
+        var external3 = document.createElement('script');
+        external3.src = "//talkycloud.com/assets/jquery.js";
+
+        $(".well").text(external3.outerHTML + cms.outerHTML + external.outerHTML + external2.outerHTML);
         $(".well").slideDown();
     });
 </script>

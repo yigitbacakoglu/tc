@@ -1,3 +1,5 @@
+//= require jquery
+
 $(function () {
     var this_script = document.getElementById("talky-script");
     var div = document.createElement('div');

@@ -2,7 +2,7 @@ class Admin::CommentsController < Admin::BaseController
 
 
   def index
-    @comments = @current_store.comments.where("state != 'approved'").page(params[:page]).per(1)
+    @comments = @current_store.comments.where("state != 'approved'").page(params[:page]).per(25)
   end
 
   def fire

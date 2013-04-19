@@ -22,6 +22,7 @@ class Admin::WidgetsController < Admin::BaseController
 
   def create
     @widget = Widget.new(params[:widget])
+    @widget.store = @current_store
     @widget.key = SecureRandom.hex(15)
     if @widget.save
       flash[:success] = "Widget succesfully created"

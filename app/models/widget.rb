@@ -6,6 +6,11 @@ class Widget < ActiveRecord::Base
   has_many :posts, :class_name => "Post"
 
 
+  def self.default_scope
+    if !Store.current.nil?
+      where("#{Widget.table_name}.store_id = ?", Store.current.id)
+    end
 
+  end
 
 end
