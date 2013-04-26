@@ -12,6 +12,7 @@ class UserRegistrationsController < Devise::RegistrationsController
         if request.referer.include?('demo') && params[:close].eql?('true')
           session["user_registration_return_to"] ||= request.referer
         elsif params[:close].eql?('false')
+          resource.update_attributes(:role => 'admin')
           session["user_registration_return_to"] = request.referer
         end
         respond_with resource, :location => after_sign_up_path_for(resource)

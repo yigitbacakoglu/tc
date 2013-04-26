@@ -46,3 +46,6 @@ class Store < ActiveRecord::Base
     Thread.current[:store]
   end
 end
+
+
+# TODO We should add role to user_stores table.

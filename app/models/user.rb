@@ -73,7 +73,6 @@ class User < ActiveRecord::Base
   end
 
   def create_bogus_store
-    self.role = 'admin'
     store = self.stores.new
     store = Store.new
     store.kind = "blog"

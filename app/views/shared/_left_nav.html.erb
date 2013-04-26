@@ -3,7 +3,7 @@
 
 <nav id="primary" class="main-nav collapsible-nav">
   <!-- Brand -->
-  <a id="sidebar-brand" href="dashboard.html">
+  <a id="sidebar-brand" href="<%= root_path %>">
     TalkyCloud
   </a>
   <button type="button" class="btn btn-navbar btn-inverse" data-toggle="collapse" data-target=".nav-collapse">
@@ -31,26 +31,8 @@
 
     <!-- Dashboard -->
     <%= tab :dashboard, :label => "Dashboard", :url => admin_path, :icon => 'dashboard', :match_path => "/admin" %>
-
-    <!-- Widgets -->
-    <li class="<%= "active" if request.fullpath.gsub('//', '/').match("/admin/.*widget.*").to_s == request.fullpath %>">
-
-      <a href="#components-list" class="accordion-toggle " data-toggle="collapse">
-          <span class="icon">
-            <i class="icon-microformats"></i>
-          </span>
-          <span class="text">
-            Widgets <b class="caret"></b>
-          </span>
-      </a>
-
-      <ul id="components-list" class=" <%= "in" if request.fullpath.gsub('//', '/').match("/admin/.*widget.*").to_s == request.fullpath %> collapse secondary">
-        <%= tab :widgets, :label => "All", :url => admin_widgets_path, :match_path => '/admin/widgets' %>
-        <%= tab :widgets, :label => "New Widget", :url => new_admin_widget_path, :match_path => new_admin_widget_path %>
-      </ul>
-
-    </li>
-    <%= tab :comments, :label => "Comments", :url => admin_comments_path, :icon => 'comments', :match_path => "/admin/comment.*" %>
+    <%= tab :widgets, :label => "Widgets", :url => admin_widgets_path, :icon => 'microformats', :match_path => "/admin/.*widget.*" %>
+    <%= tab :comments, :label => "Comments", :url => admin_comments_path, :icon => 'comments', :match_path => "/admin/.*comment.*" %>
     <!-- Components -->
     <li class="<%= "active" if request.fullpath.gsub('//', '/').match("/admin/.*user.*").to_s == request.fullpath %>">
 

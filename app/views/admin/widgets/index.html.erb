@@ -3,15 +3,15 @@
     <div class="span12">
 
       <div class="box bordered">
-        <div class="padded">
-          <div class="section-title">Widgets</div>
-          <div class="section-title"><%= link_to_with_icon "icon-plus", 'New' ,new_admin_widget_url, :class => "btn btn-success pull-right" %></div>
+        <div class="box-header">
+          <i class="icon-microformats">&nbsp; Widgets</i>
+          <%= link_to_with_icon "icon-white icon-plus", 'New' ,new_admin_widget_url, :class => "btn btn-success pull-right" %>
+        </div>
           <table class="table table-striped">
             <thead>
             <tr>
               <th>Webpage</th>
               <th>Category</th>
-              <th>Key</th>
               <th>Actions</th>
             </tr>
             </thead>
@@ -23,9 +23,7 @@
                     <%= widget.webpage %>
                   </td>
                   <td style="line-height: 24px;">
-                    <%= widget.category_id %>
-                  </td>
-                  <td>   <%= widget.key %>
+                    <%= widget.category.name %>
                   </td>
                   <td>
                     <%= link_to_with_icon "icon-pencil", "Edit", edit_admin_widget_path(widget), :class => "btn dark-blue" %>
@@ -37,7 +35,6 @@
             </tbody>
           </table>
         </div>
-      </div>
     </div>
   </div>
 </div>

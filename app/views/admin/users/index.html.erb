@@ -1,61 +1,51 @@
-<div class="span12">
-  <div class="box bordered">
-    <div class="padded">
-      <div class="section-title">Comments</div>
-      <table class="table table-strip table-bordered">
-        <thead>
-        <tr>
-          <th>Username</th>
-          <th>Fullname</th>
-          <th>Email</th>
-          <th>Comment Count</th>
-          <th>Rating Avg</th>
-          <th>Ip Addresses</th>
-          <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @users.each do |user| %>
-            <% identifier = rand(19031903) %>
-            <tr id="<%= identifier %>">
-              <td>
-                <%= user.username %>
-              </td>
-
-              <td>
-                <%= user.fullname %>
-              </td>
-              <td>
-                <%= user.email %>
-              </td>
-              <td style="line-height: 24px;">
-                <%= user.comments.count %>
-              </td>
-              <td> %<%= user.rating_avg_on(@current_store) %>
-              </td>
-              <td>
-                <%= user.ip_addresses.map(&:value) %>
-              </td>
-              <td>
-                <% if user.banned_from?(@current_store) %>
-                    <%= link_to_with_icon "icon-ok", "Allow this user", allow_admin_user_path(user.id), :remote => true, :method => :put, :class => "btn btn-mini green", :confirm => "Are you sure?" %>
-                <% else %>
-                    <%= link_to_with_icon "icon-remove", "Ban this user", ban_admin_user_path(user.id, :dom_id => identifier), :remote => true, :method => :put, :class => "btn btn-mini red", :confirm => "Are you sure?" %>
-                <% end %>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="box bordered">
+      <div class="box-header">
+          <i class="icon-user">&nbsp; Users</i>
+        </div>
+          <table class="table table-strip table-bordered">
+            <thead>
+            <tr>
+              <th>Username</th>
+              <th>Comment Count</th>
+              <th>Rating avg</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @users.each do |user| %>
+                <% identifier = rand(19031903) %>
+                <tr id="<%= identifier %>">
+                  <td>
+                    <%= user.username %>
+                  </td>
+                  <td style="line-height: 24px;">
+                    <%= user.comments.count %>
+                  </td>
+                  <td> %<%= user.rating_avg_on(@current_store) %>
+                  </td>
+                  <td>
+                    <% if user.banned_from?(@current_store) %>
+                        <%= link_to_with_icon "icon-ok", "Allow this user", allow_admin_user_path(user.id), :remote => true, :method => :put, :class => "btn btn-mini green", :confirm => "Are you sure?" %>
+                    <% else %>
+                        <%= link_to_with_icon "icon-remove", "Ban this user", ban_admin_user_path(user.id, :dom_id => identifier), :remote => true, :method => :put, :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+                    <% end %>
+                  </td>
+                </tr>
+            <% end %>
+            </tbody>
+            <tfoot>
+            <tr>
+              <td colspan="7">
+                <%= paginate @users, :theme => "bootstrap_theme" %>
               </td>
             </tr>
-        <% end %>
-        </tbody>
-        <tfoot>
-        <tr>
-          <td colspan="7">
-            <%= paginate @users, :theme => "bootstrap_theme" %>
-          </td>
-        </tr>
-        </tfoot>
-      </table>
+            </tfoot>
+          </table>
+      </div>
 
     </div>
   </div>
-
 </div>

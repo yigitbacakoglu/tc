@@ -25,34 +25,17 @@
       </a>
     </li>
     <li>
-      <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-        Rejected <span class="badge red"><%= @current_store.comments.rejected.all.count %></span>
+      <a href="#orders" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
+        Total <span class="badge dark-plum"><%= @current_store.comments.all.count %></span>
       </a>
-    </li>
-    <li>
-      <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-        Approved <span class="badge green"><%= @current_store.comments.approved.all.count %></span>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-        Total <span class="badge dark-blue"><%= @current_store.comments.all.count %></span>
-      </a>
-    </li>
 
-    <!--<li>-->
-      <!--<a href="#orders" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">-->
-        <!--Orders <span class="badge dark-plum">45</span>-->
-      <!--</a>-->
-
-      <!--<div class="collapsed" style="height: 0; overflow: visible;">-->
-        <!--<ul id="orders" class="collapse top-bar-list">-->
-          <!--<li><a href="#">New orders <span class="count">(34)</span></a></li>-->
-          <!--<li><a href="#">Refunds</a></li>-->
-          <!--<li><a href="#">History</a></li>-->
-        <!--</ul>-->
-      <!--</div>-->
-    <!--</li>-->
+      <div class="collapsed" style="height: 0; overflow: visible;">
+        <ul id="orders" class="collapse top-bar-list">
+          <li><a href="#">Approved <span class="count">(<%= @current_store.comments.approved.count %>)</span></a></li>
+          <li><a href="#">Rejected<span class="count">(<%= @current_store.comments.rejected.count %>)</span></a></li>
+        </ul>
+      </div>
+    </li>
 
   </ul>
 </div>
