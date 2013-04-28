@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   attr_accessible :firstname, :lastname, :nickname, :role
 
   has_one :user_registration, :dependent => :destroy
+  has_many :user_authentications, :through => :user_registration
   after_commit :check_registration
   has_many :user_stores, :class_name => 'UserStore', :dependent => :destroy
   has_many :stores, :through => :user_stores

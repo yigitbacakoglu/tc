@@ -5,6 +5,14 @@
       <div class="article">
         <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago, Page: #{comment.post.url}" %>
           <span class="pull-right badge <%= comment.state_color %>"><%= comment.state %></span>
+          <% if comment.parent.present? %>
+              , <i class="icon-retweet"></i>Reply to <%= comment.parent.user.username rescue '[Deleted Comment]' %>
+          <% end %>
+          <div class="past-rating">
+            <%= rating_for(comment, :url => rate_posts_path(:comment_id => comment.id,
+                                                            :widget_id => comment.post.widget.id,
+                                                            :current_page => comment.post.url)) %>
+          </div>
         </div>
         <div class="post-content-preview">
           <%= comment.message %>
@@ -19,7 +27,6 @@
     </li>
 
 <% end %>
-
-<li class="comment-box view-more" style="text-align: center">
-  <%= link_to_next_page @comments, 'View More', :remote => true %>
+<li class="comment-box">
+  <%= paginate @comments, :theme => "bootstrap_theme", :remote => true %>
 </li>

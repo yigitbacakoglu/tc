@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   prepend_before_filter :set_widget
   before_filter :check_user, :only => [:comment, :rate]
+  layout "widget"
 
   def comment
   end
@@ -16,6 +17,7 @@ class WelcomeController < ApplicationController
     reset_widget_session
 
     @current_widget = Widget.where(:key => session[:current_widget_key], :webpage => session[:current_widget_host]).first
+    @current_widget ||= Widget.where(:id => params[:widget_id]).first
     set_current_store(@current_widget.store)
   end
 
@@ -64,6 +66,6 @@ class WelcomeController < ApplicationController
   end
 
   def load_comments
-    @comments = @post.comments.main.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page]).per(5)
+    @comments = @post.approved_comments.main.order("#{::Comment.quoted_table_name}.created_at desc").page(params[:page]).per(5)
   end
 end

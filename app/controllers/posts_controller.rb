@@ -51,6 +51,7 @@ class PostsController < WelcomeController
 
   def load_resource
     @post = @current_widget.posts.where(:url => session[:current_page]).first
+    @post ||= @current_widget.posts.where(:url => params[:current_page]).first
     load_comments
     @comment = @post.comments.build
     if params[:class_name] == "comment"

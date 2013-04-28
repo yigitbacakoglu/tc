@@ -33,6 +33,11 @@
       <% unless (@current_widget.login_required && @current_user.blank?) %>
           <%= link_to_with_icon "icon-retweet", "Reply", "#", :class => 'reply', "data-form" => "reply-form-container_#{comment.id}" %>
       <% end %>
+     <!--<section class='social-links'>-->
+      &nbsp; Share: &nbsp;<i class="icon-external-link"></i>
+      <%= link_to_with_icon "icon-twitter-sign", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id), :class => 'open-win' %>
+      <%= link_to_with_icon "icon-facebook-sign", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id), :class => 'open-win' %>
+     <!--</section>-->
     </div>
   </div>
   <ul class="child-comments">

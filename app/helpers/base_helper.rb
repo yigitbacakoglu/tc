@@ -4,14 +4,18 @@ module BaseHelper
 
     rateable_obj.ratings.build if rateable_obj.ratings.blank?
     category = rateable_obj.rating_category
+    options['max_value'] ||= category.max_value
+    self.send(category.name.to_sym, rateable_obj, options) if self.respond_to?(category.name.to_sym)
+  end
 
-    rating_tool = category.name
-    rating_max_value = category.max_value
+  def star(rateable_obj, options)
+    rating_max_value = options['max_value']
     avg_rate = number_with_precision rateable_obj.avg_rate, :precision => 2
 
     content_tag :div, "", :class => "star", :id => "#{rateable_obj.class.name.to_s.downcase}_#{rateable_obj.id}", "data-rating" => avg_rate,
                 "data-id" => rateable_obj.id, "data-classname" => rateable_obj.class.name.to_s.downcase,
                 "data-star-count" => rating_max_value, "data-url" => options[:url]
+
   end
 
   def comment_form(object, url, method = "POST", display_none = false, parent_id = false)

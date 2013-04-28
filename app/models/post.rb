@@ -1,11 +1,14 @@
+require 'mechanize'
 class Post < ActiveRecord::Base
-  attr_accessible :url, :widget_id, :category_id
+  attr_accessible :url, :widget_id, :category_id, :title
 
   belongs_to :widget
   belongs_to :category
   has_many :ratings, :as => :ratable, :class_name => 'Rating'
 
-  has_many :comments, :class_name => "Comment",
+  has_many :comments, :class_name => "Comment"
+
+  has_many :approved_comments, :class_name => "Comment",
            :conditions => ["#{::Comment.quoted_table_name}.state = ? ", "approved"]
 
   belongs_to :rating_category,
@@ -18,6 +21,7 @@ class Post < ActiveRecord::Base
 
 
   before_create :set_defaults
+
 
   def approval_required?
     self.widget.approval_required?
@@ -78,12 +82,24 @@ class Post < ActiveRecord::Base
     self.ratings.blank? ? 0 : (self.ratings.map(&:value).sum.to_f / self.ratings.count)
   end
 
+  def webpage
+    "http://#{self.widget.webpage}#{self.url}"
+  end
+
   private
 
   def set_defaults
     unless self.rating_category #|| self.commenting_category
       self.rating_category = Category.where(:category_type => "rating").first
     end
+    begin
+      agent = Mechanize.new
+      page = agent.get(self.webpage)
+      self.title = page.title
+    rescue
+      self.title = 'Join discussion here'
+    end
+
   end
 
 end

@@ -1,4 +1,1 @@
-<% if params[:page] %>
-$('.comment-box.view-more').first().remove();
-$('#comment_container').append('<%= escape_javascript(render :partial => "/admin/overview/index", :formats => :html) %>');
-<% end %>
+$('#comment_container').html('<%= escape_javascript(render :partial => "/admin/overview/index", :formats => :html) %>');

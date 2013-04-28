@@ -1,0 +1,129 @@
+<div class="container-fluid"><%= link_to_with_icon "icon-arrow-left" ,'Back', request.referer, :class => "btn" %> </div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="box bordered">
+
+        <ul id="comment_container" class="recent-comments">
+
+          <li class="comment-box">
+            <div class="avatar user2 pull-left" style='background-image: url(<%= avatar_url(@comment.user) %>);'></div>
+
+            <div class="article">
+              <div class="post-info"> <%= "#{@comment.user.username}, #{time_ago_in_words(@comment.created_at)} ago, Page: #{@comment.post.url}" %>
+                <span class="pull-right badge <%= @comment.state_color %>"><%= @comment.state %></span>
+              </div>
+              <div class="post-content-preview">
+                <%= @comment.message %>
+              </div>
+
+              <div class="article-actions">
+                <%= link_to_with_icon "icon-edit", "Edit", edit_admin_comment_path(@comment), :class => "btn btn-mini dark-blue", :remote => true %>
+                <%= link_to_with_icon "icon-ok", "Approve", admin_fire_path('approve', @comment.id), :class => "btn btn-mini green", :confirm => "Are you sure?" %>
+                <%= link_to_with_icon "icon-remove", "Reject", admin_fire_path('reject', @comment.id), :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="box bordered">
+        <div class="padded">
+          <ul class="audience-alt">
+            <li style="margin-top:-22px;">
+              <div class="percent">Effect in page</div>
+            </li>
+
+
+            <li>
+              <div class="icon">
+                <div class="big-label medium-blue text-inverse">
+                  <i class="icon-lightbulb"></i>
+                </div>
+              </div>
+
+              <div class="value">504</div>
+              <div class="stat-name">Visitors</div>
+
+              <div class="percent">(+30%)</div>
+              <div class="progress-bar audience-progress">
+                <div class="progress progress-medium-blue">
+                  <div class="bar" style="width: 30%"></div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="icon">
+                <div class="big-label dark-blue text-inverse">
+                  <i class="icon-star"></i>
+                </div>
+              </div>
+              <div class="value">439</div>
+              <div class="stat-name">Visits</div>
+
+              <div class="percent">(+61%)</div>
+              <div class="progress-bar audience-progress">
+                <div class="progress progress-dark-blue">
+                  <div class="bar" style="width: 61%"></div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="icon">
+                <div class="big-label light-blue">
+                  <i class="icon-eye-open"></i>
+                </div>
+              </div>
+              <div class="value">988</div>
+              <div class="stat-name">Page views</div>
+
+              <div class="percent">(+44%)</div>
+              <div class="progress-bar audience-progress">
+                <div class="progress progress-light-blue">
+                  <div class="bar" style="width: 44%"></div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="icon">
+                <div class="big-label dark-plum text-inverse">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <div class="value">39</div>
+              <div class="stat-name">Likes</div>
+
+              <div class="percent">(+12%)</div>
+              <div class="progress-bar audience-progress">
+                <div class="progress progress-dark-plum">
+                  <div class="bar" style="width: 12%"></div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="icon">
+                <div class="big-label text-blue text-inverse">
+                  <i class="icon-comment"></i>
+                </div>
+              </div>
+              <div class="value">18</div>
+              <div class="stat-name">Comments</div>
+
+              <div class="percent">(+78%)</div>
+              <div class="progress-bar audience-progress">
+                <div class="progress progress-text-blue">
+                  <div class="bar" style="width: 78%"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

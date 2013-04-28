@@ -1,7 +1,8 @@
 class Admin::OverviewController < Admin::BaseController
 
   def index
-    @comments = @current_store.comments.where("state != 'approved'").page(params[:page]).per(20)
+    # Recent comments
+    @comments = @current_store.comments.where("state = 'new'").page(params[:page]).per(5)
   end
 
   def fire

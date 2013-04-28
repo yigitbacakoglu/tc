@@ -5,10 +5,11 @@
     <%= stylesheet_link_tag "admin/font-awesome" %>
     <%= stylesheet_link_tag "admin/application" %>
     <%= stylesheet_link_tag "widget" %>
+    <!--<%= stylesheet_link_tag "ww" %>-->
     <%= javascript_tag "new_comment_form = '#{escape_javascript(comment_form(@comment, comment_posts_url))}'" %>
     <!--<%#= javascript_tag "edit_comment_form = '#{escape_javascript(comment_form(@comment, update_comment_posts_url))}'" %>-->
 <% end %>
-<div class="container-fluid">
+<div class="container-fluid-">
   <div class="row-fluid">
     <div class="span12">
       <div class="row-fluid">
@@ -31,6 +32,44 @@
               </div>
               <div id="comment-form-container">
                 <%= comment_form(@comment, comment_posts_url) %>
+              </div>
+              <div id="main-nav" class="nav pull-right">
+                <ul>
+                  <!--<li><a href="#" data-nav="dashboard" style="" class="publisher-nav-color">My Disqus <span class="notification-count" data-role="notification-count" style="display: none;"><span>0</span></span></a></li>-->
+
+                  <li class="user-menu dropdown" data-role="logout" data-dropdown="enabled">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="cog"><i aria-hidden="true" class="icon-cog"></i></span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                      <li>
+                        <a href="#" data-role="user-profile-link" data-action="profile" data-user="34839551">
+                          yigitcan
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="thread-share-menu" class="share-menu dropdown" data-dropdown="enabled">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+                      <span class="label">Share</span> <span class="icon-export"></span><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu pull-right">
+                      <li class="share">Share this discussion on
+                        <ul>
+                          <li class="twitter">
+                            <%= link_to_with_icon "icon-twitter-sign", '', "#", "data-link" => share_twitter_path(:post_id => @post.id), :class => 'open-win' %>
+                          </li>
+                          <li class="facebook">
+                            <%= link_to_with_icon "icon-facebook-sign", '', "#", "data-link" => share_facebook_path(:post_id => @post.id), :class => 'open-win' %>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
               </div>
             </div>
             <div class="padded10">
@@ -77,6 +116,10 @@
             $('div[id=' + $(this).attr('data-next') + ']').slideDown();
         });
 
+        $('.open-win').on('click', function (e) {
+            e.preventDefault();
+            openWin($(this).attr('data-link'));
+        });
         $('.auth-twitter').on('click', function () {
             openWin("/auth/twitter")
         });
@@ -177,7 +220,7 @@
 
     .login-form {
         margin-left: 50px;
-        min-width: 412px;
+        /*min-width: 412px;*/
     }
 
     .post-formtrue {
@@ -201,6 +244,21 @@
 
     .guest-details {
         width: 207px;
+    }
+
+    .nav {
+        border-bottom: 2px solid #e4e4e4;
+        border-bottom: 2px solid rgba(0,49,79,0.08);
+        margin: 0 0 18px;
+        padding: 0;
+        position: relative;
+    }
+
+    .nav>ul {
+        clear: both;
+    }
+    .nav>ul>li {
+        float: left;
     }
 
 </style>

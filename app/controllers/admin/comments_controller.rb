@@ -2,13 +2,24 @@ class Admin::CommentsController < Admin::BaseController
 
 
   def index
-    @comments = @current_store.comments.where("state != 'approved'").page(params[:page]).per(25)
+    params[:state] ||= ['approved', 'rejected', 'new']
+    if params[:state] =='agreed'
+      @comments = Kaminari.paginate_array(@current_store.comments.sort_by { |c| c.percentage_avg_rate }.last(5)).page(params[:page]).per(25)
+    elsif params[:state] == 'disagreed'
+      @comments = Kaminari.paginate_array(@current_store.comments.collect { |x| x if x.percentage_avg_rate > 0 && x.percentage_avg_rate < 0.36 }.delete_if(&:blank?).sort_by { |c| c.percentage_avg_rate }.first(5)).page(params[:page]).per(25)
+    else
+      @comments = @current_store.comments.where(:state => params[:state]).page(params[:page]).per(25)
+    end
   end
 
   def fire
     comment = @current_store.comments.where(:id => params[:comment_id]).first
     comment.send(params[:e])
-    redirect_to admin_path
+    redirect_to admin_comments_path
+  end
+
+  def show
+    @comment = Comment.find(params[:id])
   end
 
 

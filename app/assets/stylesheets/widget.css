@@ -1,6 +1,6 @@
 .box.bordered {
     background-color: #fff;
-    margin: 10px auto 5px auto;
+    margin: 0px auto 5px auto;
     padding: 0;
     border: 1px solid #cccccc;
     -webkit-border-radius: 2px;
@@ -11,7 +11,7 @@
     -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
-    min-width: 494px !important;
+    /*min-width: 494px !important;*/
 
 }
 

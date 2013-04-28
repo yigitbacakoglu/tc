@@ -16,6 +16,9 @@ Omrats::Application.routes.draw do
   post '/domain/offer', :to => "blogs#save_contact_info", :as => :save_contact_info
   resources :widgets
 
+  get '/share/twitter', :to => "social#twitter", :as => :share_twitter
+  get '/share/facebook', :to => "social#facebook", :as => :share_facebook
+
   resources :posts do
     collection do
       post :rate

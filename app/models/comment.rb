@@ -61,9 +61,12 @@ class Comment < ActiveRecord::Base
   end
 
   def avg_rate
-    self.ratings.blank? ? 0 : (self.ratings.map(&:value).sum.to_f / self.ratings.count)
+    self.ratings.blank? ? 0 : (self.ratings.sum(:value).to_f / self.ratings.count)
   end
 
+  def percentage_avg_rate
+      avg_rate / self.rating_category.max_value
+  end
   def can_rate?(ip_address)
     if User.current
       all_ratings = self.ratings.where(:user_id => User.current.id)

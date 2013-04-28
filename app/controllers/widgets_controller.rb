@@ -13,7 +13,7 @@ class WidgetsController < WelcomeController
 
   def close
     reset_widget_session
-    flash[:success] = "Signed in successfully"
+    flash.keep
     @show_avatar = true
   end
 

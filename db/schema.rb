@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407112703) do
+ActiveRecord::Schema.define(:version => 20130428104054) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20130407112703) do
     t.integer  "rating_category_id"
     t.integer  "commenting_category_id"
     t.string   "state"
+    t.string   "title"
   end
 
   create_table "ratings", :force => true do |t|
@@ -62,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130407112703) do
     t.datetime "updated_at",   :null => false
     t.integer  "user_id"
     t.string   "ip_address"
+    t.integer  "max_value"
   end
 
   add_index "ratings", ["ratable_id", "ratable_type"], :name => "index_ratings_on_ratable_id_and_ratable_type"
