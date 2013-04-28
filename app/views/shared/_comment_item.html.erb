@@ -24,22 +24,27 @@
       <%= label_tag "content", comment.message, :id => "comment_label_#{comment.id}", "data-page" => params[:page] %>
     </div>
 
-    <div class="article-actions">
-      <% if can? :edit, comment %>
-          <%= link_to_with_icon "icon-edit", "Edit", edit_comment_path(comment.id), :remote => true, :class => 'edit-comment' %>
-          -
-          <%= link_to_delete comment, {:url => comment_path(comment, :dom_id => "comment_container#{comment.id}")} %>
-      <% end %>
-      <% unless (@current_widget.login_required && @current_user.blank?) %>
-          <%= link_to_with_icon "icon-retweet", "Reply", "#", :class => 'reply', "data-form" => "reply-form-container_#{comment.id}" %>
-      <% end %>
-     <!--<section class='social-links'>-->
-      &nbsp; Share: &nbsp;<i class="icon-external-link"></i>
+  </div>
+  <div class="article-actions">
+    <% if can? :edit, comment %>
+        <%= link_to_with_icon "icon-edit", "Edit", edit_comment_path(comment.id), :remote => true, :class => 'edit-comment' %>
+        -
+        <%= link_to_delete comment, {:url => comment_path(comment, :dom_id => "comment_container#{comment.id}")} %>
+    <% end %>
+    <% unless (@current_widget.login_required && @current_user.blank?) %>
+        <%= link_to_with_icon "icon-retweet", "Reply", "#", :class => 'reply', "data-form" => "reply-form-container_#{comment.id}" %>
+    <% end %>
+    <!--<section class='social-links'>-->
+    <div class="pull-right social-links-trigger">
+      <i class="icon-external-link"></i>Share › &nbsp;
+      <div class="social-links" style="display: none">
       <%= link_to_with_icon "icon-twitter-sign", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id), :class => 'open-win' %>
       <%= link_to_with_icon "icon-facebook-sign", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id), :class => 'open-win' %>
-     <!--</section>-->
+      </div>
     </div>
+    <!--</section>-->
   </div>
+
   <ul class="child-comments">
     <% for child in comment.children %>
         <%= render :partial => "shared/comment_item", :locals => {:comment => child, :sub_level => sub_level} %>

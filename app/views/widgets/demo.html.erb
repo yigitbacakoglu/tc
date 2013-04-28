@@ -5,7 +5,7 @@
     <%= stylesheet_link_tag "admin/font-awesome" %>
     <%= stylesheet_link_tag "admin/application" %>
     <%= stylesheet_link_tag "widget" %>
-    <!--<%= stylesheet_link_tag "ww" %>-->
+    <%#= stylesheet_link_tag "ww" %>
     <%= javascript_tag "new_comment_form = '#{escape_javascript(comment_form(@comment, comment_posts_url))}'" %>
     <!--<%#= javascript_tag "edit_comment_form = '#{escape_javascript(comment_form(@comment, update_comment_posts_url))}'" %>-->
 <% end %>
@@ -20,7 +20,7 @@
                 <%= render :partial => "shared/flashes" %>
 
               </section>
-              <i class="icon-comments"></i> <%= @current_widget.try(:store).try(:name) %>
+              <i class="icon-comments"></i> <%= "#{@comments.total_count} Comments" %>
               <div class="pull-right">
                 <%= rating_for(@post, :url => rate_posts_path) %>
                 <div class="post-error">
@@ -53,7 +53,7 @@
 
                   <li id="thread-share-menu" class="share-menu dropdown" data-dropdown="enabled">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
-                      <span class="label">Share</span> <span class="icon-export"></span><span class="caret"></span>
+                      <span class="label">Share</span> <span class="icon-external-link"></span><span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu pull-right">
                       <li class="share">Share this discussion on
@@ -102,6 +102,14 @@
         $("html, body").animate({ scrollTop: form.offset().top }, 1000);
 
     })
+
+    $('.social-links-trigger').on('hover', function(){
+        $(this).children('.social-links').slideDown();
+    });
+    $('.social-links-trigger').on('mouseleave', function(){
+        $('.social-links').slideUp();
+    });
+
 </script>
 
 <script>
@@ -137,130 +145,5 @@
         myWindow.focus();
     }
 </script>
-<style>
-    .postbox section {
-        padding: 14px 0 0;
-        -webkit-border-radius: 0 0 3px 3px;
-        -moz-border-radius: 0 0 3px 3px;
-        border-radius: 0 0 3px 3px;
-    }
-
-    .auth-section .connect {
-        position: absolute;
-    }
-
-    h6 {
-        font-weight: 600;
-        font-size: 11px;
-        color: #8e949c;
-        text-transform: uppercase;
-        margin: 0 0 10px;
-        line-height: 1;
-    }
-
-    .auth-section {
-        display: block;
-        position: relative;
-        z-index: 200;
-    }
-
-    .auth-section .connect .services {
-        margin: 0 0 18px;
-    }
-
-    .auth-section .connect .services li {
-        float: left;
-        margin: 0 5px 0 0;
-    }
-
-    .auth-section .connect .services li.auth-twitter a {
-        background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png");
-    }
-
-    .auth-section .connect .services a {
-        font-size: 11px;
-        display: block;
-        width: 32px;
-        height: 32px;
-        text-indent: -9999em;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
-        -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .08), inset 0 2px 0 rgba(255, 255, 255, .12);
-    }
-
-    .auth-section .guest {
-        border-left: 1px dotted #cfd5dc;
-        margin: 0 98px 0 119px;
-        padding: 0 10px 0 10px;
-        min-height: 32px;
-        position: relative;
-    }
-
-    .auth-section .guest p {
-        margin: 0 0 12px;
-    }
-
-    .auth-section .guest .guest-details.expanded {
-        display: block;
-    }
-
-    .auth-section .proceed {
-        position: absolute;
-        right: 0;
-        top: 15px;
-        font-size: 12px;
-    }
-
-    .auth-section .connect .services li.auth-facebook a {
-        background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png") -32px 0;
-    }
-
-    .login-form {
-        margin-left: 50px;
-        /*min-width: 412px;*/
-    }
-
-    .post-formtrue {
-        margin-left: 50px;
-    }
-
-    .post-formfalse {
-        margin-left: 0px !important;
-        min-width: 0px !important;
-    }
-
-    section#main {
-        overflow: hidden;
-        margin-left: 0px !important;
-        padding-top: 0px !important;
-    }
-
-    .alert {
-        padding: 0px 31px 0px 14px !important;
-    }
-
-    .guest-details {
-        width: 207px;
-    }
-
-    .nav {
-        border-bottom: 2px solid #e4e4e4;
-        border-bottom: 2px solid rgba(0,49,79,0.08);
-        margin: 0 0 18px;
-        padding: 0;
-        position: relative;
-    }
-
-    .nav>ul {
-        clear: both;
-    }
-    .nav>ul>li {
-        float: left;
-    }
-
-</style>
 
 
