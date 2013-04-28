@@ -11,20 +11,25 @@ class SocialController < ApplicationController
 
   def facebook
     session.delete :user_registration_return_to
-    session[:user_registration_return_to] = request.fullpath
 
     if current_user.nil?
+      session[:user_registration_return_to] = request.fullpath
+
       respond_with_auth('facebook')
       #redirect_to '/user/auth/facebook'
     else
       fb_user = current_user.user_authentications.find_by_provider("facebook")
       if fb_user.nil?
+        session[:user_registration_return_to] = request.fullpath
+
         respond_with_auth('facebook')
         #redirect_to '/user/auth/facebook'
       else
         me = FbGraph::User.me(fb_user.oauth_token)
 
         unless me.permissions.include?(:publish_stream)
+          session[:user_registration_return_to] = request.fullpath
+
           respond_with_auth('facebook')
         else
           me.feed!(
