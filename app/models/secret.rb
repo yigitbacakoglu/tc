@@ -18,7 +18,7 @@ class Secret < ActiveRecord::Base
     where(:provider => 'facebook').first.api_secret
   end
 
-  def self.mail_key
+  def self.mail_secret
     where(:provider => 'yandex').first.api_secret
   end
 end
