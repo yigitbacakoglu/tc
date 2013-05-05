@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
-  ROLES = %w[admin moderator author banned anonymous]
+  ROLES = %w[admin moderator author anonymous]
 
-  attr_accessible :firstname, :lastname, :nickname, :role
+  attr_accessible :firstname, :lastname, :nickname
 
   has_one :user_registration, :dependent => :destroy
+  has_many :shares, :class_name => "Share"
   has_many :user_authentications, :through => :user_registration
   after_commit :check_registration
   has_many :user_stores, :class_name => 'UserStore', :dependent => :destroy
@@ -14,6 +15,14 @@ class User < ActiveRecord::Base
   has_many :ratings, :class_name => 'Rating'
   before_create :create_bogus_store
 
+
+  def role=(param)
+    _us = self.user_stores.where(:store_id => Store.current.try(:id)).first
+    unless _us.blank?
+      _us.update_attributes(:role => param)
+    end
+  end
+
   def self.current
     Thread.current[:user]
   end
@@ -22,8 +31,22 @@ class User < ActiveRecord::Base
     Thread.current[:user] = user
   end
 
+
+  def first_managable_store
+    managable_stores.first
+  end
+
+  def managable_stores
+    user_stores.where(:role => 'admin').map(&:store)
+  end
+
+  # Ready to use app ?
+  def has_valid_store?
+    !first_managable_store.blank? && first_managable_store.initial?
+  end
+
   def banned_from?(store)
-    self.user_stores.where(:store_id => store.id).first.role.eql?('banned') rescue false
+    self.user_stores.where(:store_id => store.id).first.status.eql?('banned') rescue false
   end
 
   def email
@@ -44,6 +67,10 @@ class User < ActiveRecord::Base
 
   def has_role?(param)
     self.role == param.try(:to_s)
+  end
+
+  def role
+    self.user_stores.where(:store_id => Store.current.try(:id)).first.try(:role) || 'author'
   end
 
   def rating_avg_on(store)

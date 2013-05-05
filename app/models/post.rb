@@ -19,6 +19,7 @@ class Post < ActiveRecord::Base
              :class_name => "Category",
              :foreign_key => :commenting_category_id
 
+  has_many :shares, :as => :source, :class_name => "Share"
 
   before_create :set_defaults
 
@@ -27,8 +28,10 @@ class Post < ActiveRecord::Base
     self.widget.approval_required?
   end
 
+
   def rate(value, ip_address, user_id)
     if can_rate? ip_address
+      save_user_store(user_id)
       #r = ratings.find_or_initialize_by_ip_address_id(IpAddress.find_by_value(ip_address).id)
       r = ratings.find_or_initialize_by_user_id(user_id)
       r.value = value
@@ -42,6 +45,7 @@ class Post < ActiveRecord::Base
 
   def comment(message, options = {})
     parent_id = nil
+    save_user_store(options[:user_id])
     unless message.is_a? String
       parent_id = message[:parent_id]
       message = message[:message]
@@ -86,12 +90,7 @@ class Post < ActiveRecord::Base
     "http://#{self.widget.webpage}#{self.url}"
   end
 
-  private
-
-  def set_defaults
-    unless self.rating_category #|| self.commenting_category
-      self.rating_category = Category.where(:category_type => "rating").first
-    end
+  def set_page_title
     begin
       agent = Mechanize.new
       page = agent.get(self.webpage)
@@ -99,7 +98,19 @@ class Post < ActiveRecord::Base
     rescue
       self.title = 'Join discussion here'
     end
+  end
 
+  def save_user_store(user_id)
+    UserStore.create(:user_id => user_id, :store_id => self.widget.store_id, :role => 'author') if self.widget.store.user_stores.where(:user_id => user_id).blank?
+  end
+
+  private
+
+  def set_defaults
+    unless self.rating_category #|| self.commenting_category
+      self.rating_category = Category.where(:category_type => "rating").first
+    end
+    set_page_title
   end
 
 end

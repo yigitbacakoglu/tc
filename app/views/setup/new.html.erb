@@ -1,0 +1,39 @@
+<%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration", :close => false), :remote => true, :html => {:class => 'login-form'}) do |f| %>
+    <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+    <br/>
+
+    <div id="login_form_<%= identifier %>" class="post-actions" style="display: none;">
+
+      <div class="logged-out auth-section">
+        <section data-tab="auth-external">
+          <div class="connect"><h6>Sign in with</h6>
+            <ul class="services">
+              <li class="auth-twitter">
+                <a data-action="auth:twitter" href="#" title="Twitter">Twitter</a></li>
+              <li class="auth-facebook">
+                <a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
+              <li class="auth-talky"><a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
+            </ul>
+          </div>
+          <div class="guest"><h6> or register with TalkyCloud </h6>
+
+            <p class="input-wrapper">
+              <%= f.text_field :username, :autocomplete => "off", :id => "nickname_#{identifier}", "data-next" => "details_#{identifier}", :placeholder => "Username" %>
+            </p>
+
+            <div class="guest-details " id="details_<%= identifier %>" style="display: none;">
+              <p class="input-wrapper">
+                <%= f.email_field :email, :autocomplete => "off", :id => "email_#{identifier}", :placeholder => "Email" %>
+              </p>
+            </div>
+          </div>
+          <div class="proceed">
+            <%= f.submit 'Next', :class => 'btn btn-medium dark-blue login-btn' %>
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+<% end %>

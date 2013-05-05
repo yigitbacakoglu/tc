@@ -19,7 +19,7 @@ class Store < ActiveRecord::Base
 
 
   has_many :comments
-  attr_accessible :email, :kind, :name, :recover_email, :website, :restricted_words_attributes
+  attr_accessible :email, :kind, :name, :recover_email, :website, :restricted_words_attributes, :phone
   accepts_nested_attributes_for :restricted_words
 
   # Adding restricted_words

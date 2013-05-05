@@ -45,7 +45,7 @@
             <div class="span2 center link_div" data-link="<%= admin_comments_path(:state => 'agreed') %>">
               <div class="stat-box text-blue">
                 <i class="icon-hand-right icon-large"></i>
-                <span class="count">5</span>
+                <span class="count"><%= Comment.where(:state => 'agreed').count %></span>
                 <span class="stat-text">Agreed</span>
               </div>
             </div>
@@ -53,7 +53,7 @@
             <div class="span2 center link_div" data-link="<%= admin_comments_path(:state => 'disagreed') %>">
               <div class="stat-box dark-blue">
                 <i class="icon-envelope icon-large"></i>
-                <span class="count">5</span>
+                <span class="count"><%= Comment.where(:state => 'disagreed').count %></span>
                 <span class="stat-text">Disagreed</span>
               </div>
             </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428104054) do
+ActiveRecord::Schema.define(:version => 20130505113308) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -93,6 +93,26 @@ ActiveRecord::Schema.define(:version => 20130428104054) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "secrets", :force => true do |t|
+    t.string   "provider"
+    t.string   "api_key"
+    t.string   "api_secret"
+    t.string   "permission"
+    t.string   "environment"
+    t.boolean  "active"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "shares", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "source_type"
+    t.integer  "source_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "stores", :force => true do |t|
     t.string   "name"
     t.string   "kind"
@@ -101,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20130428104054) do
     t.string   "recover_email"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "phone"
   end
 
   create_table "user_authentications", :force => true do |t|
@@ -140,6 +161,7 @@ ActiveRecord::Schema.define(:version => 20130428104054) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "role"
+    t.string   "status"
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="box bordered">
+        <div class="box-header">
+          <i class="icon-sitemap"></i> Setup
+        </div>
+        <%= form_for @widget, :url => create_setup_path(:id => :step2), :method => :pos do |f| %>
+
+            <div class="row-fluid">
+              <div class="span6">
+                <div class="padded">
+                  <div class="section-title">
+                    Personal Details
+                  </div>
+                  <div class="vpadded">
+                    <div class="input full-width">
+                      <%= text_field_tag "user[firstname]", @current_user.firstname, :placeholder => "Firstname" %>
+                    </div>
+                    <div class="input full-width">
+                      <%= text_field_tag "user[lastname]", @current_user.lastname, :placeholder => "Lastname" %>
+                    </div>
+                    <div class="input full-width">
+                      <%= text_field_tag "store[phone]", @store.phone, :placeholder => "Phone" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="span6">
+                <div class="padded">
+                  <div class="section-title">
+                    Web Page Details
+                  </div>
+                  <div class="vpadded">
+                    <div class="input full-width">
+                      <%= text_field_tag "store[name]", @store.name, :placeholder => "Name of site" %>
+                    </div>
+                    <div class="input full-width">
+                      <%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>
+                    </div>
+                    <div class="input full-width">
+                      <%= f.select :category_id, Category.where(:category_type => :widget).collect { |c| [c.name, c.id] }, {}, :class => "chzn-select" %>
+                    </div>
+                    <div class="clearfix" style="margin-top:15px;">
+                      <label class="checkbox">
+                        <%= f.check_box :approval_required %> Approval required
+                      </label>
+                      <label class="checkbox">
+                        <%= f.check_box :login_required %>
+                        Login required
+                      </label></div>
+
+
+
+
+                    <% unless @widget.new_record? %>
+                        <p><i class="icon-info-sign"></i>
+                          <b>Please Copy and Paste code into place where you would like to load TalkyCloud. </b></p>
+                    <% end %>
+                    <div class="well" style="display: none;">
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row-fluid">
+              <div class="span6 pull-right">
+                <div class="padded">
+                  <div class="vpadded pull-right">
+                    <%= f.submit "Save and Continue", :class => "btn medium-blue" %>
+                    <!--<%= link_to "Cancel", admin_widgets_path %>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

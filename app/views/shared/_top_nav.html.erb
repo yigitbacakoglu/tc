@@ -5,34 +5,51 @@
 
   <ul class="top-notifications">
     <!--<li>-->
-      <!--<a href="#messages" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">-->
-         <!--Comments Waiting <span class="badge dark-blue">3</span>-->
-      <!--</a>-->
+    <!--<a href="#messages" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">-->
+    <!--Comments Waiting <span class="badge dark-blue">3</span>-->
+    <!--</a>-->
 
-      <!--<div class="collapsed" style="height: 0; overflow: visible;">-->
-        <!--<ul id="messages" class="collapse top-bar-list">-->
-          <!--<li><a href="#">New message</a></li>-->
-          <!--<li><a href="#">Inbox <span class="count">(8)</span></a></li>-->
-          <!--<li><a href="#">Sent</a></li>-->
-          <!--<li><a href="#">Drafts</a></li>-->
-        <!--</ul>-->
-      <!--</div>-->
+    <!--<div class="collapsed" style="height: 0; overflow: visible;">-->
+    <!--<ul id="messages" class="collapse top-bar-list">-->
+    <!--<li><a href="#">New message</a></li>-->
+    <!--<li><a href="#">Inbox <span class="count">(8)</span></a></li>-->
+    <!--<li><a href="#">Sent</a></li>-->
+    <!--<li><a href="#">Drafts</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
     <!--</li>-->
 
     <li>
-      <a href="<%= admin_comments_path(:state => 'new') %>" >
-        Comments Waiting <span class="badge orange"><%= @current_store.comments.waiting.all.count %></span>
+      <a href="#stores" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
+        Sites (<%= @current_store.name %>) <span class="badge orange"><%= @current_user.managable_stores.count %></span>
       </a>
+
+      <div class="collapsed" style="height: 0; overflow: visible;">
+        <ul id="stores" class="collapse top-bar-list">
+          <% @current_user.managable_stores.each do |store| %>
+              <% next if @current_store == store%>
+              <li><a href="<%= admin_change_store_path(store.id) %>">d<%= store.name %></li>
+          <% end %>
+        </ul>
+      </div>
     </li>
+
+
     <li>
       <a href="#orders" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-        Total <span class="badge dark-plum"><%= @current_store.comments.all.count %></span>
+        Comments <span class="badge turquoise"><%= @current_store.comments.all.count %></span>
       </a>
 
       <div class="collapsed" style="height: 0; overflow: visible;">
         <ul id="orders" class="collapse top-bar-list">
-          <li><a href="<%= admin_comments_path(:state => 'approved') %>">Approved <span class="count">(<%= @current_store.comments.approved.count %>)</span></a></li>
-          <li><a href="<%= admin_comments_path(:state => 'rejected') %>">Rejected<span class="count">(<%= @current_store.comments.rejected.count %>)</span></a></li>
+          <li><a href="<%= admin_comments_path(:state => 'approved') %>">Approved
+            <span class="count">(<%= @current_store.comments.approved.count %>)</span></a></li>
+          <li>
+            <a href="<%= admin_comments_path(:state => 'rejected') %>">Rejected<span class="count">(<%= @current_store.comments.rejected.count %>
+              )</span></a></li>
+          <li>
+            <a href="<%= admin_comments_path(:state => 'new') %>">Pending<span class="count">(<%= @current_store.comments.waiting.all.count %>
+              )</span></a></li>
         </ul>
       </div>
     </li>

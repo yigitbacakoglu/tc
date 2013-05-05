@@ -16,6 +16,11 @@ Omrats::Application.routes.draw do
   post '/domain/offer', :to => "blogs#save_contact_info", :as => :save_contact_info
   resources :widgets
 
+
+  get '/setup', :to => "setup#new", :as => :new_setup
+  get '/setup/:id', :to => "setup#show", :as => :setup
+  post '/setup', :to => "setup#create", :as => :create_setup
+
   get '/share/twitter', :to => "social#twitter", :as => :share_twitter
   get '/share/facebook', :to => "social#facebook", :as => :share_facebook
 
@@ -38,7 +43,9 @@ Omrats::Application.routes.draw do
 
   namespace :admin do
 
+    get "/admin/set_store/:store_id", :to => "overview#set_session_store", :as => :change_store
     resources :overview
+    resources :secrets
 
     resources :users do
       member do

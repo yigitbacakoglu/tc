@@ -36,7 +36,7 @@ class SocialController < ApplicationController
               :message => @message,
               :link => @page
           )
-
+          record_share
           flash[:notice] = "Shared Successfully"
           respond_with_success
         end
@@ -58,8 +58,8 @@ class SocialController < ApplicationController
         #render :template => 'spree/promotions/auth' , :formats => [:js]
       else
         Twitter.configure do |config|
-          config.consumer_key = "9isVRy5mq4fyeN1jeeG65w"
-          config.consumer_secret = "Yag3lZ6gToJTkUmrcZRNmuxcLbVIwUPjkVSdcLOw"
+          config.consumer_key = Secret.twitter_key
+          config.consumer_secret = Secret.twitter_secret
           config.oauth_token = tw_user.oauth_token
           config.oauth_token_secret = tw_user.oauth_token_secret
 
@@ -69,7 +69,7 @@ class SocialController < ApplicationController
         r = Random.new
         @message = "#{@message} #{@page} via @TalkyCloud #{r.rand(1...12341)}"
         Twitter.update(@message)
-
+        record_share
         flash[:notice] = "Shared successfully"
         respond_with_success
       end
@@ -128,15 +128,23 @@ class SocialController < ApplicationController
 
   def set_message
     if params[:comment_id]
-      comment = Comment.where(:id => params[:comment_id]).first
-      @message = comment.try(:message).truncate(30)
-      username = comment.user.username
-      @page = "http://#{comment.post.widget.webpage}#{comment.post.url}"
+      @object = Comment.where(:id => params[:comment_id]).first
+      @message = @object.try(:message).truncate(30)
+      username = @object.user.username
+      @page = "http://#{@object.post.widget.webpage}#{@object.post.url}"
       @message = " \"#{@message}\" - #{username}"
     else
-      post = Post.where(:id => params[:post_id]).first
+      @object = Post.where(:id => params[:post_id]).first
       @page = "http://#{session[:current_widget_host]}#{session[:current_page]}"
-      @message = "#{post.title}"
+      @message = "#{@object.title}"
     end
+  end
+
+  def record_share
+    share = Share.new
+    share.user = current_user
+    share.source = @object
+    share.provider = params[:action]
+    share.save
   end
 end

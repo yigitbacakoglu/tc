@@ -7,7 +7,7 @@ class UserRegistration < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
 
-  attr_accessor :login
+  attr_accessor :login, :tmp_password
   attr_accessible :login
   belongs_to :user
   has_many :user_authentications, :class_name => 'UserAuthentication', :dependent => :destroy
@@ -15,6 +15,7 @@ class UserRegistration < ActiveRecord::Base
   accepts_nested_attributes_for :user
   validates_presence_of :username
   validates_uniqueness_of :username
+  after_create :deliver_password
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
@@ -33,6 +34,7 @@ class UserRegistration < ActiveRecord::Base
       self.email = omniauth['info']['email']
     end
     self.password = Devise.friendly_token
+    self.tmp_password = self.password
     self.user_authentications.build(:provider => omniauth['provider'],
                                     :uid => omniauth['uid'],
                                     :oauth_token => omniauth['credentials']['token'],
@@ -50,8 +52,13 @@ class UserRegistration < ActiveRecord::Base
   end
 
   def check_password
-    self.password = Devise.friendly_token if self.password.blank?
+    if self.password.blank?
+      self.password = Devise.friendly_token
+      self.tmp_password = self.password
+    end
   end
+
+
   def password_required?
     (user_authentications.empty? || !password.blank?) && super
   end
@@ -77,6 +84,12 @@ class UserRegistration < ActiveRecord::Base
       else
         self.username = self.email
       end
+    end
+  end
+
+  def deliver_password
+    if self.tmp_password
+      UserMailer.password(self.user, self.tmp_password).deliver
     end
   end
 

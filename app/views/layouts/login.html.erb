@@ -41,16 +41,19 @@
     TalkyCloud
   </a>
 
-  <div class="pull-right">
-    <div class="hpadded20">
-      <%= link_to "Sign Up", new_user_registration_registration_url, :class => "btn btn-small dark-blue" %>
-    </div>
-  </div>
+  <% unless @dont_show_signup_link %>
+      <div class="pull-right">
+        <div class="hpadded20">
+          <%= link_to "Sign up", new_user_registration_registration_url, :class => "btn btn-small dark-blue" %>
+          <%= link_to "Get widget", new_setup_path, :class => "btn btn-small dark-blue" %>
+        </div>
+      </div>
+  <% end %>
 </div>
 
 
 <section id="main">
-<%= render :partial => "shared/flashes" %>
+  <%= render :partial => "shared/flashes" %>
   <%= yield %>
 </section>
 

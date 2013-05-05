@@ -15,6 +15,7 @@ class Comment < ActiveRecord::Base
   belongs_to :parent, :class_name => "Comment"
   has_many :children, :class_name => "Comment", :foreign_key => :parent_id
   has_many :ratings, :as => :ratable, :class_name => 'Rating'
+  has_many :shares, :as => :source, :class_name => "Share"
 
   attr_accessible :kind, :message,
                   :parent_id, :ip_address, :user_agent, :referer, :user_id, :state
@@ -42,10 +43,15 @@ class Comment < ActiveRecord::Base
   end
 
 
+  def self.default_scope
+    where("#{Comment.table_name}.store_id = ?", Store.current.id) if Store.current.present?
+  end
+
   #after_transition :on => :register, :do => :sent_registered_mail
 
   def rate(value, ip_address, user_id)
     if can_rate? ip_address
+      UserStore.create(:user_id => user_id, :store_id => self.store_id, :role => 'author') if self.store.user_stores.where(:user_id => user_id).blank?
       r = ratings.find_or_initialize_by_user_id(user_id)
       r.value = value
       r.ip_address = ip_address

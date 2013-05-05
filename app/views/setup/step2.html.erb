@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="box bordered">
+        <div class="box-header">
+          <i class="icon-sitemap"></i> Setup
+        </div>
+
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                Personal Details
+              </div>
+              <div class="well">
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    $(function () {
+        var cms = document.createElement('script');
+        cms.innerHTML = "talkyCostumerKey='<%= @widget.try(:key) %>'";
+        cms.type = "text/javascript"
+
+        var external = document.createElement('script');
+        <% if Rails.env.development? %>
+        external.src = "//localhost:3000/assets/dev_embed.js";
+        <% else %>
+        external.src = "//talkycloud.com/assets/embed.js";
+        <% end %>
+        external.id = "talky-script";
+        var external2 = document.createElement('script');
+        external2.src = "//talkycloud.com/assets/easyXDM.min.js";
+        var external3 = document.createElement('script');
+        external3.src = "//talkycloud.com/assets/jquery.js";
+
+        $(".well").text(external3.outerHTML + cms.outerHTML + external.outerHTML + external2.outerHTML);
+        $(".well").slideDown();
+    });
+</script>

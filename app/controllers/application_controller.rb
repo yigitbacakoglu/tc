@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_store(store = nil)
-    Store.current = (store || current_user.stores.first)
+    store = Store.find(session[:store_id]) if store.blank? && session[:store_id]
+    Store.current = (store || current_user.try(:first_managable_store))
     @current_store = Store.current
   end
 
