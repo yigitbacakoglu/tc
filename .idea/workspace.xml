@@ -86,7 +86,7 @@
     <file path="/user_passwords_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367752832816" ignored="false" />
     <file path="/secrets_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367755270680" ignored="false" />
     <file path="/omniauth.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367767367557" ignored="false" />
-    <file path="/secret.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367767812516" ignored="false" />
+    <file path="/secret.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367768246695" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,7 @@
       <file leaf-file-name="secret.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/secret.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="22" selection-start="473" selection-end="473" vertical-scroll-proportion="0.78125">
+            <state line="21" column="59" selection-start="573" selection-end="573" vertical-scroll-proportion="0.8203125">
               <folding />
             </state>
           </provider>
@@ -843,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/secret.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="473" selection-end="473" vertical-scroll-proportion="0.78125">
+        <state line="21" column="59" selection-start="573" selection-end="573" vertical-scroll-proportion="0.8203125">
           <folding />
         </state>
       </provider>

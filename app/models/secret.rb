@@ -3,22 +3,22 @@ class Secret < ActiveRecord::Base
 
 
   def self.twitter_key
-    where(:provider => 'twitter').first.api_key
+    where(:provider => 'twitter').first.api_key rescue ""
   end
 
   def self.twitter_secret
-    where(:provider => 'twitter').first.api_secret
+    where(:provider => 'twitter').first.api_secret rescue ""
   end
 
   def self.facebook_key
-    where(:provider => 'facebook').first.api_key
+    where(:provider => 'facebook').first.api_key rescue ""
   end
 
   def self.facebook_secret
-    where(:provider => 'facebook').first.api_secret
+    where(:provider => 'facebook').first.api_secret rescue ""
   end
 
   def self.mail_secret
-    where(:provider => 'yandex').first.api_secret
+    where(:provider => 'yandex').first.api_secret rescue ""
   end
 end
