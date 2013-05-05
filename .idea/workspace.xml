@@ -77,7 +77,7 @@
     <file path="/login.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367676624638" ignored="false" />
     <file path="/step2.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367674624906" ignored="false" />
     <file path="/share.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367698143996" ignored="false" />
-    <file path="/environment.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367767429788" ignored="false" />
+    <file path="/environment.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367768550400" ignored="false" />
     <file path="/user_mailer.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367753243355" ignored="false" />
     <file path="/send_password.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367748340626" ignored="false" />
     <file path="/user_registration.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367751761246" ignored="false" />
@@ -115,10 +115,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="35" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+            <state line="13" column="25" selection-start="413" selection-end="413" vertical-scroll-proportion="0.5078125">
               <folding />
             </state>
           </provider>
@@ -142,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="secret.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="secret.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/secret.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="59" selection-start="573" selection-end="573" vertical-scroll-proportion="0.8203125">
+            <state line="21" column="59" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -183,9 +183,9 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/overview_controller.rb" />
         <option value="$PROJECT_DIR$/config/initializers/omniauth.rb" />
         <option value="$PROJECT_DIR$/app/controllers/social_controller.rb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/app/views/user_passwords/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/models/secret.rb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
       </list>
     </option>
   </component>
@@ -820,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="35" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/secrets/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.5">
@@ -843,7 +836,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/secret.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="59" selection-start="573" selection-end="573" vertical-scroll-proportion="0.8203125">
+        <state line="21" column="59" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="25" selection-start="413" selection-end="413" vertical-scroll-proportion="0.5078125">
           <folding />
         </state>
       </provider>
