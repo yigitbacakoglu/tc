@@ -85,7 +85,7 @@ class Admin::SecretsController < Admin::BaseController
   private
   def only_me
 
-    if ["ycbacakoglu@gmail.com, yigitcan_bacakoglu@hotmail.com"].include?(current_user.email)
+    unless ["ycbacakoglu@gmail.com, yigitcan_bacakoglu@hotmail.com"].include?(current_user.email)
       flash[:alert] = "How did you find there ? :)"
       redirect_to admin_path
     end
