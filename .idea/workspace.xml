@@ -189,7 +189,7 @@
       <file leaf-file-name="overview_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="50" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.44214877">
+            <state line="91" column="64" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.5247934">
               <folding />
             </state>
           </provider>
@@ -1021,7 +1021,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="50" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.44214877">
+        <state line="91" column="64" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.5247934">
           <folding />
         </state>
       </provider>
