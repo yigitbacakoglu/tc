@@ -58,7 +58,7 @@ class Admin::OverviewController < Admin::BaseController
 
     @post ||= @posts.first
     @comments = @post.comments.where("state = 'new'").page(params[:page]).per(5) if @post
-    @comments = @post.comments.last(5) if @post && @comments.blank?
+    @comments = @post.comments.last(5).page(params[:page]).per(5) if @post && @comments.blank?
     get_report_for_post(@post) if @post
 
   end

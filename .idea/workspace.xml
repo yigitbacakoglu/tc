@@ -39,7 +39,7 @@
     <file path="/seeds.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365263108708" ignored="false" />
     <file path="/20130406151247_change_user_table.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365261231668" ignored="false" />
     <file path="/store.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368112923361" ignored="false" />
-    <file path="/overview_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368223506884" ignored="false" />
+    <file path="/overview_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368223674529" ignored="false" />
     <file path="/_top_nav.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367864394881" ignored="false" />
     <file path="/base_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367864341482" ignored="false" />
     <file path="/base_helper.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368028096909" ignored="false" />
@@ -159,19 +159,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/overview/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="71" selection-start="6878" selection-end="6878" vertical-scroll-proportion="0.8958333">
+            <state line="196" column="71" selection-start="6878" selection-end="6878" vertical-scroll-proportion="-5.16">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overview_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="overview_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="51" selection-start="1758" selection-end="1758" vertical-scroll-proportion="0.0">
+            <state line="60" column="65" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.8119658">
               <folding />
             </state>
           </provider>
@@ -201,8 +201,8 @@
         <option value="$PROJECT_DIR$/app/controllers/setup_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/rating.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/overview_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/overview/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/overview_controller.rb" />
       </list>
     </option>
   </component>
@@ -961,16 +961,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/overview/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="51" selection-start="1758" selection-end="1758" vertical-scroll-proportion="0.0">
+        <state line="196" column="71" selection-start="6878" selection-end="6878" vertical-scroll-proportion="-5.16">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/overview/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="71" selection-start="6878" selection-end="6878" vertical-scroll-proportion="0.8958333">
+        <state line="60" column="65" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.8119658">
           <folding />
         </state>
       </provider>
