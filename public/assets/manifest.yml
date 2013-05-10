@@ -463,6 +463,8 @@ account.js: account-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 account/index.js: account-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 admin/application.js: admin/application-d0c77327b9a59a40c8d3550e87d57c0c.js
 admin/application/index.js: admin/application-d0c77327b9a59a40c8d3550e87d57c0c.js
+admin/common.js: admin/common-c7bfac83f2339ffd32992a3f35595ef9.js
+admin/common/index.js: admin/common-c7bfac83f2339ffd32992a3f35595ef9.js
 admin/excanvas.js: admin/excanvas-875cb2d4b758558f63fc88f939f02841.js
 admin/excanvas/index.js: admin/excanvas-875cb2d4b758558f63fc88f939f02841.js
 admin/home.js: admin/home-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
@@ -471,8 +473,8 @@ admin/html5shiv.js: admin/html5shiv-1eb97f87e53c263240c70295643780e7.js
 admin/html5shiv/index.js: admin/html5shiv-1eb97f87e53c263240c70295643780e7.js
 admin/ie_fix.js: admin/ie_fix-7f157c653c26d904c71d3492451dfadf.js
 admin/ie_fix/index.js: admin/ie_fix-7f157c653c26d904c71d3492451dfadf.js
-application.js: application-f000824844c326dfd06b603660f57e0b.js
-application/index.js: application-f000824844c326dfd06b603660f57e0b.js
+application.js: application-df4ca836b6ffefad6c301e25ec57c72f.js
+application/index.js: application-df4ca836b6ffefad6c301e25ec57c72f.js
 blogs/DD_belatedPNG.js: blogs/DD_belatedPNG-5f92bc749a2fbadf919e62e57a6ca471.js
 blogs/DD_belatedPNG/index.js: blogs/DD_belatedPNG-5f92bc749a2fbadf919e62e57a6ca471.js
 blogs/customize.js: blogs/customize-5ffa9c5dfc848f66a48ce19f595b585f.js
@@ -511,14 +513,14 @@ widget.js: widget-7348864c170c61873bf4b4e093a49fa3.js
 widget/index.js: widget-7348864c170c61873bf4b4e093a49fa3.js
 account.css: account-1b13569e9620782f423d4cd3ce931750.css
 account/index.css: account-1b13569e9620782f423d4cd3ce931750.css
-admin/application.css: admin/application-f31a22f412d2708fe30df0b6c9815f77.css
-admin/application/index.css: admin/application-f31a22f412d2708fe30df0b6c9815f77.css
+admin/application.css: admin/application-3287c8476bf3af4b7af276d39eca9f19.css
+admin/application/index.css: admin/application-3287c8476bf3af4b7af276d39eca9f19.css
 admin/font-awesome.css: admin/font-awesome-709a767b681f23c8da75d214804a910f.css
 admin/font-awesome/index.css: admin/font-awesome-709a767b681f23c8da75d214804a910f.css
 admin/ie_fix.css: admin/ie_fix-3055207763d559d86977f0aa21819d6d.css
 admin/ie_fix/index.css: admin/ie_fix-3055207763d559d86977f0aa21819d6d.css
-application.css: application-d18c452ec0b35b0e6eee1230089d4458.css
-application/index.css: application-d18c452ec0b35b0e6eee1230089d4458.css
+application.css: application-67ee2cc5d325d00f7236eac0ce718c3c.css
+application/index.css: application-67ee2cc5d325d00f7236eac0ce718c3c.css
 blogs/industry.css: blogs/industry-a65f2300b4d6357fc1047291bf19c982.css
 blogs/industry/index.css: blogs/industry-a65f2300b4d6357fc1047291bf19c982.css
 blogs/reset.css: blogs/reset-7cf272fbe2b3dfe87cfb8161a58e8113.css
@@ -527,6 +529,8 @@ bootstrap-responsive.min.css: bootstrap-responsive.min-707ea8fb95c204f455c309f8d
 bootstrap-responsive/index.min.css: bootstrap-responsive.min-707ea8fb95c204f455c309f8d4967914.css
 bootstrap.min.css: bootstrap.min-e53dbdc44d6e9d6314043982722ac005.css
 bootstrap/index.min.css: bootstrap.min-e53dbdc44d6e9d6314043982722ac005.css
+scaffolds.css: scaffolds-4e1c83aee4efc6dfda6f86e06a0bab7e.css
+scaffolds/index.css: scaffolds-4e1c83aee4efc6dfda6f86e06a0bab7e.css
 theme-desktop.css: theme-desktop-348b23b6d0da896020ce293ebe4ba0a0.css
 theme-desktop/index.css: theme-desktop-348b23b6d0da896020ce293ebe4ba0a0.css
 theme-phone.css: theme-phone-ff7226a15e286f0c93c08f1ce80768cd.css
