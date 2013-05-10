@@ -65,7 +65,7 @@
     <file path="/deneme2.html" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1366357539167" ignored="false" />
     <file path="/show.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367754240046" ignored="false" />
     <file path="/_index.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367063820711" ignored="false" />
-    <file path="/rating.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367865186877" ignored="false" />
+    <file path="/rating.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368222146705" ignored="false" />
     <file path="/20130427135825_add_column_to_ratings.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367071467858" ignored="false" />
     <file path="/admin.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367870550958" ignored="false" />
     <file path="/social_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367767411553" ignored="false" />
@@ -168,10 +168,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sitemaps_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sitemaps_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/app/controllers/sitemaps_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="39" selection-start="135" selection-end="135" vertical-scroll-proportion="0.08278146">
+            <state line="13" column="38" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rating.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/rating.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="142" selection-start="389" selection-end="389" vertical-scroll-proportion="0.16830294">
               <folding />
             </state>
           </provider>
@@ -268,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/admin/common.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/admin.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/widgets/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/_form.html.erb" />
@@ -284,6 +292,7 @@
         <option value="$PROJECT_DIR$/app/controllers/setup_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/overview/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/rating.rb" />
       </list>
     </option>
   </component>
@@ -296,8 +305,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1054" />
+    <option name="width" value="1440" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -325,7 +334,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -504,20 +512,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -816,14 +825,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1054" extended-state="1" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.48777348" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27761838" sideWeight="0.48777348" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5122265" sideWeight="0.981857" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -902,11 +911,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/admin/overview/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="65" selection-start="7295" selection-end="7295" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="317" selection-end="586" vertical-scroll-proportion="0.117713004" />
@@ -926,16 +930,12 @@
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/sitemap_notifier-1.0.0/lib/sitemap_notifier/notifier.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="84" selection-end="84" vertical-scroll-proportion="0.016146393">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="84" selection-end="84" vertical-scroll-proportion="0.016146393" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/sitemap_notifier-1.0.0/lib/sitemap_notifier/active_record.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="511" selection-end="511" vertical-scroll-proportion="0.35522068">
-          <folding />
-        </state>
+        <state line="22" column="28" selection-start="511" selection-end="511" vertical-scroll-proportion="0.35522068" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/generators/dynamic_sitemaps/dynamic_sitemaps_generator.rb">
@@ -1003,7 +1003,14 @@
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/app/controllers/sitemaps_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="39" selection-start="135" selection-end="135" vertical-scroll-proportion="0.08278146">
+        <state line="13" column="38" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/rating.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="142" selection-start="389" selection-end="389" vertical-scroll-proportion="0.16830294">
           <folding />
         </state>
       </provider>
