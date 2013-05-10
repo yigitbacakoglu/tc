@@ -10,6 +10,7 @@
   <%= stylesheet_link_tag "admin/application" %>
   <%= stylesheet_link_tag "admin/font-awesome" %>
   <%= javascript_include_tag "admin/application" %>
+  <%= javascript_include_tag "admin/common" %>
   <%= javascript_include_tag "jquery_ujs" %>
   <%= yield :head %>
   <%= csrf_meta_tags %>
@@ -36,6 +37,7 @@
 
 <section id="main">
   <%= render :partial => "shared/flashes" %>
+
 
   <div class="modal fade hide" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
     <div class="modal-header">

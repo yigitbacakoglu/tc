@@ -19549,7 +19549,6 @@ strong, em, th, thead {
     font-weight: 700;
     line-height: 28px;
     text-align: left;
-    text-transform: uppercase;
     color: rgba(51, 86, 106, 0.5);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6), 0 0 1px rgba(0, 0, 0, 0.3);
 }

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   ROLES = %w[admin moderator author anonymous]
 
-  attr_accessible :firstname, :lastname, :nickname
+  attr_accessible :firstname, :lastname, :nickname, :gender, :user_registration_attributes
 
   has_one :user_registration, :dependent => :destroy
   has_many :shares, :class_name => "Share"
@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   has_many :ratings, :class_name => 'Rating'
   before_create :create_bogus_store
 
+  accepts_nested_attributes_for :user_registration
 
   def role=(param)
     _us = self.user_stores.where(:store_id => Store.current.try(:id)).first
@@ -104,6 +105,7 @@ class User < ActiveRecord::Base
     store = self.stores.new
     store = Store.new
     store.kind = "blog"
+    store.name = "Bogus"
     store.email = "admin@talkycloud.com"
     store.recover_email = "admin@talkycloud.com"
     store.website = "talkycloud.com"

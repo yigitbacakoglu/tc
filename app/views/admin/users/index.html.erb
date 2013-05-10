@@ -4,8 +4,10 @@
       <div class="box bordered">
       <div class="box-header">
           <i class="icon-user">&nbsp; Users</i>
-        </div>
-          <table class="table table-strip table-bordered">
+        <%#= link_to_with_icon "icon-white icon-plus", 'New' ,new_admin_user_url, :class => "btn btn-success pull-right" %>
+      </div>
+        <div class="row-fluid padded">
+          <table class="table table-striped">
             <thead>
             <tr>
               <th>Username</th>
@@ -44,6 +46,7 @@
             </tr>
             </tfoot>
           </table>
+      </div>
       </div>
 
     </div>

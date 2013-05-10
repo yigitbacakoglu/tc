@@ -24,6 +24,10 @@ class Post < ActiveRecord::Base
   before_create :set_defaults
 
 
+  def self.default_scope
+    where("#{Post.table_name}.widget_id IN(?)", Store.current.widget_ids) if Store.current
+  end
+
   def approval_required?
     self.widget.approval_required?
   end

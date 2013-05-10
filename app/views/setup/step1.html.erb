@@ -37,12 +37,17 @@
                     <div class="input full-width">
                       <%= text_field_tag "store[name]", @store.name, :placeholder => "Name of site" %>
                     </div>
-                    <div class="input full-width">
-                      <%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>
-                    </div>
+
+                    <%= f.fields_for :widget_domains do |d| %>
+                        <div class="input  full-width">
+                          <%= d.text_field :domain, :placeholder => "ex. talkycloud.com" %>
+                        </div>
+                    <% end %>
+
                     <div class="input full-width">
                       <%= f.select :category_id, Category.where(:category_type => :widget).collect { |c| [c.name, c.id] }, {}, :class => "chzn-select" %>
                     </div>
+
                     <div class="clearfix" style="margin-top:15px;">
                       <label class="checkbox">
                         <%= f.check_box :approval_required %> Approval required
@@ -50,7 +55,8 @@
                       <label class="checkbox">
                         <%= f.check_box :login_required %>
                         Login required
-                      </label></div>
+                      </label>
+                    </div>
 
 
 

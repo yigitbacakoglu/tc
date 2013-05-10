@@ -3,7 +3,7 @@
     <div class="span12">
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-user"></i> Edit User
+          <i class="icon-user"></i> New User
         </div>
         <%= form_for [:admin, @user] do |f| %>
             <%= render :partial => "form", :locals => {:f => f} %>
@@ -11,7 +11,7 @@
               <div class="span6">
                 <div class="padded">
                   <div class="vpadded">
-                    <%= f.submit "Update", :class => "btn medium-blue" %> or
+                    <%= f.submit "Create", :class => "btn medium-blue" %> or
                     <%= link_to "Cancel", admin_users_path %>
                   </div>
                 </div>

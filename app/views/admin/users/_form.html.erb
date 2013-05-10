@@ -1,0 +1,50 @@
+<%= render :partial => "shared/errors", :locals => {:target => @user} %>
+
+<div class="row-fluid">
+  <div class="span6">
+    <div class="padded">
+      <div class="section-title">
+        Personal Details
+      </div>
+      <div class="vpadded">
+        <div class="input  full-width">
+          <%= f.text_field :firstname, :placeholder => "Firstname" %>
+        </div>
+
+        <div class="input  full-width">
+          <%= f.text_field :lastname, :placeholder => "Lastname" %>
+        </div>
+
+        <div class="input  full-width">
+          <%= f.select :gender, ['male', 'female'], {}, :placeholder => "Lastname", :class => "chzn-select" %>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="span6">
+    <div class="padded">
+      <div class="section-title">
+        Registration Details
+      </div>
+      <div class="vpadded">
+        <%= f.fields_for :user_registration do |d| %>
+            <div class="input  full-width">
+              <%= d.text_field :username, :placeholder => "Username" %>
+            </div>
+
+            <div class="input  full-width">
+              <%= d.text_field :email, :placeholder => "Email" %>
+            </div>
+
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

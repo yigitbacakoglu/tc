@@ -8,16 +8,16 @@ class Store < ActiveRecord::Base
   # Not banned users
   has_many :active_users,
            :through => :user_stores,
-           :conditions => ["#{UserStore.quoted_table_name}.role != 'banned' OR #{UserStore.quoted_table_name}.role IS NULL"],
+           :conditions => ["#{UserStore.quoted_table_name}.status != 'banned' OR #{UserStore.quoted_table_name}.status IS NULL"],
            :source => :user
 
   # Not banned users
   has_many :banned_users,
            :through => :user_stores,
-           :conditions => ["#{UserStore.quoted_table_name}.role = 'banned'"],
+           :conditions => ["#{UserStore.quoted_table_name}.status = 'banned'"],
            :source => :user
 
-
+  validates :name, :presence => true
   has_many :comments
   attr_accessible :email, :kind, :name, :recover_email, :website, :restricted_words_attributes, :phone
   accepts_nested_attributes_for :restricted_words

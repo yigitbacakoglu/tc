@@ -43,7 +43,9 @@ Omrats::Application.routes.draw do
 
   namespace :admin do
 
-    get "/admin/set_store/:store_id", :to => "overview#set_session_store", :as => :change_store
+    get "/set_store/:store_id", :to => "overview#set_session_store", :as => :change_store
+    get "/change_widget/:widget_id", :to => "overview#set_session_widget", :as => :change_widget
+    get "/change_post/:post_id", :to => "overview#set_post", :as => :change_post
     resources :overview
     resources :secrets
 
@@ -70,7 +72,11 @@ Omrats::Application.routes.draw do
 
     get '/account', :as => :account, :to => 'account#show'
     put '/account', :as => :update_account, :to => 'account#update'
-    resources :widgets
+    resources :widgets  do
+      member do
+        delete :delete_domain
+      end
+    end
     get '/fire/:e/comment/:comment_id', :as => :fire, :to => 'overview#fire'
   end
 

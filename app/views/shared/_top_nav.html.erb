@@ -4,20 +4,20 @@
   </a>
 
   <ul class="top-notifications">
-    <!--<li>-->
-    <!--<a href="#messages" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">-->
-    <!--Comments Waiting <span class="badge dark-blue">3</span>-->
-    <!--</a>-->
+    <li>
+      <a href="#widgets" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
+        Widgets (<%= @current_widget.try(:domains).try(:first) || "All" %>)
+        <span class="badge blue"><%= @current_store.widgets.count %></span>
+      </a>
 
-    <!--<div class="collapsed" style="height: 0; overflow: visible;">-->
-    <!--<ul id="messages" class="collapse top-bar-list">-->
-    <!--<li><a href="#">New message</a></li>-->
-    <!--<li><a href="#">Inbox <span class="count">(8)</span></a></li>-->
-    <!--<li><a href="#">Sent</a></li>-->
-    <!--<li><a href="#">Drafts</a></li>-->
-    <!--</ul>-->
-    <!--</div>-->
-    <!--</li>-->
+      <div class="collapsed" style="height: 0; overflow: visible;">
+        <ul id="widgets" class="collapse top-bar-list">
+          <% @current_store.widgets.each do |widget| %>
+              <li><a href="<%= admin_change_widget_path(widget.id) %>"><%= widget.domains.first %></li>
+          <% end %>
+        </ul>
+      </div>
+    </li>
 
     <li>
       <a href="#stores" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
@@ -27,14 +27,12 @@
       <div class="collapsed" style="height: 0; overflow: visible;">
         <ul id="stores" class="collapse top-bar-list">
           <% @current_user.managable_stores.each do |store| %>
-              <% next if @current_store == store%>
-              <li><a href="<%= admin_change_store_path(store.id) %>">d<%= store.name %></li>
+              <% next if @current_store == store %>
+              <li><a href="<%= admin_change_store_path(store.id) %>"><%= store.name %></li>
           <% end %>
         </ul>
       </div>
     </li>
-
-
     <li>
       <a href="#orders" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
         Comments <span class="badge turquoise"><%= @current_store.comments.all.count %></span>

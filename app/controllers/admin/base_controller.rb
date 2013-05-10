@@ -1,6 +1,7 @@
 class Admin::BaseController < ApplicationController
   before_filter :authenticate_user_registration!
   before_filter :set_current_store
+  before_filter :set_current_widget
   before_filter :authorize_admin
 
   layout "admin"
@@ -23,6 +24,10 @@ class Admin::BaseController < ApplicationController
 
   def destroy
 
+  end
+
+  def set_current_widget
+    @current_widget = Widget.where(:id => session[:widget_id]).first
   end
 
   def render_default_modal_form(title = nil, target = nil)

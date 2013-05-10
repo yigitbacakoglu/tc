@@ -46,157 +46,208 @@
 <% end %>
 
 <div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span6">
-      <div class="box bordered">
-        <div class="box-header">
-          <i class="icon-comments"></i> Recent comments
-          <div class="pull-right">
-            <div class="btn-group">
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-wrench"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-left">
-                <li><%= link_to "Approve All", set_all_admin_comments_path('approve'), :confirm => "Are you sure?" %></li>
-                <li><%= link_to "Reject All", set_all_admin_comments_path('reject'), :confirm => "Are you sure?" %></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <ul id="comment_container" class="recent-comments">
-          <%= render :partial => "index" %>
-          <% if @comments.blank? %>
-              <div class="padded">
-                <i class="icon-info-sign"></i> <span>You dont have waiting comment... </span>
-              </div>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-    <div class="span6">
+<b>Current Page: <%= @post.try(:url) %></b>
 
-      <div class="box bordered">
-        <div class="box-header">
-          <i class="icon-link"></i> Stats
-          <div class="pull-right">
-            <div class="btn-group">
-              Page: deneme.html &nbsp;
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                 <i class="icon-cog"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-left">
-                <li><%= link_to "Approve All", set_all_admin_comments_path('approve'), :confirm => "Are you sure?" %></li>
-                <li><%= link_to "Reject All", set_all_admin_comments_path('reject'), :confirm => "Are you sure?" %></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row-fluid">
-          <div class="span12">
-            <div class="padded">
+<div class="row-fluid">
 
-              <ul class="audience-alt">
-
-
-                <li>
-                  <div class="icon">
-                    <div class="big-label dark-plum text-inverse">
-                      <i class="icon-heart"></i>
-                    </div>
-                  </div>
-                  <div class="value">39</div>
-                  <div class="stat-name">Visits</div>
-
-                  <div class="percent">(+12%)</div>
-                  <div class="progress-bar audience-progress">
-                    <div class="progress progress-dark-plum">
-                      <div class="bar" style="width: 12%"></div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="icon">
-                    <div class="big-label dark-plum text-inverse">
-                      <i class="icon-heart"></i>
-                    </div>
-                  </div>
-                  <div class="value"><%= @shares.count %></div>
-                  <div class="stat-name">Shares</div>
-
-                  <div class="percent">(+12%)</div>
-                  <div class="progress-bar audience-progress">
-                    <div class="progress progress-dark-plum">
-                      <div class="bar" style="width: 12%"></div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="icon">
-                    <div class="big-label text-blue text-inverse">
-                      <i class="icon-comment"></i>
-                    </div>
-                  </div>
-                  <div class="value"><%= Comment.all.count %></div>
-                  <div class="stat-name">Comments</div>
-
-                  <div class="percent">(+78%)</div>
-                  <div class="progress-bar audience-progress">
-                    <div class="progress progress-text-blue">
-                      <div class="bar" style="width: 78%"></div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-        <div class="row-fluid">
-
-          <div class="span12">
-
-            <div class="padded">
-              <div class="section-title">Quick Links</div>
-
-              <button class="big-button" href="#">
-                <i class="icon-cogs icon-large"></i>
-                <span class="button-text">Users</span>
-              </button>
-
-              <button class="big-button" href="#">
-                <i class="icon-group icon-large"></i>
-                <span class="button-text">Requests</span>
-              </button>
-
-              <button class="big-button" href="#">
-                <i class="icon-envelope icon-large"></i>
-                <span class="button-text">Messages</span>
-              </button>
-
-              <button class="big-button" href="#">
-                <i class="icon-comments icon-large"></i>
-                <span class="button-text">Comments</span>
-              </button>
-
-              <button class="big-button" href="#">
-                <i class="icon-flag icon-large"></i>
-                <span class="button-text">Events</span>
-              </button>
-
-              <button class="big-button" href="#">
-                <i class="icon-bar-chart icon-large"></i>
-                <span class="button-text">Orders</span>
-              </button>
-
-            </div>
+  <div class="span6">
+    <div class="box bordered">
+      <div class="box-header">
+        <i class="icon-comments"></i> Recent comments
+        <div class="pull-right">
+          <div class="btn-group">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-left">
+              <li><%= link_to "Approve All", set_all_admin_comments_path('approve'), :confirm => "Are you sure?" %></li>
+              <li><%= link_to "Reject All", set_all_admin_comments_path('reject'), :confirm => "Are you sure?" %></li>
+            </ul>
           </div>
         </div>
       </div>
+      <ul id="comment_container" class="recent-comments">
+        <% if @comments.blank? %>
+            <div class="padded">
+              <i class="icon-info-sign"></i> <span>You dont have waiting comment... </span>
+            </div>
+        <% else %>
+            <%= render :partial => "index" %>
+        <% end %>
+      </ul>
     </div>
-
-
   </div>
+  <div class="span6">
+
+    <div class="box bordered">
+      <div class="box-header">
+        <i class="icon-link"></i> Stats
+        <div class="pull-right">
+          Change page
+          <div class="btn-group">
+
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-cog"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-right">
+              <% @posts.each do |post| %>
+                  <li><%= link_to "#{post.url}", admin_change_post_path(post.id), :remote => true %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
+        <!--<div class="pull-right">-->
+        <!--<div class="btn-group open">-->
+        <!--<a class="dropdown-toggle" data-toggle="dropdown">-->
+        <!--<i class="icon-cog"></i>-->
+        <!--</a>-->
+        <!--<ul class="dropdown-menu dropdown-left">-->
+        <!--<li><a href="#">Delete all</a></li>-->
+        <!--<li><a href="#">Mark all as complete</a></li>-->
+        <!--<li class="divider"></li>-->
+        <!--<li><a href="#">Refresh</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="padded">
+
+            <ul class="audience-alt">
+
+
+              <li>
+                <div class="icon">
+                  <div class="big-label light-blue">
+                    <i class="icon-eye-open"></i>
+                  </div>
+                </div>
+                <div class="value"><%= @visits %></div>
+                <div class="stat-name">Visits</div>
+
+                <div class="percent">(+<%= @visits_overall %>%)</div>
+                <div class="progress-bar audience-progress">
+                  <div class="progress progress-light-blue">
+                    <div class="bar" style="width: <%= @visits_overall %>%"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="icon">
+                  <div class="big-label dark-plum text-inverse">
+                    <i class="icon-star"></i>
+                  </div>
+                </div>
+                <div class="value"><%= @shares.try(:count) %></div>
+                <div class="stat-name">Shares
+                    <span>(<%= "#{@twitter_count} <i class='icon-twitter-sign'></i> #{@facebook_count} <i class='icon-facebook-sign'></i> ".html_safe %>
+                      )
+
+                    </span>
+
+                </div>
+
+                <div class="percent">(+<%= @shares_overall %>%)</div>
+                <div class="progress-bar audience-progress">
+                  <div class="progress progress-dark-plum">
+                    <div class="bar" style="width: <%= @shares_overall %>%"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="icon">
+                  <div class="big-label text-blue text-inverse">
+                    <i class="icon-comment"></i>
+                  </div>
+                </div>
+                <div class="value"><%= @post_comments.try(:count) %></div>
+                <div class="stat-name">Comments</div>
+
+                <div class="percent">(+<%= @comments_overall %>%)</div>
+                <div class="progress-bar audience-progress">
+                  <div class="progress progress-text-blue">
+                    <div class="bar" style="width: <%= @comments_overall %>%"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="icon">
+                  <div class="big-label medium-blue text-inverse">
+                    <i class="icon-heart"></i>
+                  </div>
+                </div>
+                <div class="value"><%= @ratings.try(:count) %></div>
+                <div class="stat-name">Ratings
+                    <span>(<%= "#{@like_count} <i class='icon-hand-up'></i> #{@dislike_count} <i class='icon-hand-down'></i> ".html_safe %>
+                      )
+
+                    </span>
+
+                </div>
+
+                <div class="percent">(+<%= @shares_overall %>%)</div>
+                <div class="progress-bar audience-progress">
+                  <div class="progress progress-medium-blue">
+                    <div class="bar" style="width: <%= @shares_overall %>%"></div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+
+        <div class="span12">
+
+          <div class="padded">
+            <div class="section-title">Quick Links</div>
+
+            <button class="big-button link_div" data-link="<%= "#" %>">
+              <i class="icon-group icon-large"></i>
+              <span class="button-text">New User</span>
+            </button>
+
+            <button class="big-button link_div" data-link="<%= new_admin_widget_path %>">
+              <i class="icon-microformats icon-large"></i>
+              <span class="button-text">New Widget</span>
+            </button>
+
+            <button class="big-button link_div" data-link="<%= admin_settings_path %>">
+              <i class="icon-wrench icon-large"></i>
+              <span class="button-text">Settings</span>
+            </button>
+
+            <button class="big-button link_div" data-link="<%= admin_comments_path %>">
+              <i class="icon-comments icon-large"></i>
+              <span class="button-text">Comments</span>
+            </button>
+
+            <button class="big-button link_div" data-link="<%= new_admin_user_path %>">
+              <i class="icon-flag icon-large"></i>
+              <span class="button-text">Flags</span>
+            </button>
+
+            <button class="big-button link_div" data-link="<%= admin_account_path %>">
+              <i class="icon-user icon-large"></i>
+              <span class="button-text">My Account</span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
 </div>
 

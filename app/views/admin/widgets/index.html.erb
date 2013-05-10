@@ -7,10 +7,12 @@
           <i class="icon-microformats">&nbsp; Widgets</i>
           <%= link_to_with_icon "icon-white icon-plus", 'New' ,new_admin_widget_url, :class => "btn btn-success pull-right" %>
         </div>
-          <table class="table table-striped">
+        <div class="row-fluid padded">
+
+        <table class="table table-striped">
             <thead>
             <tr>
-              <th>Webpage</th>
+              <th>Domains</th>
               <th>Category</th>
               <th>Actions</th>
             </tr>
@@ -20,7 +22,7 @@
                 <% identifier = rand(19031903) %>
                 <tr id="<%= identifier %>">
                   <td>
-                    <%= widget.webpage %>
+                    <%= widget.widget_domains.map(&:domain).join(' | ') %>
                   </td>
                   <td style="line-height: 24px;">
                     <%= widget.category.name %>
@@ -34,6 +36,7 @@
 
             </tbody>
           </table>
+        </div>
         </div>
     </div>
   </div>

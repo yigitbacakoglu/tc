@@ -44,7 +44,8 @@ class SetupController < ApplicationController
     @dont_show_signup_link = true
     @user_store = current_user.user_stores.new(:role => 'admin')
     @store = @user_store.build_store
-    @widget = @store.widgets.build
+    @widget = @store.widgets.new
+    @widget.widget_domains.build
   end
 
   def initialize_step2
@@ -54,8 +55,11 @@ class SetupController < ApplicationController
 
 
   def save_step1
-    initialize_step1
-    @widget.update_attributes(params[:widget])
+    @dont_show_signup_link = true
+    @user_store = current_user.user_stores.new(:role => 'admin')
+    @store = @user_store.build_store(params[:store])
+
+    @widget = @store.widgets.new(params[:widget])
     @store.update_attributes(params[:store])
     session[:store_id] = @store.id
     @current_user.update_attributes(params[:user])

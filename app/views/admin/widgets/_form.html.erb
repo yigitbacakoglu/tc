@@ -1,3 +1,4 @@
+<%= render :partial => "shared/errors", :locals => {:target => @widget} %>
 <div class="row-fluid">
   <div class="span6">
     <div class="padded">
@@ -5,9 +6,16 @@
         Web Page Details
       </div>
       <div class="vpadded">
-        <div class="input full-width">
-          <%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>
-        </div>
+        <%= f.fields_for :widget_domains do |d| %>
+            <% identifier = rand(19031903) %>
+            <div class="input  full-width generatable_container" id="<%= identifier %>">
+              <div class="generatable">
+                <%= d.text_field :domain, :placeholder => "ex. talkycloud.com", :class => "generatable" %>
+              </div>
+              <%= link_to_delete d.object, :url => d.object.new_record? ? "#" : delete_domain_admin_widget_path(d.object.id, :dom_id => identifier), :class => "remove_field" %>
+
+            </div>
+        <% end %>
         <div class="input full-width">
           <%= f.select :category_id, Category.where(:category_type => :widget).collect { |c| [c.name, c.id] }, {}, :class => "chzn-select" %>
         </div>
@@ -21,6 +29,7 @@
           </label></div>
 
 
+        <%= link_to "Connect new domain", "javascript:;", :class => "generate_field", "data-target-class" => "generatable" %>
 
 
         <% unless @widget.new_record? %>
@@ -35,21 +44,38 @@
     </div>
   </div>
 
-  <!--<div class="span6">-->
-  <!--<div class="padded">-->
-  <!--<div class="section-title">-->
-  <!--Web Page Details-->
-  <!--</div>-->
-  <!--<div class="vpadded">-->
-  <!--<div class="input full-width">-->
-  <!--<%= f.text_field :webpage, :placeholder => "ex. talkycloud.com" %>-->
-  <!--</div>-->
-  <!--<div class="input full-width">-->
-  <!--<%= f.text_field :category_id, :placeholder => 'Category' %>-->
-  <!--</div>-->
-  <!--</div>-->
-  <!--</div>-->
-  <!--</div>-->
-
 </div>
 
+<script>
+    $('.generate_field').on('click', function () {
+        var class_name = $(this).attr('data-target-class');
+        var element = $('.' + class_name).first().clone();
+        element = change_ids(element);
+        $('.' + class_name + '_container').append(element);
+        var delete_link = $('.remove_field').first().clone();
+        delete_link.attr('href', "javascript:;");
+        $('.' + class_name + '_container').append(delete_link);
+    });
+
+    $('.remove_field').live('click', function () {
+        if ($('.generatable').length != 1) {
+            $(this).prev('div').remove();
+            $(this).remove();
+        }
+    });
+
+    change_ids = function (element) {
+        var new_id = new Date().getTime();
+        element.find("input,select").each(function () {
+            var el = $(this);
+            el.val("");
+            el.attr("id", el.attr("id").replace(/\d+/, new_id))
+            el.attr("name", el.attr("name").replace(/\d+/, new_id))
+            if (el.attr("type") == "number") {
+                el.val(1);
+            }
+        })
+
+        return element;
+    }
+</script>
