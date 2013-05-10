@@ -80,16 +80,16 @@ class Admin::OverviewController < Admin::BaseController
     tmp = 0
     post.comments.collect { |c| tmp += c.ratings.count }
     @visits = post.comments.count + post.ratings.count + tmp
-    @visits_overall = (@visits * 100) /(Comment.all.count + Rating.all.count)
+    @visits_overall = (@visits * 100) /(Comment.all.count + Rating.all.count)  rescue 0
 
     @post_comments = post.comments
-    @comments_overall = (@post_comments.count * 100) / Comment.all.count
+    @comments_overall = (@post_comments.count * 100) / Comment.all.count   rescue 0
 
     tmp_ratings = []
     post.comments.collect { |c| tmp_ratings += c.ratings }
 
     @ratings = @post.ratings.all + tmp_ratings
-    @ratings_overall = @ratings.count * 100 / Rating.all.count
+    @ratings_overall = @ratings.count * 100 / Rating.all.count  rescue 0
     like_count = 0
     dislike_count = 0
 
