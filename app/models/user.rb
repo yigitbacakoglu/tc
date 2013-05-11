@@ -63,7 +63,7 @@ class User < ActiveRecord::Base
   end
 
   def anonymous?
-    self.has_role? "anonymous"
+    self.firstname.eql? "Anonymous"
   end
 
   def has_role?(param)
