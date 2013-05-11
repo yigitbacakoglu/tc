@@ -20,6 +20,14 @@ class Admin::CommentsController < Admin::BaseController
 
   def show
     @comment = Comment.find(params[:id])
+    @shares = @comment.shares
+    @facebook_count = @shares.where(:provider => "facebook").count
+    @twitter_count = @shares.where(:provider => "twitter").count
+    @shares_overall = (100 * @shares.count) / Share.all.count rescue 0
+    @ratings = @comment.ratings
+    @ratings_overall = (100 * @ratings.count) / Rating.all.count rescue 0
+    @children = @comment.children
+    @children_overall =  (100 * @children.count) / Comment.where("parent_id IS NOT NULL").count rescue 0
   end
 
 

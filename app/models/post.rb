@@ -4,9 +4,9 @@ class Post < ActiveRecord::Base
 
   belongs_to :widget
   belongs_to :category
-  has_many :ratings, :as => :ratable, :class_name => 'Rating'
+  has_many :ratings, :as => :ratable, :class_name => 'Rating', :dependent => :destroy
 
-  has_many :comments, :class_name => "Comment"
+  has_many :comments, :class_name => "Comment", :dependent => :destroy
 
   has_many :approved_comments, :class_name => "Comment",
            :conditions => ["#{::Comment.quoted_table_name}.state = ? ", "approved"]
@@ -19,7 +19,7 @@ class Post < ActiveRecord::Base
              :class_name => "Category",
              :foreign_key => :commenting_category_id
 
-  has_many :shares, :as => :source, :class_name => "Share"
+  has_many :shares, :as => :source, :class_name => "Share", :dependent => :destroy
 
   before_create :set_defaults
 

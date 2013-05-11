@@ -1,3 +1,8 @@
+<%= content_for :head do %>
+    <%= javascript_include_tag "jquery.raty" %>
+    <%= javascript_include_tag "widget" %>
+    <!--<%#= javascript_tag "edit_comment_form = '#{escape_javascript(comment_form(@comment, update_comment_posts_url))}'" %>-->
+<% end %>
 <div class="container-fluid"><%= link_to_with_icon "icon-arrow-left" ,'Back', request.referer, :class => "btn" %> </div>
 <div class="container-fluid">
   <div class="row-fluid">
@@ -13,6 +18,15 @@
               <div class="post-info"> <%= "#{@comment.user.username}, #{time_ago_in_words(@comment.created_at)} ago, Page: #{@comment.post.url}" %>
                 <span class="pull-right badge <%= @comment.state_color %>"><%= @comment.state %></span>
               </div>
+              <% if @comment.parent.present? %>
+                  , <i class="icon-retweet"></i>Reply to <%= @comment.parent.user.username rescue '[Deleted Comment]' %>
+              <% end %>
+              <div class="past-rating">
+                <%= rating_for(@comment, :url => rate_posts_path(:comment_id => @comment.id,
+                                                                :widget_id => @comment.post.widget.id,
+                                                                :current_page => @comment.post.url)) %>
+              </div>
+
               <div class="post-content-preview">
                 <%= @comment.message %>
               </div>
@@ -39,51 +53,43 @@
             <li>
               <div class="icon">
                 <div class="big-label medium-blue text-inverse">
-                  <i class="icon-lightbulb"></i>
-                </div>
-              </div>
-
-              <div class="value">504</div>
-              <div class="stat-name">Visitors</div>
-
-              <div class="percent">(+30%)</div>
-              <div class="progress-bar audience-progress">
-                <div class="progress progress-medium-blue">
-                  <div class="bar" style="width: 30%"></div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="icon">
-                <div class="big-label dark-blue text-inverse">
                   <i class="icon-star"></i>
                 </div>
               </div>
-              <div class="value">439</div>
-              <div class="stat-name">Visits</div>
 
-              <div class="percent">(+61%)</div>
+              <div class="value"><%= @shares.count %></div>
+              <div class="stat-name">Shares
+                    <span>(<%= "#{@twitter_count} <i class='icon-twitter-sign'></i> #{@facebook_count} <i class='icon-facebook-sign'></i> ".html_safe %>
+                      )
+
+                    </span>
+
+              </div>
+
+              <div class="percent">(+<%= @shares_overall %>%)</div>
               <div class="progress-bar audience-progress">
-                <div class="progress progress-dark-blue">
-                  <div class="bar" style="width: 61%"></div>
+                <div class="progress progress-medium-blue">
+                  <div class="bar" style="width: <%= @shares_overall %>%"></div>
                 </div>
               </div>
             </li>
+
+
+
 
             <li>
               <div class="icon">
                 <div class="big-label light-blue">
-                  <i class="icon-eye-open"></i>
+                  <i class="icon-retweet icon-white"></i>
                 </div>
               </div>
-              <div class="value">988</div>
-              <div class="stat-name">Page views</div>
+              <div class="value"><%= @children.count %></div>
+              <div class="stat-name">Reply</div>
 
-              <div class="percent">(+44%)</div>
+              <div class="percent">(+<%= @children_overall %>%)</div>
               <div class="progress-bar audience-progress">
                 <div class="progress progress-light-blue">
-                  <div class="bar" style="width: 44%"></div>
+                  <div class="bar" style="width: <%= @children_overall %>%"></div>
                 </div>
               </div>
             </li>
@@ -94,33 +100,17 @@
                   <i class="icon-heart"></i>
                 </div>
               </div>
-              <div class="value">39</div>
+              <div class="value"><%= @ratings.count %></div>
               <div class="stat-name">Likes</div>
 
-              <div class="percent">(+12%)</div>
+              <div class="percent">(+<%= @ratings_overall %>%)</div>
               <div class="progress-bar audience-progress">
                 <div class="progress progress-dark-plum">
-                  <div class="bar" style="width: 12%"></div>
+                  <div class="bar" style="width: <%= @ratings_overall %>%"></div>
                 </div>
               </div>
             </li>
 
-            <li>
-              <div class="icon">
-                <div class="big-label text-blue text-inverse">
-                  <i class="icon-comment"></i>
-                </div>
-              </div>
-              <div class="value">18</div>
-              <div class="stat-name">Comments</div>
-
-              <div class="percent">(+78%)</div>
-              <div class="progress-bar audience-progress">
-                <div class="progress progress-text-blue">
-                  <div class="bar" style="width: 78%"></div>
-                </div>
-              </div>
-            </li>
           </ul>
         </div>
       </div>

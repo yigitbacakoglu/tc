@@ -14,8 +14,8 @@ class Comment < ActiveRecord::Base
   belongs_to :store
   belongs_to :parent, :class_name => "Comment"
   has_many :children, :class_name => "Comment", :foreign_key => :parent_id
-  has_many :ratings, :as => :ratable, :class_name => 'Rating'
-  has_many :shares, :as => :source, :class_name => "Share"
+  has_many :ratings, :as => :ratable, :class_name => 'Rating', :dependent => :destroy
+  has_many :shares, :as => :source, :class_name => "Share", :dependent => :destroy
 
   attr_accessible :kind, :message,
                   :parent_id, :ip_address, :user_agent, :referer, :user_id, :state
@@ -71,8 +71,9 @@ class Comment < ActiveRecord::Base
   end
 
   def percentage_avg_rate
-      avg_rate / self.rating_category.max_value
+    avg_rate / self.rating_category.max_value
   end
+
   def can_rate?(ip_address)
     if User.current
       all_ratings = self.ratings.where(:user_id => User.current.id)
@@ -107,6 +108,18 @@ class Comment < ActiveRecord::Base
   def after_create
     auto_approve
     save_user_store
+    send_reply_mail
+  end
+
+  def send_reply_mail
+    if self.parent.present?
+      begin
+        post = self.post
+        UserMailer.replied_comment(self.parent.user, post).deliver
+      rescue
+        puts "Error on reply mail"
+      end
+    end
   end
 
   def auto_approve

@@ -10,4 +10,14 @@ class UserMailer < ActionMailer::Base
 
   end
 
+  def replied_comment(user, post)
+    subject = "Your comment is replied !"
+    mail_params = {:from => "no-reply@talkycloud.com", :to => user.email, :subject => subject}
+    @user = user
+    @post = post
+
+    mail(mail_params)
+
+  end
+
 end
