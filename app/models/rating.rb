@@ -33,7 +33,7 @@ class Rating < ActiveRecord::Base
           store = self.ratable.store
         end
         array = all_ratings.order('updated_at DESC').limit(10).map(&:percentage_value)
-        if ((array.sum.to_f / array.size) < 0.35)
+        if (array.size > 9 && (array.sum.to_f / array.size) < 0.35)
           StoreMailer.bad_ratings(store, post).deliver
         end
       end
