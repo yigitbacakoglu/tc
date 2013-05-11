@@ -159,10 +159,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="social_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="social_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/social_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="68" selection-start="4018" selection-end="4027" vertical-scroll-proportion="0.33239436">
+            <state line="121" column="50" selection-start="4053" selection-end="4053" vertical-scroll-proportion="-53.653847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authentications_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/authentications_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="55" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.24456522">
               <folding />
             </state>
           </provider>
@@ -178,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/widgets/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/new.html.erb" />
@@ -194,6 +202,7 @@
         <option value="$PROJECT_DIR$/app/views/admin/overview/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/overview_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/social_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/authentications_controller.rb" />
       </list>
     </option>
   </component>
@@ -860,11 +869,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/sitemap_notifier-1.0.0/lib/sitemap_notifier/notifier.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="84" selection-end="84" vertical-scroll-proportion="0.016146393" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/sitemap_notifier-1.0.0/lib/sitemap_notifier/active_record.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="28" selection-start="511" selection-end="511" vertical-scroll-proportion="0.35522068" />
@@ -943,7 +947,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/social_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="68" selection-start="4018" selection-end="4027" vertical-scroll-proportion="0.33239436">
+        <state line="121" column="50" selection-start="4053" selection-end="4053" vertical-scroll-proportion="-53.653847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/authentications_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="55" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.24456522">
           <folding />
         </state>
       </provider>

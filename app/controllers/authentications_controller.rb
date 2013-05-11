@@ -19,7 +19,7 @@ class AuthenticationsController < ApplicationController
                                                              :oauth_token => omniauth['credentials']['token'],
                                                              :oauth_token_secret => omniauth['credentials']['secret'])
       flash[:notice] = "Authentication successful."
-      redirect_to "/admin"
+      redirect_to session[:user_registration_return_to]
     else
       user_registration = UserRegistration.new
       user_registration.apply_omniauth(omniauth)
