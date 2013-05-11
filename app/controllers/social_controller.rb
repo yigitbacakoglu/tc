@@ -130,7 +130,7 @@ class SocialController < ApplicationController
       @object = Comment.where(:id => params[:comment_id]).first
       @message = @object.try(:message).truncate(30)
       username = @object.user.username
-      @page = "http://#{@object.post.widget.webpage}#{@object.post.url}"
+      @page = "http://#{@object.post.widget.domains.first}#{@object.post.url}"
       @message = " \"#{@message}\" - #{username}"
     else
       @object = Post.where(:id => params[:post_id]).first
