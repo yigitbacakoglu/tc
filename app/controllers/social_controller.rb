@@ -10,7 +10,6 @@ class SocialController < ApplicationController
   rescue_from Twitter::Error::Forbidden, :with => :duplicate_tweet
 
   def facebook
-    session.delete :user_registration_return_to
 
     if current_user.nil?
       session[:user_registration_return_to] = request.fullpath
@@ -45,7 +44,7 @@ class SocialController < ApplicationController
   end
 
   def twitter
-    session.delete :user_registration_return_to
+
     if current_user.nil?
       session[:user_registration_return_to] = request.fullpath
       respond_with_auth('twitter')
@@ -123,7 +122,7 @@ class SocialController < ApplicationController
   end
 
   def set_session
-    session["user_registration_return_to"] ||= "/close?" + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
+    session["user_registration_return_to"] = "/close?" + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
   end
 
   def set_message
