@@ -159,19 +159,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/overview/index.html.erb">
+      <file leaf-file-name="social_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/social_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="71" selection-start="6878" selection-end="6878" vertical-scroll-proportion="-5.16">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="overview_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="95" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.8974359">
+            <state line="120" column="68" selection-start="4018" selection-end="4027" vertical-scroll-proportion="0.33239436">
               <folding />
             </state>
           </provider>
@@ -187,7 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/admin.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/widgets/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/edit.html.erb" />
@@ -203,6 +193,7 @@
         <option value="$PROJECT_DIR$/app/models/rating.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/overview/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/overview_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/social_controller.rb" />
       </list>
     </option>
   </component>
@@ -244,6 +235,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -470,21 +463,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -783,15 +774,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27761838" sideWeight="0.48777348" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5122265" sideWeight="0.981857" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28192252" sideWeight="0.48777348" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5122265" sideWeight="0.981857" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561132" sideWeight="0.956777" order="2" side_tool="false" content_ui="tabs" />
@@ -869,11 +860,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/actionpack-3.2.13/lib/action_dispatch/routing/polymorphic_routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="10" selection-start="3867" selection-end="3867" vertical-scroll-proportion="0.3326157" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/sitemap_notifier-1.0.0/lib/sitemap_notifier/notifier.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="84" selection-end="84" vertical-scroll-proportion="0.016146393" />
@@ -886,72 +872,52 @@
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/generators/dynamic_sitemaps/dynamic_sitemaps_generator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/dynamic_sitemaps/page.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="8" selection-start="31" selection-end="31" vertical-scroll-proportion="0.020026702">
-          <folding />
-        </state>
+        <state line="1" column="8" selection-start="31" selection-end="31" vertical-scroll-proportion="0.020026702" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/dynamic_sitemaps/engine.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/dynamic_sitemaps/sitemap.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/dynamic_sitemaps/url.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/generators/dynamic_sitemaps/templates/initializer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/lib/dynamic_sitemaps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/app/views/sitemaps/index.builder">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="67" selection-start="339" selection-end="339" vertical-scroll-proportion="0.22029373">
-          <folding />
-        </state>
+        <state line="11" column="67" selection-start="339" selection-end="339" vertical-scroll-proportion="0.22029373" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/app/views/sitemaps/sitemap.builder">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="433" selection-end="433" vertical-scroll-proportion="0.40053403">
-          <folding />
-        </state>
+        <state line="20" column="13" selection-start="433" selection-end="433" vertical-scroll-proportion="0.40053403" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/dynamic_sitemaps-1.0.8/app/controllers/sitemaps_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="38" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="38" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/rating.rb">
@@ -963,14 +929,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/overview/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="71" selection-start="6878" selection-end="6878" vertical-scroll-proportion="-5.16">
+        <state line="196" column="71" selection-start="6878" selection-end="6878" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="95" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.8974359">
+        <state line="62" column="95" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.020026702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/social_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="68" selection-start="4018" selection-end="4027" vertical-scroll-proportion="0.33239436">
           <folding />
         </state>
       </provider>

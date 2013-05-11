@@ -84,7 +84,7 @@ class SocialController < ApplicationController
   def oauth_facebook_error
     flash[:error] = "There's a problem on facebook connection, please logout and login back with facebook"
     respond_to do |format|
-      format.html { redirect_to session[:return_to] }
+      format.html { redirect_to session[:user_registration_return_to] }
       format.js { render 'error' }
     end
   end
@@ -92,7 +92,7 @@ class SocialController < ApplicationController
   def oauth_twitter_error
     flash[:error] = "There's a problem on twitter connection, please logout and login back with twitter"
     respond_to do |format|
-      format.html { redirect_to session[:return_to] }
+      format.html { redirect_to session[:user_registration_return_to] }
       format.js { render 'error' }
     end
   end
