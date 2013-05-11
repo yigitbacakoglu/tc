@@ -32,6 +32,11 @@ class Post < ActiveRecord::Base
     self.widget.approval_required?
   end
 
+  def all_ratings
+    Rating.where(" ( #{Rating.table_name}.ratable_type = 'Post' AND #{Rating.table_name}.ratable_id IN(?) ) OR (
+              #{Rating.table_name}.ratable_type = 'Comment' AND #{Rating.table_name}.ratable_id IN(?) )", self.id, comment_ids)
+  end
+
 
   def rate(value, ip_address, user_id)
     if can_rate? ip_address

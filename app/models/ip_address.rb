@@ -17,8 +17,8 @@ class IpAddress < ActiveRecord::Base
   def create_anonymous_user
     self.user = User.create(:firstname => "Anonymous",
                      :lastname => "User",
-                     :nickname => "Guest",
-                     :role => "anonymous"
+                     :nickname => "Guest"
+                     #:role => "anonymous"
     )
   end
 end

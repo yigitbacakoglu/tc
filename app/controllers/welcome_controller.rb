@@ -44,7 +44,7 @@ class WelcomeController < ApplicationController
         ips = IpAddress.where(:value => request.remote_ip)
         if !ips.blank?
           ips.each do |ip|
-            if ip.user.anonymous?
+            if ip.user.try(:anonymous?)
               @current_anonymous_user = ip.user
               session[:user_id] = ip.user.id
               break
