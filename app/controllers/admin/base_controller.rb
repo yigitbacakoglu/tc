@@ -43,4 +43,11 @@ class Admin::BaseController < ApplicationController
     session.delete(:current_page)
   end
 
+  private
+  def only_me
+    if !current_user.system_admin? && !Rails.env.development?
+      flash[:alert] = "How did you find there ? :)"
+      redirect_to admin_path
+    end
+  end
 end

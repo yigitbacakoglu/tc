@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506195604) do
+ActiveRecord::Schema.define(:version => 20130512152149) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -186,10 +186,11 @@ ActiveRecord::Schema.define(:version => 20130506195604) do
     t.string   "webpage"
     t.integer  "category_id"
     t.string   "key"
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
-    t.boolean  "login_required",    :default => false
-    t.boolean  "approval_required", :default => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.boolean  "login_required",     :default => false
+    t.boolean  "approval_required",  :default => false
+    t.integer  "rating_category_id"
   end
 
 end

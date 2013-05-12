@@ -48,6 +48,7 @@ Omrats::Application.routes.draw do
     get "/change_post/:post_id", :to => "overview#set_post", :as => :change_post
     resources :overview
     resources :secrets
+    resources :categories
 
     resources :users do
       member do

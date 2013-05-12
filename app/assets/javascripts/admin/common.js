@@ -1,18 +1,19 @@
 $('.link_div').live('click', function () {
     location = $(this).data('link');
 });
-$('.generate_field').on('click', function () {
+$('.generate_field').live('click', function () {
     var class_name = $(this).attr('data-target-class');
     var element = $('.' + class_name).first().clone();
     element = change_ids(element);
     $('.' + class_name + '_container').append(element);
     var delete_link = $('.remove_field').first().clone();
     delete_link.attr('href', "javascript:;");
+    delete_link.removeAttr("data-confirm");
     $('.' + class_name + '_container').append(delete_link);
 });
 
-$('.remove_field').live('click', function () {
-    if ($('.generatable').length != 1) {
+$('.remove_field').live('click', function (e) {
+    if ($('.generatable').length != 1 && $(this).attr('href') == 'javascript:;') {
         $(this).prev('div').remove();
         $(this).remove();
     }
@@ -32,4 +33,3 @@ change_ids = function (element) {
 
     return element;
 }
-

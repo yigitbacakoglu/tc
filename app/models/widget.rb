@@ -1,12 +1,18 @@
 class Widget < ActiveRecord::Base
 
-  attr_accessible :category_id, :key, :store_id, :webpage, :login_required, :approval_required, :widget_domains_attributes
+  attr_accessible :category_id, :key, :store_id, :webpage, :login_required, :approval_required, :widget_domains_attributes,
+                  :rating_category_id
   belongs_to :store
   belongs_to :category
+  belongs_to :rating_category,
+             :class_name => "Category",
+             :foreign_key => :rating_category_id
+
   has_many :posts, :class_name => "Post"
   has_many :widget_domains, :class_name => "WidgetDomain"
   before_create :generate_key
   accepts_nested_attributes_for :widget_domains
+  after_save :update_rating_tool
 
   def self.default_scope
     if !Store.current.nil?
@@ -27,6 +33,12 @@ class Widget < ActiveRecord::Base
 
   def generate_key
     self.key = SecureRandom.hex(15)
+  end
+
+  def update_rating_tool
+    if self.rating_category_id_changed?
+      self.posts.update_all(:rating_category_id => rating_category_id)
+    end
   end
 
 end

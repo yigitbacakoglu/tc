@@ -82,14 +82,7 @@ class Admin::SecretsController < Admin::BaseController
     end
   end
 
-  private
-  def only_me
 
-    unless ["ycbacakoglu@gmail.com, yigitcan_bacakoglu@hotmail.com"].include?(current_user.email)
-      flash[:alert] = "How did you find there ? :)"
-      redirect_to admin_path
-    end
-  end
 
 end
 

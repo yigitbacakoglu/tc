@@ -6,29 +6,19 @@
         Web Page Details
       </div>
       <div class="vpadded">
-        <%= f.fields_for :widget_domains do |d| %>
-            <% identifier = rand(19031903) %>
-            <div class="input  full-width generatable_container" id="<%= identifier %>">
-              <div class="generatable">
-                <%= d.text_field :domain, :placeholder => "ex. talkycloud.com", :class => "generatable" %>
+        <div class="input  full-width generatable_container">
+
+          <%= f.fields_for :widget_domains do |d| %>
+              <% identifier = rand(19031903) %>
+              <div class="generatable" id="<%= identifier %>">
+                <%= d.text_field :domain, :placeholder => "ex. talkycloud.com", :class => "generatables" %>
               </div>
-              <%= link_to_delete d.object, :url => d.object.new_record? ? "#" : delete_domain_admin_widget_path(d.object.id, :dom_id => identifier), :class => "remove_field" %>
+              <%= link_to_delete d.object, :url => d.object.new_record? ? "#" : delete_domain_admin_widget_path(d.object.id, :dom_id => identifier), :class => "remove_field #{identifier}" %>
 
-            </div>
-        <% end %>
-        <div class="input full-width">
-          <%= f.select :category_id, Category.where(:category_type => :widget).collect { |c| [c.name, c.id] }, {}, :class => "chzn-select" %>
+          <% end %>
         </div>
-        <div class="clearfix" style="margin-top:15px;">
-          <label class="checkbox">
-            <%= f.check_box :approval_required %> Approval required
-          </label>
-          <label class="checkbox">
-            <%= f.check_box :login_required %>
-            Login required
-          </label></div>
 
-
+        <hr>
         <%= link_to "Connect new domain", "javascript:;", :class => "generate_field", "data-target-class" => "generatable" %>
 
 
@@ -42,40 +32,48 @@
 
       </div>
     </div>
+
+  </div>
+
+  <div class="row-fluid">
+    <div class="span6">
+
+      <div class="padded">
+        <div class="section-title">
+          Settings
+        </div>
+
+        <div class="vpadded">
+          <div class="input full-width">
+            <%= f.select :category_id, Category.where(:category_type => :widget).collect { |c| [c.name, c.id] }, {}, :class => "chzn-select" %>
+          </div>
+          <div class="clearfix" style="margin-top:15px;">
+            <div class="note">Permissions</div>
+
+            <label class="checkbox">
+              <%= f.check_box :approval_required %> Approval required
+            </label>
+            <label class="checkbox">
+              <%= f.check_box :login_required %>
+              Login required
+            </label></div>
+
+          <div class="clearfix" style="margin-top:15px;">
+            <div class="note">Rating tool</div>
+
+            <label class="checkbox">
+              <% Category.rating_categories.each do |cat| %>
+                  <%= f.radio_button :rating_category_id, cat.id %><%= cat.symbol %> <%= "#{cat.name.titleize}" %>
+              <% end %>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
 
 <script>
-    $('.generate_field').on('click', function () {
-        var class_name = $(this).attr('data-target-class');
-        var element = $('.' + class_name).first().clone();
-        element = change_ids(element);
-        $('.' + class_name + '_container').append(element);
-        var delete_link = $('.remove_field').first().clone();
-        delete_link.attr('href', "javascript:;");
-        $('.' + class_name + '_container').append(delete_link);
-    });
 
-    $('.remove_field').live('click', function () {
-        if ($('.generatable').length != 1) {
-            $(this).prev('div').remove();
-            $(this).remove();
-        }
-    });
-
-    change_ids = function (element) {
-        var new_id = new Date().getTime();
-        element.find("input,select").each(function () {
-            var el = $(this);
-            el.val("");
-            el.attr("id", el.attr("id").replace(/\d+/, new_id))
-            el.attr("name", el.attr("name").replace(/\d+/, new_id))
-            if (el.attr("type") == "number") {
-                el.val(1);
-            }
-        })
-
-        return element;
-    }
 </script>

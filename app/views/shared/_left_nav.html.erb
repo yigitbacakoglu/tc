@@ -54,6 +54,9 @@
     </li>
     <!--Accordion end-->
     <%= tab :setting, :label => "Settings", :url => admin_settings_path, :icon => 'wrench', :match_path => admin_settings_path %>
-
+    <% if current_user.try(:system_admin?) || Rails.env.development? %>
+         <%= tab :secrets, :label => "Secrets", :url => admin_secrets_path, :icon => 'key', :match_path => admin_secrets_path %>
+         <%= tab :categories, :label => "Categories", :url => admin_categories_path, :icon => 'list', :match_path => admin_categories_path %>
+    <% end %>
   </ul>
 </nav>

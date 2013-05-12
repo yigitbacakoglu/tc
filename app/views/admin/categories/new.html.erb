@@ -3,16 +3,16 @@
     <div class="span12">
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-key"></i> Edit Secret
+          <i class="icon-list"></i> New Category
         </div>
-        <%= form_for [:admin, @secret] do |f| %>
+        <%= form_for [:admin, @category] do |f| %>
             <%= render :partial => "form", :locals => {:f => f} %>
             <div class="row-fluid">
               <div class="span6">
                 <div class="padded">
                   <div class="vpadded">
-                    <%= f.submit "Update", :class => "btn medium-blue" %> or
-                    <%= link_to "Cancel", admin_secrets_path %>
+                    <%= f.submit "Create", :class => "btn medium-blue" %> or
+                    <%= link_to "Cancel", admin_categories_path %>
                   </div>
                 </div>
               </div>

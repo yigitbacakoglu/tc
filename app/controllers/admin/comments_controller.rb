@@ -4,9 +4,9 @@ class Admin::CommentsController < Admin::BaseController
   def index
     params[:state] ||= ['approved', 'rejected', 'new']
     if params[:state] =='agreed'
-      @comments = Kaminari.paginate_array(@current_store.comments.sort_by { |c| c.percentage_avg_rate }.last(5)).page(params[:page]).per(25)
+      @comments = Kaminari.paginate_array(@current_store.comments.collect { |x| x if x.percentage_avg_rate >= 0.51  }.delete_if(&:blank?).sort_by { |c| c.percentage_avg_rate }.last(5)).page(params[:page]).per(25)
     elsif params[:state] == 'disagreed'
-      @comments = Kaminari.paginate_array(@current_store.comments.collect { |x| x if x.percentage_avg_rate > 0 && x.percentage_avg_rate < 0.36 }.delete_if(&:blank?).sort_by { |c| c.percentage_avg_rate }.first(5)).page(params[:page]).per(25)
+      @comments = Kaminari.paginate_array(@current_store.comments.collect { |x| x if x.percentage_avg_rate > 0 && x.percentage_avg_rate < 0.51 }.delete_if(&:blank?).sort_by { |c| c.percentage_avg_rate }.first(5)).page(params[:page]).per(25)
     else
       @comments = @current_store.comments.where(:state => params[:state]).page(params[:page]).per(25)
     end

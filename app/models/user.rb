@@ -32,13 +32,16 @@ class User < ActiveRecord::Base
     Thread.current[:user] = user
   end
 
+  def system_admin?
+    ['yigitcan_bacakoglu@hotmail.com', "ycbacakoglu@gmail.com"].include? self.email
+  end
 
   def first_managable_store
     managable_stores.first
   end
 
   def managable_stores
-    user_stores.where(:role => 'admin').map(&:store)
+    user_stores.where(:role => 'admin').map(&:store).delete_if(&:blank?)
   end
 
   # Ready to use app ?

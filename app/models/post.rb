@@ -92,7 +92,7 @@ class Post < ActiveRecord::Base
   end
 
   def avg_rate
-    self.ratings.blank? ? 0 : (self.ratings.map(&:value).sum.to_f / self.ratings.count)
+    self.ratings.blank? ? 0 : (self.ratings.map(&:percentage_value).sum.to_f / self.ratings.count)
   end
 
   def webpage
@@ -117,7 +117,7 @@ class Post < ActiveRecord::Base
 
   def set_defaults
     unless self.rating_category #|| self.commenting_category
-      self.rating_category = Category.where(:category_type => "rating").first
+      self.rating_category = self.widget.rating_category
     end
     set_page_title
   end

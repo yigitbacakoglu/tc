@@ -1,0 +1,34 @@
+<%= render :partial => "shared/errors", :locals => {:target => @user} %>
+
+<div class="row-fluid">
+
+
+  <div class="span6">
+    <div class="padded">
+      <div class="section-title">
+        Secret
+      </div>
+      <div class="vpadded">
+
+        <div class="input  full-width">
+          <%= f.text_field :name, :placeholder => 'Name' %> <br>
+        </div>
+
+
+        <div class="input  full-width">
+          <%= f.text_field :max_value, :placeholder => 'Max Value' %> <br>
+        </div>
+
+        <div class="input  full-width">
+          <%= f.select :category_type, ['widget', 'rating'], {}, :placeholder => "Category type", :class => "chzn-select" %>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

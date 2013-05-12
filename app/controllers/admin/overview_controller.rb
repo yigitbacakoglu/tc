@@ -93,7 +93,7 @@ class Admin::OverviewController < Admin::BaseController
     like_count = 0
     dislike_count = 0
 
-    @ratings.collect { |i| (i.value / i.max_value) > 0.5 ? like_count += 1 : dislike_count += 1 }
+    @ratings.collect { |i| (i.value.try(:to_f) / i.max_value.try(:to_f)) > 0.5 ? like_count += 1 : dislike_count += 1 } rescue 0
     @like_count = like_count
     @dislike_count = dislike_count
   end

@@ -1,5 +1,6 @@
 class Admin::WidgetsController < Admin::BaseController
 
+  respond_to :html
 
   def index
     @widgets = Widget.all
@@ -19,6 +20,8 @@ class Admin::WidgetsController < Admin::BaseController
     @widget = Widget.find(params[:id])
     if @widget.update_attributes(params[:widget])
       redirect_to admin_widgets_path
+    else
+      respond_with(@widget)
     end
   end
 
@@ -42,6 +45,8 @@ class Admin::WidgetsController < Admin::BaseController
         format.html { redirect_to edit_admin_widget_path(@widget) }
         format.js { render 'admin/widgets/create' }
       end
+    else
+      respond_with(@widget)
     end
   end
 

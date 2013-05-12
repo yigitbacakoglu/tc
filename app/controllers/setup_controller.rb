@@ -31,8 +31,13 @@ class SetupController < ApplicationController
       when "step2"
         save_step1
     end
-    flash[:success] = "Congratulations! You successfully signed up"
-    redirect_to edit_admin_widget_path(@widget)
+    if @widget.try(:id)
+      flash[:success] = "Congratulations! You successfully signed up"
+      redirect_to edit_admin_widget_path(@widget)
+    else
+      flash[:error] = "Fill the form"
+      redirect_to setup_path(:step1)
+    end
   end
 
   private
