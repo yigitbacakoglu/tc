@@ -5,6 +5,10 @@
       <div class="article">
         <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago, Page: #{comment.post.url}" %>
           <span class="pull-right badge <%= comment.state_color %>"><%= comment.state %></span>
+          <% if comment.flags.count > 0 %>
+              <span class="pull-right badge <%= "red" %>"><%= "#{comment.flags.count} flags" %></span>
+          <% end %>
+
           <% if comment.parent.present? %>
               , <i class="icon-retweet"></i>Reply to <%= comment.parent.user.username rescue '[Deleted Comment]' %>
           <% end %>

@@ -11,6 +11,16 @@ class PostsController < WelcomeController
   end
 
 
+  def flag
+    if @object.is_a?(Comment) && (@current_user || @current_anonymous_user)
+      if @object.flag(@current_user.try(:id) || @current_anonymous_user.try(:id))
+        @success = [@object, "Thank you for flag!"]
+      end
+
+    end
+    render 'rate'
+  end
+
   def comment
     @current_comment = @post.comment(
         params[:comment],

@@ -421,6 +421,8 @@ social-skype.png: social-skype-96c633f4471c8ffcd3a3ee59eb310281.png
 social-skype/index.png: social-skype-96c633f4471c8ffcd3a3ee59eb310281.png
 social-twitter.png: social-twitter-c62327bb82a50c77b6f7da7b48c3df30.png
 social-twitter/index.png: social-twitter-c62327bb82a50c77b6f7da7b48c3df30.png
+social_icons.png: social_icons-ce9415341ccef5e0ede37ed7af3d0ad3.png
+social_icons/index.png: social_icons-ce9415341ccef5e0ede37ed7af3d0ad3.png
 sprite.png: sprite-24a37adc5435cd3cbd6e20202b5dc7ce.png
 sprite/index.png: sprite-24a37adc5435cd3cbd6e20202b5dc7ce.png
 star-half.png: star-half-f9dac1a52861f6219d44fed292c7088e.png
@@ -519,8 +521,8 @@ admin/font-awesome.css: admin/font-awesome-709a767b681f23c8da75d214804a910f.css
 admin/font-awesome/index.css: admin/font-awesome-709a767b681f23c8da75d214804a910f.css
 admin/ie_fix.css: admin/ie_fix-3055207763d559d86977f0aa21819d6d.css
 admin/ie_fix/index.css: admin/ie_fix-3055207763d559d86977f0aa21819d6d.css
-application.css: application-67ee2cc5d325d00f7236eac0ce718c3c.css
-application/index.css: application-67ee2cc5d325d00f7236eac0ce718c3c.css
+application.css: application-1e4bfba714361f6ab20b0caf7fb21bc3.css
+application/index.css: application-1e4bfba714361f6ab20b0caf7fb21bc3.css
 blogs/industry.css: blogs/industry-a65f2300b4d6357fc1047291bf19c982.css
 blogs/industry/index.css: blogs/industry-a65f2300b4d6357fc1047291bf19c982.css
 blogs/reset.css: blogs/reset-7cf272fbe2b3dfe87cfb8161a58e8113.css
@@ -537,8 +539,8 @@ theme-phone.css: theme-phone-ff7226a15e286f0c93c08f1ce80768cd.css
 theme-phone/index.css: theme-phone-ff7226a15e286f0c93c08f1ce80768cd.css
 theme-tablet.css: theme-tablet-eb963bd1ad931293a1c874109b31ab15.css
 theme-tablet/index.css: theme-tablet-eb963bd1ad931293a1c874109b31ab15.css
-widget.css: widget-350daa0ff58a72ca4489cdae8898ce54.css
-widget/index.css: widget-350daa0ff58a72ca4489cdae8898ce54.css
+widget.css: widget-075b4bc0fbdc30425c9d49e07e24aba2.css
+widget/index.css: widget-075b4bc0fbdc30425c9d49e07e24aba2.css
 jquery-ui.js: jquery-ui-a46ee80b2a395a15bd1c31602752f528.js
 jquery-ui/index.js: jquery-ui-a46ee80b2a395a15bd1c31602752f528.js
 jquery-ui.min.js: jquery-ui.min-58c82b49ecb1561ca471f6871b84fdff.js

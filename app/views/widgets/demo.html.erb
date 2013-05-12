@@ -37,23 +37,10 @@
                 <ul>
                   <!--<li><a href="#" data-nav="dashboard" style="" class="publisher-nav-color">My Disqus <span class="notification-count" data-role="notification-count" style="display: none;"><span>0</span></span></a></li>-->
 
-                  <li class="user-menu dropdown" data-role="logout" data-dropdown="enabled">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <span class="cog"><i aria-hidden="true" class="icon-cog"></i></span> <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-
-                      <li>
-                        <a href="#" data-role="user-profile-link" data-action="profile" data-user="34839551">
-                          yigitcan
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
 
                   <li id="thread-share-menu" class="share-menu dropdown" data-dropdown="enabled">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
-                      <span class="label">Share</span> <span class="icon-external-link"></span><span class="caret"></span>
+                      Share <span class="icon-external-link"></span><span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu pull-right">
                       <li class="share">Share this discussion on
@@ -104,10 +91,10 @@
     })
 
     $('.social-links-trigger').on('hover', function(){
-        $(this).children('.social-links').slideDown();
+        $('.'+$(this).attr('data-class')).css('display','inline-block');
     });
     $('.social-links-trigger').on('mouseleave', function(){
-        $('.social-links').slideUp();
+        $('.'+$(this).attr('data-class')).slideUp();
     });
 
 </script>

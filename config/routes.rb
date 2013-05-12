@@ -27,6 +27,7 @@ Omrats::Application.routes.draw do
   resources :posts do
     collection do
       post :rate
+      post :flag
       post :comment
     end
   end

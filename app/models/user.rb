@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   has_many :ip_addresses, :class_name => "IpAddress"
   has_many :comments, :class_name => 'Comment'
   has_many :ratings, :class_name => 'Rating'
+  has_many :flags, :class_name => 'CommentFlag'
   before_create :create_bogus_store
 
   accepts_nested_attributes_for :user_registration

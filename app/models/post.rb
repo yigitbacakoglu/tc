@@ -52,6 +52,7 @@ class Post < ActiveRecord::Base
     end
   end
 
+
   def comment(message, options = {})
     parent_id = nil
     save_user_store(options[:user_id])

@@ -131,7 +131,7 @@ h6 {
 }
 
 .auth-section .connect .services li.auth-twitter a {
-    background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png");
+    background: url("social_icons.png");
 }
 
 .auth-section .connect .services a {
@@ -172,7 +172,11 @@ h6 {
 }
 
 .auth-section .connect .services li.auth-facebook a {
-    background: url("http://mediacdn.disqus.com/1363376898/img/next/social-icons.png") -32px 0;
+    background: url(social_icons.png) -32px 0;
+}
+
+.auth-section .connect .services li.auth-talky a {
+    background: url(social_icons.png) -96px 0;
 }
 
 .login-form {
@@ -253,6 +257,12 @@ section#main {
     padding: 0;
 }
 
+.share .twitter a:hover {
+    background: url("/assets/share.png") 0 0;
+}
+
+
+
 .nav>ul>li.share-menu .dropdown-menu li a {
     padding: 5px 10px;
 }
@@ -288,6 +298,10 @@ section#main {
 .share .facebook a {
     background: url("/assets/share.png") -18px 0;
 }
+.share .facebook a:hover {
+    background: url("/assets/share.png") -18px 0;
+}
+
 
 .share .twitter a {
     background: url("/assets/share.png") 0 0;
@@ -395,11 +409,12 @@ section#main {
 /*}*/
 
 .article-actions {
-    margin-top: 10px;
+    margin-top: 0px;
     height: auto;
-    padding: 10px;
-    padding-left: 20px;
-    font-size: 1.2em;
+    padding: 0px;
+    padding-left: 0px;
+    font-size: 1.25em;
+    margin-right: -81px;
 }
 
 .social-links {
@@ -450,3 +465,37 @@ section#main {
     color: #333;
     margin: 3px 10px;
 }
+
+.icon-medium {
+    font-size: 15px;
+    margin-top: 2px;
+    padding-top: -2px;
+    margin-bottom: 0px;
+    padding-bottom: 8px;
+    vertical-align: 10%;
+}
+
+@media (max-width: 500px)  {
+    .auth-section .guest {
+        border:none;
+        margin: 0;
+        padding: 0 10px 0 10px;
+        min-height: 32px;
+        position: relative;
+    }
+    .auth-section .guest {
+        padding: 0 17px 0 2px;
+        padding-top: 64px;
+    }
+    .auth-section .connect {
+        position: absolute;
+        border-bottom: 1px dotted;
+        padding-bottom: 6px;
+        z-index: 201;
+    }
+    .auth-section {
+        position: relative;
+        z-index: 200;
+    }
+}
+

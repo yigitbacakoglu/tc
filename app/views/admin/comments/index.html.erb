@@ -80,6 +80,10 @@
                   <%= simple_date(comment.created_at) %>
                   <br>
                   <span class="pull-left badge <%= comment.state_color %>"><%= comment.state %></span>
+                  <% if comment.flags.count > 0 %>
+                      <span class="pull-left badge <%= "red" %>"><%= "#{comment.flags.count} flags" %></span>
+                  <% end %>
+
                 </td>
 
                 <td>

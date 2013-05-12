@@ -28,6 +28,10 @@ class Admin::CommentsController < Admin::BaseController
     @ratings_overall = (100 * @ratings.count) / Rating.all.count rescue 0
     @children = @comment.children
     @children_overall =  (100 * @children.count) / Comment.where("parent_id IS NOT NULL").count rescue 0
+
+    @flags = @comment.flags
+    @flags_overall = (100 * @flags.count) / CommentFlag.where(:comment_id => @comment.post.comment_ids).count rescue 0
+
   end
 
 

@@ -16,6 +16,7 @@ class Comment < ActiveRecord::Base
   has_many :children, :class_name => "Comment", :foreign_key => :parent_id
   has_many :ratings, :as => :ratable, :class_name => 'Rating', :dependent => :destroy
   has_many :shares, :as => :source, :class_name => "Share", :dependent => :destroy
+  has_many :flags, :class_name => "CommentFlag", :dependent => :destroy
 
   attr_accessible :kind, :message,
                   :parent_id, :ip_address, :user_agent, :referer, :user_id, :state
@@ -58,6 +59,15 @@ class Comment < ActiveRecord::Base
       r.save!
     else
       errors.add :base, "You already rated this."
+      false
+    end
+  end
+
+  def flag(user_id)
+    if self.flags.where(:user_id => user_id).blank?
+      self.flags.create!(:user_id => user_id)
+    else
+      errors.add :base, "You already flag this."
       false
     end
   end

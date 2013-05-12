@@ -79,7 +79,7 @@
 
             <li>
               <div class="icon">
-                <div class="big-label light-blue">
+                <div class="big-label light-blue text-inverse ">
                   <i class="icon-retweet icon-white"></i>
                 </div>
               </div>
@@ -107,6 +107,23 @@
               <div class="progress-bar audience-progress">
                 <div class="progress progress-dark-plum">
                   <div class="bar" style="width: <%= @ratings_overall %>%"></div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="icon">
+                <div class="big-label red text-inverse">
+                  <i class="icon-white icon-flag  "></i>
+                </div>
+              </div>
+              <div class="value"><%= @flags.count %></div>
+              <div class="stat-name">Flags</div>
+
+              <div class="percent">(+<%= @flags_overall %>%)</div>
+              <div class="progress-bar audience-progress">
+                <div class="progress progress-red">
+                  <div class="bar" style="width: <%= @flags_overall %>%"></div>
                 </div>
               </div>
             </li>

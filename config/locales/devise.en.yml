@@ -67,4 +67,5 @@ en:
         subject: 'Unlock Instructions'
     user_sessions:
       user_registration:
-        signed_out: 'Signed out!'
+        signed_out: 'Signed out successfully.'
+        signed_in: 'Signed in successfully.'
