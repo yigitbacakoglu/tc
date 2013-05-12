@@ -41,7 +41,7 @@ class Admin::CategoriesController < Admin::BaseController
   # POST /admin/categories
   # POST /admin/categories.json
   def create
-    @category = Category.new(params[:secret])
+    @category = Category.new(params[:category])
 
     respond_to do |format|
       if @category.save
@@ -60,7 +60,7 @@ class Admin::CategoriesController < Admin::BaseController
     @category = Category.find(params[:id])
 
     respond_to do |format|
-      if @category.update_attributes(params[:secret])
+      if @category.update_attributes(params[:category])
         format.html { redirect_to admin_categories_path, notice: 'Category was successfully updated.' }
         format.json { head :no_content }
       else
