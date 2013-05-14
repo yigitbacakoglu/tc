@@ -10,12 +10,12 @@
     <!--<section class='social-links'>-->
     <div class="pull-left social-links-trigger">
       <i class="icon-cogs text-transparent"></i>
-      <div class="<%= "social_links_#{identifier}" %>" style="display: none">
+      <div class="<%= "social_links_#{identifier}" %>" style="display: none; margin-right:15px;">
         <%= link_to_with_icon "icon-twitter", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id), "data-original-title" => "Tweet this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
         <%= link_to_with_icon "icon-facebook", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id), "data-original-title" => "Share this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
         <% if can? :edit, comment %>
             <%= link_to_with_icon "icon-edit", "", edit_comment_path(comment.id), :remote => true, "data-original-title" => "Edit", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent' %>
-            <%= link_to_delete comment, {:name => "", :url => comment_path(comment, :dom_id => "comment_container#{comment.id}", "data-original-title" => "Delete", "data-placement" => "top", :rel => "tooltip", :class => ' social-link  text-transparent')} %>
+            <%= link_to_with_icon "icon-trash icon-white", "", comment_path(comment, :dom_id => "comment_container#{comment.id}"), :remote => true, "data-original-title" => "Delete", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent', :method => :delete, :confirm => 'Are you sure?' %>
         <% end %>
         <% unless (@current_widget.login_required && @current_user.blank?) %>
             <%= link_to_with_icon "icon-retweet", "", "#", "data-original-title" => "Reply", "data-placement" => "top", :rel => "tooltip", :class => ' social-link reply text-transparent', "data-form" => "reply-form-container_#{comment.id}" %>

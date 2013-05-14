@@ -90,10 +90,14 @@
 
     })
 
-    $('.social-links-trigger').on('hover', function(){
+    $('.social-links-trigger').live('hover', function(){
         $('.'+$(this).attr('data-class')).css('display','inline-block');
     });
-    $('.social-links-trigger').on('mouseleave', function(){
+    $('.icon-cogs').live('click', function(){
+        $('.'+$(this).attr('data-class')).css('display','inline-block');
+    });
+
+    $('.social-links-trigger').live('mouseleave', function(){
         $('.'+$(this).attr('data-class')).slideUp();
     });
 

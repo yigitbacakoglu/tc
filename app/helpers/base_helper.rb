@@ -117,7 +117,7 @@ module BaseHelper
     url = options[:url] || object_url(resource)
     confirm = options[:confirm] || 'Are you sure?'
     name = options[:name] || font_icon('icon-trash icon-white') + ' ' + 'Delete'
-    link_to name, url,
+    link_to name, url, options,
             :class => options[:class],
             :remote => true,
             :method => :delete,
