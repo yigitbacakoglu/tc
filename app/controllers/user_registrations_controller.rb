@@ -23,8 +23,8 @@ class UserRegistrationsController < Devise::RegistrationsController
       end
     else
       clean_up_passwords resource
-      if request.referer.include?('demo') && params[:close].blank?
-        render :partial => "shared/errors", :locals => {:target => resource}
+      if request.referer.include?('demo') && params[:close] == "false"
+        render :partial => "shared/errors", :locals => {:target => resource}, :formats => [:js]
       else
         respond_with resource
       end

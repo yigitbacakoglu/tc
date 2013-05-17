@@ -4,30 +4,6 @@
 <li class="comment-box sub-<%= sub_level %> social-links-trigger" data-class="<%= "social_links_#{identifier}" %>" id="comment_container<%= comment.id %>">
   <div class="avatar pull-left" style='background-image: url(<%= avatar_url(comment.user) %>);'>
   </div>
-
-  <div class="article-actions pull-right">
-
-    <!--<section class='social-links'>-->
-    <div class="pull-left social-links-trigger">
-      <i class="icon-cogs text-transparent"></i>
-      <div class="<%= "social_links_#{identifier}" %>" style="display: none; margin-right:15px;">
-        <%= link_to_with_icon "icon-twitter", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id), "data-original-title" => "Tweet this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
-        <%= link_to_with_icon "icon-facebook", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id), "data-original-title" => "Share this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
-        <% if can? :edit, comment %>
-            <%= link_to_with_icon "icon-edit", "", edit_comment_path(comment.id), :remote => true, "data-original-title" => "Edit", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent' %>
-            <%= link_to_with_icon "icon-trash icon-white", "", comment_path(comment, :dom_id => "comment_container#{comment.id}"), :remote => true, "data-original-title" => "Delete", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent', :method => :delete, :confirm => 'Are you sure?' %>
-        <% end %>
-        <% unless (@current_widget.login_required && @current_user.blank?) %>
-            <%= link_to_with_icon "icon-retweet", "", "#", "data-original-title" => "Reply", "data-placement" => "top", :rel => "tooltip", :class => ' social-link reply text-transparent', "data-form" => "reply-form-container_#{comment.id}" %>
-            <%= link_to_with_icon "icon-flag", "", flag_posts_path(:comment_id => comment.id, :class_name => "comment"), :remote => true, :method => :post, "data-original-title" => "Flag", "data-placement" => "top", :rel => "tooltip", :class => ' social-link  text-transparent' %>
-
-        <% end %>
-
-      </div>
-
-    </div>
-    <!--</section>-->
-  </div>
   <div class="article">
     <div class="post-info">
       <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago" %>
@@ -38,6 +14,29 @@
     </div>
     <div class="past-rating">
       <%= rating_for(comment, :url => rate_posts_path) %>
+      <div class="article-actions pull-right">
+
+        <!--<section class='social-links'>-->
+        <div class="pull-left social-links-trigger">
+          <!--<i class="icon-cogs text-transparent"></i>-->
+          <div class="<%= "social_links_#{identifier}" %>" style="display: none;">
+            <%= link_to_with_icon "icon-twitter", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id), "data-original-title" => "Tweet this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
+            <%= link_to_with_icon "icon-facebook", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id), "data-original-title" => "Share this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
+            <% if can? :edit, comment %>
+                <%= link_to_with_icon "icon-edit", "", edit_comment_path(comment.id), :remote => true, "data-original-title" => "Edit", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent' %>
+                <%= link_to_with_icon "icon-trash icon-white", "", comment_path(comment, :dom_id => "comment_container#{comment.id}"), :remote => true, "data-original-title" => "Delete", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent', :method => :delete, :confirm => 'Are you sure?' %>
+            <% end %>
+            <% unless (@current_widget.login_required && @current_user.blank?) %>
+                <%= link_to_with_icon "icon-retweet", "", "#", "data-original-title" => "Reply", "data-placement" => "top", :rel => "tooltip", :class => ' social-link reply text-transparent', "data-form" => "reply-form-container_#{comment.id}" %>
+                <%= link_to_with_icon "icon-flag", "", flag_posts_path(:comment_id => comment.id, :class_name => "comment"), :remote => true, :method => :post, "data-original-title" => "Flag", "data-placement" => "top", :rel => "tooltip", :class => ' social-link  text-transparent' %>
+
+            <% end %>
+
+          </div>
+
+        </div>
+        <!--</section>-->
+      </div>
     </div>
     <div class="past-actions" style="margin-top:-40px; float: right;">
 
@@ -46,7 +45,6 @@
 
       <%= label_tag "content", comment.message, :id => "comment_label_#{comment.id}", "data-page" => params[:page] %>
     </div>
-
   </div>
 
 

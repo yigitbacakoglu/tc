@@ -3,6 +3,10 @@ class HomeController < ApplicationController
 
   end
 
+  def maintenance
+
+  end
+
   def ping
 
   end

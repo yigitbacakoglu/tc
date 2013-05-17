@@ -45,8 +45,8 @@ class UserRegistration < ActiveRecord::Base
     email = self.email.split(/@/)
     check_username(email[0])
     if self.user.blank?
-      self.user = User.new(:firstname => self.username,
-                           :lastname => email[1])
+      self.user = User.new(:firstname => "",
+                           :lastname => "")
     end
 
   end

@@ -25,11 +25,11 @@
                     <%= widget.widget_domains.map(&:domain).join(' | ') %>
                   </td>
                   <td style="line-height: 24px;">
-                    <%= widget.category.name %>
+                    <%= widget.category.try(:name) %>
                   </td>
                   <td>
                     <%= link_to_with_icon "icon-pencil", "Edit", edit_admin_widget_path(widget), :class => "btn dark-blue" %>
-                    <%= link_to_delete widget, {:url => admin_widget_path(widget, :dom_id => identifier), :class => "btn red"} %>
+                    <%= link_to_delete widget, :url => admin_widget_path(widget, :dom_id => identifier), :class => "btn red" %>
                   </td>
                 </tr>
             <% end %>

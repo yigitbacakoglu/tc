@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(:version => 20130512215254) do
     t.datetime "updated_at",             :null => false
     t.integer  "rating_category_id"
     t.integer  "commenting_category_id"
-    t.string   "state"
     t.string   "title"
   end
 

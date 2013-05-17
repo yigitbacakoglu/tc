@@ -21,7 +21,10 @@
                       <%= text_field_tag "user[lastname]", @current_user.lastname, :placeholder => "Lastname" %>
                     </div>
                     <div class="input full-width">
-                      <%= text_field_tag "store[phone]", @store.phone, :placeholder => "Phone" %>
+                      <%= text_field_tag "store[phone]", @store.phone, :placeholder => "Contact Phone" %>
+                    </div>
+                    <div class="input full-width">
+                      <%= text_field_tag "store[email]", @store.email, :placeholder => "Contact Email" %>
                     </div>
                   </div>
                 </div>

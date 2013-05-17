@@ -27,6 +27,10 @@ class Admin::BaseController < ApplicationController
   end
 
   def set_current_widget
+    if @current_store && @current_store.widgets.blank? && !params[:controller].eql?("admin/widgets")
+      flash[:error] = "You should add at least one widget to use system !"
+      redirect_to new_admin_widget_path
+    end
     @current_widget = Widget.where(:id => session[:widget_id]).first
   end
 

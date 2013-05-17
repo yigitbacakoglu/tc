@@ -38,6 +38,21 @@ module BaseHelper
     end
 
   end
+
+  def plus(rateable_obj, options)
+    rating_max_value = options['max_value']
+    up_votes = rateable_obj.ratings.where("( value / max_value ) > 0.5").count
+    down_votes = rateable_obj.ratings.where("( value / max_value ) <= 0.5").count
+    avg_rate = number_with_precision rateable_obj.avg_rate, :precision => 2
+    content_tag :div, "", :class => "thumbs_container", :id => "#{rateable_obj.class.name.to_s.downcase}_#{rateable_obj.id}", "data-rating" => avg_rate,
+                "data-id" => rateable_obj.id, "data-classname" => rateable_obj.class.name.to_s.downcase,
+                "data-star-count" => rating_max_value, "data-url" => options[:url] do
+
+      "#{link_to_with_icon 'icon-plus icon-medium rate_thumb', "", '#', 'data-value' => '2'} <span class='up'>#{up_votes.to_s}</span> #{link_to_with_icon 'icon-minus icon-medium rate_thumb', "", '#', 'data-value' => '1'} <span class='down'>#{down_votes}</span>".html_safe
+    end
+
+  end
+
   def star(rateable_obj, options)
     rating_max_value = options['max_value']
     avg_rate = number_with_precision rateable_obj.avg_rate * rateable_obj.rating_category.max_value, :precision => 2
@@ -117,11 +132,12 @@ module BaseHelper
     url = options[:url] || object_url(resource)
     confirm = options[:confirm] || 'Are you sure?'
     name = options[:name] || font_icon('icon-trash icon-white') + ' ' + 'Delete'
-    link_to name, url, options,
+    link_to name.html_safe, url,
             :class => options[:class],
             :remote => true,
             :method => :delete,
             :data => {:confirm => confirm}
+
   end
 
   def font_icon(icon_class)

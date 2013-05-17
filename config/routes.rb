@@ -4,6 +4,7 @@ Omrats::Application.routes.draw do
   match 'sitemap.xml' => 'sitemaps#sitemap'
 
   root :to => "home#index"
+  get "/maintenance", :to => "home#maintenance"
   get '/close', :to => "widgets#close", :as => :close
   get '/ping', :to => "home#ping", :as => :ping
   get '/demo', :to => "widgets#demo", :as => :demo

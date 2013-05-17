@@ -9,11 +9,11 @@
           <div class="row-fluid padded10">
 
 
-            <div class="span2 center link_div" data-link="<%= admin_comments_path %>">
+            <div class="span2 center link_div" data-link="<%=  admin_comments_path(:state => 'flagged')  %>">
               <div class="stat-box medium-blue">
-                <i class="icon-comments-alt icon-large"></i>
-                <span class="count"><%= Comment.all.count %></span>
-                <span class="stat-text">All</span>
+                <i class="icon-flag icon-large"></i>
+                <span class="count"><%= Comment.joins(:flags).where("#{CommentFlag.table_name}.comment_id IN(?)", @current_store.comment_ids).count %></span>
+                <span class="stat-text">Flagged</span>
               </div>
             </div>
 

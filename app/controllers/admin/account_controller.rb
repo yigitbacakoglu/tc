@@ -41,6 +41,7 @@ module Admin
     private
 
     def load_resource
+      session[:user_registration_return_to] = "/admin/account"
       @user_registration = current_user_registration
     end
   end

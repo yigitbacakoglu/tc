@@ -12,6 +12,11 @@ class Category < ActiveRecord::Base
         "<i class='icon-hand-up'></i>".html_safe
       when "star"
         "<i class='icon-star'></i>".html_safe
+      when "vote"
+        "<i class='icon-chevron-up'></i>".html_safe
+      when "plus"
+        "<i class='icon-plus'></i>".html_safe
+
     end
   end
 
