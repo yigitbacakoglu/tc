@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
 
     reset_widget_session
 
-    @current_widget = Widget.joins(:widget_domains).where("#{Widget.table_name}.key = ? AND #{WidgetDomain.table_name}.domain = ?", session[:current_widget_key], session[:current_widget_host]).first
+    @current_widget = Widget.joins(:widget_domains).where("#{Widget.table_name}.key = ? AND #{WidgetDomain.table_name}.domain = ?", cookies[:current_widget_key], cookies[:current_widget_host]).first
     @current_widget ||= Widget.where(:id => params[:widget_id]).first
     begin
       set_current_store(@current_widget.store)
@@ -27,19 +27,19 @@ class WelcomeController < ApplicationController
   end
 
   def reset_widget_session
-    if params["k"] && params["p"] && params["u"]
-      session[:current_widget_host] = params["u"]
-      session[:current_widget_key] = params["k"]
-      session[:current_page] = params["p"]
+    if !params["k"].blank? && !params["p"].blank? && !params["u"].blank?
+      cookies[:current_widget_host] = params["u"]
+      cookies[:current_widget_key] = params["k"]
+      cookies[:current_page] = params["p"]
     end
   end
 
   def init_session
-    session[:current_widget_host] ||= request.referer
-    session[:current_widget_key] ||= params[:k]
+    cookies[:current_widget_host] ||= request.referer
+    cookies[:current_widget_key] ||= params[:k]
     if request.referer
       ref = URI.parse(request.referer)
-      session[:current_page] ||= ref.path
+      cookies[:current_page] ||= ref.path
     end
   end
 

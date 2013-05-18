@@ -11,6 +11,10 @@
           <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
           <br/>
 
+          <%= hidden_field_tag :u, cookies[:current_widget_host]  %>
+          <%= hidden_field_tag :k, cookies[:current_widget_key]  %>
+          <%= hidden_field_tag :p, cookies[:current_page]  %>
+
           <div id="login_form_<%= identifier %>" class="post-actions" style="display: none;">
 
             <div class="logged-out auth-section">

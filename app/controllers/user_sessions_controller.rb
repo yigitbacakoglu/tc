@@ -9,8 +9,8 @@ class UserSessionsController < Devise::SessionsController
   private
 
   def after_sign_out_path_for(resource_or_scope)
-    if session[:current_page] && (!request.referer.include?('/admin') || !request.referer.include?('/admin/signup'))
-      request.referer + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
+    if cookies[:current_page] && (!request.referer.include?('/admin') && !request.referer.include?('/admin/signup'))
+      request.referer + "&p=#{cookies[:current_page]}&u=#{cookies[:current_widget_host]}&k=#{cookies[:current_widget_key]}"
     else
       request.referer
     end

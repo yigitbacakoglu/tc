@@ -122,7 +122,7 @@ class SocialController < ApplicationController
   end
 
   def set_session
-    session["user_registration_return_to"] = "/close?" + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
+    session["user_registration_return_to"] = "/close?" + "&p=#{cookies[:current_page]}&u=#{cookies[:current_widget_host]}&k=#{cookies[:current_widget_key]}"
   end
 
   def set_message
@@ -134,7 +134,7 @@ class SocialController < ApplicationController
       @message = " \"#{@message}\" - #{username}"
     else
       @object = Post.where(:id => params[:post_id]).first
-      @page = "http://#{session[:current_widget_host]}#{session[:current_page]}"
+      @page = "http://#{cookies[:current_widget_host]}#{cookies[:current_page]}"
       @message = "#{@object.title}"
     end
   end
