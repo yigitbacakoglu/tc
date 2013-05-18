@@ -58,7 +58,7 @@
     <file path="/ban.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365334234541" ignored="false" />
     <file path="/restrictions_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365356039506" ignored="false" />
     <file path="/settings_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365360042186" ignored="false" />
-    <file path="/_comment_item.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368826761435" ignored="false" />
+    <file path="/_comment_item.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368881298779" ignored="false" />
     <file path="/_comment_form.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368829011524" ignored="false" />
     <file path="/deneme.html" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1366356340551" ignored="false" />
     <file path="/devise.en.yml" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368401088504" ignored="false" />
@@ -71,7 +71,7 @@
     <file path="/social_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368303983032" ignored="false" />
     <file path="/twitter.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367143661630" ignored="false" />
     <file path="/auth.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367092147959" ignored="false" />
-    <file path="/widget.css" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368825539429" ignored="false" />
+    <file path="/widget.css" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368881076408" ignored="false" />
     <file path="/setup_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368366151503" ignored="false" />
     <file path="/step1.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368878932138" ignored="false" />
     <file path="/login.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367676624638" ignored="false" />
@@ -174,17 +174,39 @@
       <file leaf-file-name="base_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/base_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="35" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+            <state line="2" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="widget.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/widget.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="418" column="26" selection-start="9452" selection-end="9452" vertical-scroll-proportion="-9.615385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/widget.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="21" selection-start="925" selection-end="925" vertical-scroll-proportion="0.5568182">
+            <state line="37" column="21" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_comment_item.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_item.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="29" selection-start="715" selection-end="715" vertical-scroll-proportion="0.4180791">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#li#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -254,12 +276,12 @@
         <option value="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/user_registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/widgets/demo.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_comment_item.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/widget.css" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/setup/step1.html.erb" />
         <option value="$PROJECT_DIR$/app/models/widget.rb" />
         <option value="$PROJECT_DIR$/app/models/category.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/widget.css" />
+        <option value="$PROJECT_DIR$/app/views/shared/_comment_item.html.erb" />
       </list>
     </option>
   </component>
@@ -900,13 +922,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/user_registration.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="41" selection-start="1909" selection-end="1909" vertical-scroll-proportion="-4.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="118" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.71087533">
@@ -942,22 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_item.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="32" selection-start="2251" selection-end="2251" vertical-scroll-proportion="0.3573201">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/widget.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="442" column="49" selection-start="9985" selection-end="9989" vertical-scroll-proportion="0.33248082">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/user_registrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="61" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.4940048">
@@ -986,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/base_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/category.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="57" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
@@ -1009,8 +1001,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/widget.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="21" selection-start="925" selection-end="925" vertical-scroll-proportion="0.5568182">
+        <state line="37" column="21" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/widget.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="418" column="26" selection-start="9452" selection-end="9452" vertical-scroll-proportion="-9.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/letsrate-1.0.8/lib/letsrate/helpers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.035971224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/base_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_item.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="715" selection-end="715" vertical-scroll-proportion="0.4180791">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#li#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

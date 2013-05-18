@@ -13,11 +13,12 @@
       <% end %>
     </div>
     <div class="past-rating">
-      <%= rating_for(comment, :url => rate_posts_path) %>
+      <div class="rating-tool" style="display: inline-block">
+      <%= rating_for(comment, :url => rate_posts_path) %>  </div>
       <div class="article-actions pull-right">
 
         <!--<section class='social-links'>-->
-        <div class="pull-left social-links-trigger">
+        <div class="social-links-trigger">
           <!--<i class="icon-cogs text-transparent"></i>-->
           <div class="<%= "social_links_#{identifier}" %>" style="display: none; margin-right: 10px;">
             <%= link_to_with_icon "icon-twitter", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id), "data-original-title" => "Tweet this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
