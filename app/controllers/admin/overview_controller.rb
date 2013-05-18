@@ -46,6 +46,20 @@ class Admin::OverviewController < Admin::BaseController
     set_reports
   end
 
+  def edit_post
+    @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html { render :layout => !request.xhr? }
+      format.js { render_default_modal_form("Edit Post Url") }
+    end
+  end
+
+  def update_post
+    @post = Post.find(params[:id])
+    @post.update_attributes(params[:post])
+    redirect_to admin_path
+
+  end
   def set_reports
     if @current_widget.blank?
       @posts = @current_store.widgets.collect { |w| w.posts }.first

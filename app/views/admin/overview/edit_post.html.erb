@@ -1,0 +1,19 @@
+<%= form_for @post, :url => admin_update_post_path(:id => @post.id), :html => {:class => 'form-horizontal'} do |f| %>
+
+    <div class="alert alert fade in">
+      <i class="icon-warning-sign"></i> <strong> Changing URL will also change the comments path to be shown ! </strong>
+    </div>
+    <div class="modal-body">
+      <div class="control-group">
+        <%= f.text_field :url, :class => "input-xxlarge" %>
+      </div>
+    </div>
+    <br>
+    <div class="modal-footer">
+      <%= link_to "Close", "#", "data-dismiss" => "modal", :class => "btn", "aria-hidden" => true %>
+      <%= button_tag "Save", :disable_with => "Processing", :class => "btn btn-primary" %>
+    </div>
+
+<% end %>
+
+

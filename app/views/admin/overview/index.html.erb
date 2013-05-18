@@ -46,7 +46,7 @@
 <% end %>
 
 <div class="container-fluid">
-<b>Current Page: <%= @post.try(:url) %></b>
+<b>Current Page: <%= @post.try(:url) %></b> (<%= link_to_with_icon "icon-wrench", "Setting", admin_edit_post_path(:id => @post.try(:id)) , :remote => true %>)
 
 <div class="row-fluid">
 

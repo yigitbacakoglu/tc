@@ -48,6 +48,8 @@ Omrats::Application.routes.draw do
     get "/set_store/:store_id", :to => "overview#set_session_store", :as => :change_store
     get "/change_widget/:widget_id", :to => "overview#set_session_widget", :as => :change_widget
     get "/change_post/:post_id", :to => "overview#set_post", :as => :change_post
+    get "/post/edit", :to => "overview#edit_post", :as => :edit_post
+    put "/post/update", :to => "overview#update_post", :as => :update_post
     resources :overview
     resources :secrets
     resources :categories

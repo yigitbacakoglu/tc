@@ -51,8 +51,9 @@
       <%= link_to t(:close), "#", "data-dismiss" => "modal", :class => "btn", "aria-hidden" => true %>
     </div>
   </div>
-
-  <%= yield %>
+  <div id="main-container">
+    <%= yield %>
+  </div>
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span12">
