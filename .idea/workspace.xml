@@ -5,7 +5,7 @@
     <ignored path="omrats.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.dummy" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368894752475" ignored="false" />
-    <file path="/posts_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368396167909" ignored="false" />
+    <file path="/posts_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368895633491" ignored="false" />
     <file path="/fragment.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368894922772" ignored="false" />
     <file path="/user_sessions_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367662799965" ignored="false" />
     <file path="/welcome_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368894445039" ignored="false" />
@@ -25,7 +25,7 @@
     <file path="/ping.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368893665392" ignored="false" />
     <file path="/routes.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368827394749" ignored="false" />
     <file path="/home_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368827314510" ignored="false" />
-    <file path="/comment.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1366318411253" ignored="false" />
+    <file path="/comment.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368895518459" ignored="false" />
     <file path="/demo.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364751377143" ignored="false" />
     <file path="/edit.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368373629500" ignored="false" />
     <file path="/20130406125420_add_column_to_widgets.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365252931390" ignored="false" />
@@ -184,10 +184,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_sessions_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/user_sessions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.521978">
+            <state line="19" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widgets_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/widgets_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="posts_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="76" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.924812">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/posts/comment.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="18" selection-start="866" selection-end="878" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
@@ -203,7 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/setup/step1.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_comment_item.html.erb" />
         <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/widget.css" />
@@ -212,13 +247,14 @@
         <option value="$PROJECT_DIR$/app/views/home/ping.html.erb" />
         <option value="$PROJECT_DIR$/app/models/widget.rb" />
         <option value="$PROJECT_DIR$/app/models/post.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/widgets_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/social_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/user_sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/base_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/posts/comment.js.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
       </list>
     </option>
   </component>
@@ -295,28 +331,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omrats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omrats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -336,7 +350,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
+              <option name="myItemId" value="posts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -677,8 +691,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35521236" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21090387" sideWeight="0.7387387" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26126125" sideWeight="0.9967983" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21090387" sideWeight="0.5495495" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45045045" sideWeight="0.9967983" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561132" sideWeight="0.956777" order="2" side_tool="false" content_ui="tabs" />
@@ -751,160 +765,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="139" />
+      <option name="time" value="140" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://Ruby/ApplicationController">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Ruby</ID>
-          <OriginalElement>ApplicationController</OriginalElement>
-          <nodes>
-            <node x="2261.0" y="907.0">Admin::SettingsController</node>
-            <node x="1730.03125" y="0.0">ApplicationController</node>
-            <node x="3578.0" y="830.0">Admin::WidgetsController</node>
-            <node x="478.0" y="1302.0">UserPasswordsController</node>
-            <node x="3333.0" y="918.0">Admin::AccountController</node>
-            <node x="1814.03125" y="410.5">HomeController</node>
-            <node x="714.0" y="1302.0">Admin</node>
-            <node x="212.03587092731823" y="388.0">BlogsController</node>
-            <node x="1666.0" y="852.0">Admin::UsersController</node>
-            <node x="395.03587092731823" y="300.0">WelcomeController</node>
-            <node x="3057.0" y="863.0">Admin::SecretsController</node>
-            <node x="1958.0" y="863.0">Admin::CategoriesController</node>
-            <node x="0.0" y="1302.0">UserRegistrationsController</node>
-            <node x="0.0" y="841.0">CommentsController</node>
-            <node x="818.0" y="852.0">WidgetsController</node>
-            <node x="2413.5" y="311.0">Admin::BaseController</node>
-            <node x="2736.5" y="289.0">SetupController</node>
-            <node x="253.0" y="1302.0">UserSessionsController</node>
-            <node x="1135.0" y="753.0">Admin::CommentsController</node>
-            <node x="3106.5" y="344.0">AuthenticationsController</node>
-            <node x="1421.03125" y="289.0">SocialController</node>
-            <node x="389.0" y="819.0">PostsController</node>
-            <node x="2491.0" y="698.0">Admin::OverviewController</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="WelcomeController" target="ApplicationController">
-              <point x="0.0" y="-158.5" />
-              <point x="577.0358709273182" y="259.0" />
-              <point x="1794.7455357142858" y="259.0" />
-              <point x="-86.28571428571433" y="114.5" />
-            </edge>
-            <edge source="Admin::AccountController" target="Admin::BaseController">
-              <point x="0.0" y="-59.5" />
-              <point x="3445.5" y="658.0" />
-              <point x="2659.6875" y="658.0" />
-              <point x="94.6875" y="147.5" />
-            </edge>
-            <edge source="Admin::SettingsController" target="Admin::BaseController">
-              <point x="0.0" y="-70.5" />
-              <point x="2366.0" y="678.0" />
-              <point x="2546.0625" y="678.0" />
-              <point x="-18.9375" y="147.5" />
-            </edge>
-            <edge source="BlogsController" target="ApplicationController">
-              <point x="0.0" y="-70.5" />
-              <point x="293.53587092731823" y="249.0" />
-              <point x="1751.6026785714284" y="249.0" />
-              <point x="-129.42857142857144" y="114.5" />
-            </edge>
-            <edge source="Admin::SecretsController" target="Admin::BaseController">
-              <point x="0.0" y="-114.5" />
-              <point x="3185.0" y="668.0" />
-              <point x="2621.8125" y="668.0" />
-              <point x="56.8125" y="147.5" />
-            </edge>
-            <edge source="Admin::CommentsController" target="Admin::BaseController">
-              <point x="0.0" y="-224.5" />
-              <point x="1390.5" y="648.0" />
-              <point x="2432.4375" y="648.0" />
-              <point x="-132.5625" y="147.5" />
-            </edge>
-            <edge source="Admin::CategoriesController" target="Admin::BaseController">
-              <point x="0.0" y="-114.5" />
-              <point x="2099.5" y="668.0" />
-              <point x="2508.1875" y="668.0" />
-              <point x="-56.8125" y="147.5" />
-            </edge>
-            <edge source="Admin::UsersController" target="Admin::BaseController">
-              <point x="0.0" y="-125.5" />
-              <point x="1802.0" y="658.0" />
-              <point x="2470.3125" y="658.0" />
-              <point x="-94.6875" y="147.5" />
-            </edge>
-            <edge source="AuthenticationsController" target="ApplicationController">
-              <point x="0.0" y="-114.5" />
-              <point x="3261.0" y="249.0" />
-              <point x="2010.4598214285713" y="249.0" />
-              <point x="129.42857142857133" y="114.5" />
-            </edge>
-            <edge source="Admin::WidgetsController" target="Admin::BaseController">
-              <point x="0.0" y="-147.5" />
-              <point x="3741.5" y="648.0" />
-              <point x="2697.5625" y="648.0" />
-              <point x="132.5625" y="147.5" />
-            </edge>
-            <edge source="WidgetsController" target="WelcomeController">
-              <point x="0.0" y="-125.5" />
-              <point x="966.5" y="678.0" />
-              <point x="698.3692042606515" y="678.0" />
-              <point x="121.33333333333331" y="158.5" />
-            </edge>
-            <edge source="SetupController" target="ApplicationController">
-              <point x="0.0" y="-169.5" />
-              <point x="2911.5" y="259.0" />
-              <point x="1967.3169642857142" y="259.0" />
-              <point x="86.28571428571422" y="114.5" />
-            </edge>
-            <edge source="SocialController" target="ApplicationController">
-              <point x="0.0" y="-169.5" />
-              <point x="1607.53125" y="269.0" />
-              <point x="1837.888392857143" y="269.0" />
-              <point x="-43.14285714285711" y="114.5" />
-            </edge>
-            <edge source="HomeController" target="ApplicationController">
-              <point x="0.0" y="-48.0" />
-              <point x="0.0" y="114.5" />
-            </edge>
-            <edge source="Admin::BaseController" target="ApplicationController">
-              <point x="0.0" y="-147.5" />
-              <point x="2565.0" y="269.0" />
-              <point x="1924.174107142857" y="269.0" />
-              <point x="43.14285714285711" y="114.5" />
-            </edge>
-            <edge source="CommentsController" target="WelcomeController">
-              <point x="0.0" y="-136.5" />
-              <point x="184.5" y="678.0" />
-              <point x="455.70253759398497" y="678.0" />
-              <point x="-121.33333333333331" y="158.5" />
-            </edge>
-            <edge source="Admin::OverviewController" target="Admin::BaseController">
-              <point x="0.0" y="-279.5" />
-              <point x="2764.0" y="678.0" />
-              <point x="2583.9375" y="678.0" />
-              <point x="18.9375" y="147.5" />
-            </edge>
-            <edge source="PostsController" target="WelcomeController">
-              <point x="0.0" y="-158.5" />
-              <point x="593.5" y="678.0" />
-              <point x="577.0358709273182" y="678.0" />
-              <point x="0.0" y="158.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.48025477707006364" x="1309.73474801061" y="712.7347480106101" />
-          <SelectedNodes>
-            <node>ApplicationController</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Methods</Category>
-            <Category>Fields</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/widget.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
@@ -954,20 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="48" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/widgets_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="56" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="63" selection-start="942" selection-end="970" vertical-scroll-proportion="-5.0833335">
@@ -977,13 +827,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="33" selection-start="981" selection-end="1010" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +853,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/user_sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.521978">
+        <state line="19" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/widgets_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/posts/comment.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="866" selection-end="878" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="76" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.924812">
           <folding />
         </state>
       </provider>

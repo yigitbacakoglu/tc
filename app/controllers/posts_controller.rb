@@ -22,19 +22,24 @@ class PostsController < WelcomeController
   end
 
   def comment
-    @current_comment = @post.comment(
-        params[:comment],
-        :ip_address => request.remote_ip,
-        :referrer => request.referer,
-        :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id)),
-        :user_agent => env["HTTP_USER_AGENT"]
-    )
-    if @current_comment && @current_comment.valid?
-      if @current_comment.approved?
-        flash[:success] = "Thanks for comment!"
-      else
-        flash[:success] = "Your comment will be published after approval!"
+    if  @current_user || (@current_anonymous_user && !@current_widget.login_required?)
+      @current_comment = @post.comment(
+          params[:comment],
+          :ip_address => request.remote_ip,
+          :referrer => request.referer,
+          :user_id => (@current_user.try(:id) || @current_anonymous_user.try(:id)),
+          :user_agent => env["HTTP_USER_AGENT"]
+      )
+      if @current_comment && @current_comment.valid?
+        if @current_comment.approved?
+          flash[:success] = "Thanks for comment!"
+        else
+          flash[:success] = "Your comment will be published after approval!"
+        end
       end
+    else
+      @force_flash = true
+      flash[:error] = "Gotcha ! Do you think you can hack me ? GTFO or LOGIN"
     end
   end
 

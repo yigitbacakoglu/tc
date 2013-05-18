@@ -13,6 +13,9 @@ apply_raty();
 <%= render :partial => "shared/flashes" %>
 <% else %>
 <%= render :partial => "shared/errors", :locals => {:target => @current_comment} %>
+<%end%>
+<% if @force_flash %>
+<%= render :partial => "shared/flashes" %>
 <% end %>
 <%#= render :partial => "shared/errors" %>
 
