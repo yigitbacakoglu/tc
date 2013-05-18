@@ -14,7 +14,7 @@
     <file path="/new.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368373625999" ignored="false" />
     <file path="/user_registrations_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368898548893" ignored="false" />
     <file path="/index.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368900939207" ignored="false" />
-    <file path="/demo.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368906465996" ignored="false" />
+    <file path="/demo.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368911634049" ignored="false" />
     <file path="/application.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364751337477" ignored="false" />
     <file path="/application_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368898357347" ignored="false" />
     <file path="/user.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368395688941" ignored="false" />
@@ -177,10 +177,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_comment_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_comment_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="49" selection-start="431" selection-end="431" vertical-scroll-proportion="0.23166023">
+            <state line="8" column="49" selection-start="431" selection-end="431" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="165" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.7239382">
               <folding />
             </state>
           </provider>
@@ -205,13 +214,13 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/account/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_social.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/widgets/demo.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/widget.html.erb" />
         <option value="$PROJECT_DIR$/app/views/account/_comments.html.erb" />
         <option value="$PROJECT_DIR$/app/views/account/show.js.erb" />
         <option value="$PROJECT_DIR$/app/controllers/account_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/account/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/widgets/demo.html.erb" />
       </list>
     </option>
   </component>
@@ -901,13 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="26" selection-start="435" selection-end="494" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/account/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.083334">
@@ -931,7 +933,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="49" selection-start="431" selection-end="431" vertical-scroll-proportion="0.23166023">
+        <state line="8" column="49" selection-start="431" selection-end="431" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="165" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.7239382">
           <folding />
         </state>
       </provider>
