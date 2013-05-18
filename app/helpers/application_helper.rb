@@ -12,4 +12,8 @@ module ApplicationHelper
     end
 
   end
+
+  def widget_params(starts_with = "&")
+    "#{starts_with}u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}&p=#{session[:current_page]}"
+  end
 end

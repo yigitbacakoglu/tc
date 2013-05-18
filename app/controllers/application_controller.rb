@@ -5,6 +5,15 @@ class ApplicationController < ActionController::Base
   prepend_before_filter :set_current_user
   before_filter :check_sale
   before_filter :set_anonymous_user
+  before_filter :set_user_session
+
+  def set_user_session
+    if !params["k"].blank? && !params["p"].blank? && !params["u"].blank?
+      session["user_registration_return_to"] = "/close?" + "&p=#{params[:p]}&u=#{session[:current_widget_host]}&k=#{params[:k]}"
+    elsif params[:close] == "false"
+      session.delete "user_registration_return_to"
+    end
+  end
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url, :alert => exception.message

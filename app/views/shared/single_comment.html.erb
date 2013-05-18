@@ -2,7 +2,7 @@
 
 <div class="article">
   <div class="post-info"> <%= "#{@current_comment.user.firstname}, #{time_ago_in_words(@current_comment.created_at)} ago" %>
-    <%= rating_for(@current_comment, :url => rate_posts_path) %>
+    <%= rating_for(@current_comment, :url => rate_posts_path + widget_params("?")) %>
     <div class="post-error">
       <%= @object.errors.first[1] if @object == @current_comment && @object.errors.any? %>
     </div>

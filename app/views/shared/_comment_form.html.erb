@@ -11,9 +11,9 @@
           <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
           <br/>
 
-          <%= hidden_field_tag :u, cookies[:current_widget_host]  %>
-          <%= hidden_field_tag :k, cookies[:current_widget_key]  %>
-          <%= hidden_field_tag :p, cookies[:current_page]  %>
+          <%= hidden_field_tag :u, session[:current_widget_host]  %>
+          <%= hidden_field_tag :k, session[:current_widget_key]  %>
+          <%= hidden_field_tag :p, session[:current_page]  %>
 
           <div id="login_form_<%= identifier %>" class="post-actions" style="display: none;">
 
@@ -21,11 +21,11 @@
               <section data-tab="auth-external">
                 <div class="connect"><h6>Sign in with</h6>
                   <ul class="services">
-                    <li class="auth-twitter">
-                      <a data-action="auth:twitter" href="#" title="Twitter">Twitter</a></li>
-                    <li class="auth-facebook">
+                    <li class="auth-twitter open-win"  data-link="<%= '/auth/twitter' + widget_params("?")  %>">
+                      <a data-action="auth:twitter " href="#" title="Twitter">Twitter</a></li>
+                    <li class="auth-facebook open-win" data-link="<%= '/auth/facebook' + widget_params("?")  %>">
                       <a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
-                    <li class="auth-talky"><a data-action="auth:facebook" href="#" title="Facebook">Facebook</a></li>
+                    <li class="auth-talky open-win " data-link="<%= '/authenticate/login' + widget_params("?")  %>" ><a data-action="auth:facebook" href="#" title="Facebook">TalkyCloud</a></li>
                   </ul>
                 </div>
                 <div class="guest"><h6> or register with TalkyCloud </h6>
@@ -57,6 +57,10 @@
           <%= f.text_area :message, :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
           <br/>
 
+          <%= hidden_field_tag :u, session[:current_widget_host]  %>
+          <%= hidden_field_tag :k, session[:current_widget_key]  %>
+          <%= hidden_field_tag :p, session[:current_page]  %>
+
           <% if parent_id %>
               <%= f.hidden_field :parent_id, :value => parent_id %>
               <%= hidden_field_tag :prepend_container,  "reply-form-container_#{parent_id}" %>
@@ -66,7 +70,7 @@
               <%= f.submit "Post as #{current_user.try(:username) || "Anonymous"}", :class => "btn dark-blue pull-right" %>
               <a class="btn dark-blue dropdown-toggle pull-right" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
               <ul class="dropdown-menu">
-                <li><%= link_to_with_icon "icon-off", "Logout", destroy_user_registration_session_path, :method => :delete %></li>
+                <li><%= link_to_with_icon "icon-off", "Logout", destroy_user_registration_session_path + widget_params("?"), :method => :delete %></li>
               </ul>
             </div>
           </div>

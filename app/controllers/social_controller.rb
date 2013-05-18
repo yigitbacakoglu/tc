@@ -2,7 +2,7 @@ require 'twitter'
 require 'fb_graph'
 class SocialController < ApplicationController
 
-  before_filter :set_session
+  #before_filter :set_session
   before_filter :set_message
   rescue_from FbGraph::InvalidRequest, :with => :oauth_facebook_error
   rescue_from FbGraph::InvalidToken, :with => :oauth_facebook_error
@@ -114,16 +114,16 @@ class SocialController < ApplicationController
   end
 
   def respond_with_success
-    set_session
+    #set_session
     respond_to do |format|
       format.js { render 'success' }
       format.html { redirect_to session["user_registration_return_to"] || admin_path }
     end
   end
 
-  def set_session
-    session["user_registration_return_to"] = "/close?" + "&p=#{cookies[:current_page]}&u=#{cookies[:current_widget_host]}&k=#{cookies[:current_widget_key]}"
-  end
+  #def set_session
+  #  session["user_registration_return_to"] = "/close?" + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
+  #end
 
   def set_message
     if params[:comment_id]
@@ -134,7 +134,7 @@ class SocialController < ApplicationController
       @message = " \"#{@message}\" - #{username}"
     else
       @object = Post.where(:id => params[:post_id]).first
-      @page = "http://#{cookies[:current_widget_host]}#{cookies[:current_page]}"
+      @page = "http://#{session[:current_widget_host]}#{session[:current_page]}"
       @message = "#{@object.title}"
     end
   end

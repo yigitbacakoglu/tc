@@ -1,6 +1,6 @@
 class UserRegistrationsController < Devise::RegistrationsController
   layout "login"
-
+  prepend_before_filter :set_user_session
   # POST /resource
   def create
     build_resource
@@ -44,4 +44,12 @@ class UserRegistrationsController < Devise::RegistrationsController
     end
   end
 
+
+  def set_user_session
+    if !params["k"].blank? && !params["p"].blank? && !params["u"].blank?
+      session["user_registration_return_to"] = "/close?" + "&p=#{params[:p]}&u=#{session[:current_widget_host]}&k=#{params[:k]}"
+    elsif params[:close] == "false"
+      session.delete "user_registration_return_to"
+    end
+  end
 end

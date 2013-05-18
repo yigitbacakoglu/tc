@@ -40,9 +40,9 @@
       <div class="row-fluid">
         <div class="span12">
           <h2>Sign up!</h2>
-          <p><%= link_to "Sign up as commenter", new_user_registration_registration_url, :class => "btn btn-small dark-blue" %> </p>
+          <p><%= link_to "Sign up as commenter", new_user_registration_registration_url(:close => false), :class => "btn btn-small dark-blue" %> </p>
         <h2>Get Widget !</h2>
-          <%= link_to "Get widget", new_setup_path, :class => "btn btn-small dark-blue" %>
+          <%= link_to "Get widget", new_setup_path(:close => false), :class => "btn btn-small dark-blue" %>
         </div>
       </div>
 
