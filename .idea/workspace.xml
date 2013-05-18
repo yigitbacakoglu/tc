@@ -14,7 +14,7 @@
     <file path="/new.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368373625999" ignored="false" />
     <file path="/user_registrations_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368829272620" ignored="false" />
     <file path="/index.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368878568444" ignored="false" />
-    <file path="/demo.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368826438540" ignored="false" />
+    <file path="/demo.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368893521523" ignored="false" />
     <file path="/application.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364751337477" ignored="false" />
     <file path="/application_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368827631739" ignored="false" />
     <file path="/user.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368395688941" ignored="false" />
@@ -22,15 +22,15 @@
     <file path="/_form.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368824629108" ignored="false" />
     <file path="/embed.html" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364678137917" ignored="false" />
     <file path="/embed.js" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364752001601" ignored="false" />
-    <file path="/ping.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364753889883" ignored="false" />
+    <file path="/ping.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368893665392" ignored="false" />
     <file path="/routes.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368827394749" ignored="false" />
     <file path="/home_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368827314510" ignored="false" />
     <file path="/comment.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1366318411253" ignored="false" />
     <file path="/demo.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1364751377143" ignored="false" />
     <file path="/edit.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368373629500" ignored="false" />
     <file path="/20130406125420_add_column_to_widgets.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365252931390" ignored="false" />
-    <file path="/widget.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368879258991" ignored="false" />
-    <file path="/post.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368371165968" ignored="false" />
+    <file path="/widget.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368894043919" ignored="false" />
+    <file path="/post.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368894056791" ignored="false" />
     <file path="/Dummy.txt" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365253242340" ignored="false" />
     <file path="/Gemfile" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365253480967" ignored="false" />
     <file path="/comment.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368395870641" ignored="false" />
@@ -63,7 +63,7 @@
     <file path="/deneme.html" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1366356340551" ignored="false" />
     <file path="/devise.en.yml" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368401088504" ignored="false" />
     <file path="/deneme2.html" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1366357539167" ignored="false" />
-    <file path="/show.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368396624608" ignored="false" />
+    <file path="/show.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368892511169" ignored="false" />
     <file path="/_index.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368396902079" ignored="false" />
     <file path="/rating.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368374894938" ignored="false" />
     <file path="/20130427135825_add_column_to_ratings.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367071467858" ignored="false" />
@@ -71,7 +71,7 @@
     <file path="/social_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368303983032" ignored="false" />
     <file path="/twitter.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367143661630" ignored="false" />
     <file path="/auth.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367092147959" ignored="false" />
-    <file path="/widget.css" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368881076408" ignored="false" />
+    <file path="/widget.css" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368893348777" ignored="false" />
     <file path="/setup_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368366151503" ignored="false" />
     <file path="/step1.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368878932138" ignored="false" />
     <file path="/login.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367676624638" ignored="false" />
@@ -149,9 +149,13 @@
     <file path="/category.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368879301000" ignored="false" />
     <file path="/categories_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368372662377" ignored="false" />
     <file path="/comment_flag.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368396449037" ignored="false" />
-    <file path="/widget.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368827229041" ignored="false" />
+    <file path="/widget.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368893563223" ignored="false" />
     <file path="/maintenance.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368827507933" ignored="false" />
     <file path="/account_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368828499905" ignored="false" />
+    <file path="$PROJECT_DIR$/../tatilplanim/app/controllers/posts_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368891912011" ignored="false" />
+    <file path="$PROJECT_DIR$/../tatilplanim/app/views/posts/show.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368892823913" ignored="false" />
+    <file path="$PROJECT_DIR$/../tatilplanim/app/models/post.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368892769673" ignored="false" />
+    <file path="$PROJECT_DIR$/../tatilplanim/app/views/layouts/application.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368892876336" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +178,7 @@
       <file leaf-file-name="base_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/base_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+            <state line="23" column="24" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -183,7 +187,237 @@
       <file leaf-file-name="widget.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/widget.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="418" column="26" selection-start="9452" selection-end="9452" vertical-scroll-proportion="-9.615385">
+            <state line="2" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ruby/ApplicationController" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://Ruby/ApplicationController">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>Ruby</ID>
+              <OriginalElement>ApplicationController</OriginalElement>
+              <nodes>
+                <node x="2261.0" y="907.0">Admin::SettingsController</node>
+                <node x="1730.03125" y="0.0">ApplicationController</node>
+                <node x="3578.0" y="830.0">Admin::WidgetsController</node>
+                <node x="478.0" y="1302.0">UserPasswordsController</node>
+                <node x="3333.0" y="918.0">Admin::AccountController</node>
+                <node x="1814.03125" y="410.5">HomeController</node>
+                <node x="714.0" y="1302.0">Admin</node>
+                <node x="212.03587092731823" y="388.0">BlogsController</node>
+                <node x="1666.0" y="852.0">Admin::UsersController</node>
+                <node x="395.03587092731823" y="300.0">WelcomeController</node>
+                <node x="3057.0" y="863.0">Admin::SecretsController</node>
+                <node x="1958.0" y="863.0">Admin::CategoriesController</node>
+                <node x="0.0" y="1302.0">UserRegistrationsController</node>
+                <node x="0.0" y="841.0">CommentsController</node>
+                <node x="818.0" y="852.0">WidgetsController</node>
+                <node x="2413.5" y="311.0">Admin::BaseController</node>
+                <node x="2736.5" y="289.0">SetupController</node>
+                <node x="253.0" y="1302.0">UserSessionsController</node>
+                <node x="1135.0" y="753.0">Admin::CommentsController</node>
+                <node x="3106.5" y="344.0">AuthenticationsController</node>
+                <node x="1421.03125" y="289.0">SocialController</node>
+                <node x="389.0" y="819.0">PostsController</node>
+                <node x="2491.0" y="698.0">Admin::OverviewController</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="WelcomeController" target="ApplicationController">
+                  <point x="0.0" y="-158.5" />
+                  <point x="577.0358709273182" y="259.0" />
+                  <point x="1794.7455357142858" y="259.0" />
+                  <point x="-86.28571428571433" y="114.5" />
+                </edge>
+                <edge source="Admin::AccountController" target="Admin::BaseController">
+                  <point x="0.0" y="-59.5" />
+                  <point x="3445.5" y="658.0" />
+                  <point x="2659.6875" y="658.0" />
+                  <point x="94.6875" y="147.5" />
+                </edge>
+                <edge source="Admin::SettingsController" target="Admin::BaseController">
+                  <point x="0.0" y="-70.5" />
+                  <point x="2366.0" y="678.0" />
+                  <point x="2546.0625" y="678.0" />
+                  <point x="-18.9375" y="147.5" />
+                </edge>
+                <edge source="BlogsController" target="ApplicationController">
+                  <point x="0.0" y="-70.5" />
+                  <point x="293.53587092731823" y="249.0" />
+                  <point x="1751.6026785714284" y="249.0" />
+                  <point x="-129.42857142857144" y="114.5" />
+                </edge>
+                <edge source="Admin::SecretsController" target="Admin::BaseController">
+                  <point x="0.0" y="-114.5" />
+                  <point x="3185.0" y="668.0" />
+                  <point x="2621.8125" y="668.0" />
+                  <point x="56.8125" y="147.5" />
+                </edge>
+                <edge source="Admin::CommentsController" target="Admin::BaseController">
+                  <point x="0.0" y="-224.5" />
+                  <point x="1390.5" y="648.0" />
+                  <point x="2432.4375" y="648.0" />
+                  <point x="-132.5625" y="147.5" />
+                </edge>
+                <edge source="Admin::CategoriesController" target="Admin::BaseController">
+                  <point x="0.0" y="-114.5" />
+                  <point x="2099.5" y="668.0" />
+                  <point x="2508.1875" y="668.0" />
+                  <point x="-56.8125" y="147.5" />
+                </edge>
+                <edge source="Admin::UsersController" target="Admin::BaseController">
+                  <point x="0.0" y="-125.5" />
+                  <point x="1802.0" y="658.0" />
+                  <point x="2470.3125" y="658.0" />
+                  <point x="-94.6875" y="147.5" />
+                </edge>
+                <edge source="AuthenticationsController" target="ApplicationController">
+                  <point x="0.0" y="-114.5" />
+                  <point x="3261.0" y="249.0" />
+                  <point x="2010.4598214285713" y="249.0" />
+                  <point x="129.42857142857133" y="114.5" />
+                </edge>
+                <edge source="Admin::WidgetsController" target="Admin::BaseController">
+                  <point x="0.0" y="-147.5" />
+                  <point x="3741.5" y="648.0" />
+                  <point x="2697.5625" y="648.0" />
+                  <point x="132.5625" y="147.5" />
+                </edge>
+                <edge source="WidgetsController" target="WelcomeController">
+                  <point x="0.0" y="-125.5" />
+                  <point x="966.5" y="678.0" />
+                  <point x="698.3692042606515" y="678.0" />
+                  <point x="121.33333333333331" y="158.5" />
+                </edge>
+                <edge source="SetupController" target="ApplicationController">
+                  <point x="0.0" y="-169.5" />
+                  <point x="2911.5" y="259.0" />
+                  <point x="1967.3169642857142" y="259.0" />
+                  <point x="86.28571428571422" y="114.5" />
+                </edge>
+                <edge source="SocialController" target="ApplicationController">
+                  <point x="0.0" y="-169.5" />
+                  <point x="1607.53125" y="269.0" />
+                  <point x="1837.888392857143" y="269.0" />
+                  <point x="-43.14285714285711" y="114.5" />
+                </edge>
+                <edge source="HomeController" target="ApplicationController">
+                  <point x="0.0" y="-48.0" />
+                  <point x="0.0" y="114.5" />
+                </edge>
+                <edge source="Admin::BaseController" target="ApplicationController">
+                  <point x="0.0" y="-147.5" />
+                  <point x="2565.0" y="269.0" />
+                  <point x="1924.174107142857" y="269.0" />
+                  <point x="43.14285714285711" y="114.5" />
+                </edge>
+                <edge source="CommentsController" target="WelcomeController">
+                  <point x="0.0" y="-136.5" />
+                  <point x="184.5" y="678.0" />
+                  <point x="455.70253759398497" y="678.0" />
+                  <point x="-121.33333333333331" y="158.5" />
+                </edge>
+                <edge source="Admin::OverviewController" target="Admin::BaseController">
+                  <point x="0.0" y="-279.5" />
+                  <point x="2764.0" y="678.0" />
+                  <point x="2583.9375" y="678.0" />
+                  <point x="18.9375" y="147.5" />
+                </edge>
+                <edge source="PostsController" target="WelcomeController">
+                  <point x="0.0" y="-158.5" />
+                  <point x="593.5" y="678.0" />
+                  <point x="577.0358709273182" y="678.0" />
+                  <point x="0.0" y="158.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.48025477707006364" x="1309.73474801061" y="712.7347480106101" />
+              <SelectedNodes>
+                <node>ApplicationController</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Methods</Category>
+                <Category>Fields</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding>
+                <marker date="1368893552000" expanded="true" signature="22:601" placeholder="do ... end" />
+                <marker date="1368893552000" expanded="true" signature="634:3416" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="660:3409" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="685:3400" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="715:3389" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="744:3376" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="795:3361" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="832:3019" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="866:951" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="1077:1459" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="1184:1299" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="1342:1438" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="1507:1593" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="1650:3000" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="1671:2979" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="1998:2956" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="2092:2213" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="2271:2932" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="2312:2906" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="2365:2878" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="2412:2605" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="2653:2848" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="3054:3344" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="3120:3197" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="3426:4384" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="3476:3714" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="3530:3615" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="3759:3983" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="4041:4121" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="4168:4248" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="4312:4372" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="4394:5523" placeholder="..." />
+                <marker date="1368893552000" expanded="true" signature="4414:5330" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="4485:4547" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="4550:4709" placeholder="//..." />
+                <marker date="1368893552000" expanded="true" signature="4770:4853" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="4905:4996" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="5050:5098" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="5153:5216" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="5268:5322" placeholder="{...}" />
+                <marker date="1368893552000" expanded="true" signature="5358:5514" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/widget.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="5" selection-start="2315" selection-end="2315" vertical-scroll-proportion="-13.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ping.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/ping.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="49" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="40" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.36363637">
               <folding />
             </state>
           </provider>
@@ -192,65 +426,7 @@
       <file leaf-file-name="widget.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/widget.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="21" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_comment_item.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_item.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="29" selection-start="715" selection-end="715" vertical-scroll-proportion="0.4180791">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#li#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="57" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="21" selection-start="1186" selection-end="1244" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="store.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/store.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="18" selection-start="5263" selection-end="5263" vertical-scroll-proportion="-12.416667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="step1.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/setup/step1.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="36" selection-start="3700" selection-end="3700" vertical-scroll-proportion="-14.916667">
+            <state line="27" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="-13.846154">
               <folding />
             </state>
           </provider>
@@ -266,10 +442,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/home/maintenance.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/base_controller.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/base_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/widgets/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/account_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user_registration.rb" />
@@ -278,10 +450,14 @@
         <option value="$PROJECT_DIR$/app/views/widgets/demo.js.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/setup/step1.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/widget.rb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_comment_item.html.erb" />
         <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/widget.css" />
-        <option value="$PROJECT_DIR$/app/views/shared/_comment_item.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/widgets/demo.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/widget.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/ping.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/widget.rb" />
+        <option value="$PROJECT_DIR$/app/models/post.rb" />
       </list>
     </option>
   </component>
@@ -330,132 +506,6 @@
               <option name="myItemId" value="omrats" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omrats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic_sitemaps (v1.0.8, RVM: ruby-1.9.3-p194 [global]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omrats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic_sitemaps (v1.0.8, RVM: ruby-1.9.3-p194 [global]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic_sitemaps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omrats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic_sitemaps (v1.0.8, RVM: ruby-1.9.3-p194 [global]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic_sitemaps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omrats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic_sitemaps (v1.0.8, RVM: ruby-1.9.3-p194 [global]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitemaps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omrats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic_sitemaps (v1.0.8, RVM: ruby-1.9.3-p194 [global]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -503,7 +553,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="setup" />
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omrats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omrats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -844,8 +916,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35521236" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21090387" sideWeight="0.6023166" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3976834" sideWeight="0.9967983" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21090387" sideWeight="0.7387387" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26126125" sideWeight="0.9967983" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561132" sideWeight="0.956777" order="2" side_tool="false" content_ui="tabs" />
@@ -922,119 +994,1328 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="118" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.71087533">
-          <folding />
+    <entry file="uml://Ruby/Category">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Ruby</ID>
+          <OriginalElement>Category</OriginalElement>
+          <nodes>
+            <node x="769.25" y="580.0">ActiveRecord::AttributeMethods</node>
+            <node x="1116.5" y="290.0">ActiveRecord::AttributeMethods::DeprecatedUnderscoreRead</node>
+            <node x="34.5" y="290.0">ActiveModel::SecurePassword</node>
+            <node x="2607.0093642468646" y="460.0">ActiveModel::Serializers::Xml</node>
+            <node x="1664.3010309135316" y="290.0">ActiveRecord::Scoping::Default</node>
+            <node x="0.0" y="580.0">ActiveRecord::Querying</node>
+            <node x="1453.1760309135316" y="580.0">ActiveRecord::Associations</node>
+            <node x="1437.1760309135316" y="460.0">ActiveSupport::Autoload</node>
+            <node x="2083.3010309135316" y="380.0">ActiveSupport::Callbacks</node>
+            <node x="4786.6875" y="290.0">ActiveModel::Conversion</node>
+            <node x="4748.6875" y="580.0">ActiveRecord::Explain</node>
+            <node x="5054.1875" y="290.0">ActiveRecord::Integration</node>
+            <node x="3298.1875" y="290.0">ActiveRecord::Persistence</node>
+            <node x="1342.5" y="290.0">ActiveRecord::AttributeMethods::Query</node>
+            <node x="2465.5510309135316" y="460.0">ActiveRecord::Translation</node>
+            <node x="4849.6875" y="580.0">ActiveRecord::QueryCache::ClassMethods</node>
+            <node x="2679.22508463758" y="580.0">ActiveRecord::Serialization</node>
+            <node x="2199.3010309135316" y="460.0">ActiveModel::Callbacks</node>
+            <node x="2602.3719030968987" y="290.0">ActiveModel::Naming</node>
+            <node x="2726.1875" y="460.0">ActiveModel::Serializers::JSON</node>
+            <node x="275.5" y="290.0">ActiveModel::AttributeMethods</node>
+            <node x="248.75" y="380.0">ActiveModel::Dirty</node>
+            <node x="4117.6875" y="580.0">ActiveRecord::DynamicMatchers</node>
+            <node x="2932.1875" y="290.0">ActiveRecord::Aggregations</node>
+            <node x="2812.1875" y="290.0">ActiveRecord::Locking::Optimistic</node>
+            <node x="265.0" y="460.0">ActiveRecord::AttributeMethods::Dirty</node>
+            <node x="2345.5510309135316" y="580.0">ActiveRecord::Validations</node>
+            <node x="985.5" y="290.0">ActiveRecord::AttributeMethods::Serialization</node>
+            <node x="1596.919630369626" y="580.0">ActiveRecord::Scoping</node>
+            <node x="4053.1875" y="290.0">ActiveRecord::Sanitization</node>
+            <node x="3541.1875" y="290.0">ActiveModel::MassAssignmentSecurity</node>
+            <node x="3987.6875" y="580.0">ActiveRecord::Locking::Pessimistic</node>
+            <node x="1565.3010309135316" y="290.0">ActiveRecord::Scoping::Named</node>
+            <node x="834.5" y="290.0">ActiveRecord::AttributeMethods::BeforeTypeCast</node>
+            <node x="2637.1875" y="380.0">ActiveModel::Serialization</node>
+            <node x="3070.1875" y="290.0">Letsrate</node>
+            <node x="4347.1875" y="290.0">ActiveRecord::ReadonlyAttributes</node>
+            <node x="3423.1875" y="290.0">ActiveRecord::Reflection</node>
+            <node x="4284.6875" y="580.0">ActiveSupport::Benchmarkable</node>
+            <node x="2268.0" y="380.0">ActiveModel::Validations::HelperMethods</node>
+            <node x="4241.1875" y="290.0">ActiveRecord::Store</node>
+            <node x="3752.1875" y="290.0">ActiveRecord::NestedAttributes</node>
+            <node x="1865.3010309135316" y="380.0">ActiveModel::Observing</node>
+            <node x="3174.1875" y="290.0">ActiveRecord::Inheritance</node>
+            <node x="2255.536342823839" y="0.0">ActiveSupport::Concern</node>
+            <node x="3913.1875" y="290.0">ActiveRecord::ModelSchema</node>
+            <node x="4434.6875" y="580.0">ActiveRecord::IdentityMap</node>
+            <node x="2042.4260309135316" y="460.0">ActiveModel::Validations::Callbacks</node>
+            <node x="4930.1875" y="290.0">ActiveRecord::Timestamp</node>
+            <node x="1764.3010309135316" y="290.0">ActiveRecord::Transactions</node>
+            <node x="750.5" y="290.0">ActiveRecord::AttributeMethods::Read</node>
+            <node x="4480.6875" y="460.0">ActiveRecord::AutosaveAssociation::AssociationBuilderExtension</node>
+            <node x="3501.1875" y="380.0">ActiveRecord::AttributeAssignment</node>
+            <node x="440.5" y="290.0">ActiveRecord::AttributeMethods::TimeZoneConversion</node>
+            <node x="1900.3010309135316" y="290.0">ActiveSupport::DescendantsTracker</node>
+            <node x="627.5" y="290.0">ActiveRecord::AttributeMethods::PrimaryKey</node>
+            <node x="188.5" y="290.0">ActiveRecord::AttributeMethods::Write</node>
+            <node x="2439.3010309135316" y="380.0">ActiveModel::Translation</node>
+            <node x="3380.1875" y="820.0">ActiveRecord::Base</node>
+            <node x="3366.1875" y="900.0">Category</node>
+            <node x="4562.6875" y="580.0">ActiveRecord::AutosaveAssociation</node>
+            <node x="5116.1875" y="580.0">ActiveRecord::CounterCache</node>
+            <node x="2314.3010309135316" y="460.0">ActiveModel::Validations</node>
+            <node x="2139.38337912088" y="580.0">ActiveRecord::Callbacks</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="ActiveRecord::Scoping::Named" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="1604.3010309135316" y="200.0" />
+              <point x="2283.877251914748" y="200.0" />
+              <point x="-14.659090909090992" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Validations" target="ActiveModel::Translation">
+              <point x="41.59999999999991" y="-15.0" />
+              <point x="2407.9010309135315" y="440.0" />
+              <point x="2465.5510309135316" y="440.0" />
+              <point x="-26.25" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Integration">
+              <point x="28.416666666666515" y="-15.0" />
+              <point x="3439.6041666666665" y="790.0" />
+              <point x="5105.6875" y="790.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Validations" target="ActiveModel::Validations::HelperMethods">
+              <point x="-20.800000000000182" y="-15.0" />
+              <point x="2345.5010309135314" y="430.0" />
+              <point x="2300.25" y="430.0" />
+              <point x="-32.25" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Serializers::JSON" target="ActiveModel::Serialization">
+              <point x="-21.666666666666515" y="-15.0" />
+              <point x="2737.0208333333335" y="440.0" />
+              <point x="2720.4375" y="440.0" />
+              <point x="27.75" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Validations" target="ActiveSupport::Concern">
+              <point x="26.0" y="-15.0" />
+              <point x="2423.5510309135316" y="560.0" />
+              <point x="2428.8010309135316" y="560.0" />
+              <point x="2428.8010309135316" y="250.0" />
+              <point x="2301.468161005657" y="250.0" />
+              <point x="2.9318181818180165" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Serializers::Xml" target="ActiveSupport::Concern">
+              <point x="-19.333333333333485" y="-15.0" />
+              <point x="2616.6760309135316" y="440.0" />
+              <point x="2560.875" y="440.0" />
+              <point x="2560.875" y="240.0" />
+              <point x="2303.422706460203" y="240.0" />
+              <point x="4.886363636363512" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Scoping" target="ActiveRecord::Scoping::Named">
+              <point x="-10.5" y="-15.0" />
+              <point x="1628.419630369626" y="540.0" />
+              <point x="1604.3010309135316" y="540.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AutosaveAssociation" target="ActiveRecord::AutosaveAssociation::AssociationBuilderExtension">
+              <point x="-41.5" y="-15.0" />
+              <point x="4604.1875" y="560.0" />
+              <point x="4587.1875" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Persistence" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="3350.6875" y="170.0" />
+              <point x="2317.104524642021" y="170.0" />
+              <point x="18.568181818181984" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::ModelSchema" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="3973.1875" y="120.0" />
+              <point x="2326.877251914748" y="120.0" />
+              <point x="28.34090909090901" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Locking::Optimistic" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="2862.1875" y="210.0" />
+              <point x="2309.286342823839" y="210.0" />
+              <point x="10.75" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Serializers::JSON" target="ActiveModel::Naming">
+              <point x="0.0" y="-15.0" />
+              <point x="2758.6875" y="360.0" />
+              <point x="2674.9969030968987" y="360.0" />
+              <point x="31.125" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Dirty" target="ActiveModel::AttributeMethods">
+              <point x="16.25" y="-15.0" />
+              <point x="297.5" y="360.0" />
+              <point x="311.5" y="360.0" />
+              <point x="-36.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Sanitization" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="4107.1875" y="110.0" />
+              <point x="2328.831797369294" y="110.0" />
+              <point x="30.295454545454504" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::AttributeMethods">
+              <point x="-26.694444444444343" y="-15.0" />
+              <point x="3384.4930555555557" y="780.0" />
+              <point x="841.25" y="780.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Serialization" target="ActiveModel::Serializers::JSON">
+              <point x="0.0" y="-15.0" />
+              <point x="2734.72508463758" y="560.0" />
+              <point x="2758.6875" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveSupport::Autoload">
+              <point x="66.0" y="-15.0" />
+              <point x="907.25" y="560.0" />
+              <point x="1452.3426975801983" y="560.0" />
+              <point x="-30.333333333333258" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::IdentityMap">
+              <point x="18.083333333333485" y="-15.0" />
+              <point x="3429.2708333333335" y="730.0" />
+              <point x="4488.6875" y="730.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveModel::Conversion">
+              <point x="23.25" y="-15.0" />
+              <point x="3434.4375" y="760.0" />
+              <point x="4839.1875" y="760.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Locking::Optimistic">
+              <point x="-7.75" y="-15.0" />
+              <point x="3403.4375" y="670.0" />
+              <point x="2862.1875" y="670.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Serialization" target="ActiveSupport::Concern">
+              <point x="37.0" y="-15.0" />
+              <point x="2771.72508463758" y="560.0" />
+              <point x="2801.6875" y="560.0" />
+              <point x="2801.6875" y="220.0" />
+              <point x="2307.331797369294" y="220.0" />
+              <point x="8.795454545454504" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AutosaveAssociation" target="ActiveSupport::Concern">
+              <point x="41.5" y="-15.0" />
+              <point x="4687.1875" y="560.0" />
+              <point x="4704.1875" y="560.0" />
+              <point x="4704.1875" y="80.0" />
+              <point x="2334.69543373293" y="80.0" />
+              <point x="36.15909090909099" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::BeforeTypeCast" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="900.0" y="140.0" />
+              <point x="2272.1499791874758" y="140.0" />
+              <point x="-26.386363636363512" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::AutosaveAssociation">
+              <point x="19.805555555555657" y="-15.0" />
+              <point x="3430.9930555555557" y="740.0" />
+              <point x="4645.6875" y="740.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::Serialization" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="1041.0" y="150.0" />
+              <point x="2274.104524642021" y="150.0" />
+              <point x="-24.431818181818016" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Transactions" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="1821.8010309135316" y="230.0" />
+              <point x="2289.740888278385" y="230.0" />
+              <point x="-8.795454545454504" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::DeprecatedUnderscoreRead">
+              <point x="30.0" y="-15.0" />
+              <point x="871.25" y="530.0" />
+              <point x="1219.5" y="530.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Store" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="4274.1875" y="100.0" />
+              <point x="2330.786342823839" y="100.0" />
+              <point x="32.25" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Associations" target="ActiveSupport::Concern">
+              <point x="28.75" y="-15.0" />
+              <point x="1538.6760309135316" y="190.0" />
+              <point x="2281.922706460203" y="190.0" />
+              <point x="-16.613636363636488" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Serialization" target="ActiveModel::Serializers::Xml">
+              <point x="-37.0" y="-15.0" />
+              <point x="2697.72508463758" y="560.0" />
+              <point x="2636.0093642468646" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::Write">
+              <point x="-66.0" y="-15.0" />
+              <point x="775.25" y="560.0" />
+              <point x="221.5" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Observing" target="ActiveSupport::DescendantsTracker">
+              <point x="24.5" y="-15.0" />
+              <point x="1938.8010309135316" y="360.0" />
+              <point x="1927.3010309135316" y="360.0" />
+              <point x="-54.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::DeprecatedUnderscoreRead" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="1219.5" y="160.0" />
+              <point x="2276.0590700965668" y="160.0" />
+              <point x="-22.47727272727252" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::NestedAttributes" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="3822.6875" y="130.0" />
+              <point x="2324.922706460203" y="130.0" />
+              <point x="26.386363636363512" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::MassAssignmentSecurity" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="3636.6875" y="140.0" />
+              <point x="2322.968161005657" y="140.0" />
+              <point x="24.431818181818016" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::Write" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="221.5" y="70.0" />
+              <point x="2258.468161005657" y="70.0" />
+              <point x="-40.06818181818198" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Associations" target="ActiveSupport::Autoload">
+              <point x="-28.75" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Translation" target="ActiveModel::Naming">
+              <point x="0.0" y="-15.0" />
+              <point x="2491.8010309135316" y="340.0" />
+              <point x="2612.7469030968987" y="340.0" />
+              <point x="-31.125" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Scoping" target="ActiveRecord::Scoping::Default">
+              <point x="31.5" y="-15.0" />
+              <point x="1670.419630369626" y="560.0" />
+              <point x="1704.3010309135316" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::SecurePassword" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="101.5" y="60.0" />
+              <point x="2256.513615551112" y="60.0" />
+              <point x="-42.02272727272748" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Integration" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="5105.6875" y="50.0" />
+              <point x="2340.559070096566" y="50.0" />
+              <point x="42.022727272727025" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::TimeZoneConversion">
+              <point x="-30.0" y="-15.0" />
+              <point x="811.25" y="530.0" />
+              <point x="524.0" y="530.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Scoping" target="ActiveSupport::Autoload">
+              <point x="-31.5" y="-15.0" />
+              <point x="1607.419630369626" y="550.0" />
+              <point x="1513.0093642468648" y="550.0" />
+              <point x="30.333333333333258" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::ReadonlyAttributes" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="4424.1875" y="90.0" />
+              <point x="2332.740888278385" y="90.0" />
+              <point x="34.204545454545496" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Timestamp">
+              <point x="26.694444444444343" y="-15.0" />
+              <point x="3437.8819444444443" y="780.0" />
+              <point x="4982.1875" y="780.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Callbacks" target="ActiveModel::Callbacks">
+              <point x="31.666666666666515" y="-15.0" />
+              <point x="2218.550045787546" y="560.0" />
+              <point x="2246.8010309135316" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Validations" target="ActiveSupport::Callbacks">
+              <point x="-41.59999999999991" y="-15.0" />
+              <point x="2324.7010309135317" y="440.0" />
+              <point x="2154.5510309135316" y="440.0" />
+              <point x="23.75" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Locking::Pessimistic">
+              <point x="7.75" y="-15.0" />
+              <point x="3418.9375" y="670.0" />
+              <point x="4040.1875" y="670.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveModel::AttributeMethods">
+              <point x="-42.0" y="-15.0" />
+              <point x="799.25" y="540.0" />
+              <point x="383.5" y="540.0" />
+              <point x="36.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Dirty" target="ActiveSupport::Concern">
+              <point x="-16.25" y="-15.0" />
+              <point x="265.0" y="80.0" />
+              <point x="2260.422706460203" y="80.0" />
+              <point x="-38.11363636363649" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::Read" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="782.5" y="130.0" />
+              <point x="2270.19543373293" y="130.0" />
+              <point x="-28.34090909090901" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::Dirty">
+              <point x="-54.0" y="-15.0" />
+              <point x="787.25" y="550.0" />
+              <point x="297.5" y="550.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::QueryCache::ClassMethods">
+              <point x="24.97222222222217" y="-15.0" />
+              <point x="3436.159722222222" y="770.0" />
+              <point x="4910.6875" y="770.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Serializers::Xml" target="ActiveModel::Naming">
+              <point x="0.0" y="-15.0" />
+              <point x="2636.0093642468646" y="440.0" />
+              <point x="2626.6875" y="440.0" />
+              <point x="2626.6875" y="360.0" />
+              <point x="2654.2469030968987" y="360.0" />
+              <point x="10.375" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveModel::Naming">
+              <point x="-11.194444444444343" y="-15.0" />
+              <point x="3399.9930555555557" y="690.0" />
+              <point x="2596.5093642468646" y="690.0" />
+              <point x="2596.5093642468646" y="350.0" />
+              <point x="2633.4969030968987" y="350.0" />
+              <point x="-10.375" y="15.0" />
+            </edge>
+            <edge source="Category" target="ActiveRecord::Base">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::PrimaryKey" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="679.0" y="120.0" />
+              <point x="2268.240888278385" y="120.0" />
+              <point x="-30.295454545454504" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::ModelSchema">
+              <point x="6.027777777777828" y="-15.0" />
+              <point x="3417.215277777778" y="660.0" />
+              <point x="3973.1875" y="660.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::Read">
+              <point x="-6.0" y="-15.0" />
+              <point x="835.25" y="510.0" />
+              <point x="782.5" y="510.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Store">
+              <point x="12.916666666666515" y="-15.0" />
+              <point x="3424.1041666666665" y="700.0" />
+              <point x="4274.1875" y="700.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveModel::SecurePassword">
+              <point x="-28.416666666666515" y="-15.0" />
+              <point x="3382.7708333333335" y="790.0" />
+              <point x="101.5" y="790.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::Dirty" target="ActiveModel::Dirty">
+              <point x="-16.25" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Explain">
+              <point x="21.52777777777783" y="-15.0" />
+              <point x="3432.715277777778" y="750.0" />
+              <point x="4788.6875" y="750.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveSupport::Concern">
+              <point x="54.0" y="-15.0" />
+              <point x="895.25" y="550.0" />
+              <point x="1424.0" y="550.0" />
+              <point x="1424.0" y="180.0" />
+              <point x="2279.968161005657" y="180.0" />
+              <point x="-18.568181818181984" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeAssignment" target="ActiveSupport::Concern">
+              <point x="-41.25" y="-15.0" />
+              <point x="3542.4375" y="360.0" />
+              <point x="3530.6875" y="360.0" />
+              <point x="3530.6875" y="150.0" />
+              <point x="2321.013615551112" y="150.0" />
+              <point x="22.47727272727252" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Validations::Callbacks" target="ActiveSupport::Concern">
+              <point x="-23.75" y="-15.0" />
+              <point x="2066.1760309135316" y="440.0" />
+              <point x="2072.8010309135316" y="440.0" />
+              <point x="2072.8010309135316" y="250.0" />
+              <point x="2293.6499791874758" y="250.0" />
+              <point x="-4.886363636363512" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Serialization">
+              <point x="-9.472222222222172" y="-15.0" />
+              <point x="3401.715277777778" y="680.0" />
+              <point x="2734.72508463758" y="680.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Callbacks">
+              <point x="-16.361111111111313" y="-15.0" />
+              <point x="3394.8263888888887" y="720.0" />
+              <point x="2186.88337912088" y="720.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::Dirty" target="ActiveSupport::Concern">
+              <point x="16.25" y="-15.0" />
+              <point x="313.75" y="440.0" />
+              <point x="430.0" y="440.0" />
+              <point x="430.0" y="100.0" />
+              <point x="2264.331797369294" y="100.0" />
+              <point x="-34.204545454545496" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::ReadonlyAttributes">
+              <point x="16.361111111111313" y="-15.0" />
+              <point x="3427.5486111111113" y="720.0" />
+              <point x="4424.1875" y="720.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Scoping" target="ActiveSupport::Concern">
+              <point x="10.5" y="-15.0" />
+              <point x="1649.419630369626" y="560.0" />
+              <point x="1653.8010309135316" y="560.0" />
+              <point x="1653.8010309135316" y="210.0" />
+              <point x="2285.831797369294" y="210.0" />
+              <point x="-12.704545454545496" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Persistence">
+              <point x="-0.8611111111113132" y="-15.0" />
+              <point x="3410.3263888888887" y="630.0" />
+              <point x="3350.6875" y="630.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Reflection">
+              <point x="0.8611111111113132" y="-15.0" />
+              <point x="3412.0486111111113" y="630.0" />
+              <point x="3471.6875" y="630.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Validations::Callbacks" target="ActiveSupport::Callbacks">
+              <point x="23.75" y="-15.0" />
+              <point x="2113.6760309135316" y="440.0" />
+              <point x="2107.0510309135316" y="440.0" />
+              <point x="-23.75" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Aggregations" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="2991.1875" y="200.0" />
+              <point x="2311.240888278385" y="200.0" />
+              <point x="12.704545454545496" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Translation">
+              <point x="-12.916666666666515" y="-15.0" />
+              <point x="3398.2708333333335" y="700.0" />
+              <point x="2518.0510309135316" y="700.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveModel::Observing">
+              <point x="-19.805555555555657" y="-15.0" />
+              <point x="3391.3819444444443" y="740.0" />
+              <point x="1914.3010309135316" y="740.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Inheritance">
+              <point x="-2.583333333333485" y="-15.0" />
+              <point x="3408.6041666666665" y="640.0" />
+              <point x="3226.1875" y="640.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeAssignment" target="ActiveModel::MassAssignmentSecurity">
+              <point x="41.25" y="-15.0" />
+              <point x="3624.9375" y="360.0" />
+              <point x="3636.6875" y="360.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::TimeZoneConversion" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="524.0" y="110.0" />
+              <point x="2266.286342823839" y="110.0" />
+              <point x="-32.25" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Serializers::JSON" target="ActiveSupport::Concern">
+              <point x="21.666666666666515" y="-15.0" />
+              <point x="2780.3541666666665" y="440.0" />
+              <point x="2784.710227272727" y="440.0" />
+              <point x="2784.710227272727" y="230.0" />
+              <point x="2305.377251914748" y="230.0" />
+              <point x="6.840909090909008" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Validations">
+              <point x="-14.638888888888687" y="-15.0" />
+              <point x="3396.5486111111113" y="710.0" />
+              <point x="2397.5510309135316" y="710.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Conversion" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="4839.1875" y="70.0" />
+              <point x="2336.6499791874758" y="70.0" />
+              <point x="38.11363636363649" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::DynamicMatchers">
+              <point x="11.194444444444343" y="-15.0" />
+              <point x="3422.3819444444443" y="690.0" />
+              <point x="4190.6875" y="690.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::Query">
+              <point x="42.0" y="-15.0" />
+              <point x="883.25" y="540.0" />
+              <point x="1378.0" y="540.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::AttributeAssignment">
+              <point x="2.583333333333485" y="-15.0" />
+              <point x="3413.7708333333335" y="640.0" />
+              <point x="3583.6875" y="640.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Querying">
+              <point x="-30.138888888888687" y="-15.0" />
+              <point x="3381.0486111111113" y="800.0" />
+              <point x="45.5" y="800.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Serializers::Xml" target="ActiveModel::Serialization">
+              <point x="19.333333333333485" y="-15.0" />
+              <point x="2655.3426975801985" y="440.0" />
+              <point x="2664.9375" y="440.0" />
+              <point x="-27.75" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Associations">
+              <point x="-24.97222222222217" y="-15.0" />
+              <point x="3386.215277777778" y="770.0" />
+              <point x="1510.6760309135316" y="770.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Validations" target="ActiveModel::Validations">
+              <point x="-26.0" y="-15.0" />
+              <point x="2371.5510309135316" y="560.0" />
+              <point x="2366.3010309135316" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveSupport::Benchmarkable">
+              <point x="14.638888888888687" y="-15.0" />
+              <point x="3425.8263888888887" y="710.0" />
+              <point x="4349.1875" y="710.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Inheritance" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="3226.1875" y="180.0" />
+              <point x="2315.1499791874758" y="180.0" />
+              <point x="16.613636363636488" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveSupport::DescendantsTracker">
+              <point x="-18.083333333333485" y="-15.0" />
+              <point x="3393.1041666666665" y="730.0" />
+              <point x="1981.3010309135316" y="730.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::NestedAttributes">
+              <point x="4.305555555555657" y="-15.0" />
+              <point x="3415.4930555555557" y="650.0" />
+              <point x="3822.6875" y="650.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Timestamp" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="4982.1875" y="60.0" />
+              <point x="2338.604524642021" y="60.0" />
+              <point x="40.06818181818198" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Callbacks" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="2186.88337912088" y="560.0" />
+              <point x="2188.8010309135316" y="560.0" />
+              <point x="2188.8010309135316" y="270.0" />
+              <point x="2297.5590700965668" y="270.0" />
+              <point x="-0.9772727272725206" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::PrimaryKey">
+              <point x="-18.0" y="-15.0" />
+              <point x="823.25" y="520.0" />
+              <point x="679.0" y="520.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Translation" target="ActiveModel::Translation">
+              <point x="0.0" y="-15.0" />
+              <point x="26.25" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Sanitization">
+              <point x="9.472222222222172" y="-15.0" />
+              <point x="3420.659722222222" y="680.0" />
+              <point x="4107.1875" y="680.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Validations" target="ActiveSupport::Concern">
+              <point x="20.800000000000182" y="-15.0" />
+              <point x="2387.1010309135318" y="430.0" />
+              <point x="2416.397727272727" y="430.0" />
+              <point x="2416.397727272727" y="260.0" />
+              <point x="2299.513615551112" y="260.0" />
+              <point x="0.9772727272725206" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="Letsrate">
+              <point x="-4.305555555555657" y="-15.0" />
+              <point x="3406.8819444444443" y="650.0" />
+              <point x="3112.1875" y="650.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveSupport::Callbacks" target="ActiveSupport::Concern">
+              <point x="23.75" y="-15.0" />
+              <point x="2154.5510309135316" y="260.0" />
+              <point x="2295.604524642021" y="260.0" />
+              <point x="-2.9318181818180165" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Callbacks" target="ActiveModel::Validations::Callbacks">
+              <point x="-31.666666666666515" y="-15.0" />
+              <point x="2155.216712454213" y="560.0" />
+              <point x="2089.9260309135316" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Reflection" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="3471.6875" y="160.0" />
+              <point x="2319.059070096566" y="160.0" />
+              <point x="20.522727272727025" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods::Query" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="1378.0" y="170.0" />
+              <point x="2278.013615551112" y="170.0" />
+              <point x="-20.52272727272748" y="15.0" />
+            </edge>
+            <edge source="Letsrate" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="3112.1875" y="190.0" />
+              <point x="2313.19543373293" y="190.0" />
+              <point x="14.659090909090992" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::CounterCache">
+              <point x="30.138888888888687" y="-15.0" />
+              <point x="3441.3263888888887" y="800.0" />
+              <point x="5177.1875" y="800.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::BeforeTypeCast">
+              <point x="6.0" y="-15.0" />
+              <point x="847.25" y="510.0" />
+              <point x="900.0" y="510.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Aggregations">
+              <point x="-6.027777777777828" y="-15.0" />
+              <point x="3405.159722222222" y="660.0" />
+              <point x="2991.1875" y="660.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::AttributeMethods" target="ActiveRecord::AttributeMethods::Serialization">
+              <point x="18.0" y="-15.0" />
+              <point x="859.25" y="520.0" />
+              <point x="1041.0" y="520.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveSupport::Callbacks" target="ActiveSupport::DescendantsTracker">
+              <point x="-23.75" y="-15.0" />
+              <point x="2107.0510309135316" y="360.0" />
+              <point x="2035.3010309135316" y="360.0" />
+              <point x="54.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Scoping">
+              <point x="-23.25" y="-15.0" />
+              <point x="3387.9375" y="760.0" />
+              <point x="1638.919630369626" y="760.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Scoping::Default" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="1704.3010309135316" y="220.0" />
+              <point x="2287.786342823839" y="220.0" />
+              <point x="-10.75" y="15.0" />
+            </edge>
+            <edge source="ActiveRecord::Base" target="ActiveRecord::Transactions">
+              <point x="-21.52777777777783" y="-15.0" />
+              <point x="3389.659722222222" y="750.0" />
+              <point x="1821.8010309135316" y="750.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::AttributeMethods" target="ActiveSupport::Concern">
+              <point x="0.0" y="-15.0" />
+              <point x="347.5" y="90.0" />
+              <point x="2262.377251914748" y="90.0" />
+              <point x="-36.15909090909099" y="15.0" />
+            </edge>
+            <edge source="ActiveModel::Observing" target="ActiveSupport::Concern">
+              <point x="-24.5" y="-15.0" />
+              <point x="1889.8010309135316" y="240.0" />
+              <point x="2291.69543373293" y="240.0" />
+              <point x="-6.840909090909008" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6091652405400265" x="3136.874890747909" y="669.0967661380947" />
+          <SelectedNodes>
+            <node>Category</node>
+          </SelectedNodes>
+          <Categories />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="3" selection-start="630" selection-end="630" vertical-scroll-proportion="0.2173913">
-          <folding />
+    <entry file="uml://GemDependency/#omrats">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>GemDependency</ID>
+          <OriginalElement>#omrats</OriginalElement>
+          <nodes>
+            <node x="" y="">mechanize</node>
+            <node x="" y="">rails</node>
+            <node x="" y="">treetop</node>
+            <node x="" y="">rake</node>
+            <node x="" y="">httpclient</node>
+            <node x="" y="">polyglot</node>
+            <node x="" y="">webrobots</node>
+            <node x="" y="">fb_graph</node>
+            <node x="" y="">coffee-script</node>
+            <node x="" y="">rack</node>
+            <node x="" y="">nokogiri</node>
+            <node x="" y="">sass-rails</node>
+            <node x="" y="">actionmailer</node>
+            <node x="" y="">activerecord</node>
+            <node x="" y="">twitter</node>
+            <node x="" y="">oauth2</node>
+            <node x="" y="">omniauth-oauth2</node>
+            <node x="" y="">multipart-post</node>
+            <node x="" y="">ntlm-http</node>
+            <node x="" y="">rack-cache</node>
+            <node x="" y="">domain_name</node>
+            <node x="" y="">multi_json</node>
+            <node x="" y="">omniauth-facebook</node>
+            <node x="" y="">letsrate</node>
+            <node x="" y="">#omrats</node>
+            <node x="" y="">mime-types</node>
+            <node x="" y="">oauth</node>
+            <node x="" y="">activeresource</node>
+            <node x="" y="">railties</node>
+            <node x="" y="">rails-erd</node>
+            <node x="" y="">builder</node>
+            <node x="" y="">jwt</node>
+            <node x="" y="">coffee-script-source</node>
+            <node x="" y="">orm_adapter</node>
+            <node x="" y="">mysql2</node>
+            <node x="" y="">pg</node>
+            <node x="" y="">bundler</node>
+            <node x="" y="">omniauth-oauth</node>
+            <node x="" y="">rdoc</node>
+            <node x="" y="">unf</node>
+            <node x="" y="">omniauth</node>
+            <node x="" y="">unf_ext</node>
+            <node x="" y="">simple_oauth</node>
+            <node x="" y="">net-http-persistent</node>
+            <node x="" y="">tzinfo</node>
+            <node x="" y="">rack-ssl</node>
+            <node x="" y="">warden</node>
+            <node x="" y="">choice</node>
+            <node x="" y="">dynamic_sitemaps</node>
+            <node x="" y="">mongrel</node>
+            <node x="" y="">actionpack</node>
+            <node x="" y="">net-http-digest_auth</node>
+            <node x="" y="">state_machine</node>
+            <node x="" y="">faraday</node>
+            <node x="" y="">rakismet</node>
+            <node x="" y="">httpauth</node>
+            <node x="" y="">sass</node>
+            <node x="" y="">json</node>
+            <node x="" y="">recaptcha</node>
+            <node x="" y="">erubis</node>
+            <node x="" y="">rack-test</node>
+            <node x="" y="">omniauth-twitter</node>
+            <node x="" y="">daemons</node>
+            <node x="" y="">attr_required</node>
+            <node x="" y="">ruby-graphviz</node>
+            <node x="" y="">mail</node>
+            <node x="" y="">sitemap_notifier</node>
+            <node x="" y="">tilt</node>
+            <node x="" y="">execjs</node>
+            <node x="" y="">kaminari</node>
+            <node x="" y="">rack-oauth2</node>
+            <node x="" y="">jquery-rails</node>
+            <node x="" y="">thor</node>
+            <node x="" y="">activemodel</node>
+            <node x="" y="">activesupport</node>
+            <node x="" y="">gem_plugin</node>
+            <node x="" y="">sprockets</node>
+            <node x="" y="">coffee-rails</node>
+            <node x="" y="">uglifier</node>
+            <node x="" y="">bcrypt-ruby</node>
+            <node x="" y="">devise</node>
+            <node x="" y="">cancan</node>
+            <node x="" y="">i18n</node>
+            <node x="" y="">hashie</node>
+            <node x="" y="">hike</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.1" x="6346.451699463328" y="716.6406812456648" />
+          <SelectedNodes />
+          <Categories />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/comment.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="714" selection-end="757" vertical-scroll-proportion="0.44665012">
-          <folding />
+    <entry file="uml://RailsDependency/#omrats">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>RailsDependency</ID>
+          <OriginalElement>#omrats</OriginalElement>
+          <nodes>
+            <node x="" y="">User</node>
+            <node x="" y="">Widget</node>
+            <node x="" y="">Store</node>
+            <node x="" y="">RestrictedWord</node>
+            <node x="" y="">Comment</node>
+            <node x="" y="">IpAddress</node>
+            <node x="" y="">CommentFlag</node>
+            <node x="" y="">Share</node>
+            <node x="" y="">Restriction</node>
+            <node x="" y="">UserRegistration</node>
+            <node x="" y="">Secret</node>
+            <node x="" y="">Category</node>
+            <node x="" y="">Post</node>
+            <node x="" y="">Rating</node>
+            <node x="" y="">Ability</node>
+            <node x="" y="">UserStore</node>
+            <node x="" y="">Sale</node>
+            <node x="" y="">WidgetDomain</node>
+            <node x="" y="">UserAuthentication</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.4542456718878813" x="1116.5" y="570.0825771324863" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Association fields</Category>
+            <Category>Migration fields</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.28846154">
-          <folding />
+    <entry file="uml://Ruby/UserStore">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Ruby</ID>
+          <OriginalElement>UserStore</OriginalElement>
+          <nodes>
+            <node x="" y="">User</node>
+            <node x="" y="">ActiveRecord::AttributeMethods</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::DeprecatedUnderscoreRead</node>
+            <node x="" y="">CommentFlag</node>
+            <node x="" y="">ActiveModel::SecurePassword</node>
+            <node x="" y="">ActiveModel::Serializers::Xml</node>
+            <node x="" y="">Ability</node>
+            <node x="" y="">ActiveRecord::Scoping::Default</node>
+            <node x="" y="">ActiveRecord::Associations</node>
+            <node x="" y="">ActiveRecord::Querying</node>
+            <node x="" y="">ActiveSupport::Autoload</node>
+            <node x="" y="">ActiveSupport::Callbacks</node>
+            <node x="" y="">ActiveModel::Conversion</node>
+            <node x="" y="">StoreMailer</node>
+            <node x="" y="">Comment</node>
+            <node x="" y="">ActiveRecord::Explain</node>
+            <node x="" y="">ActiveRecord::Persistence</node>
+            <node x="" y="">ActiveRecord::Integration</node>
+            <node x="" y="">Secret</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::Query</node>
+            <node x="" y="">ActiveRecord::Translation</node>
+            <node x="" y="">ActiveRecord::QueryCache::ClassMethods</node>
+            <node x="" y="">BlogMailer</node>
+            <node x="" y="">ActiveRecord::Serialization</node>
+            <node x="" y="">ActiveModel::Callbacks</node>
+            <node x="" y="">ActiveModel::Naming</node>
+            <node x="" y="">ActiveModel::Serializers::JSON</node>
+            <node x="" y="">ActiveModel::AttributeMethods</node>
+            <node x="" y="">ActiveModel::Dirty</node>
+            <node x="" y="">ActiveRecord::Aggregations</node>
+            <node x="" y="">ActiveRecord::DynamicMatchers</node>
+            <node x="" y="">Widget</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::Dirty</node>
+            <node x="" y="">ActiveRecord::Validations</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::Serialization</node>
+            <node x="" y="">ActiveRecord::Locking::Optimistic</node>
+            <node x="" y="">ActiveRecord::Scoping</node>
+            <node x="" y="">ActiveRecord::Sanitization</node>
+            <node x="" y="">ActiveModel::MassAssignmentSecurity</node>
+            <node x="" y="">Store</node>
+            <node x="" y="">RestrictedWord</node>
+            <node x="" y="">ActiveRecord::Locking::Pessimistic</node>
+            <node x="" y="">ActiveRecord::Scoping::Named</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::BeforeTypeCast</node>
+            <node x="" y="">ActiveModel::Serialization</node>
+            <node x="" y="">Letsrate</node>
+            <node x="" y="">ActiveRecord::ReadonlyAttributes</node>
+            <node x="" y="">ActiveRecord::Reflection</node>
+            <node x="" y="">ActiveSupport::Benchmarkable</node>
+            <node x="" y="">Share</node>
+            <node x="" y="">Restriction</node>
+            <node x="" y="">ActiveModel::Validations::HelperMethods</node>
+            <node x="" y="">UserRegistration</node>
+            <node x="" y="">ActiveRecord::Store</node>
+            <node x="" y="">ActiveRecord::NestedAttributes</node>
+            <node x="" y="">ActiveModel::Observing</node>
+            <node x="" y="">Post</node>
+            <node x="" y="">ActiveRecord::Inheritance</node>
+            <node x="" y="">ActiveSupport::Concern</node>
+            <node x="" y="">UserStore</node>
+            <node x="" y="">WidgetDomain</node>
+            <node x="" y="">ActiveRecord::ModelSchema</node>
+            <node x="" y="">ActiveRecord::IdentityMap</node>
+            <node x="" y="">ActiveModel::Validations::Callbacks</node>
+            <node x="" y="">ActiveRecord::Timestamp</node>
+            <node x="" y="">ActiveRecord::Transactions</node>
+            <node x="" y="">ActiveRecord::AutosaveAssociation::AssociationBuilderExtension</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::Read</node>
+            <node x="" y="">IpAddress</node>
+            <node x="" y="">ActiveRecord::AttributeAssignment</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::TimeZoneConversion</node>
+            <node x="" y="">ActiveSupport::DescendantsTracker</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::PrimaryKey</node>
+            <node x="" y="">ActiveModel::Translation</node>
+            <node x="" y="">ActiveRecord::AttributeMethods::Write</node>
+            <node x="" y="">ActiveRecord::Base</node>
+            <node x="" y="">Category</node>
+            <node x="" y="">UserMailer</node>
+            <node x="" y="">ActiveRecord::CounterCache</node>
+            <node x="" y="">ActiveRecord::AutosaveAssociation</node>
+            <node x="" y="">ActiveModel::Validations</node>
+            <node x="" y="">ActiveRecord::Callbacks</node>
+            <node x="" y="">UserAuthentication</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8" x="4605.5" y="4004.375" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Fields</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/user_registrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="61" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.4940048">
-          <folding />
+    <entry file="uml://Ruby/UserMailer">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Ruby</ID>
+          <OriginalElement>UserMailer</OriginalElement>
+          <nodes>
+            <node x="" y="">ActionMailer::Base</node>
+            <node x="" y="">StoreMailer</node>
+            <node x="" y="">BlogMailer</node>
+            <node x="" y="">UserMailer</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="456.0" y="217.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/store.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/sale.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="18" selection-start="5263" selection-end="5263" vertical-scroll-proportion="-12.416667">
-          <folding />
+    <entry file="uml://Ruby/ApplicationController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Ruby</ID>
+          <OriginalElement>ApplicationController</OriginalElement>
+          <nodes>
+            <node x="2261.0" y="907.0">Admin::SettingsController</node>
+            <node x="1730.03125" y="0.0">ApplicationController</node>
+            <node x="3578.0" y="830.0">Admin::WidgetsController</node>
+            <node x="478.0" y="1302.0">UserPasswordsController</node>
+            <node x="3333.0" y="918.0">Admin::AccountController</node>
+            <node x="1814.03125" y="410.5">HomeController</node>
+            <node x="714.0" y="1302.0">Admin</node>
+            <node x="212.03587092731823" y="388.0">BlogsController</node>
+            <node x="1666.0" y="852.0">Admin::UsersController</node>
+            <node x="395.03587092731823" y="300.0">WelcomeController</node>
+            <node x="3057.0" y="863.0">Admin::SecretsController</node>
+            <node x="1958.0" y="863.0">Admin::CategoriesController</node>
+            <node x="0.0" y="1302.0">UserRegistrationsController</node>
+            <node x="0.0" y="841.0">CommentsController</node>
+            <node x="818.0" y="852.0">WidgetsController</node>
+            <node x="2413.5" y="311.0">Admin::BaseController</node>
+            <node x="2736.5" y="289.0">SetupController</node>
+            <node x="253.0" y="1302.0">UserSessionsController</node>
+            <node x="1135.0" y="753.0">Admin::CommentsController</node>
+            <node x="3106.5" y="344.0">AuthenticationsController</node>
+            <node x="1421.03125" y="289.0">SocialController</node>
+            <node x="389.0" y="819.0">PostsController</node>
+            <node x="2491.0" y="698.0">Admin::OverviewController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="WelcomeController" target="ApplicationController">
+              <point x="0.0" y="-158.5" />
+              <point x="577.0358709273182" y="259.0" />
+              <point x="1794.7455357142858" y="259.0" />
+              <point x="-86.28571428571433" y="114.5" />
+            </edge>
+            <edge source="Admin::AccountController" target="Admin::BaseController">
+              <point x="0.0" y="-59.5" />
+              <point x="3445.5" y="658.0" />
+              <point x="2659.6875" y="658.0" />
+              <point x="94.6875" y="147.5" />
+            </edge>
+            <edge source="Admin::SettingsController" target="Admin::BaseController">
+              <point x="0.0" y="-70.5" />
+              <point x="2366.0" y="678.0" />
+              <point x="2546.0625" y="678.0" />
+              <point x="-18.9375" y="147.5" />
+            </edge>
+            <edge source="BlogsController" target="ApplicationController">
+              <point x="0.0" y="-70.5" />
+              <point x="293.53587092731823" y="249.0" />
+              <point x="1751.6026785714284" y="249.0" />
+              <point x="-129.42857142857144" y="114.5" />
+            </edge>
+            <edge source="Admin::SecretsController" target="Admin::BaseController">
+              <point x="0.0" y="-114.5" />
+              <point x="3185.0" y="668.0" />
+              <point x="2621.8125" y="668.0" />
+              <point x="56.8125" y="147.5" />
+            </edge>
+            <edge source="Admin::CommentsController" target="Admin::BaseController">
+              <point x="0.0" y="-224.5" />
+              <point x="1390.5" y="648.0" />
+              <point x="2432.4375" y="648.0" />
+              <point x="-132.5625" y="147.5" />
+            </edge>
+            <edge source="Admin::CategoriesController" target="Admin::BaseController">
+              <point x="0.0" y="-114.5" />
+              <point x="2099.5" y="668.0" />
+              <point x="2508.1875" y="668.0" />
+              <point x="-56.8125" y="147.5" />
+            </edge>
+            <edge source="Admin::UsersController" target="Admin::BaseController">
+              <point x="0.0" y="-125.5" />
+              <point x="1802.0" y="658.0" />
+              <point x="2470.3125" y="658.0" />
+              <point x="-94.6875" y="147.5" />
+            </edge>
+            <edge source="AuthenticationsController" target="ApplicationController">
+              <point x="0.0" y="-114.5" />
+              <point x="3261.0" y="249.0" />
+              <point x="2010.4598214285713" y="249.0" />
+              <point x="129.42857142857133" y="114.5" />
+            </edge>
+            <edge source="Admin::WidgetsController" target="Admin::BaseController">
+              <point x="0.0" y="-147.5" />
+              <point x="3741.5" y="648.0" />
+              <point x="2697.5625" y="648.0" />
+              <point x="132.5625" y="147.5" />
+            </edge>
+            <edge source="WidgetsController" target="WelcomeController">
+              <point x="0.0" y="-125.5" />
+              <point x="966.5" y="678.0" />
+              <point x="698.3692042606515" y="678.0" />
+              <point x="121.33333333333331" y="158.5" />
+            </edge>
+            <edge source="SetupController" target="ApplicationController">
+              <point x="0.0" y="-169.5" />
+              <point x="2911.5" y="259.0" />
+              <point x="1967.3169642857142" y="259.0" />
+              <point x="86.28571428571422" y="114.5" />
+            </edge>
+            <edge source="SocialController" target="ApplicationController">
+              <point x="0.0" y="-169.5" />
+              <point x="1607.53125" y="269.0" />
+              <point x="1837.888392857143" y="269.0" />
+              <point x="-43.14285714285711" y="114.5" />
+            </edge>
+            <edge source="HomeController" target="ApplicationController">
+              <point x="0.0" y="-48.0" />
+              <point x="0.0" y="114.5" />
+            </edge>
+            <edge source="Admin::BaseController" target="ApplicationController">
+              <point x="0.0" y="-147.5" />
+              <point x="2565.0" y="269.0" />
+              <point x="1924.174107142857" y="269.0" />
+              <point x="43.14285714285711" y="114.5" />
+            </edge>
+            <edge source="CommentsController" target="WelcomeController">
+              <point x="0.0" y="-136.5" />
+              <point x="184.5" y="678.0" />
+              <point x="455.70253759398497" y="678.0" />
+              <point x="-121.33333333333331" y="158.5" />
+            </edge>
+            <edge source="Admin::OverviewController" target="Admin::BaseController">
+              <point x="0.0" y="-279.5" />
+              <point x="2764.0" y="678.0" />
+              <point x="2583.9375" y="678.0" />
+              <point x="18.9375" y="147.5" />
+            </edge>
+            <edge source="PostsController" target="WelcomeController">
+              <point x="0.0" y="-158.5" />
+              <point x="593.5" y="678.0" />
+              <point x="577.0358709273182" y="678.0" />
+              <point x="0.0" y="158.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.48025477707006364" x="1309.73474801061" y="712.7347480106101" />
+          <SelectedNodes>
+            <node>ApplicationController</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Fields</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/setup/step1.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/base_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="36" selection-start="3700" selection-end="3700" vertical-scroll-proportion="-14.916667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="57" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="21" selection-start="1186" selection-end="1244" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/widget.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="21" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
+        <state line="23" column="24" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/widget.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="418" column="26" selection-start="9452" selection-end="9452" vertical-scroll-proportion="-9.615385">
+        <state line="2" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@global/gems/letsrate-1.0.8/lib/letsrate/helpers.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/widgets/demo.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.035971224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/base_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_item.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="715" selection-end="715" vertical-scroll-proportion="0.4180791">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#li#0;n#!!top" expanded="true" />
+            <marker date="1368893552000" expanded="true" signature="22:601" placeholder="do ... end" />
+            <marker date="1368893552000" expanded="true" signature="634:3416" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="660:3409" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="685:3400" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="715:3389" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="744:3376" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="795:3361" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="832:3019" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="866:951" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="1077:1459" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="1184:1299" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="1342:1438" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="1507:1593" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="1650:3000" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="1671:2979" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="1998:2956" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="2092:2213" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="2271:2932" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="2312:2906" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="2365:2878" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="2412:2605" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="2653:2848" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="3054:3344" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="3120:3197" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="3426:4384" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="3476:3714" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="3530:3615" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="3759:3983" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="4041:4121" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="4168:4248" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="4312:4372" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="4394:5523" placeholder="..." />
+            <marker date="1368893552000" expanded="true" signature="4414:5330" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="4485:4547" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="4550:4709" placeholder="//..." />
+            <marker date="1368893552000" expanded="true" signature="4770:4853" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="4905:4996" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="5050:5098" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="5153:5216" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="5268:5322" placeholder="{...}" />
+            <marker date="1368893552000" expanded="true" signature="5358:5514" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/widget.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="5" selection-start="2315" selection-end="2315" vertical-scroll-proportion="-13.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/ping.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="49" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="4" selection-start="6428" selection-end="6428" vertical-scroll-proportion="0.5124283">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/widget.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="-13.846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="40" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.36363637">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -97,7 +97,7 @@ class Post < ActiveRecord::Base
   end
 
   def webpage
-    "http://#{self.widget.webpage}#{self.url}"
+    "http://#{self.widget.domains.first}#{self.url}"
   end
 
   def set_page_title

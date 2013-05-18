@@ -1,0 +1,234 @@
+digraph Omrats {
+rankdir = "LR";
+ranksep = "0.5";
+nodesep = "0.4";
+pad = "0.4,0.4";
+margin = "0,0";
+concentrate = "true";
+labelloc = "t";
+fontsize = "13";
+fontname = "Arial Bold";
+node[ shape  =  "Mrecord" , fontsize  =  "10" , fontname  =  "Arial" , margin  =  "0.07,0.05" , penwidth  =  "1.0"];
+edge[ fontname  =  "Arial" , fontsize  =  "7" , dir  =  "both" , arrowsize  =  "0.9" , penwidth  =  "1.0" , labelangle  =  "32" , labeldistance  =  "1.8"];
+rankdir = "TB";
+label = "My model diagram\n\n";
+m_Category [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Category</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="category_type">category_type <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="max_value">max_value <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_Comment [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Comment</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="ip_address">ip_address <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="kind">kind <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="message">message <font face="Arial Italic" color="grey60">text ∗</font></td></tr>
+  <tr><td align="left" width="130" port="referer">referer <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="state">state <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="user_agent">user_agent <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_CommentFlag [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">CommentFlag</font></td></tr>
+</table>
+}>];
+m_IpAddress [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">IpAddress</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="value">value <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_Post [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Post</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="commenting_category_id">commenting_category_id <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="rating_category_id">rating_category_id <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="title">title <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="url">url <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_Rating [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Rating</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="ip_address">ip_address <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="max_value">max_value <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="ratable_type">ratable_type <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="value">value <font face="Arial Italic" color="grey60">integer</font></td></tr>
+</table>
+}>];
+m_RestrictedWord [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">RestrictedWord</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="value">value <font face="Arial Italic" color="grey60">text</font></td></tr>
+</table>
+}>];
+m_Restriction [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Restriction</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="restrictable_type">restrictable_type <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_Sale [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Sale</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="email">email <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="message">message <font face="Arial Italic" color="grey60">text ∗</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+}>];
+m_Secret [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Secret</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="active">active <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="api_key">api_key <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="api_secret">api_secret <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="environment">environment <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="permission">permission <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="provider">provider <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_Share [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Share</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="provider">provider <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="source_type">source_type <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_Store [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Store</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="email">email <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="kind">kind <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="phone">phone <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="recover_email">recover_email <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="website">website <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_User [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">User</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="firstname">firstname <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="gender">gender <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="lastname">lastname <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="nickname">nickname <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="role">role <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_UserAuthentication [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">UserAuthentication</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="oauth_token">oauth_token <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="oauth_token_secret">oauth_token_secret <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="provider">provider <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="uid">uid <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_UserRegistration [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">UserRegistration</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="current_sign_in_at">current_sign_in_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="current_sign_in_ip">current_sign_in_ip <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="email">email <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="encrypted_password">encrypted_password <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="last_sign_in_at">last_sign_in_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="last_sign_in_ip">last_sign_in_ip <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="remember_created_at">remember_created_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="reset_password_sent_at">reset_password_sent_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="reset_password_token">reset_password_token <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="sign_in_count">sign_in_count <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="username">username <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+}>];
+m_UserStore [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">UserStore</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="role">role <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="status">status <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_Widget [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Widget</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="approval_required">approval_required <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="key">key <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="login_required">login_required <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="rating_category_id">rating_category_id <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="webpage">webpage <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+}>];
+m_WidgetDomain [label = <{<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">WidgetDomain</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="domain">domain <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+}>];
+  m_User -> m_UserRegistration [arrowhead = "none", arrowtail = "none", weight = "2"];
+  m_UserRegistration -> m_UserAuthentication [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Category -> m_Widget [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Category -> m_Post [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Category -> m_Rating [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Post -> m_Comment [arrowhead = "normal", arrowtail = "none", weight = "3"];
+  m_User -> m_Comment [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Store -> m_Comment [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Comment -> m_Comment [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Comment -> m_Rating [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Post -> m_Rating [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Comment -> m_Share [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Post -> m_Share [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Comment -> m_CommentFlag [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_User -> m_Share [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_User -> m_UserAuthentication [style = "dotted", arrowhead = "normal", arrowtail = "none", weight = "1", constraint = "false"];
+  m_User -> m_UserStore [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_User -> m_Store [style = "dotted", arrowhead = "normal", arrowtail = "none", weight = "4", constraint = "false"];
+  m_User -> m_Restriction [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_User -> m_IpAddress [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_User -> m_Rating [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_User -> m_CommentFlag [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Store -> m_Widget [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Category -> m_Widget [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Widget -> m_Post [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Widget -> m_WidgetDomain [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Category -> m_Post [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Category -> m_Post [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_Store -> m_RestrictedWord [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Store -> m_Restriction [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Store -> m_UserStore [arrowhead = "normal", arrowtail = "none", weight = "2"];
+}
