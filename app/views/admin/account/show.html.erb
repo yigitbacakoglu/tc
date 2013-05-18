@@ -66,29 +66,3 @@
 </div>
 
 
-<div id="widget_form" style="display:none">
-  <%= form_for @user_registration, :url => admin_account_path, :remote => true, :method => :put, :html => {:class => "mainForm"} do |f| %>
-      <fieldset>
-        <legend><%= t(:new_password) %> </legend>
-        <div class="rowElem">
-          <%= f.label :password, t(:password) %>
-          <div class="formRight">
-            <%= f.password_field :password %>
-          </div>
-        </div>
-        <div class="rowElem">
-          <%= f.label :password_confirmation, t(:confirm_password) %>
-          <div class="formRight">
-            <%= f.password_field :password_confirmation, :class => 'title' %>
-          </div>
-        </div>
-        <div class="fix"></div>
-        <div class="submitForm">
-          <%= f.submit t(:update), :disable_with => t('payment_states.processing'), :class => "button button-blue button-big" %> <%= t(:or) %>
-          <%= link_to t(:cancel), admin_account_path %>
-          <%= hidden_field_tag 'new_password', 'new_password' %>
-        </div>
-
-      </fieldset>
-  <% end %>
-</div>

@@ -36,39 +36,3 @@
         color: rgb(0, 173, 255);
     }
 </style>
-<!--Used in account page.-->
-<script>
-    $(document).ready(function () {
-        has_password = <%= @user_registration.has_password? %>;
-        $('.removeAuth').click(function (e) {
-            e.preventDefault();
-            if (confirm('<%=  t(:remove_authentication_option_confirmation) %>')) {
-                if (!has_password) {
-                    e.preventDefault();
-                    $('.default_fancybox').trigger('click');
-                    $("<div class='flash hideit warning'><div class='center_warning'><p><%= t(:need_to_define_password) %><span><%= t(:close) %></span></p></div></div>").insertBefore('#widget_form');
-                }
-                else if (has_password) {
-                    $.ajax({
-                        type:'POST',
-                        url:$(this).attr("href"),
-                        data:{
-                            _method:'delete',
-                            authenticity_token:AUTH_TOKEN
-                        },
-                        dataType:'script',
-                        success:function (response) {
-                            el.parents("tr").fadeOut('hide');
-                        },
-                        error:function (response, textStatus, errorThrown) {
-                            show_flash_error(response.responseText);
-                        }
-                    });
-                }
-            }
-        });
-    });
-
-
-</script>
-<%# end -----------------------------------Spree social ---------------------------------- %>

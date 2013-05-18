@@ -1,13 +1,5 @@
 <%= content_for :head do %>
-    <%= javascript_include_tag "admin/application" %>
-    <%= javascript_include_tag "jquery.raty" %>
-    <%= javascript_include_tag "widget" %>
-    <%= stylesheet_link_tag "admin/font-awesome" %>
-    <%= stylesheet_link_tag "admin/application" %>
-    <%= stylesheet_link_tag "widget" %>
-    <%#= stylesheet_link_tag "ww" %>
-    <%= javascript_tag "new_comment_form = '#{escape_javascript(comment_form(@comment, comment_posts_url))}'" %>
-    <!--<%#= javascript_tag "edit_comment_form = '#{escape_javascript(comment_form(@comment, update_comment_posts_url))}'" %>-->
+    <%= javascript_tag "new_comment_form = '#{escape_javascript(comment_form(@comment, comment_posts_url + widget_params("?")))}'" %>
 <% end %>
 <div class="container-fluid-">
   <div class="row-fluid">

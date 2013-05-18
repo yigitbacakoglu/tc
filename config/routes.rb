@@ -24,6 +24,8 @@ Omrats::Application.routes.draw do
 
   get '/share/twitter', :to => "social#twitter", :as => :share_twitter
   get '/share/facebook', :to => "social#facebook", :as => :share_facebook
+  get '/profile', :to => "account#show", :as => :account
+  put '/profile', :to => "account#update", :as => :update_account
 
   resources :posts do
     collection do

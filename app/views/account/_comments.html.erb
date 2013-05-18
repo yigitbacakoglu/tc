@@ -1,0 +1,32 @@
+<% @comments.each do |comment| %>
+    <li class="comment-box">
+      <div class="avatar user2 pull-left" style='background-image: url(<%= avatar_url(comment.user) %>);'></div>
+
+      <div class="article">
+        <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago, " %>
+          <%= link_to "Go to page",comment.post.webpage, :target => "_blank" %>
+          <span class="pull-right badge <%= comment.state_color %>"><%= comment.state %></span>
+          <% if comment.flags.count > 0 %>
+              <span class="pull-right badge <%= "red" %>"><%= "#{comment.flags.count} flags" %></span>
+          <% end %>
+
+          <% if comment.parent.present? %>
+              , <i class="icon-retweet"></i>Reply
+              to <%= comment.parent.user.username rescue '[Deleted Comment]' %>
+          <% end %>
+          <div class="past-rating">
+            <%= rating_for(comment, :url => rate_posts_path(:comment_id => comment.id,
+                                                            :widget_id => comment.post.widget.id,
+                                                            :current_page => comment.post.url)) %>
+          </div>
+        </div>
+        <div class="post-content-preview">
+          <%= comment.message %>
+        </div>
+      </div>
+    </li>
+
+<% end %>
+<li class="comment-box">
+  <%= paginate @comments, :theme => "bootstrap_theme", :remote => true %>
+</li>
