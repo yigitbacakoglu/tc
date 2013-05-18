@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
 
   has_many :widgets, :class_name => "Widget"
   has_many :posts, :class_name => "Post"
-  has_many :ratings, :class_name => "Rating"
+  #has_many :ratings, :class_name => "Rating"
   scope :rating, lambda { where(:category_type => 'rating') }
 
   def symbol
