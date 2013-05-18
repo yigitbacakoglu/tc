@@ -445,7 +445,7 @@ section#main {
     font-weight: 600;
     font-size: 10px;
     margin-left: 10px;
-    height: 30px;
+    /*height: 30px;*/
 }
 
 .post-error {
