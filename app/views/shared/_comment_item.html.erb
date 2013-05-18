@@ -19,7 +19,7 @@
         <!--<section class='social-links'>-->
         <div class="pull-left social-links-trigger">
           <!--<i class="icon-cogs text-transparent"></i>-->
-          <div class="<%= "social_links_#{identifier}" %>" style="display: none;">
+          <div class="<%= "social_links_#{identifier}" %>" style="display: none; margin-right: 10px;">
             <%= link_to_with_icon "icon-twitter", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id), "data-original-title" => "Tweet this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
             <%= link_to_with_icon "icon-facebook", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id), "data-original-title" => "Share this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
             <% if can? :edit, comment %>
