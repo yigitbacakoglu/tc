@@ -57,9 +57,17 @@ class Admin::OverviewController < Admin::BaseController
   def update_post
     @post = Post.find(params[:id])
     @post.update_attributes(params[:post])
+    flash[:success] = "Successfully updated"
     redirect_to admin_path
-
   end
+
+  def delete_post
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:success] = "Successfully deleted"
+    redirect_to admin_path
+  end
+
   def set_reports
     if @current_widget.blank?
       @posts = @current_store.widgets.collect { |w| w.posts }.first

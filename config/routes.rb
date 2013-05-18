@@ -50,6 +50,7 @@ Omrats::Application.routes.draw do
     get "/change_post/:post_id", :to => "overview#set_post", :as => :change_post
     get "/post/edit", :to => "overview#edit_post", :as => :edit_post
     put "/post/update", :to => "overview#update_post", :as => :update_post
+    delete "/post/delete", :to => "overview#delete_post", :as => :delete_post
     resources :overview
     resources :secrets
     resources :categories
