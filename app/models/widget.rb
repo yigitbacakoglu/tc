@@ -33,6 +33,7 @@ class Widget < ActiveRecord::Base
 
   def generate_key
     self.key = SecureRandom.hex(15)
+    self.rating_category = Category.rating.first
   end
 
   def update_rating_tool
