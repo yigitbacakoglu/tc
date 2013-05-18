@@ -521,8 +521,8 @@ admin/font-awesome.css: admin/font-awesome-709a767b681f23c8da75d214804a910f.css
 admin/font-awesome/index.css: admin/font-awesome-709a767b681f23c8da75d214804a910f.css
 admin/ie_fix.css: admin/ie_fix-3055207763d559d86977f0aa21819d6d.css
 admin/ie_fix/index.css: admin/ie_fix-3055207763d559d86977f0aa21819d6d.css
-application.css: application-59cb81f7fb35ae0254704a33eb6781ce.css
-application/index.css: application-59cb81f7fb35ae0254704a33eb6781ce.css
+application.css: application-78fe26ed00383fb8759fb69f764ba8e9.css
+application/index.css: application-78fe26ed00383fb8759fb69f764ba8e9.css
 blogs/industry.css: blogs/industry-a65f2300b4d6357fc1047291bf19c982.css
 blogs/industry/index.css: blogs/industry-a65f2300b4d6357fc1047291bf19c982.css
 blogs/reset.css: blogs/reset-7cf272fbe2b3dfe87cfb8161a58e8113.css
@@ -539,8 +539,8 @@ theme-phone.css: theme-phone-ff7226a15e286f0c93c08f1ce80768cd.css
 theme-phone/index.css: theme-phone-ff7226a15e286f0c93c08f1ce80768cd.css
 theme-tablet.css: theme-tablet-eb963bd1ad931293a1c874109b31ab15.css
 theme-tablet/index.css: theme-tablet-eb963bd1ad931293a1c874109b31ab15.css
-widget.css: widget-849ee450f267f1065a9b5f1a2db867f2.css
-widget/index.css: widget-849ee450f267f1065a9b5f1a2db867f2.css
+widget.css: widget-be19c641854149ba67188690686c6760.css
+widget/index.css: widget-be19c641854149ba67188690686c6760.css
 jquery-ui.js: jquery-ui-a46ee80b2a395a15bd1c31602752f528.js
 jquery-ui/index.js: jquery-ui-a46ee80b2a395a15bd1c31602752f528.js
 jquery-ui.min.js: jquery-ui.min-58c82b49ecb1561ca471f6871b84fdff.js
