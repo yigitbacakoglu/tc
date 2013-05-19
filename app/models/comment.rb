@@ -63,6 +63,20 @@ class Comment < ActiveRecord::Base
     end
   end
 
+  def can_rate?(ip_address)
+    if User.current
+      all_ratings = self.ratings.where(:user_id => User.current.id)
+    else
+      all_ratings = self.ratings.where(:ip_address => ip_address)
+    end
+    if all_ratings.blank?
+      true
+    else
+      # Can change his rating within 5 mins.
+      (all_ratings.order("updated_at desc").first.created_at.to_time + 300) >= Time.now
+    end
+  end
+
   def flag(user_id)
     if self.flags.where(:user_id => user_id).blank?
       self.flags.create!(:user_id => user_id)
@@ -82,20 +96,6 @@ class Comment < ActiveRecord::Base
 
   def percentage_avg_rate
     avg_rate
-  end
-
-  def can_rate?(ip_address)
-    if User.current
-      all_ratings = self.ratings.where(:user_id => User.current.id)
-    else
-      all_ratings = self.ratings.where(:ip_address => ip_address)
-    end
-    if all_ratings.blank?
-      true
-    else
-      # Can change his rating within 5 mins.
-      (all_ratings.order("updated_at desc").first.created_at.to_time + 300) >= Time.now
-    end
   end
 
   # Returns CSS color class for span views
