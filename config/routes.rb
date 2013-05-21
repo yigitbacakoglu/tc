@@ -7,7 +7,7 @@ Omrats::Application.routes.draw do
   get "/maintenance", :to => "home#maintenance"
   get '/close', :to => "widgets#close", :as => :close
   get '/ping', :to => "home#ping", :as => :ping
-  get '/demo', :to => "widgets#demo", :as => :demo
+  match '/demo', :to => "widgets#demo", :as => :demo
   get '/demo-1', :to => "widgets#demo", :as => :demo2
   get '/demo-2', :to => "widgets#demo", :as => :demo3
   match '/admin', :to => 'admin/overview#index', :as => :admin
