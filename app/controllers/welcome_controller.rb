@@ -18,12 +18,12 @@ class WelcomeController < ApplicationController
 
     @current_widget = Widget.joins(:widget_domains).where("#{Widget.table_name}.key = ? AND #{WidgetDomain.table_name}.domain = ?", session[:current_widget_key], session[:current_widget_host]).first
     @current_widget ||= Widget.where(:id => params[:widget_id]).first
-    begin
+    #begin
       set_current_store(@current_widget.store)
-    rescue
-      @maintenance = true
-      redirect_to maintenance_path
-    end
+    #rescue
+    #  @maintenance = true
+    #  redirect_to maintenance_path
+    #end
   end
 
   def reset_widget_session
