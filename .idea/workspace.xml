@@ -178,10 +178,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="8" selection-start="470" selection-end="470" vertical-scroll-proportion="0.07978723">
+            <state line="24" column="8" selection-start="470" selection-end="470" vertical-scroll-proportion="-1.7307693">
               <folding />
             </state>
           </provider>
@@ -196,10 +196,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="welcome_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="1" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
+            <state line="26" column="13" selection-start="699" selection-end="699" vertical-scroll-proportion="0.5084746">
               <folding />
             </state>
           </provider>
@@ -238,8 +238,8 @@
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
       </list>
     </option>
   </component>
@@ -794,16 +794,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="1" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
+        <state line="24" column="8" selection-start="470" selection-end="470" vertical-scroll-proportion="-1.7307693">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="8" selection-start="470" selection-end="470" vertical-scroll-proportion="0.07978723">
+        <state line="26" column="13" selection-start="699" selection-end="699" vertical-scroll-proportion="0.5084746">
           <folding />
         </state>
       </provider>
