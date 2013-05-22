@@ -7,7 +7,10 @@ class Rating < ActiveRecord::Base
   before_save :check_max_value
 
   def self.default_scope
-    where(" ( #{Rating.table_name}.ratable_type = 'Comment' AND #{Rating.table_name}.ratable_id IN(?) ) OR ( #{Rating.table_name}.ratable_type = 'Post' AND #{Rating.table_name}.ratable_id IN(?) )", Store.current.comment_ids, Post.where(:widget_id => Store.current.widget_ids).map(&:id)) if !Store.current.nil?
+    unless User.current.try(:system_admin?)
+
+      where(" ( #{Rating.table_name}.ratable_type = 'Comment' AND #{Rating.table_name}.ratable_id IN(?) ) OR ( #{Rating.table_name}.ratable_type = 'Post' AND #{Rating.table_name}.ratable_id IN(?) )", Store.current.comment_ids, Post.where(:widget_id => Store.current.widget_ids).map(&:id)) if !Store.current.nil?
+    end
   end
 
   def percentage_value

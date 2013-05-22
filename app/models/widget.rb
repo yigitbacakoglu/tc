@@ -15,8 +15,8 @@ class Widget < ActiveRecord::Base
   after_save :update_rating_tool
 
   def self.default_scope
-    if !Store.current.nil?
-      where("#{Widget.table_name}.store_id = ?", Store.current.id)
+    unless User.current.try(:system_admin?)
+      where("#{Widget.table_name}.store_id = ?", Store.current.id) if !Store.current.nil?
     end
 
   end

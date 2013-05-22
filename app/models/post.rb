@@ -25,7 +25,10 @@ class Post < ActiveRecord::Base
 
 
   def self.default_scope
-    where("#{Post.table_name}.widget_id IN(?)", Store.current.widget_ids) if Store.current
+    unless User.current.try(:system_admin?)
+
+      where("#{Post.table_name}.widget_id IN(?)", Store.current.widget_ids) if Store.current
+  end
   end
 
   def approval_required?

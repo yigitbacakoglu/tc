@@ -45,7 +45,9 @@ class Comment < ActiveRecord::Base
 
 
   def self.default_scope
-    where("#{Comment.table_name}.store_id = ?", Store.current.id) if Store.current.present?
+    unless User.current.try(:system_admin?)
+      where("#{Comment.table_name}.store_id = ?", Store.current.id) if Store.current.present?
+    end
   end
 
   #after_transition :on => :register, :do => :sent_registered_mail
