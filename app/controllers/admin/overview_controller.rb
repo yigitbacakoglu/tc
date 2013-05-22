@@ -16,7 +16,7 @@ class Admin::OverviewController < Admin::BaseController
   def set_session_store
     if params[:store_id]
       validate = current_user.user_stores.where(:store_id => params[:store_id], :role => 'admin')
-      if !validate.blank?
+      if !validate.blank? || current_user.system_admin?
         session[:store_id] = params[:store_id]
         set_current_store
         flash[:success] = "Successfully changed. You are managing Site: '#{@current_store.name}'"

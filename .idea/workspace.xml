@@ -4,7 +4,7 @@
     <list default="true" id="c56ead06-000c-4a79-a275-3ee1314a73ad" name="Default" comment="" />
     <ignored path="omrats.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/a.dummy" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369239415581" ignored="false" />
+    <file path="/a.dummy" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369240862038" ignored="false" />
     <file path="/posts_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368895633491" ignored="false" />
     <file path="/fragment.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368894922772" ignored="false" />
     <file path="/user_sessions_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369238115372" ignored="false" />
@@ -39,7 +39,7 @@
     <file path="/seeds.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365263108708" ignored="false" />
     <file path="/20130406151247_change_user_table.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1365261231668" ignored="false" />
     <file path="/store.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368972258146" ignored="false" />
-    <file path="/overview_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368901398773" ignored="false" />
+    <file path="/overview_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369240851319" ignored="false" />
     <file path="/_top_nav.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367864394881" ignored="false" />
     <file path="/base_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369239717551" ignored="false" />
     <file path="/base_helper.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368897403828" ignored="false" />
@@ -199,7 +199,7 @@
       <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="2238" selection-end="2238" vertical-scroll-proportion="-9.384615">
+            <state line="39" column="6" selection-start="1283" selection-end="1283" vertical-scroll-proportion="-6.5">
               <folding />
             </state>
           </provider>
@@ -208,16 +208,43 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.0">
+            <state line="12" column="50" selection-start="257" selection-end="257" vertical-scroll-proportion="-6.923077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="overview_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="17" selection-start="410" selection-end="410" vertical-scroll-proportion="0.33271027">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/setup_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="18" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/base_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="116" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.43925235">
+            <state line="2" column="27" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="58" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -242,7 +269,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/widgets/demo.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/widget.css" />
         <option value="$PROJECT_DIR$/app/views/shared/_comment_item.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
@@ -258,6 +284,7 @@
         <option value="$PROJECT_DIR$/app/models/widget.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/base_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/overview_controller.rb" />
       </list>
     </option>
   </component>
@@ -836,27 +863,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/user_registrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="106" selection-start="1718" selection-end="1718" vertical-scroll-proportion="1.1177884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/user_passwords_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="77" selection-end="77" vertical-scroll-proportion="0.072115384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="143" selection-start="4479" selection-end="4485" vertical-scroll-proportion="-2.86">
@@ -927,23 +933,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/base_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="27" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="58" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2238" selection-end="2238" vertical-scroll-proportion="-9.384615">
+        <state line="39" column="6" selection-start="1283" selection-end="1283" vertical-scroll-proportion="-6.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.0">
+        <state line="12" column="50" selection-start="257" selection-end="257" vertical-scroll-proportion="-6.923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/base_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/setup_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="116" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.43925235">
+        <state line="63" column="18" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/overview_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="17" selection-start="410" selection-end="410" vertical-scroll-proportion="0.33271027">
           <folding />
         </state>
       </provider>
