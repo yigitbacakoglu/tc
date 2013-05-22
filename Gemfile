@@ -21,7 +21,7 @@ gem 'sitemap_notifier'
 gem 'dynamic_sitemaps'
 gem 'state_machine'
 
-gem 'thin'
+#gem 'thin'
 group :development do
   gem "letsrate", "~> 1.0.8"
   gem "rails-erd"
