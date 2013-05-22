@@ -47,7 +47,7 @@ class UserRegistrationsController < Devise::RegistrationsController
 
   def set_user_session
     if !params["k"].blank? && !params["p"].blank? && !params["u"].blank?
-      session["user_registration_return_to"] = "/close?" + "&p=#{params[:p]}&u=#{session[:current_widget_host]}&k=#{params[:k]}"
+      session["user_registration_return_to"] = "/close?" + "&p=#{params[:p]}&u=#{params[:u]}&k=#{params[:k]}"
     elsif params[:close] == "false"
       session.delete "user_registration_return_to"
     end

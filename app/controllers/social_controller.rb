@@ -128,7 +128,8 @@ class SocialController < ApplicationController
       session[:current_widget_key] = params["k"]
       session[:current_page] = params["p"]
       session["user_registration_return_to"] = "/close?" + "&p=#{params[:p]}&u=#{session[:current_widget_host]}&k=#{params[:k]}"
-    end  end
+    end
+  end
 
   def set_message
     if params[:comment_id]
