@@ -1,6 +1,6 @@
 class UserSessionsController < Devise::SessionsController
   layout "login"
-  before_filter :set_devise_session
+  #before_filter :set_devise_session
 
   def new
     session[:user_registration_return_to] ||= '/admin'

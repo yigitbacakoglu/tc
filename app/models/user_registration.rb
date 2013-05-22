@@ -1,7 +1,7 @@
 class UserRegistration < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  validate :check_user
+  after_create :check_user
   validate :check_password
 
   devise :database_authenticatable, :registerable,
@@ -47,12 +47,13 @@ class UserRegistration < ActiveRecord::Base
     if self.user.blank?
       self.user = User.new(:firstname => "",
                            :lastname => "")
+      self.save
     end
 
   end
 
   def check_password
-    if self.password.blank?
+    if self.encrypted_password.blank? && self.password.blank?
       self.password = Devise.friendly_token
       self.tmp_password = self.password
     end

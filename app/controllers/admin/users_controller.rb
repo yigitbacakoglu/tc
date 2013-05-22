@@ -34,7 +34,7 @@ class Admin::UsersController < Admin::BaseController
     @user = User.new(params[:user])
 
     if @user.save
-      UserStore.create(:store_id => @current_store.id, :user_id => @user.id, :role => 'admin')
+      UserStore.create(:store_id => @current_store.id, :user_id => @user.id, :role => params[:role])
       flash[:success] = "User succesfully created"
       respond_to do |format|
         format.html { redirect_to admin_users_path }
