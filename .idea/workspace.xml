@@ -4,7 +4,7 @@
     <list default="true" id="c56ead06-000c-4a79-a275-3ee1314a73ad" name="Default" comment="" />
     <ignored path="omrats.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/a.dummy" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369233058832" ignored="false" />
+    <file path="/a.dummy" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369234089643" ignored="false" />
     <file path="/posts_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368895633491" ignored="false" />
     <file path="/fragment.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368894922772" ignored="false" />
     <file path="/user_sessions_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367662799965" ignored="false" />
@@ -68,7 +68,7 @@
     <file path="/rating.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368374894938" ignored="false" />
     <file path="/20130427135825_add_column_to_ratings.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367071467858" ignored="false" />
     <file path="/admin.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368900819136" ignored="false" />
-    <file path="/social_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368303983032" ignored="false" />
+    <file path="/social_controller.rb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1369234098364" ignored="false" />
     <file path="/twitter.js.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367143661630" ignored="false" />
     <file path="/auth.html.erb" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1367092147959" ignored="false" />
     <file path="/widget.css" changelist="c56ead06-000c-4a79-a275-3ee1314a73ad" time="1368893348777" ignored="false" />
@@ -196,10 +196,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="welcome_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="699" selection-end="699" vertical-scroll-proportion="0.5084746">
+            <state line="28" column="0" selection-start="701" selection-end="1087" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="social_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/social_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="35" selection-start="120" selection-end="120" vertical-scroll-proportion="0.10169491">
               <folding />
             </state>
           </provider>
@@ -224,7 +233,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/account/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_social.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/widget.html.erb" />
         <option value="$PROJECT_DIR$/app/views/account/_comments.html.erb" />
@@ -240,6 +248,7 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/social_controller.rb" />
       </list>
     </option>
   </component>
@@ -720,11 +729,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/mailers/store_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/rating.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -803,7 +807,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="699" selection-end="699" vertical-scroll-proportion="0.5084746">
+        <state line="28" column="0" selection-start="701" selection-end="1087" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/social_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="35" selection-start="120" selection-end="120" vertical-scroll-proportion="0.10169491">
           <folding />
         </state>
       </provider>

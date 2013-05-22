@@ -2,7 +2,7 @@ require 'twitter'
 require 'fb_graph'
 class SocialController < ApplicationController
 
-  #before_filter :set_session
+  before_filter :set_social_session
   before_filter :set_message
   rescue_from FbGraph::InvalidRequest, :with => :oauth_facebook_error
   rescue_from FbGraph::InvalidToken, :with => :oauth_facebook_error
@@ -121,9 +121,14 @@ class SocialController < ApplicationController
     end
   end
 
-  #def set_session
-  #  session["user_registration_return_to"] = "/close?" + "&p=#{session[:current_page]}&u=#{session[:current_widget_host]}&k=#{session[:current_widget_key]}"
-  #end
+
+  def set_social_session
+    if !params["k"].blank? && !params["p"].blank? && !params["u"].blank?
+      session[:current_widget_host] = params["u"]
+      session[:current_widget_key] = params["k"]
+      session[:current_page] = params["p"]
+      session["user_registration_return_to"] = "/close?" + "&p=#{params[:p]}&u=#{session[:current_widget_host]}&k=#{params[:k]}"
+    end  end
 
   def set_message
     if params[:comment_id]
