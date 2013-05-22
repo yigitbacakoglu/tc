@@ -42,7 +42,11 @@ class User < ActiveRecord::Base
   end
 
   def managable_stores
-    user_stores.where(:role => 'admin').map(&:store).delete_if(&:blank?)
+    if User.current.try(:system_admin?)
+      Store.all
+    else
+      user_stores.where(:role => 'admin').map(&:store).delete_if(&:blank?)
+    end
   end
 
   # Ready to use app ?
@@ -51,7 +55,11 @@ class User < ActiveRecord::Base
   end
 
   def banned_from?(store)
-    self.user_stores.where(:store_id => store.id).first.status.eql?('banned') rescue false
+    if User.current.try(:system_admin?)
+      UserStore.where(:store_id => store.id).first.status.eql?('banned') rescue false
+    else
+      self.user_stores.where(:store_id => store.id).first.status.eql?('banned') rescue false
+    end
   end
 
   def email
