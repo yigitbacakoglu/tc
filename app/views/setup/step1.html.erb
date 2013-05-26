@@ -3,7 +3,7 @@
     <div class="span12">
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-sitemap"></i> Setup
+          <i class="icon-sitemap"></i> <%= t(:setup) %>
         </div>
         <%= form_for @widget, :url => create_setup_path(:id => :step2), :method => :pos do |f| %>
 
@@ -11,20 +11,20 @@
               <div class="span6">
                 <div class="padded">
                   <div class="section-title">
-                    Personal Details
+                    <%= t(:personal_details) %>
                   </div>
                   <div class="vpadded">
                     <div class="input full-width">
-                      <%= text_field_tag "user[firstname]", @current_user.firstname, :placeholder => "Firstname" %>
+                      <%= text_field_tag "user[firstname]", @current_user.firstname, :placeholder => t(:firstname) %>
                     </div>
                     <div class="input full-width">
-                      <%= text_field_tag "user[lastname]", @current_user.lastname, :placeholder => "Lastname" %>
+                      <%= text_field_tag "user[lastname]", @current_user.lastname, :placeholder => t(:lastname) %>
                     </div>
                     <div class="input full-width">
-                      <%= text_field_tag "store[phone]", @store.phone, :placeholder => "Contact Phone" %>
+                      <%= text_field_tag "store[phone]", @store.phone, :placeholder => t(:phone_number) %>
                     </div>
                     <div class="input full-width">
-                      <%= text_field_tag "store[email]", @store.email, :placeholder => "Contact Email" %>
+                      <%= text_field_tag "store[email]", @store.email, :placeholder => t(:email_of_site) %>
                     </div>
                   </div>
                 </div>
@@ -34,11 +34,11 @@
               <div class="span6">
                 <div class="padded">
                   <div class="section-title">
-                    Web Page Details
+                    <%= t(:webpage_details) %>
                   </div>
                   <div class="vpadded">
                     <div class="input full-width">
-                      <%= text_field_tag "store[name]", @store.name, :placeholder => "Name of site" %>
+                      <%= text_field_tag "store[name]", @store.name, :placeholder => t(:name_of_site) %>
                     </div>
 
                     <%= f.fields_for :widget_domains do |d| %>
@@ -53,11 +53,11 @@
 
                     <div class="clearfix" style="margin-top:15px;">
                       <label class="checkbox">
-                        <%= f.check_box :approval_required %> Approval required
+                        <%= f.check_box :approval_required %> <%= t(:approval_required) %>
                       </label>
                       <label class="checkbox">
                         <%= f.check_box :login_required %>
-                        Login required
+                        <%= t(:login_required) %>
                       </label>
                     </div>
 
@@ -66,7 +66,7 @@
 
                     <% unless @widget.new_record? %>
                         <p><i class="icon-info-sign"></i>
-                          <b>Please Copy and Paste code into place where you would like to load TalkyCloud. </b></p>
+                          <b><%= t(:please_copy_and_paste) %> </b></p>
                     <% end %>
                     <div class="well" style="display: none;">
 
@@ -82,7 +82,7 @@
               <div class="span6 pull-right">
                 <div class="padded">
                   <div class="vpadded pull-right">
-                    <%= f.submit "Save and Continue", :class => "btn medium-blue" %>
+                    <%= f.submit t(:save_and_continue), :class => "btn medium-blue" %>
                     <!--<%= link_to "Cancel", admin_widgets_path %>-->
                   </div>
                 </div>

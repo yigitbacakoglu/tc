@@ -9,15 +9,15 @@
     <div class="box bordered">
       <div class="box-header">
         <%= image_tag avatar_url(current_user), :style => "position:relative; width:40px;" %>
-        My Account
+        <%= t(:my_account) %>
         <%= link_to "Close", "#", :onclick => "self.close()", :class => " pull-right btn" %>
       </div>
       <div class="row-fluid">
         <div class="span12">
           <div class="tabbable"> <!-- Only required for left/right tabs -->
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab1" class="tab-link" data-toggle="tab">Settings</a></li>
-              <li><a href="#tab2" class="tab-link" data-toggle="tab">Comments
+              <li class="active"><a href="#tab1" class="tab-link" data-toggle="tab"><%= t(:settings) %></a></li>
+              <li><a href="#tab2" class="tab-link" data-toggle="tab"><%= t(:comments) %>
                 <span class=" badge blue "><%= "#{@comments.total_count}" %></a></li>
             </ul>
 
@@ -35,18 +35,18 @@
                           <div class="span6">
                             <div class="padded">
                               <div class="section-title">
-                                Profile
+                                <%= t(:profile) %>
                               </div>
                               <div class="vpadded">
                                 <%= f.fields_for :user do |usr| %>
                                     <div class="input full-width">
-                                      <%= usr.text_field :firstname, :placeholder => 'Firstname' %>
+                                      <%= usr.text_field :firstname, :placeholder => t(:firstname) %>
                                     </div>
                                     <div class="input full-width">
-                                      <%= usr.text_field :lastname, :placeholder => 'Lastname' %>
+                                      <%= usr.text_field :lastname, :placeholder => t(:lastname) %>
                                     </div>
                                     <div class="input full-width">
-                                      <%= f.email_field :email, :placeholder => 'Email' %>
+                                      <%= f.email_field :email, :placeholder => t(:email) %>
                                     </div>
                                 <% end %>
 
@@ -56,16 +56,16 @@
                           <div class="span6">
                             <div class="padded">
                               <div class="section-title">
-                                Change Password
+                                <%= t(:change_password) %>
                               </div>
                               <div class="vpadded">
                                 <div class="input full-width">
 
-                                  <%= f.password_field :password, :placeholder => "Password" %>
+                                  <%= f.password_field :password, :placeholder => t(:password) %>
                                 </div>
                                 <div class="input full-width">
 
-                                  <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %>
+                                  <%= f.password_field :password_confirmation, :placeholder => t(:password_confirmation) %>
                                 </div>
 
                               </div>

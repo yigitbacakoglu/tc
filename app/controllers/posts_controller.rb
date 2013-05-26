@@ -4,7 +4,7 @@ class PostsController < WelcomeController
   def rate
     if @current_user || @current_anonymous_user
       if @object.rate(params[:value], request.remote_ip, @current_user.try(:id) || @current_anonymous_user.try(:id))
-        @success = [@object, "Thank you for rating!"]
+        @success = [@object, t(:thanks_for_rating)]
       end
     end
     render 'rate'
@@ -14,7 +14,7 @@ class PostsController < WelcomeController
   def flag
     if @object.is_a?(Comment) && (@current_user || @current_anonymous_user)
       if @object.flag(@current_user.try(:id) || @current_anonymous_user.try(:id))
-        @success = [@object, "Thank you for flag!"]
+        @success = [@object, t(:thanks_for_flag)]
       end
 
     end
@@ -32,9 +32,9 @@ class PostsController < WelcomeController
       )
       if @current_comment && @current_comment.valid?
         if @current_comment.approved?
-          flash[:success] = "Thanks for comment!"
+          flash[:success] = t(:thanks_for_comment)
         else
-          flash[:success] = "Your comment will be published after approval!"
+          flash[:success] = t(:published_after_approval)
         end
       end
     else

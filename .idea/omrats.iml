@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="faraday (v0.8.7, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fb_graph (v2.6.7, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gem_plugin (v0.2.3, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gli (v2.2.1, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v2.0.4, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.2, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httpauth (v0.2.0, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
@@ -50,6 +51,7 @@
     <orderEntry type="library" scope="PROVIDED" name="jwt (v0.1.8, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.14.1, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="letsrate (v1.0.8, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="localeapp (v0.5.2, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.3, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mechanize (v2.6.0, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.23, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
@@ -83,6 +85,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rakismet (v1.3.0, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="recaptcha (v0.3.5, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.7, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-graphviz (v1.0.9, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.8, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
@@ -100,6 +103,7 @@
     <orderEntry type="library" scope="PROVIDED" name="unf_ext (v0.0.6, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.1, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webrobots (v0.1.1, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ya2yaml (v0.31, RVM: ruby-1.9.3-p194 [global]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

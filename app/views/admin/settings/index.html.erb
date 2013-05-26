@@ -4,7 +4,7 @@
     <div class="span12">
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-sitemap"></i> Settings
+          <i class="icon-sitemap"></i> <%= t(:settings) %>
         </div>
         <%= form_for @current_store, :url => admin_setting_path(@current_store), :method => :put do |f| %>
 
@@ -14,7 +14,7 @@
                 <div class="padded">
 
                   <div class="section-title">
-                    Restricted Words
+                    <%= t(:restricted_words) %>
                   </div>
 
                   <div class="vpadded">
@@ -40,7 +40,7 @@
               <div class="span6">
                 <div class="padded">
                   <div class="vpadded">
-                    <%= f.submit "Update", :class => "btn medium-blue", :disable_with => "Processing..." %>
+                    <%= f.submit t(:update), :class => "btn medium-blue", :disable_with => t(:processing) %>
                   </div>
                 </div>
               </div>

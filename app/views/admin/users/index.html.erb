@@ -3,17 +3,17 @@
     <div class="span12">
       <div class="box bordered">
       <div class="box-header">
-          <i class="icon-user">&nbsp; Users</i>
+          <i class="icon-user">&nbsp; <%= t(:users) %></i>
         <%#= link_to_with_icon "icon-white icon-plus", 'New' ,new_admin_user_url, :class => "btn btn-success pull-right" %>
       </div>
         <div class="row-fluid padded">
           <table class="table table-striped">
             <thead>
             <tr>
-              <th>Username</th>
-              <th>Comment Count</th>
-              <th>Rating avg</th>
-              <th>Actions</th>
+              <th><%= t(:username) %></th>
+              <th><%= t(:comment_count) %></th>
+              <th><%= t(:rating_avg) %></th>
+              <th><%= t(:actions) %></th>
             </tr>
             </thead>
             <tbody>
@@ -30,9 +30,9 @@
                   </td>
                   <td>
                     <% if user.banned_from?(@current_store) %>
-                        <%= link_to_with_icon "icon-ok", "Allow this user", allow_admin_user_path(user.id), :remote => true, :method => :put, :class => "btn btn-mini green", :confirm => "Are you sure?" %>
+                        <%= link_to_with_icon "icon-ok", t(:allow_this_user), allow_admin_user_path(user.id), :remote => true, :method => :put, :class => "btn btn-mini green", :confirm => t(:are_you_sure) %>
                     <% else %>
-                        <%= link_to_with_icon "icon-remove", "Ban this user", ban_admin_user_path(user.id, :dom_id => identifier), :remote => true, :method => :put, :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+                        <%= link_to_with_icon "icon-remove", t(:ban_this_user), ban_admin_user_path(user.id, :dom_id => identifier), :remote => true, :method => :put, :class => "btn btn-mini red", :confirm => t(:are_you_sure) %>
                     <% end %>
                   </td>
                 </tr>

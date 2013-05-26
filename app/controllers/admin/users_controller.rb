@@ -35,7 +35,7 @@ class Admin::UsersController < Admin::BaseController
 
     if @user.save
       UserStore.create(:store_id => @current_store.id, :user_id => @user.id, :role => params[:role])
-      flash[:success] = "User succesfully created"
+      flash[:success] = t(:created_successfully)
       respond_to do |format|
         format.html { redirect_to admin_users_path }
         format.js { render 'admin/users/create' }
@@ -49,14 +49,14 @@ class Admin::UsersController < Admin::BaseController
     UserStore.where(:store_id => @current_store.id,
                     :user_id => params[:id]).first.ban!
 
-    flash[:success] = "User is banned from your webpages!"
+    flash[:success] = t(:banned_from_your_sites)
   end
 
   def allow
     UserStore.where(:store_id => @current_store.id,
                     :user_id => params[:id]).first.allow!
 
-    flash[:success] = "User is allowed for your webpages!"
+    flash[:success] = t(:user_is_allowed)
     render :text => "document.location.reload();"
   end
 end

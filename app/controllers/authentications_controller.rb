@@ -11,7 +11,7 @@ class AuthenticationsController < ApplicationController
     authentication = UserAuthentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
     if authentication
       authentication.update_attributes(:oauth_token => omniauth['credentials']['token'], :oauth_token_secret => omniauth['credentials']['secret'])
-      flash[:notice] = "Signed in successfully."
+      flash[:notice] = t(:signed_in)
       sign_in_and_redirect(:user_registration, authentication.user_registration)
     elsif @current_user
       current_user_registration.user_authentications.create!(:provider => omniauth['provider'],
@@ -32,7 +32,7 @@ class AuthenticationsController < ApplicationController
       user_registration.build_user(:firstname => auth_hash['info']['first_name'].try(:strip), :lastname => auth_hash['info']['last_name'])
 
       if user_registration.save
-        flash[:notice] = "Signed in successfully."
+        flash[:notice] = t(:signed_in)
         sign_in_and_redirect(:user_registration, user_registration)
       else
         session[:omniauth] = auth_hash.except('extra')
@@ -44,7 +44,7 @@ class AuthenticationsController < ApplicationController
   def destroy
     @authentication = @current_user.authentications.find(params[:id])
     @authentication.destroy
-    flash[:notice] = "Successfully destroyed authentication."
+    flash[:notice] = t(:successfully_destroyed)
     redirect_to authentications_url
   end
 

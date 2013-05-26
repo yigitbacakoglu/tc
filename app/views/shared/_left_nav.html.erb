@@ -22,17 +22,17 @@
       </a>
 
       <ul id="profile-opts" class="collapse secondary">
-        <%= tab :accounts, :label => "My Account", :url => admin_account_path, :match_path => "/admin/account.*" %>
+        <%= tab :accounts, :label => t(:my_account), :url => admin_account_path, :match_path => "/admin/account.*" %>
         <li class="">
-          <%= link_to "Logout", destroy_user_registration_session_path, :method => :delete %>
+          <%= link_to t(:logout), destroy_user_registration_session_path, :method => :delete %>
         </li>
       </ul>
     </li>
 
     <!-- Dashboard -->
-    <%= tab :dashboard, :label => "Dashboard", :url => admin_path, :icon => 'dashboard', :match_path => "/admin" %>
-    <%= tab :widgets, :label => "Widgets", :url => admin_widgets_path, :icon => 'microformats', :match_path => "/admin/.*widget.*" %>
-    <%= tab :comments, :label => "Comments", :url => admin_comments_path, :icon => 'comments', :match_path => "/admin/.*comment.*" %>
+    <%= tab :dashboard, :label => t(:dashboard), :url => admin_path, :icon => 'dashboard', :match_path => "/admin" %>
+    <%= tab :widgets, :label => t(:widgets), :url => admin_widgets_path, :icon => 'microformats', :match_path => "/admin/.*widget.*" %>
+    <%= tab :comments, :label => t(:comments), :url => admin_comments_path, :icon => 'comments', :match_path => "/admin/.*comment.*" %>
     <!-- Components -->
     <li class="<%= "active" if request.fullpath.gsub('//', '/').match("/admin/.*user.*").to_s == request.fullpath %>">
 
@@ -41,19 +41,19 @@
             <i class="icon-user"></i>
           </span>
           <span class="text">
-            Users <b class="caret"></b>
+            <%= t(:users) %> <b class="caret"></b>
           </span>
       </a>
 
       <ul id="users-list" class="<%= "in" if request.fullpath.gsub('//', '/').match("/admin/.*user.*").to_s == request.fullpath %> collapse secondary">
-        <%= tab :widgets, :label => "All", :url => admin_users_path, :match_path => '/admin/users' %>
-        <%= tab :widgets, :label => "Active", :url => admin_users_path(:e => :active), :match_path => "/admin/users.?e=active.*" %>
-        <%= tab :widgets, :label => "Banned", :url => admin_users_path(:e => :banned), :match_path => "/admin/users.?e=banned.*" %>
+        <%= tab :widgets, :label => t(:all), :url => admin_users_path, :match_path => '/admin/users' %>
+        <%= tab :widgets, :label => t(:active), :url => admin_users_path(:e => :active), :match_path => "/admin/users.?e=active.*" %>
+        <%= tab :widgets, :label => t(:banned), :url => admin_users_path(:e => :banned), :match_path => "/admin/users.?e=banned.*" %>
       </ul>
 
     </li>
     <!--Accordion end-->
-    <%= tab :setting, :label => "Settings", :url => admin_settings_path, :icon => 'wrench', :match_path => admin_settings_path %>
+    <%= tab :setting, :label => t(:settings), :url => admin_settings_path, :icon => 'wrench', :match_path => admin_settings_path %>
     <% if current_user.try(:system_admin?) || Rails.env.development? %>
          <%= tab :secrets, :label => "Secrets", :url => admin_secrets_path, :icon => 'key', :match_path => admin_secrets_path %>
          <%= tab :categories, :label => "Categories", :url => admin_categories_path, :icon => 'list', :match_path => admin_categories_path %>

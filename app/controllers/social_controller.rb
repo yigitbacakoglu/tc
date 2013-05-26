@@ -36,7 +36,7 @@ class SocialController < ApplicationController
               :link => @page
           )
           record_share
-          flash[:notice] = "Shared Successfully"
+          flash[:notice] = t(:shared_successfully)
           respond_with_success
         end
       end
@@ -69,7 +69,7 @@ class SocialController < ApplicationController
         @message = "#{@message} #{@page} via @TalkyCloud #{r.rand(1...12341)}"
         Twitter.update(@message)
         record_share
-        flash[:notice] = "Shared successfully"
+        flash[:notice] = t(:shared_successfully)
         respond_with_success
       end
     end

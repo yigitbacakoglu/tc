@@ -9,7 +9,7 @@ class CommentsController < WelcomeController
   def update
     if @current_user || @current_anonymous_user
       if @current_comment.update_attributes(params[:comment])
-        flash[:success] = "Thank you for comment!"
+        flash[:success] = t(:thanks_for_comment)
       end
     end
   end
@@ -17,7 +17,7 @@ class CommentsController < WelcomeController
   def destroy
     if @current_user || @current_anonymous_user
       if @current_comment.destroy
-        flash[:notice] = "Comment successfully deleted"
+        flash[:notice] = t(:comment_deleted)
       end
     end
     render 'shared/destroy'

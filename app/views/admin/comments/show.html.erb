@@ -3,7 +3,7 @@
     <%= javascript_include_tag "widget" %>
     <!--<%#= javascript_tag "edit_comment_form = '#{escape_javascript(comment_form(@comment, update_comment_posts_url))}'" %>-->
 <% end %>
-<div class="container-fluid"><%= link_to_with_icon "icon-arrow-left" ,'Back', request.referer, :class => "btn" %> </div>
+<div class="container-fluid"><%= link_to_with_icon "icon-arrow-left" ,t(:back), request.referer, :class => "btn" %> </div>
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span6">
@@ -19,7 +19,7 @@
                 <span class="pull-right badge <%= @comment.state_color %>"><%= @comment.state %></span>
               </div>
               <% if @comment.parent.present? %>
-                  , <i class="icon-retweet"></i>Reply to <%= @comment.parent.user.username rescue '[Deleted Comment]' %>
+                  , <i class="icon-retweet"></i><%= t(:reply_to) %>: <%= @comment.parent.user.username rescue '[Deleted Comment]' %>
               <% end %>
               <div class="past-rating">
                 <%= rating_for(@comment, :url => rate_posts_path(:comment_id => @comment.id,
@@ -32,9 +32,9 @@
               </div>
 
               <div class="article-actions">
-                <%= link_to_with_icon "icon-edit", "Edit", edit_admin_comment_path(@comment), :class => "btn btn-mini dark-blue", :remote => true %>
-                <%= link_to_with_icon "icon-ok", "Approve", admin_fire_path('approve', @comment.id), :class => "btn btn-mini green", :confirm => "Are you sure?" %>
-                <%= link_to_with_icon "icon-remove", "Reject", admin_fire_path('reject', @comment.id), :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+                <%= link_to_with_icon "icon-edit", t(:edit), edit_admin_comment_path(@comment), :class => "btn btn-mini dark-blue", :remote => true %>
+                <%= link_to_with_icon "icon-ok", t(:approve), admin_fire_path('approve', @comment.id), :class => "btn btn-mini green", :confirm => t(:are_you_sure) %>
+                <%= link_to_with_icon "icon-remove", t(:reject), admin_fire_path('reject', @comment.id), :class => "btn btn-mini red", :confirm => t(:are_you_sure) %>
               </div>
             </div>
           </li>
@@ -46,7 +46,7 @@
         <div class="padded">
           <ul class="audience-alt">
             <li style="margin-top:-22px;">
-              <div class="percent">Effect in page</div>
+              <div class="percent"><%= t(:effect_in_page) %></div>
             </li>
 
 
@@ -58,7 +58,7 @@
               </div>
 
               <div class="value"><%= @shares.count %></div>
-              <div class="stat-name">Shares
+              <div class="stat-name"><%= t(:shares) %>
                     <span>(<%= "#{@twitter_count} <i class='icon-twitter-sign'></i> #{@facebook_count} <i class='icon-facebook-sign'></i> ".html_safe %>
                       )
 
@@ -84,7 +84,7 @@
                 </div>
               </div>
               <div class="value"><%= @children.count %></div>
-              <div class="stat-name">Reply</div>
+              <div class="stat-name"><%= t(:reply) %></div>
 
               <div class="percent">(+<%= @children_overall %>%)</div>
               <div class="progress-bar audience-progress">
@@ -101,7 +101,7 @@
                 </div>
               </div>
               <div class="value"><%= @ratings.count %></div>
-              <div class="stat-name">Likes</div>
+              <div class="stat-name"><%= t(:likes) %></div>
 
               <div class="percent">(+<%= @ratings_overall %>%)</div>
               <div class="progress-bar audience-progress">
@@ -118,7 +118,7 @@
                 </div>
               </div>
               <div class="value"><%= @flags.count %></div>
-              <div class="stat-name">Flags</div>
+              <div class="stat-name"><%= t(:flags) %></div>
 
               <div class="percent">(+<%= @flags_overall %>%)</div>
               <div class="progress-bar audience-progress">

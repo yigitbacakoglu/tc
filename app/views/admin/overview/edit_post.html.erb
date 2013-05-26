@@ -10,9 +10,9 @@
     </div>
     <br>
     <div class="modal-footer">
-      <%= link_to "Close", "#", "data-dismiss" => "modal", :class => "btn", "aria-hidden" => true %>
-      <%= link_to_with_icon "icon-trash", "Delete", admin_delete_post_path(:id => @post.id) , :class => "pull-left btn btn-danger", :confirm => "Are you sure?", :method => :delete %>
-      <%= button_tag "Save", :disable_with => "Processing", :class => "btn btn-primary" %>
+      <%= link_to t(:close), "#", "data-dismiss" => "modal", :class => "btn", "aria-hidden" => true %>
+      <%= link_to_with_icon "icon-trash", t(:delete), admin_delete_post_path(:id => @post.id) , :class => "pull-left btn btn-danger", :confirm => t(:are_you_sure), :method => :delete %>
+      <%= button_tag t(:save), :disable_with => t(:processing), :class => "btn btn-primary" %>
     </div>
 
 <% end %>

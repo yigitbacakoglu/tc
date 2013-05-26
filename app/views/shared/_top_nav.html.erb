@@ -6,7 +6,7 @@
   <ul class="top-notifications">
     <li>
       <a href="#widgets" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-        Widgets (<%= @current_widget.try(:domains).try(:first) || "All" %>)
+        <%= t(:widgets) %> (<%= @current_widget.try(:domains).try(:first) || t(:all) %>)
         <span class="badge blue"><%= @current_store.widgets.count %></span>
       </a>
 
@@ -21,7 +21,7 @@
 
     <li>
       <a href="#stores" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-        Sites (<%= @current_store.name %>) <span class="badge orange"><%= @current_user.managable_stores.count %></span>
+        <%= t(:sites) %> (<%= @current_store.name %>) <span class="badge orange"><%= @current_user.managable_stores.count %></span>
       </a>
 
       <div class="collapsed" style="height: 0; overflow: visible;">
@@ -35,18 +35,18 @@
     </li>
     <li>
       <a href="#orders" class="accordion-toggle" data-toggle="collapse" data-parent="#top-acc">
-        Comments <span class="badge turquoise"><%= @current_store.comments.all.count %></span>
+        <%= t(:comments) %> <span class="badge turquoise"><%= @current_store.comments.all.count %></span>
       </a>
 
       <div class="collapsed" style="height: 0; overflow: visible;">
         <ul id="orders" class="collapse top-bar-list">
-          <li><a href="<%= admin_comments_path(:state => 'approved') %>">Approved
+          <li><a href="<%= admin_comments_path(:state => 'approved') %>"><%= t("states.approved") %>
             <span class="count">(<%= @current_store.comments.approved.count %>)</span></a></li>
           <li>
-            <a href="<%= admin_comments_path(:state => 'rejected') %>">Rejected<span class="count">(<%= @current_store.comments.rejected.count %>
+            <a href="<%= admin_comments_path(:state => 'rejected') %>"><%= t("states.rejected") %><span class="count">(<%= @current_store.comments.rejected.count %>
               )</span></a></li>
           <li>
-            <a href="<%= admin_comments_path(:state => 'new') %>">Pending<span class="count">(<%= @current_store.comments.waiting.all.count %>
+            <a href="<%= admin_comments_path(:state => 'new') %>"><%= t("states.pending") %><span class="count">(<%= @current_store.comments.waiting.all.count %>
               )</span></a></li>
         </ul>
       </div>

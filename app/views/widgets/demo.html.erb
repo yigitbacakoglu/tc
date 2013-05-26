@@ -12,7 +12,7 @@
                 <%= render :partial => "shared/flashes" %>
 
               </section>
-              <i class="icon-comments"></i> <%= "#{@comments.total_count} Comments" %>
+              <i class="icon-comments"></i> <%= t(:comments_count, :count => @comments.total_count ) %>
               <div class="pull-right">
                 <%= rating_for(@post, :url => rate_posts_path + widget_params("?")) %>
                 <div class="post-error">
@@ -32,10 +32,10 @@
 
                   <li id="thread-share-menu" class="share-menu dropdown" data-dropdown="enabled">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
-                      Share <span class="icon-external-link"></span><span class="caret"></span>
+                      <%= t(:share) %> <span class="icon-external-link"></span><span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu pull-right">
-                      <li class="share">Share this discussion on
+                      <li class="share"><%= t(:share_this_discussion_on) %>
                         <ul>
                           <li class="twitter">
                             <%= link_to_with_icon "icon-twitter-sign", '', "#", "data-link" => share_twitter_path(:post_id => @post.id) + widget_params, :class => 'open-win' %>

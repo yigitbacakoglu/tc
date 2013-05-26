@@ -3,7 +3,7 @@
     <div class="span12">
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-sitemap"></i> New Widget
+          <i class="icon-sitemap"></i> <%= t(:new_widget) %>
         </div>
         <%= form_for [:admin, @widget] do |f| %>
             <%= render :partial => "form", :locals => {:f => f} %>
@@ -11,8 +11,8 @@
               <div class="span6">
                 <div class="padded">
                   <div class="vpadded">
-                    <%= f.submit "Create", :class => "btn medium-blue" %> or
-                    <%= link_to "Cancel", admin_widgets_path %>
+                    <%= f.submit t(:create), :class => "btn medium-blue" %> <%= t(:or) %>
+                    <%= link_to t(:cancel), admin_widgets_path %>
                   </div>
                 </div>
               </div>

@@ -7,8 +7,8 @@
     </div>
     <br>
     <div class="modal-footer">
-      <%= link_to "Close", "#", "data-dismiss" => "modal", :class => "btn", "aria-hidden" => true %>
-      <%= button_tag "Save", :disable_with => "Processing", :class => "btn btn-primary" %>
+      <%= link_to t(:close), "#", "data-dismiss" => "modal", :class => "btn", "aria-hidden" => true %>
+      <%= button_tag t(:save), :disable_with => t(:processing), :class => "btn btn-primary" %>
     </div>
 
 <% end %>

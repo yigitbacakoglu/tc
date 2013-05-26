@@ -1,0 +1,451 @@
+tr:
+  actions: İşlemler
+  active: Aktif
+  add_another_service: Giriş yapmak için başka servis ekleyin
+  added_services: Aşağıdaki Servislerle Giriş Yaptınız
+  admin: Yönetici
+  agreed: Beğenilmiş
+  all: Hepsi
+  already_rated: Daha önce oy verdiniz.
+  anonymous: Anonim
+  approval_required: Onay gerektirir
+  approve: Onayla
+  approve_all: Hepsini Onayla
+  author: Yazar
+  back: Geri
+  banned: Engellenmiş
+  banned_from_your_sites: Kullanıcı siteleriniz için engellendi.
+  cancel: Vazgeç
+  category: Kategori
+  chane_post_url_warning: Sayfa adresini değiştirmeniz, sayfadaki yorumların adresinide değiştirir.
+  change_page: Sayfa Değiştir
+  change_password: Şifre Değiştir
+  close: Kapa
+  comment_count: Yorum Sayısı
+  comments: Yorumlar
+  comments_count: ! '%{count} Yorum'
+  connect_new_domain: Yeni alan adı bağla
+  continue: Devam
+  create: Oluştur
+  created_at: Oluşturulma Tarihi
+  current_page: Şimdiki sayfa
+  dashboard: Panel
+  date:
+    abbr_day_names:
+    - Paz
+    - Pzt
+    - Sal
+    - Çrş
+    - Prş
+    - Cum
+    - Cts
+    abbr_month_names:
+    - 
+    - Oca
+    - Şub
+    - Mar
+    - Nis
+    - May
+    - Haz
+    - Tem
+    - Ağu
+    - Eyl
+    - Eki
+    - Kas
+    - Ara
+    day_names:
+    - Pazar
+    - Pazartesi
+    - Salı
+    - Çarşamba
+    - Perşembe
+    - Cuma
+    - Cumartesi
+    formats:
+      default: ! '%d.%m.%Y'
+      long: ! '%e %B %Y, %A'
+      short: ! '%e %b'
+    month_names:
+    - 
+    - Ocak
+    - Şubat
+    - Mart
+    - Nisan
+    - Mayıs
+    - Haziran
+    - Temmuz
+    - Ağustos
+    - Eylül
+    - Ekim
+    - Kasım
+    - Aralık
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: yaklaşık 1 saat
+        other: yaklaşık %{count} saat
+      about_x_months:
+        one: yaklaşık 1 ay
+        other: yaklaşık %{count} ay
+      about_x_years:
+        one: yaklaşık 1 yıl
+        other: yaklaşık %{count} yıl
+      almost_x_years:
+        one: neredeyse 1 yıl
+        other: neredeyse %{count} yıl
+      half_a_minute: yarım dakika
+      less_than_x_minutes:
+        one: 1 dakikadan az
+        other: ! '%{count} dakikadan az'
+        zero: 1 dakikadan az
+      less_than_x_seconds:
+        one: 1 saniyeden az
+        other: ! '%{count} saniyeden az'
+        zero: 1 saniyeden az
+      over_x_years:
+        one: 1 yıldan fazla
+        other: ! '%{count} yıldan fazla'
+      x_days:
+        one: 1 gün
+        other: ! '%{count} gün'
+      x_minutes:
+        one: 1 dakika
+        other: ! '%{count} dakika'
+      x_months:
+        one: 1 ay
+        other: ! '%{count} ay'
+      x_seconds:
+        one: 1 saniye
+        other: ! '%{count} saniye'
+    prompts:
+      day: Gün
+      hour: Saat
+      minute: Dakika
+      month: Ay
+      second: Saniye
+      year: Yıl
+  delete: Sil
+  devise:
+    confirmations:
+      confirmed: Hesabınız başarıyla doğrulandı. Şimdi giriş yapabilirsiniz.
+      send_instructions: Bir kaç dakika içinde hesabınızı nasıl doğrulayabileceğiniz ile ilgili mail alacaksınız.
+      send_paranoid_instructions: 
+    failure:
+      already_authenticated: Zaten giriş yaptınız.
+      inactive: 
+      invalid: Yanlış e-posta veya şifre.
+      invalid_token: Geçersiz kimlik kodu.
+      locked: Hesabınız kilitlenmiş.
+      timeout: Oturumunuz sona erdi, devam etmek için tekrar giriş yapınız.
+      unauthenticated: Devam etmek için giriş yapın veya kaydolun.
+      unconfirmed: 
+    mailer:
+      confirmation_instructions:
+        subject: Doğrulama adımları
+      reset_password_instructions:
+        subject: Şifre sıfırlama adımları
+      unlock_instructions:
+        subject: 
+    omniauth_callbacks:
+      failure: ! '%{kind} tarafından yetkilendirilemediniz. Sebep: "%{reason}".'
+      success: ! '%{kind} hesabınız ile başarıyla yetkilendirildiniz'
+    registrations:
+      destroyed: 
+      signed_up: Hoşgeldiniz! Başarıyla kaydoldunuz.
+      signed_up_but_inactive: 
+      signed_up_but_locked: 
+      signed_up_but_unconfirmed: 
+      update_needs_confirmation: 
+      updated: Hesabınız başarıyla güncellendi
+    sessions:
+      signed_in: Başarıyla giriş yapıldı.
+      signed_out: Başarıyla çıkış yapıldı.
+    unlocks:
+      send_instructions: 
+      send_paranoid_instructions: 
+      unlocked: 
+    user_passwords:
+      user_registration:
+        send_instructions: Birkaç dakika içerisinde, şifre sıfırlama adımlarını içeren e-posta alacaksınız.
+        send_paranoid_instructions: 
+        updated: Şifreniz başarıyla değiştirildi. Şuanda giriş yaptınız.
+        updated_not_active: Şifreniz başarıyla değiştirildi
+    user_registrations:
+      user_registration:
+        destroyed: 
+        signed_up: Hoşgeldiniz! Başarıyla kaydoldunuz.
+        signed_up_but_inactive: 
+        signed_up_but_locked: 
+        signed_up_but_unconfirmed: 
+        update_needs_confirmation: 
+        updated: Hesabınız başarıyla güncellendi.
+    user_sessions:
+      user_registration:
+        signed_in: Başarıyla giriş yaptınız.
+        signed_out: Başarıyla çıkış yapıldı.
+  disagreed: Beğenilmemiş
+  domains: Alan Adları
+  edit: Düzenle
+  edit_comment: Yorumu Düzenle
+  edit_post_url: Sayfa adresini düzenle
+  edit_widget: Modülü Düzenle
+  effect_in_page: Sayfada ki etkisi
+  email: E-posta
+  email_of_site: Sitenizin e-postası
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: kabul edilmeli
+      already_confirmed: zaten doğrulandı, lütfen tekrar giriş yapınız.
+      blank: doldurulmalı
+      confirmation: teyidiyle uyuşmamakta
+      empty: doldurulmalı
+      equal_to: tam olarak %{count} olmalı
+      even: çift olmalı
+      exclusion: kullanılamaz
+      expired: sona erdi, lütfen yeni istek gönderin
+      greater_than: ! '%{count} sayısından büyük olmalı'
+      greater_than_or_equal_to: ! '%{count} sayısına eşit veya büyük olmalı'
+      inclusion: kabul edilen bir kelime değil
+      invalid: geçersiz
+      less_than: ! '%{count} sayısından küçük olmalı'
+      less_than_or_equal_to: ! '%{count} sayısına eşit veya küçük olmalı'
+      not_a_number: geçerli bir sayı değil
+      not_an_integer: tam sayı olmalı
+      not_found: bulunamadı
+      not_locked: 
+      not_saved: ! '%{count} hata %{resource} kaydedilmesini engelledi.'
+      odd: tek olmalı
+      record_invalid: ! 'Doğrulama başarısız oldu: %{errors}'
+      taken: hali hazırda kullanılmakta
+      too_long: çok uzun (en fazla %{count} karakter)
+      too_short: çok kısa (en az %{count} karakter)
+      wrong_length: yanlış uzunlukta (tam olarak %{count} karakter olmalı)
+    template:
+      body: ! 'Lütfen aşağıdaki hataları düzeltiniz:'
+      header:
+        one: ! '%{model} girişi kaydedilemedi: 1 hata.'
+        other: ! '%{model} girişi kadedilemedi: %{count} hata.'
+  facebook_login: Facebook Girişi
+  firstname: İsim
+  flag: Rapor
+  flags: Raporlular
+  forgot_password: Şifrenizi mi unuttunuz?
+  get_widget: Modül Al
+  hello: 
+  helpers:
+    select:
+      prompt: Lütfen seçiniz
+    submit:
+      create: ! '%{model} Ekle'
+      submit: ! '%{model} Kaydet'
+      update: ! '%{model} Güncelle'
+  lastname: Soyisim
+  like_the_page: En son haberler için beğenin
+  login: Giriş yap
+  login_required: Giriş gerektirir
+  logout: Çıkış yap
+  message: Mesaj
+  meta:
+    description: TalkyCloud ücretsiz yorum servisi sayesinde sayfanızda yorumları arttırır ve internetteki konuları birbirine bağlar. Ücretsiz bir hesap açıp, çevrimiçi yorum ve puanlama servisini kendi web sayfanıza entegre ederek, web sayfanızı çevrimiçi canlı ve sosyal bir platform haline getirebilirsiniz.
+    keywords: TalkyCloud, Talky Cloud, yorum, yorum kutusu, yorum servisi, puanlama servisi, yorum bırak
+  my_account: Hesabım
+  my_comments: Yorumlarım
+  name_of_site: Sitenizin adı
+  new_user: Yeni Kullanıcı
+  new_widget: Yeni Modül
+  next: İleri
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%n %u'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: TL
+    format:
+      delimiter: .
+      precision: 2
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: Milyar
+          million: Milyon
+          quadrillion: Katrilyon
+          thousand: Bin
+          trillion: Trilyon
+          unit: ''
+      format:
+        delimiter: .
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte: Bayt
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: .
+    precision:
+      format:
+        delimiter: .
+  or: veya
+  page: Sayfa
+  password: Şifre
+  password_confirmation: Şifre Doğrulama
+  permissions: İzinler
+  personal_details: Kişisel Detaylar
+  phone_number: Telefon numarası
+  please_copy_and_paste: TalkyCloud'un yüklenmesini istediğiniz yere aşağıdaki kodu yapıştırın.
+  plus: 
+  post_as_user: ! '%{username} olarak gönder'
+  profile: Profil
+  published_after_approval: Yorumunuz, onaylandıktan sonra yayınlanacak
+  quick_links: Hızlı Linkler
+  rating_avg: Puan Ort.
+  rating_tool: Değerlendirme Türü
+  ratings: Değerlendirme
+  ready_for_demo: Demo için hazırız
+  recent_comments: Son Yorumlar
+  registration_details: 
+  reject: Reddet
+  reply: Cevapla
+  reply_to: Cevap
+  restricted_from_comment: Bu sayfada yorum yapmanız yasaklanmış
+  restricted_words: Yasaklı Kelimeler
+  save: Kaydet
+  select_gender: Cinsiyet Seçin
+  select_role: Rol Seçin
+  settings: Ayarlar
+  share: Paylaş
+  share_this: Paylaş
+  shares: Paylaşımlar
+  sign_up: Kaydol
+  sign_up_as_commenter: Yorumcu hesabı aç
+  signed_in: Başarıyla giriş yaptınız.
+  social_accounts: Sosyal Hesaplar
+  star: Yıldız
+  states:
+    active: Aktif
+    approved: Onaylanmış
+    banned: Engellendi
+    new: Yeni
+    rejected: Reddedildi
+    pending: Bekliyor
+  stats: İstatistikler
+  support:
+    array:
+      last_word_connector: ! ' ve '
+      two_words_connector: ! ' ve '
+      words_connector: ! ', '
+  thanks_for_flag: Rapor için teşekkürler
+  thanks_for_rating: Oylama için teşekkürler
+  thumb: El
+  time:
+    am: öğleden önce
+    formats:
+      default: ! '%a %d.%b.%y %H:%M'
+      long: ! '%e %B %Y, %A, %H:%M'
+      short: ! '%e %B, %H:%M'
+    pm: öğleden sonra
+  tweet_this: Tweetle
+  twitter_login: Twitter Logini
+  update: Güncelle
+  updated_at: Güncellenme Tarihi
+  url_of_site: Sitenizin adresi
+  username: Kullanıcı Adı
+  users: Kullanıcılar
+  visits: Ziyaret
+  vote: 
+  wanna_be_social: SOSYAL OLMAK ISTER MISIN?
+  webpage_details: Web Sayfası Detayları
+  widget_details: Modül Detayları
+  widgets: Modüller
+  write_something: Bir şeyler yazın...
+  Dislikes: Beğenilmeyenler
+  already_flagged: Daha önce raporladınız
+  are_you_sure: Emin misiniz?
+  join_discussion: Konuşmaya sende katıl!
+  likes: Beğeniler
+  processing: İşleniyor...
+  user: Kullanıcı
+  female: Bayan
+  male: Bay
+  allow_this_user: Kullanıcıya izin ver
+  ban_this_user: Kullanıcıyı yasakla
+  on_maintenance: Şuanda bakımda
+  or_register_with: veya TalkyCloud'a kaydol
+  save_and_continue: Kaydet ve Devam
+  sign_in_with: ! 'Giriş yap:'
+  sites: Siteler
+  email_of_username: Kullanıcı Adı veya E-posta
+  fill_the_form: Formu doldurun!
+  have_an_account: Hesabınız var mı?
+  reset_my_password: Şifremi sıfırla
+  reset_password: Şifre Sıfırlama
+  share_this_discussion_on: Konuşmayı paylaş
+  shared_successfully: Başarıyla paylaşıldı
+  sign_in: Giriş yap
+  thanks_for_comment: Yorum için teşekkürler!
+  view_more: Daha fazla göster
+  comment_deleted: Yorum başarıyla silindi
+  successfully_changed_site: Başarıyla değiştirildi. Şuan %{site} sitesini yönetiyorsunuz
+  successfully_changes_widget: Başarıyla değiştirdiniz. Şuan %{widget} modülünü yönetiyorsunuz
+  successfully_destroyed: 
+  updated_successfuly: Başarıyla Güncellendi
+  created_successfully: Başarıyla Oluşturuldu
+  deleted_successfully: Başarıyla Silindi
+  user_is_allowed: Kullanıcı web siteleriniz için izinli yapıldı
+  share_this_discussion: 
+  activerecord:
+    attributes:
+      user_registration:
+        email: Email
+        username: Username
+      store:
+        name: Name
+        widgets: Widgets
+      widget_domain:
+        domain: Domain
+    errors:
+      models:
+        user_registration:
+          attributes:
+            email:
+              blank: doldurulmalı
+            username:
+              blank: doldurulmalı
+              taken: hali hazırda kullanılmakta
+        store:
+          attributes:
+            name:
+              blank: doldurulmalı
+            widgets:
+              invalid: geçersiz
+        widget_domain:
+          attributes:
+            domain:
+              blank: doldurulmalı
+  user_registration: User registration
+  username_or_email: Kullanıcı adı veya E-posta
+  email_or_username: E-posta veya Kullanıcı adı
+  setup: Kayıt
+  store: Store
+  widget_domain: Widget domain
+  unauthorized:
+    default: You are not authorized to access this page.

@@ -16,7 +16,7 @@
   </div>
 
   <div class="article-actions">
-    <%= link_to "Edit", edit_comment_path(@current_comment.id), :remote => true %>  -
-    <%= link_to "Remove", comment_path(@current_comment.id), :remote => true, :method => :delete, :confirm => "Are you sure?" %>
+    <%= link_to t(:edit), edit_comment_path(@current_comment.id), :remote => true %>  -
+    <%= link_to t(:delete), comment_path(@current_comment.id), :remote => true, :method => :delete, :confirm => t(:are_you_sure) %>
   </div>
 </div>

@@ -60,7 +60,7 @@ class Comment < ActiveRecord::Base
       r.ip_address = ip_address
       r.save!
     else
-      errors.add :base, "You already rated this."
+      errors.add :base, I18n.t("already_rated")
       false
     end
   end
@@ -83,7 +83,7 @@ class Comment < ActiveRecord::Base
     if self.flags.where(:user_id => user_id).blank?
       self.flags.create!(:user_id => user_id)
     else
-      errors.add :base, "You already flag this."
+      errors.add :base, I18n.t("already_flagged")
       false
     end
   end
@@ -149,7 +149,7 @@ class Comment < ActiveRecord::Base
   end
 
   def validate_user
-    errors.add(:base, "You are not allowed to comment") if self.post.widget.store && self.post.widget.store.restrictions.map(&:restrictable).include?(self.user)
+    errors.add(:base, I18n.t("restricted_from_comment")) if self.post.widget.store && self.post.widget.store.restrictions.map(&:restrictable).include?(self.user)
   end
 
 

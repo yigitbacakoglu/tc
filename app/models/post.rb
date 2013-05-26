@@ -50,7 +50,7 @@ class Post < ActiveRecord::Base
       r.ip_address = ip_address
       r.save!
     else
-      errors.add :base, "You already rated this."
+      errors.add :base, I18n.t("already_rated")
       false
     end
   end
@@ -109,7 +109,7 @@ class Post < ActiveRecord::Base
       page = agent.get(self.webpage)
       self.title = page.title
     rescue
-      self.title = 'Join discussion here'
+      self.title = I18n.t("join_discussion")
     end
   end
 

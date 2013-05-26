@@ -3,7 +3,7 @@
   <div class="span6">
     <div class="padded">
       <div class="section-title">
-        Web Page Details
+        <%= t(:webpage_details) %>
       </div>
       <div class="vpadded">
         <div class="input  full-width generatable_container">
@@ -19,12 +19,12 @@
         </div>
 
         <hr>
-        <%= link_to "Connect new sub domain", "javascript:;", :class => "generate_field", "data-target-class" => "generatable" %>
+        <%= link_to t(:connect_new_domain), "javascript:;", :class => "generate_field", "data-target-class" => "generatable" %>
 
 
         <% unless @widget.new_record? %>
             <p><i class="icon-info-sign"></i>
-              <b>Please Copy and Paste code into place where you would like to load TalkyCloud. </b></p>
+              <b><%= t(:please_copy_and_paste) %> </b></p>
         <% end %>
         <div class="well" style="display: none;">
 
@@ -40,7 +40,7 @@
 
       <div class="padded">
         <div class="section-title">
-          Settings
+          <%= t(:settings) %>
         </div>
 
         <div class="vpadded">
@@ -48,18 +48,18 @@
             <%= f.select :category_id, Category.where(:category_type => :widget).collect { |c| [c.name, c.id] }, {}, :class => "chzn-select" %>
           </div>
           <div class="clearfix" style="margin-top:15px;">
-            <div class="note">Permissions</div>
+            <div class="note"><%= t(:permissions) %></div>
 
             <label class="checkbox">
-              <%= f.check_box :approval_required %> Approval required
+              <%= f.check_box :approval_required %> <%= t(:approval_required) %>
             </label>
             <label class="checkbox">
               <%= f.check_box :login_required %>
-              Login required
+              <%= t(:login_required) %>
             </label></div>
 
           <div class="clearfix" style="margin-top:15px;">
-            <div class="note">Rating tool</div>
+            <div class="note"><%= t(:rating_tool) %></div>
 
             <label class="checkbox">
               <% Category.rating_categories.each do |cat| %>

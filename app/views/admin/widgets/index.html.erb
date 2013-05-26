@@ -4,17 +4,17 @@
 
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-microformats">&nbsp; Widgets</i>
-          <%= link_to_with_icon "icon-white icon-plus", 'New' ,new_admin_widget_url, :class => "btn btn-success pull-right" %>
+          <i class="icon-microformats">&nbsp; <%= t(:widgets) %></i>
+          <%= link_to_with_icon "icon-white icon-plus", t(:new_widget) ,new_admin_widget_url, :class => "btn btn-success pull-right" %>
         </div>
         <div class="row-fluid padded">
 
         <table class="table table-striped">
             <thead>
             <tr>
-              <th>Domains</th>
-              <th>Category</th>
-              <th>Actions</th>
+              <th><%= t(:domains) %></th>
+              <th><%= t(:category) %></th>
+              <th><%= t(:actions) %></th>
             </tr>
             </thead>
             <tbody>
@@ -28,7 +28,7 @@
                     <%= widget.category.try(:name) %>
                   </td>
                   <td>
-                    <%= link_to_with_icon "icon-pencil", "Edit", edit_admin_widget_path(widget), :class => "btn dark-blue" %>
+                    <%= link_to_with_icon "icon-pencil", t(:edit), edit_admin_widget_path(widget), :class => "btn dark-blue" %>
                     <%= link_to_delete widget, :url => admin_widget_path(widget, :dom_id => identifier), :class => "btn red" %>
                   </td>
                 </tr>

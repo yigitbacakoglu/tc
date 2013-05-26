@@ -29,7 +29,7 @@ class Admin::WidgetsController < Admin::BaseController
     wd = WidgetDomain.find(params[:id])
     if wd.destroy
       respond_to do |format|
-        flash[:success] = "Domain successfully removed"
+        flash[:success] = t(:deleted_successfully)
         format.js { render "shared/destroy" }
       end
     end
@@ -40,7 +40,7 @@ class Admin::WidgetsController < Admin::BaseController
     @widget = Widget.new(params[:widget])
     @widget.store = @current_store
     if @widget.save
-      flash[:success] = "Widget succesfully created"
+      flash[:success] = t(:successfully_created)
       respond_to do |format|
         format.html { redirect_to edit_admin_widget_path(@widget) }
         format.js { render 'admin/widgets/create' }
@@ -54,7 +54,7 @@ class Admin::WidgetsController < Admin::BaseController
     widget = Widget.find(params[:id])
     if widget.destroy
       respond_to do |format|
-        flash[:success] = "Widget successfully removed"
+        flash[:success] = t(:deleted_successfully)
         format.js { render "shared/destroy" }
       end
     end

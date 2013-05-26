@@ -12,7 +12,7 @@
   <% if @current_widget.login_required && @current_user.blank? %>
       <% identifier = rand(19031903) %>
       <%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration", :close => false), :remote => true, :html => {:class => 'login-form'}) do |f| %>
-          <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+          <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => t(:write_something), :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
           <br/>
 
           <%= hidden_field_tag :u, session[:current_widget_host] %>
@@ -23,7 +23,7 @@
 
             <div class="logged-out auth-section">
               <section data-tab="auth-external">
-                <div class="connect"><h6>Sign in with</h6>
+                <div class="connect"><h6><%= t(:sign_in_with) %></h6>
                   <ul class="services">
                     <li class="auth-twitter open-win" data-link="<%= '/auth/twitter' + widget_params("?") %>">
                       <a data-action="auth:twitter " href="#" title="Twitter">Twitter</a></li>
@@ -33,20 +33,20 @@
                       <a data-action="auth:facebook" href="#" title="Facebook">TalkyCloud</a></li>
                   </ul>
                 </div>
-                <div class="guest"><h6> or register with TalkyCloud </h6>
+                <div class="guest"><h6> <%= t(:or_register_with) %> </h6>
 
                   <p class="input-wrapper">
-                    <%= f.text_field :username, :autocomplete => "off", :id => "nickname_#{identifier}", "data-next" => "details_#{identifier}", :placeholder => "Username" %>
+                    <%= f.text_field :username, :autocomplete => "off", :id => "nickname_#{identifier}", "data-next" => "details_#{identifier}", :placeholder => t(:username) %>
                   </p>
 
                   <div class="guest-details " id="details_<%= identifier %>" style="display: none;">
                     <p class="input-wrapper">
-                      <%= f.email_field :email, :autocomplete => "off", :id => "email_#{identifier}", :placeholder => "Email" %>
+                      <%= f.email_field :email, :autocomplete => "off", :id => "email_#{identifier}", :placeholder => t(:email) %>
                     </p>
                   </div>
                 </div>
                 <div class="proceed">
-                  <%= f.submit 'Next', :class => 'btn btn-medium dark-blue login-btn', :disable_with => "Processing..." %>
+                  <%= f.submit t(:next), :class => 'btn btn-medium dark-blue login-btn', :disable_with => t(:processing) %>
                 </div>
 
               </section>
@@ -59,7 +59,7 @@
 
   <% else %>
       <%= form_for object, :url => url, :method => method, :remote => true, :html => {:class => "post-form#{@show_avatar}"} do |f| %>
-          <%= f.text_area :message, :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+          <%= f.text_area :message, :placeholder => t(:write_something), :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
           <br/>
 
           <%= hidden_field_tag :u, session[:current_widget_host] %>
@@ -72,10 +72,10 @@
           <% end %>
           <div id="action_form_<%= rand(19031903) %>" class="post-actions">
             <div class="btn-group pull-right">
-              <%= f.submit "Post as #{current_user.try(:username) || "Anonymous"}", :class => "btn dark-blue pull-right" %>
+              <%= f.submit t(:post_as_user, :username => current_user.try(:username) || t(:anonymous)), :class => "btn dark-blue pull-right" %>
               <a class="btn dark-blue dropdown-toggle pull-right" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
               <ul class="dropdown-menu">
-                <li><%= link_to_with_icon "icon-off", "Logout", destroy_user_registration_session_path + widget_params("?"), :method => :delete %></li>
+                <li><%= link_to_with_icon "icon-off", t(:logout), destroy_user_registration_session_path + widget_params("?"), :method => :delete %></li>
               </ul>
             </div>
           </div>

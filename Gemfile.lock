@@ -61,6 +61,7 @@ GEM
       rack-oauth2 (>= 0.14.4)
       tzinfo
     gem_plugin (0.2.3)
+    gli (2.2.1)
     hashie (2.0.4)
     hike (1.2.2)
     httpauth (0.2.0)
@@ -77,6 +78,12 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     letsrate (1.0.8)
+    localeapp (0.5.2)
+      gli
+      i18n
+      json
+      rest-client
+      ya2yaml
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -162,6 +169,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     recaptcha (0.3.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     ruby-graphviz (1.0.9)
     sass (3.2.8)
     sass-rails (3.2.6)
@@ -196,6 +205,7 @@ GEM
     warden (1.2.1)
       rack (>= 1.0)
     webrobots (0.1.1)
+    ya2yaml (0.31)
 
 PLATFORMS
   ruby
@@ -209,6 +219,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   letsrate (~> 1.0.8)
+  localeapp
   mechanize
   mongrel (= 1.2.0.pre2)
   mysql2

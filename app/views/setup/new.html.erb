@@ -1,5 +1,5 @@
 <%= form_for(@user, :as => "user_registration", :url => registration_path("user_registration", :close => false), :remote => true, :html => {:class => 'login-form'}) do |f| %>
-    <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => "Leave your message", :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
+    <%= text_area_tag "comment_message", "", :id => "comment_message_#{identifier}", "data-form" => "login_form_#{identifier}", :placeholder => t(:write_something), :style => "max-height:250px; height:50px; width:100%; overflow:auto; resize:none;" %>
     <br/>
 
     <div id="login_form_<%= identifier %>" class="post-actions" style="display: none;">

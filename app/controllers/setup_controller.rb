@@ -32,10 +32,10 @@ class SetupController < ApplicationController
         save_step1
     end
     if @widget.try(:id)
-      flash[:success] = "Congratulations! You successfully signed up"
+      flash[:success] = t("devise.registrations.signed_up")
       redirect_to edit_admin_widget_path(@widget)
     else
-      flash[:error] = "Fill the form"
+      flash[:error] = t(:fill_the_form)
       redirect_to setup_path(:step1)
     end
   end
@@ -71,9 +71,9 @@ class SetupController < ApplicationController
   end
 
   def authenticate_current_user
-    if current_user.blank?
+    if current_user!.blank?
       session["user_registration_return_to"] = setup_path(:step1)
-      redirect_to new_user_registration_session_path
+      redirect_to new_user_registration_registration_path
     end
   end
 end

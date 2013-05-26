@@ -3,7 +3,7 @@
     <div class="span12">
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-user"></i> My Account
+          <i class="icon-user"></i> <%= t(:my_account) %>
         </div>
         <%= form_for @user_registration, :url => admin_account_path, :method => :put, :html => {:class => "mainForm"} do |f| %>
 
@@ -12,18 +12,18 @@
               <div class="span6">
                 <div class="padded">
                   <div class="section-title">
-                    Profile
+                    <%= t(:profile) %>
                   </div>
                   <div class="vpadded">
                     <%= f.fields_for :user do |usr| %>
                         <div class="input full-width">
-                          <%= usr.text_field :firstname, :placeholder => 'Firstname' %>
+                          <%= usr.text_field :firstname, :placeholder => t(:firstname) %>
                         </div>
                         <div class="input full-width">
-                          <%= usr.text_field :lastname, :placeholder => 'Lastname' %>
+                          <%= usr.text_field :lastname, :placeholder => t(:lastname) %>
                         </div>
                         <div class="input full-width">
-                          <%= f.email_field :email, :placeholder => 'Email' %>
+                          <%= f.email_field :email, :placeholder => t(:email) %>
                         </div>
                     <% end %>
 

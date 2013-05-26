@@ -9,6 +9,8 @@
   <%= stylesheet_link_tag "admin/font-awesome" %>
   <%= javascript_include_tag "admin/application" %>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+  <meta name="description" content="<%= t("meta.description") %>"/>
+  <meta name="keywords" content="<%= t("meta.keywords") %>"/>
 
   <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 
@@ -44,8 +46,8 @@
   <% unless @dont_show_signup_link %>
       <div class="pull-right">
         <div class="hpadded20">
-          <%= link_to "Sign up", new_user_registration_registration_url, :class => "btn btn-small dark-blue" %>
-          <%= link_to "Get widget", new_setup_path, :class => "btn btn-small dark-blue" %>
+          <%= link_to t(:sign_up), new_user_registration_registration_url, :class => "btn btn-small dark-blue" %>
+          <%= link_to t(:get_widget), new_setup_path, :class => "btn btn-small dark-blue" %>
         </div>
       </div>
   <% end %>

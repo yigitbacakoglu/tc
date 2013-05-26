@@ -3,14 +3,14 @@
       <div class="avatar user2 pull-left" style='background-image: url(<%= avatar_url(comment.user) %>);'></div>
 
       <div class="article">
-        <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago, Page: #{comment.post.url}" %>
+        <div class="post-info"> <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago, #{t(:page)}: #{comment.post.url}" %>
           <span class="pull-right badge <%= comment.state_color %>"><%= comment.state %></span>
           <% if comment.flags.count > 0 %>
-              <span class="pull-right badge <%= "red" %>"><%= "#{comment.flags.count} flags" %></span>
+              <span class="pull-right badge <%= "red" %>"><%= "#{comment.flags.count} #{t(:flags)}" %></span>
           <% end %>
 
           <% if comment.parent.present? %>
-              , <i class="icon-retweet"></i>Reply to <%= comment.parent.user.username rescue '[Deleted Comment]' %>
+              , <i class="icon-retweet"></i> <%= t(:reply_to) %> <%= comment.parent.user.username rescue '[Deleted Comment]' %>
           <% end %>
           <div class="past-rating">
             <%= rating_for(comment, :url => rate_posts_path(:comment_id => comment.id,
@@ -23,9 +23,9 @@
         </div>
 
         <div class="article-actions">
-          <%= link_to_with_icon "icon-edit", "Edit", edit_admin_comment_path(comment), :class => "btn btn-mini dark-blue", :remote => true %>
-          <%= link_to_with_icon "icon-ok", "Approve", admin_fire_path('approve', comment.id), :class => "btn btn-mini green", :confirm => "Are you sure?" %>
-          <%= link_to_with_icon "icon-remove", "Reject", admin_fire_path('reject', comment.id), :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+          <%= link_to_with_icon "icon-edit", t(:edit), edit_admin_comment_path(comment), :class => "btn btn-mini dark-blue", :remote => true %>
+          <%= link_to_with_icon "icon-ok", t(:approve), admin_fire_path('approve', comment.id), :class => "btn btn-mini green", :confirm => t(:are_you_sure) %>
+          <%= link_to_with_icon "icon-remove", t(:reject), admin_fire_path('reject', comment.id), :class => "btn btn-mini red", :confirm => t(:are_you_sure) %>
         </div>
       </div>
     </li>

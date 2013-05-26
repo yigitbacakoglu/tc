@@ -4,23 +4,23 @@
   <div class="span6">
     <div class="padded">
       <div class="section-title">
-        Personal Details
+        <%= t(:personal_details) %>
       </div>
       <div class="vpadded">
         <div class="input  full-width">
-          <%= f.text_field :firstname, :placeholder => "Firstname" %>
+          <%= f.text_field :firstname, :placeholder => t(:firstname) %>
         </div>
 
         <div class="input  full-width">
-          <%= f.text_field :lastname, :placeholder => "Lastname" %>
+          <%= f.text_field :lastname, :placeholder => t(:lastname) %>
         </div>
 
         <div class="input  full-width">
-          <%= f.select :gender, ['male', 'female'], {:prompt => "Select Gender"}, :class => "chzn-select" %>
+          <%= f.select :gender, [t(:male), t(:female)], {:prompt => t(:select_gender)}, :class => "chzn-select" %>
         </div>
 
         <div class="input  full-width">
-          <%= select_tag :role, options_for_select(['admin', 'author']), :class => "chzn-select", :prompt => "Select Role" %>
+          <%= select_tag :role, options_for_select([t(:admin), t(:author)]), :class => "chzn-select", :prompt => t(:select_role) %>
         </div>
       </div>
 
@@ -30,16 +30,16 @@
   <div class="span6">
     <div class="padded">
       <div class="section-title">
-        Registration Details
+        <%= t(:registration_details) %>
       </div>
       <div class="vpadded">
         <%= f.fields_for :user_registration do |d| %>
             <div class="input  full-width">
-              <%= d.text_field :username, :placeholder => "Username" %>
+              <%= d.text_field :username, :placeholder => t(:username) %>
             </div>
 
             <div class="input  full-width">
-              <%= d.text_field :email, :placeholder => "Email" %>
+              <%= d.text_field :email, :placeholder => t(:email) %>
             </div>
 
         <% end %>

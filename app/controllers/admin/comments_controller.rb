@@ -50,9 +50,9 @@ class Admin::CommentsController < Admin::BaseController
   def update
     comment = Comment.find(params[:id])
     if comment.update_attributes(params[:comment])
-      flash[:success] = "Updated succesfully!"
+      flash[:success] = t(:updated_successfuly)
     else
-      flash[:error] = "Something went wrong!"
+      flash[:error] = t(:something_went_wrong)
     end
     redirect_to session[:comment_return_to]
   end

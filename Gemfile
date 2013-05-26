@@ -20,6 +20,7 @@ gem 'mechanize'
 gem 'sitemap_notifier'
 gem 'dynamic_sitemaps'
 gem 'state_machine'
+gem 'localeapp'
 
 #gem 'thin'
 group :development do

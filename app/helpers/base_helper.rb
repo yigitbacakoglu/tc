@@ -24,7 +24,6 @@ module BaseHelper
   end
 
 
-
   def vote(rateable_obj, options)
     rating_max_value = options['max_value']
     up_votes = rateable_obj.ratings.where("( value / max_value ) > 0.5").count
@@ -130,8 +129,8 @@ module BaseHelper
 
   def link_to_delete(resource, options={})
     url = options[:url] || object_url(resource)
-    confirm = options[:confirm] || 'Are you sure?'
-    name = options[:name] || font_icon('icon-trash icon-white') + ' ' + 'Delete'
+    confirm = options[:confirm] || t(:are_you_sure)
+    name = options[:name] || font_icon('icon-trash icon-white') + ' ' + t(:delete)
     link_to name.html_safe, url,
             :class => options[:class],
             :remote => true,

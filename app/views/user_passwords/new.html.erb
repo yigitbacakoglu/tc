@@ -2,26 +2,26 @@
   <div class="row-fluid">
     <div class="span12">
       <div class="login-container center">
-        <div class="title text-transparent">Forgot Password?</div>
+        <div class="title text-transparent"><%= t("forgot_password") %></div>
         <hr class="main">
 
         <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:class => 'login-form', :method => :post}) do |f| %>
             <ul class="fields-list">
               <li>
                 <i class="icon-user" style="float: left;"></i>
-                <%= f.email_field :login, :autocomplete => "off", :id => "username", :placeholder => "Email or Username" %>
+                <%= f.email_field :login, :autocomplete => "off", :id => "username", :placeholder => t(:email_or_username) %>
               </li>
             </ul>
 
             <div class="actions">
-              <%= f.submit 'Reset my password', :class => 'btn btn-large medium-blue login-btn' %>
+              <%= f.submit t(:reset_my_password), :class => 'btn btn-large medium-blue login-btn' %>
             </div>
 
             <hr class="main">
             <div class="social-actions">
-              <%= link_to "<i class='icon-twitter'></i>".html_safe, "/auth/twitter", :rel => "tooltip", "data-original-title" => "Twitter Login", "data-placement" => "top", :class => "social-link text-transparent" %>
-              <%= link_to "<i class='icon-facebook'></i>".html_safe, "/auth/facebook", :rel => "tooltip", "data-original-title" => "Facebook Login", "data-placement" => "top", :class => "social-link text-transparent" %>
-              <%= link_to "Sign In", new_session_path(resource_name), :class => "social-link text-transparent", :style => "font-size: 1em; padding-top:15px; float:left;" %>
+              <%= link_to "<i class='icon-twitter'></i>".html_safe, "/auth/twitter", :rel => "tooltip", "data-original-title" => t(:twitter_login), "data-placement" => "top", :class => "social-link text-transparent" %>
+              <%= link_to "<i class='icon-facebook'></i>".html_safe, "/auth/facebook", :rel => "tooltip", "data-original-title" => t(:facebook_login), "data-placement" => "top", :class => "social-link text-transparent" %>
+              <%= link_to t(:sign_in), new_session_path(resource_name), :class => "social-link text-transparent", :style => "font-size: 1em; padding-top:15px; float:left;" %>
             </div>
         <% end %>
       </div>

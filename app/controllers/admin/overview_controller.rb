@@ -19,7 +19,7 @@ class Admin::OverviewController < Admin::BaseController
       if !validate.blank? || current_user.system_admin?
         session[:store_id] = params[:store_id]
         set_current_store
-        flash[:success] = "Successfully changed. You are managing Site: '#{@current_store.name}'"
+        flash[:success] = t(:successfully_changed_site, :site =>  @current_store.name)
       end
     end
     redirect_to admin_path
@@ -34,7 +34,7 @@ class Admin::OverviewController < Admin::BaseController
         @current_store.widget_ids.include?(params[:widget_id].to_i)
         session[:widget_id] = params[:widget_id]
         set_current_widget
-        flash[:success] = "Successfully changed. You are managing Widget: '#{@current_widget.domains.first}'"
+        flash[:success] =t(:successfully_changed_Widget, :widget =>  @current_widget.domains.first)
         redirect_to admin_path
       end
     end
@@ -50,21 +50,21 @@ class Admin::OverviewController < Admin::BaseController
     @post = Post.find(params[:id])
     respond_to do |format|
       format.html { render :layout => !request.xhr? }
-      format.js { render_default_modal_form("Edit Post Url") }
+      format.js { render_default_modal_form(t(:edit_post_url)) }
     end
   end
 
   def update_post
     @post = Post.find(params[:id])
     @post.update_attributes(params[:post])
-    flash[:success] = "Successfully updated"
+    flash[:success] = t(:successfully_updated)
     redirect_to admin_path
   end
 
   def delete_post
     @post = Post.find(params[:id])
     @post.destroy
-    flash[:success] = "Successfully deleted"
+    flash[:success] = t(:deleted_successfully)
     redirect_to admin_path
   end
 

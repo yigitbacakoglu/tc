@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
   end
 
   def username
-    anonymous? ? 'Anonymous' : self.user_registration.username
+    anonymous? ? I18n.t("anonymous") : self.user_registration.username
   end
 
   def fullname
@@ -75,7 +75,7 @@ class User < ActiveRecord::Base
   end
 
   def anonymous?
-    self.firstname.eql? "Anonymous"
+    ["Anonymous", "Anonim"].include? self.firstname
   end
 
   def has_role?(param)

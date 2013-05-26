@@ -3,7 +3,7 @@
     <div class="span12">
       <div class="box bordered">
         <div class="box-header">
-          <i class="icon-comments">&nbsp; COMMENTS</i>
+          <i class="icon-comments">&nbsp; <%= t(:comments) %></i>
         </div>
         <div class="box inner light-gray">
           <div class="row-fluid padded10">
@@ -13,7 +13,7 @@
               <div class="stat-box medium-blue">
                 <i class="icon-flag icon-large"></i>
                 <span class="count"><%= Comment.joins(:flags).where("#{CommentFlag.table_name}.comment_id IN(?)", @current_store.comment_ids).count %></span>
-                <span class="stat-text">Flagged</span>
+                <span class="stat-text"><%= t("states.flagged") %></span>
               </div>
             </div>
 
@@ -22,7 +22,7 @@
               <div class="stat-box medium-blue">
                 <i class="icon-download-alt icon-large"></i>
                 <span class="count"><%= Comment.where(:state => 'new').count %></span>
-                <span class="stat-text">New</span>
+                <span class="stat-text"><%= t("states.new") %></span>
               </div>
             </div>
 
@@ -30,7 +30,7 @@
               <div class="stat-box dark-blue">
                 <i class="icon-ok icon-large"></i>
                 <span class="count"><%= Comment.where(:state => 'approved').count %></span>
-                <span class="stat-text">Approved</span>
+                <span class="stat-text"><%= t("states.approved") %></span>
               </div>
             </div>
 
@@ -38,7 +38,7 @@
               <div class="stat-box border-blue">
                 <i class="icon-remove icon-large"></i>
                 <span class="count"><%= Comment.where(:state => 'rejected').count %></span>
-                <span class="stat-text">Rejected</span>
+                <span class="stat-text"><%= t("states.rejected") %></span>
               </div>
             </div>
 
@@ -46,7 +46,7 @@
               <div class="stat-box text-blue">
                 <i class="icon-hand-up icon-large"></i>
                 <span class="count"></span>
-                <span class="stat-text">Agreed</span>
+                <span class="stat-text"><%= t(:agreed) %></span>
               </div>
             </div>
 
@@ -54,7 +54,7 @@
               <div class="stat-box dark-blue">
                 <i class="icon-hand-down icon-large"></i>
                 <span class="count"></span>
-                <span class="stat-text">Disagreed</span>
+                <span class="stat-text"><%= t(:disagreed) %></span>
               </div>
             </div>
 
@@ -64,10 +64,10 @@
         <table class="table table-strip table-bordered">
           <thead>
           <tr>
-            <th>Page</th>
-            <th>Created At</th>
-            <th>Message</th>
-            <th>Actions</th>
+            <th><%= t(:page) %></th>
+            <th><%= t(:created_at) %></th>
+            <th><%= t(:comment) %></th>
+            <th><%= t(:actions) %></th>
           </tr>
           </thead>
           <tbody>
@@ -81,7 +81,7 @@
                   <br>
                   <span class="pull-left badge <%= comment.state_color %>"><%= comment.state %></span>
                   <% if comment.flags.count > 0 %>
-                      <span class="pull-left badge <%= "red" %>"><%= "#{comment.flags.count} flags" %></span>
+                      <span class="pull-left badge <%= "red" %>"><%= "#{comment.flags.count} #{t(:flags)}" %></span>
                   <% end %>
 
                 </td>
@@ -93,9 +93,9 @@
                   <%= link_to comment.message.truncate(25), admin_comment_path(comment.id) %>
                 </td>
                 <td>
-                  <%= link_to_with_icon "icon-edit", "Edit", edit_admin_comment_path(comment), :class => "btn btn-mini btn-info", :remote => true %>
-                  <%= link_to_with_icon "icon-ok", "Approve", admin_fire_path('approve', comment.id), :class => "btn btn-mini green", :confirm => "Are you sure?" %>
-                  <%= link_to_with_icon "icon-remove", "Reject", admin_fire_path('reject', comment.id), :class => "btn btn-mini red", :confirm => "Are you sure?" %>
+                  <%= link_to_with_icon "icon-edit", t(:edit), edit_admin_comment_path(comment), :class => "btn btn-mini btn-info", :remote => true %>
+                  <%= link_to_with_icon "icon-ok", t(:approve), admin_fire_path('approve', comment.id), :class => "btn btn-mini green", :confirm => t(:are_you_sure) %>
+                  <%= link_to_with_icon "icon-remove", t(:reject), admin_fire_path('reject', comment.id), :class => "btn btn-mini red", :confirm => t(:are_you_sure) %>
                 </td>
               </tr>
           <% end %>

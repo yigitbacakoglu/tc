@@ -8,7 +8,7 @@ class Admin::SettingsController < Admin::BaseController
 
   def update
     update_restricted_words
-    flash[:success] = "Updated Succesfully"
+    flash[:success] = t(:updated_successfuly)
     redirect_to admin_settings_path
   end
 

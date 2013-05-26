@@ -4,7 +4,7 @@
 <% if @user_registration.user_authentications %>
     <% unless @user_registration.user_authentications.empty? %>
 
-        <p><strong><%= t(:you_have_signed_in_with_these_services) %>:</strong></p>
+        <p><strong><%= t(:added_services) %>:</strong></p>
 
         <div class="authentications">
           <% for user_authentication in @user_registration.user_authentications %>
@@ -23,7 +23,7 @@
     <% end %>
 
 <% end %>
-<%= content_tag(:p, content_tag(:strong, t(:add_another_service_to_sign_in_with))) %>
+<%= content_tag(:p, content_tag(:strong, t(:add_another_service))) %>
 <%= render :partial => "shared/social_buttons" %>
 <style>
     .icon-facebook.custom {

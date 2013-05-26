@@ -9,7 +9,7 @@
       <%= "#{comment.user.username}, #{time_ago_in_words(comment.created_at)} ago" %>
 
       <% if comment.parent.present? %>
-          , <i class="icon-retweet"></i>Reply to <%= comment.parent.user.username rescue '[Deleted Comment]' %>
+          , <i class="icon-retweet"></i><%= t(:reply_to) %> <%= comment.parent.user.username rescue '[Deleted Comment]' %>
       <% end %>
     </div>
     <div class="past-rating">
@@ -24,15 +24,15 @@
         <div class="social-links-trigger">
           <!--<i class="icon-cogs text-transparent"></i>-->
           <div class="<%= "social_links_#{identifier}" %>" style="display: none; margin-right: 10px;">
-            <%= link_to_with_icon "icon-twitter", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id) + widget_params, "data-original-title" => "Tweet this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
-            <%= link_to_with_icon "icon-facebook", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id) + widget_params, "data-original-title" => "Share this", "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
+            <%= link_to_with_icon "icon-twitter", '', "#", "data-link" => share_twitter_path(:comment_id => comment.id) + widget_params, "data-original-title" => t(:tweet_this), "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
+            <%= link_to_with_icon "icon-facebook", '', "#", "data-link" => share_facebook_path(:comment_id => comment.id) + widget_params, "data-original-title" => t(:share_this), "data-placement" => "top", :rel => "tooltip", :class => ' social-link open-win text-transparent' %>
             <% if can? :edit, comment %>
-                <%= link_to_with_icon "icon-edit", "", edit_comment_path(comment.id) + widget_params("?"), :remote => true, "data-original-title" => "Edit", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent' %>
-                <%= link_to_with_icon "icon-trash icon-white", "", comment_path(comment, :dom_id => "comment_container#{comment.id}") + widget_params, :remote => true, "data-original-title" => "Delete", "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent', :method => :delete, :confirm => 'Are you sure?' %>
+                <%= link_to_with_icon "icon-edit", "", edit_comment_path(comment.id) + widget_params("?"), :remote => true, "data-original-title" => t(:edit), "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent' %>
+                <%= link_to_with_icon "icon-trash icon-white", "", comment_path(comment, :dom_id => "comment_container#{comment.id}") + widget_params, :remote => true, "data-original-title" => t(:delete), "data-placement" => "top", :rel => "tooltip", :class => ' social-link edit-comment text-transparent', :method => :delete, :confirm => 'Are you sure?' %>
             <% end %>
             <% unless (@current_widget.login_required && @current_user.blank?) %>
-                <%= link_to_with_icon "icon-retweet", "", "#", "data-original-title" => "Reply", "data-placement" => "top", :rel => "tooltip", :class => ' social-link reply text-transparent', "data-form" => "reply-form-container_#{comment.id}" %>
-                <%= link_to_with_icon "icon-flag", "", flag_posts_path(:comment_id => comment.id, :class_name => "comment") + widget_params, :remote => true, :method => :post, "data-original-title" => "Flag", "data-placement" => "top", :rel => "tooltip", :class => ' social-link  text-transparent' %>
+                <%= link_to_with_icon "icon-retweet", "", "#", "data-original-title" => t(:reply), "data-placement" => "top", :rel => "tooltip", :class => ' social-link reply text-transparent', "data-form" => "reply-form-container_#{comment.id}" %>
+                <%= link_to_with_icon "icon-flag", "", flag_posts_path(:comment_id => comment.id, :class_name => "comment") + widget_params, :remote => true, :method => :post, "data-original-title" => t(:flag), "data-placement" => "top", :rel => "tooltip", :class => ' social-link  text-transparent' %>
 
             <% end %>
 
